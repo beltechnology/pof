@@ -36,6 +36,8 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
 <div class="header">
   <div class="top-header">
     <div class="container-fluid">
+	<div class="row">
+	<div class="col-lg-12 col-md-12">
       <ul class="nav nav-justified">
         <li>
           <p> &nbsp; <i class="fa fa-envelope-square envevlope"></i> <?php echo  $contactData->email ;?></p>
@@ -47,6 +49,8 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
           <p><i class="fa fa-phone-square phone"></i> + 91 <?php echo  $contactData->mobile ;?></p>
         </li>
       </ul>
+	 </div>
+	 </div>
     </div>
     <!--end of container.fluid--> 
   </div>
@@ -168,7 +172,7 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
             <div class="row">
               <div class="col-md-1 col-lg-1">&nbsp;</div>
               <div class="col-md-5 col-lg-5">
-                <input class="group-form" type="email" class="form-control" name="email" placeholder="Emial" required>
+                <input class="group-form" type="email" class="form-control" name="email" placeholder="Email" required>
               </div>
               <div class="col-md-5 col-lg-5">
                 <input class="group-form" type="text" class="form-control" placeholder="City" name="city" required>
@@ -222,9 +226,9 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
   <!--end of bottom-header--> 
 </div>
 <!--end of header-->
-<div class="main-content">
-  <div class="container-fluid">
-    <div class="row"> <?php echo $htmlFactory->aboutPof();?> </div>
+<div class="container-fluid">
+  <div class="main-content">
+    <div class="row container-fluid"> <?php echo $htmlFactory->aboutPof();?> </div>
     <!--end of row--> 
   </div>
   <!--end of container-fluid--> 

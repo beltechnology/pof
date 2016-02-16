@@ -17,7 +17,7 @@ class  htmlFactory extends  dataFactory
 				if($ele == 0)
 				{
 					$carouselHTML = $carouselHTML."<div class='item active'>
-	 <img class='center-block img-responsive' src='".BaseUrl."admin/upload/".$carousel->sliderImage."' alt='...'>
+	 <img class='center-block img-responsive first-slider' src='".BaseUrl."admin/upload/".$carousel->sliderImage."' alt='...'>
       <div class='carousel-caption'>
 		<h1 class='text-center'>".$carousel->text."</h1>   
 	 </div>
@@ -26,7 +26,7 @@ class  htmlFactory extends  dataFactory
 				else
 				{
 					$carouselHTML = $carouselHTML."<div class='item'>
-	 <img class='center-block img-responsive' src='".BaseUrl."admin/upload/".$carousel->sliderImage."'  alt='...'>
+	 <img class='center-block img-responsive first-slider' src='".BaseUrl."admin/upload/".$carousel->sliderImage."'  alt='...'>
       <div class='carousel-caption'>
 		<h1 class='text-center'>".$carousel->text."</h1>   
 	 </div>
@@ -55,7 +55,7 @@ class  htmlFactory extends  dataFactory
 			{
 				if($ele == 0)
 				{
-					$carouselHTML = $carouselHTML."<div class='item active'> <img class='center-block img-responsive' src='".BaseUrl."admin/upload/".$carousel->sliderImage."' alt='...' width='100%'>
+					$carouselHTML = $carouselHTML."<div class='item active'> <img class='center-block img-responsive big-slide' src='".BaseUrl."admin/upload/".$carousel->sliderImage."' alt='...' width=''>
                 <div class='carousel-caption slider-heading'>
 				".$carousel->text."
                 </div>
@@ -63,7 +63,7 @@ class  htmlFactory extends  dataFactory
 				}
 				else
 				{
-					$carouselHTML = $carouselHTML."<div class='item'> <img class='center-block img-responsive' src='".BaseUrl."admin/upload/".$carousel->sliderImage."' alt='...' width='100%'>
+					$carouselHTML = $carouselHTML."<div class='item'> <img class='center-block img-responsive big-slide' src='".BaseUrl."admin/upload/".$carousel->sliderImage."' alt='...' width=''>
                 <div class='carousel-caption slider-heading'>
 				".$carousel->text."
                 </div>
@@ -221,10 +221,13 @@ function getHomeMenu ()
 				<div>&nbsp;</div>
 				<div class='row'>
 				<div class='stage col-lg-12 col-md-12'>
-				<p class='first-line'>Lorem Ispum Dummy
-				<p>
+				 <div class='contain'>
+                      <img src='/vibhor/pof/img/stage-1.png' alt='Norway' >
+                       <div class='alignment'><p class='first-line'>Lorem Ispum Dummy</p>
 				<p>1 July 2014</p>
 				<p><a href='".$olympaidInfo->link."'>Read Full Story &gt;&gt;</a></p>
+				</div>
+				</div>
 				</div>
 				</div>
 				</div>";
@@ -244,7 +247,7 @@ function getHomeMenu ()
 			foreach ($getTestimonialData as $testimonial)
 			{
 				
-				$testimonialHTML .= "<div class='col-lg-12 col-md-12 item ".$active."'> <img class='center-block img-responsive' src='".BaseUrl."admin/upload/".$testimonial->upload."'>
+				$testimonialHTML .= "<div class='col-lg-12 col-md-12 item ".$active."'> <img class='center-block img-responsive fixed-size' src='".BaseUrl."admin/upload/".$testimonial->upload."'>
         <h1 class='text-center'>".$testimonial->title."</h1>
         <p class='text-center'".$testimonial->description."</p>
       </div>";

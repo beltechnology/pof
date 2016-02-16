@@ -1,7 +1,7 @@
 <?php include("common/header.php");?>
-  <div class="main-content">
-    <div class="container-fluid">
-      <div class="row">
+  <div class="container-fluid">
+    <div class="main-content">
+      <div class="row container-fluid">
         <div class="col-lg-12 col-md-12 schedule">
           <h1 class="first-h text-center">Olympaid Schedule:<span class="second-h"> Academic Year 2016-17</span></h1>
         </div>
@@ -44,12 +44,12 @@
           <!--end of row-->
           <div>&nbsp;</div>
           <div>&nbsp;</div>
-          <div class="row">
+          <div class="row container-fluid">
             <div class="schedule-2 col-lg-12 col-md-12">
               <h1 class="second-h text-center">Olympaid Information</h1>
             </div>
           </div>
-          <div class="row">
+          <div class="row container-fluid">
             <?php  echo  $htmlFactory->createOlympaidInformation();?>
           </div>
           <!--end of row--> 
@@ -61,24 +61,23 @@
         <!--end of right-side--> 
       </div>
       <!--end of col-lg-4 col-md-4--> 
-    </div>
+	
     <!--end of row-->
     <div>&nbsp;</div>
-    <div class="row">
+    <div class="row container-fluid">
       <div class="col-lg-12 col-md-12 schedule">
         <div class="">
           <h1 class="second-h text-center">More Information</h1>
         </div>
-      </div>
-      
-      <!-- end of row--> 
+       </div>
+      </div><!-- end of row--> 
     </div>
     <!--end of container-fluid--> 
   </div>
   <!--end of main-page-->
   <div>&nbsp;</div>
   <div class="combined-image">
-    <div class="">
+    <div class="container-fluid">
       <marquee>
       <?php echo $htmlFactory->moreInformation();?>
       </marquee>
@@ -87,9 +86,9 @@
   </div>
   <!--end of combined-image-->
   <div>&nbsp;</div>
-  <div class="testimonials">
-    <div class="container-fluid">
-      <div class="row">
+  <div class="container-fluid">
+    <div class="testimonials">
+      <div class="row container-fluid">
         <div class="col-lg-12 col-md-12 schedule-2">
           <div class="">
             <h1 class="text-center">Testimonials</h1>
@@ -103,6 +102,9 @@
   <!--end of testimonials-->
   <div>&nbsp;</div>
   <div class="staff">
+  <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
       <div id="myCarousel" class="container-fluid carousel slide" data-ride="carousel">
     <!-- Indicators -->
     
@@ -119,6 +121,9 @@
       </ul>
     </nav>	</div>
   </div>
+</div>
+</div><!--end of col-lg-12 col-md-12-->
+</div><!--end of row-->
 </div>
 
   <!--end of container-fluid--> 

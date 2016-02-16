@@ -18,7 +18,7 @@ foreach($allMenus as $menu)
 			 $sumMenuFlag = true;
 		}
  ?>
-    <li id="<?php echo $menu->category_id; ?>"><a href='"<?php $_SERVER['PHP_SELF']?>?category_id="<?php echo $menu->category_id; ?>"'><?php echo $menu->title; ?></a><?php if($sumMenuFlag){?><i class="fa fa-plus-square pull-right" href="#demo<?php echo $menu->category_id; ?>" data-toggle="collapse"></i><?php } ?></li>
+    <div class="black-line"><li id="<?php echo $menu->category_id; ?>"><a href='"<?php $_SERVER['PHP_SELF']?>?category_id="<?php echo $menu->category_id; ?>"'><?php echo $menu->title; ?></a><?php if($sumMenuFlag){?><i class="fa fa-plus-square pull-right" href="#demo<?php echo $menu->category_id; ?>" data-toggle="collapse"></i><?php } ?></li></div>
     <?php
 	 echo $categoryInfo->getSubmenu($menu->category_id);
 	 echo $htmlFactory->createPages($menu->category_id);
