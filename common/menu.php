@@ -81,7 +81,4 @@ foreach($allMenus as $menu)
     padding-left: 30px;
 }
 ul{list-style:none;}
-li i.collapsed > a span {
-    background: rgba(0, 0, 0, 0) url("https://perishablepress.com/wp/wp-content/images/2013/accordion-menu/icon_plus.png") no-repeat scroll 96% center;
-}
   </style>

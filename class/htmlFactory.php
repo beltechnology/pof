@@ -17,7 +17,7 @@ class  htmlFactory extends  dataFactory
 				if($ele == 0)
 				{
 					$carouselHTML = $carouselHTML."<div class='item active'>
-	 <img class='center-block img-responsive' src='/vibhor/admin/upload/".$carousel->sliderImage."' alt='...'>
+	 <img class='center-block img-responsive' src='".BaseUrl."admin/upload/".$carousel->sliderImage."' alt='...'>
       <div class='carousel-caption'>
 		<h1 class='text-center'>".$carousel->text."</h1>   
 	 </div>
@@ -26,7 +26,7 @@ class  htmlFactory extends  dataFactory
 				else
 				{
 					$carouselHTML = $carouselHTML."<div class='item'>
-	 <img class='center-block img-responsive' src='/vibhor/admin/upload/".$carousel->sliderImage."'  alt='...'>
+	 <img class='center-block img-responsive' src='".BaseUrl."admin/upload/".$carousel->sliderImage."'  alt='...'>
       <div class='carousel-caption'>
 		<h1 class='text-center'>".$carousel->text."</h1>   
 	 </div>
@@ -55,7 +55,7 @@ class  htmlFactory extends  dataFactory
 			{
 				if($ele == 0)
 				{
-					$carouselHTML = $carouselHTML."<div class='item active'> <img class='center-block img-responsive' src='/vibhor/admin/upload/".$carousel->sliderImage."' alt='...' width='100%'>
+					$carouselHTML = $carouselHTML."<div class='item active'> <img class='center-block img-responsive' src='".BaseUrl."admin/upload/".$carousel->sliderImage."' alt='...' width='100%'>
                 <div class='carousel-caption slider-heading'>
 				".$carousel->text."
                 </div>
@@ -63,7 +63,7 @@ class  htmlFactory extends  dataFactory
 				}
 				else
 				{
-					$carouselHTML = $carouselHTML."<div class='item'> <img class='center-block img-responsive' src='/vibhor/admin/upload/".$carousel->sliderImage."' alt='...' width='100%'>
+					$carouselHTML = $carouselHTML."<div class='item'> <img class='center-block img-responsive' src='".BaseUrl."admin/upload/".$carousel->sliderImage."' alt='...' width='100%'>
                 <div class='carousel-caption slider-heading'>
 				".$carousel->text."
                 </div>
@@ -116,7 +116,7 @@ class  htmlFactory extends  dataFactory
 		foreach($moreinformations as $moreinformation)
 		{
 			$moreinformationHTML = $moreinformationHTML."<div class='col-lg-3 col-md-3 text'>
-			<img class='img-responsive' src='/vibhor/admin/upload/".$moreinformation->upload."'>
+			<img class='img-responsive' src='".BaseUrl."admin/upload/".$moreinformation->upload."'>
         <div class='written'>
           <h2 class='center-block'>".$moreinformation->title."</h2>
           <a href='".$moreinformation->link."'><span class='glyphicon glyphicon-play-circle' aria-hidden='true'></span></a> </div>
@@ -135,7 +135,7 @@ class  htmlFactory extends  dataFactory
 		foreach($aboutPofDetials as $aboutPofDetail)
 		{
 			$aboutPofHTML = $aboutPofHTML."<div class='col-md-4 col-lg-4 grey-1'>
-		     <img class='center-block img-responsive' src='/vibhor/admin/upload/".$aboutPofDetail->upload."' alt='pencil-photo'>
+		     <img class='center-block img-responsive' src='".BaseUrl."admin/upload/".$aboutPofDetail->upload."' alt='pencil-photo'>
 			 <div class='heading'><h2>".$aboutPofDetail->title."</h2></div>
 			 <div>&nbsp;</div>
 			 <p>". substr(strip_tags($aboutPofDetail->description),0,110). "..."."</p>
@@ -154,7 +154,7 @@ function createPages($categoryId)
 	{
 		foreach($pages as $page)
 		{
-			$pageLinkHTML =$pageLinkHTML."<li><a href='http://".$_SERVER['SERVER_NAME']."/vibhor/pages/index.php?categoryId=".$categoryId."&pageId=".$page->pageId."'>".$page->pageTitle."</a></li>";
+			$pageLinkHTML =$pageLinkHTML."<li><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$categoryId."&pageId=".$page->pageId."'>".$page->pageTitle."</a></li>";
 		}
 	}
 	return $pageLinkHTML;
@@ -173,32 +173,32 @@ function getHomeMenu ()
 			
 			if(strtoupper($menu->title) == "NCO")
 			{
-			$homeMenu .= "<div class='col-lg-3 col-md-3 first-b col-md-offset-1 col-lg-offset-1'><a href='http://".$_SERVER['SERVER_NAME']."/vibhor/pages/index.php?categoryId=".$menu->category_id."'>NCO</a></div>";
+			$homeMenu .= "<div class='col-lg-3 col-md-3 first-b col-md-offset-1 col-lg-offset-1'><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$menu->category_id."'>NCO</a></div>";
 			$count++;
 			}
 			elseif(strtoupper($menu->title) == "NSO")
 			{
-			$homeMenu .= "<div class='col-lg-3 col-md-3 second-b col-md-offset-1 col-lg-offset-1'><a href='http://".$_SERVER['SERVER_NAME']."/vibhor/pages/index.php?categoryId=".$menu->category_id."'>NSO </a></div>";
+			$homeMenu .= "<div class='col-lg-3 col-md-3 second-b col-md-offset-1 col-lg-offset-1'><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$menu->category_id."'>NSO </a></div>";
 			$count++;
 			}
 			elseif(strtoupper($menu->title) == "IEO")
 			{
-			$homeMenu .= "<div class='col-lg-3 col-md-3 third-b col-md-offset-1 col-lg-offset-1'><a href='http://".$_SERVER['SERVER_NAME']."/vibhor/pages/index.php?categoryId=".$menu->category_id."'>IEO</a> </div>";
+			$homeMenu .= "<div class='col-lg-3 col-md-3 third-b col-md-offset-1 col-lg-offset-1'><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$menu->category_id."'>IEO</a> </div>";
 			$count++;
 			}
 			elseif(strtoupper($menu->title) == "IMO")
 			{
-			$homeMenu .= "<div class='col-lg-3 col-md-3 fourth-b col-md-offset-1 col-lg-offset-1'><a href='http://".$_SERVER['SERVER_NAME']."/vibhor/pages/index.php?categoryId=".$menu->category_id."'>IMO </a></div>";
+			$homeMenu .= "<div class='col-lg-3 col-md-3 fourth-b col-md-offset-1 col-lg-offset-1'><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$menu->category_id."'>IMO </a></div>";
 			$count++;
 			}
 			elseif(strtoupper($menu->title) == strtoupper("Ask Expert"))
 			{
-			$homeMenu .= "<div class='col-lg-3 col-md-3 fifth-b col-md-offset-1 col-lg-offset-1'><a href='http://".$_SERVER['SERVER_NAME']."/vibhor/pages/index.php?categoryId=".$menu->category_id."'>Ask Expert</a></div>";
+			$homeMenu .= "<div class='col-lg-3 col-md-3 fifth-b col-md-offset-1 col-lg-offset-1'><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$menu->category_id."'>Ask Expert</a></div>";
 			$count++;
 			}
 			elseif(strtoupper($menu->title) == "FAQ")
 			{
-			$homeMenu .= "<div class='col-lg-3 col-md-3 sixth-b col-md-offset-1 col-lg-offset-1'><a href='http://".$_SERVER['SERVER_NAME']."/vibhor/pages/index.php?categoryId=".$menu->category_id."'>FAQ</a></div>";
+			$homeMenu .= "<div class='col-lg-3 col-md-3 sixth-b col-md-offset-1 col-lg-offset-1'><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$menu->category_id."'>FAQ</a></div>";
 			$count++;
 			}
 			
@@ -244,7 +244,7 @@ function getHomeMenu ()
 			foreach ($getTestimonialData as $testimonial)
 			{
 				
-				$testimonialHTML .= "<div class='col-lg-12 col-md-12 item ".$active."'> <img class='center-block img-responsive' src='/vibhor/admin/upload/".$testimonial->upload."'>
+				$testimonialHTML .= "<div class='col-lg-12 col-md-12 item ".$active."'> <img class='center-block img-responsive' src='".BaseUrl."admin/upload/".$testimonial->upload."'>
         <h1 class='text-center'>".$testimonial->title."</h1>
         <p class='text-center'".$testimonial->description."</p>
       </div>";

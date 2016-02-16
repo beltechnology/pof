@@ -55,9 +55,9 @@
 			<!--<div class="footer-bottom">-->
 			</div>
 	</div><!--end of content-->
-  <script src="/vibhor/js/jquery.js"></script>
-  <script src="/vibhor/js/bootstrap.min.js"></script>
-  <script src="/vibhor/js/common.js"></script>
+  <script src="<?php echo $pathCss;?>js/jquery.js"></script>
+  <script src="<?php echo $pathCss;?>js/bootstrap.min.js"></script>
+  <script src="<?php echo $pathCss;?>js/common.js"></script>
   
   <script>
 $("ul li i").click(function()

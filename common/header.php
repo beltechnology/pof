@@ -1,9 +1,12 @@
 <?php 
- $path = $_SERVER['DOCUMENT_ROOT']."/";
-include($path."vibhor/admin/common/conn.php");
-include($path."vibhor/admin/class/datainfo.php");
-include($path."vibhor/class/htmlFactory.php");
-include($path."vibhor/helper/header_helper.php");
+ $path = $_SERVER['DOCUMENT_ROOT']."/vibhor/pof/";
+ $pathCss = "/vibhor/pof/";
+
+include($path."class/constant.php");
+include($path."admin/common/conn.php");
+include($path."admin/class/datainfo.php");
+include($path."class/htmlFactory.php");
+include($path."helper/header_helper.php");
 
 $htmlFactory = new htmlFactory();
 
@@ -22,11 +25,11 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="/vibhor/style3.css">
-<link rel="stylesheet" type="text/css" href="/vibhor/responsive.css">
-<link rel="stylesheet" href="/vibhor/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="<?php echo BaseUrl;?>style3.css">
+<link rel="stylesheet" type="text/css" href="<?php echo BaseUrl;?>responsive.css">
+<link rel="stylesheet" href="<?php echo BaseUrl;?>font-awesome/css/font-awesome.min.css">
 <!-- Bootstrap -->
-<link href="/vibhor/css/bootstrap.min.css" rel="stylesheet">
+<link href="<?php echo BaseUrl;?>css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <div class="content">
@@ -59,7 +62,7 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
               <div class="col-lg-6 col-md-6 col-lg-offset-1 col-md-offset-1">
                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                  <a class="navbar-brand" href="#"><img class="" src="/vibhor/img/logo.png"></a> </div>
+                  <a class="navbar-brand" href="#"><img class="" src="<?php echo BaseUrl?>img/logo.png"></a> </div>
               </div>
               <div class="col-lg-2 col-md-2">&nbsp;</div>
             </div>
@@ -191,7 +194,7 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
           </form>
 
          
-          <form class="form hideToggle logged" style="display:none" action="/vibhor/admin/index.php" method="post">
+          <form class="form hideToggle logged" style="display:none" action="<?php echo BaseUrl;?>admin/index.php" method="post">
             <div class="row">
               <div class="col-md-1 col-lg-1">&nbsp;</div>
               <div class="col-md-5 col-lg-5">
