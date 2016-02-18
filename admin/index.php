@@ -1,6 +1,8 @@
 <?php
+ob_start();
 if(!empty($_POST['userName']) || !empty($_POST['password']))
 {
+	include "../class/constant.php";	
 	include "common/conn.php";	
 	$login = new userAuth ();
 	$login->userLogin($_POST['userName'],$_POST['password'],"");
@@ -71,4 +73,7 @@ if(!empty($_POST['userName']) || !empty($_POST['password']))
 .mainDiv {
     padding: 0 20px 10px 20px;
 }
-</style>
+</style> 
+<?php
+ ob_flush();
+?>

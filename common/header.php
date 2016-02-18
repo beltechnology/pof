@@ -7,10 +7,23 @@ include($path."admin/common/conn.php");
 include($path."admin/class/datainfo.php");
 include($path."class/htmlFactory.php");
 include($path."helper/header_helper.php");
-
 $htmlFactory = new htmlFactory();
+$studetLogin = false;
+if(isset($_SESSION['userInfo']))
+{
+	$userInfo = $_SESSION['userInfo'];
+	$userType = $userInfo->userType;
+	if($userType == "student")
+	{
+		$registrationId = $userInfo->registrationId;
+		$studetLogin = true;
+		$studentInfo = $htmlFactory->getStudentInfoById($registrationId);
+		var_dump($studentInfo);
 
+	}
+}
  $contactData = $htmlFactory->getContactData();
+ 
 
 if(isset($_REQUEST['pageId']))
 {
@@ -43,7 +56,10 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
           <p> &nbsp; <i class="fa fa-envelope-square envevlope"></i> <?php echo  $contactData->email ;?></p>
         </li>
         <li>
-          <p class="welcome">Welcome Visitor !</p>
+          <p class="welcome">Welcome <?php if($studetLogin){echo $studentInfo->studentName; }else{echo "Visitor !";}?></p>
+        </li>
+        <li>
+          <p><a class ="myCart" href="<?php echo BaseUrl;?>admin/dashboard.php">My Account</a></p>
         </li>
         <li>
           <p><i class="fa fa-phone-square phone"></i> + 91 <?php echo  $contactData->mobile ;?></p>

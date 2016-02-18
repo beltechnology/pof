@@ -99,7 +99,13 @@ class dataFactory
 	  return $allData;
 	} 
 	 
-
+	function getStudentInfoById($studentId)
+	{
+	  $res=mysql_query("SELECT * FROM studentregistration where deleted = 0 and studentId='".$studentId."' ");
+	  $obj=mysql_fetch_object($res);
+	  return $obj;
+	} 
+	 
 	
 } 
 ?>

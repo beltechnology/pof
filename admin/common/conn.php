@@ -1,11 +1,22 @@
 <?php
+ob_start() ;
 session_start();
 $msg="";
 $edit="";
+if($_SERVER['SERVER_NAME'] == "localhost")
+{
 $servername = "localhost";
 $username = "sofAdmin";
 $password = "admin@123";
 $dbname = "sof";
+}
+else
+{
+$servername = "localhost";
+$username = "jkcomdel_pof";
+$password = "admin@123";
+$dbname = "jkcomdel_pof";
+}
 error_reporting(E_ALL ^ E_DEPRECATED);
 $conn = mysql_connect($servername, $username, $password)or die("Unable to connect to MySQL");
 $selected = mysql_select_db($dbname,$conn)or die("Could not select examples");
@@ -45,8 +56,15 @@ class userAuth
 				{
 					$obj=mysql_fetch_object($query);
 					$_SESSION['userInfo']=$obj;
+					$userType = $obj->userType;
+					if($userType == "student")
+					{
+						header("location:".BaseUrl);
+					}
+					else
+					{
 					header("location:dashboard.php");
-					var_dump($_SESSION['userInfo']);
+					}
 				}
 				
 			}
@@ -68,5 +86,5 @@ class userAuth
 
 	}	
 }
-
+ob_flush();
 ?> 
