@@ -18,7 +18,7 @@ if(isset($_SESSION['userInfo']))
 		$registrationId = $userInfo->registrationId;
 		$studetLogin = true;
 		$studentInfo = $htmlFactory->getStudentInfoById($registrationId);
-		var_dump($studentInfo);
+		//var_dump($studentInfo);
 
 	}
 }
@@ -58,9 +58,11 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
         <li>
           <p class="welcome">Welcome <?php if($studetLogin){echo $studentInfo->studentName; }else{echo "Visitor !";}?></p>
         </li>
+        <?php if($studetLogin){?>
         <li>
           <p><a class ="myCart" href="<?php echo BaseUrl;?>admin/dashboard.php">My Account</a></p>
         </li>
+       <?php }  ?>
         <li>
           <p><i class="fa fa-phone-square phone"></i> + 91 <?php echo  $contactData->mobile ;?></p>
         </li>
