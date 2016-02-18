@@ -31,7 +31,7 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
 <!-- Bootstrap -->
 <link href="<?php echo BaseUrl;?>css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body class="body">
 <div class="content">
 <div class="header">
   <div class="top-header">
@@ -56,7 +56,7 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
   </div>
   <!--end of top-header-->
   <div class="medium-header">
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default same-border">
       <div class="container-fluid"> 
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="row">

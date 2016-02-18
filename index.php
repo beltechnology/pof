@@ -26,16 +26,21 @@
         <div class="col-md-8 col-lg-8">
           <div id="carousel-example-generic" class="carousel slide align" data-ride="carousel"> 
             <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <?php echo $htmlFactory->getIndicators(5,8)?>
-            </ol>
-            
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox"> <?php echo  $htmlFactory->getIndexCarousel();?> </div>
             
             <!-- Controls --> 
-            <a class="" href="#carousel-example-generic" role="button" data-slide="prev"> <span class="glyphicon  carousel-sign" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="" href="#carousel-example-generic" role="button" data-slide="next"> <span class="glyphicon  carousel-sign" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  </div>
           <!--end of id="carousel-example-generic" class="carousel slide" data-ride="carousel"-->
+		   <!-- Controls -->
           <div>&nbsp;</div>
           <div>&nbsp;</div>
           <div class="row homeMenu">
@@ -78,10 +83,14 @@
   <div>&nbsp;</div>
   <div class="combined-image">
     <div class="container-fluid">
-      <marquee>
-      <?php echo $htmlFactory->moreInformation();?>
-      </marquee>
-    </div>
+     <marquee>
+	  <ul>
+	   <li>
+        <?php echo $htmlFactory->moreInformation();?>
+	   </li>
+	  </ul>
+     </marquee>
+   </div>
     <!--end of container-fluid--> 
   </div>
   <!--end of combined-image-->
