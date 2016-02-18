@@ -8,7 +8,7 @@ include($path."admin/class/datainfo.php");
 include($path."class/htmlFactory.php");
 include($path."helper/header_helper.php");
 $htmlFactory = new htmlFactory();
-$studetLogin = false;
+$studentLogin = false;
 if(isset($_SESSION['userInfo']))
 {
 	$userInfo = $_SESSION['userInfo'];
@@ -16,7 +16,7 @@ if(isset($_SESSION['userInfo']))
 	if($userType == "student")
 	{
 		$registrationId = $userInfo->registrationId;
-		$studetLogin = true;
+		$studentLogin = true;
 		$studentInfo = $htmlFactory->getStudentInfoById($registrationId);
 		//var_dump($studentInfo);
 
@@ -56,9 +56,9 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
           <p> &nbsp; <i class="fa fa-envelope-square envevlope"></i> <?php echo  $contactData->email ;?></p>
         </li>
         <li>
-          <p class="welcome">Welcome <?php if($studetLogin){echo $studentInfo->studentName; }else{echo "Visitor !";}?></p>
+          <p class="welcome">Welcome <?php if($studentLogin){echo $studentInfo->studentName; }else{echo "Visitor !";}?></p>
         </li>
-        <?php if($studetLogin){?>
+        <?php if($studentLogin){?>
         <li>
           <p><a class ="myCart" href="<?php echo BaseUrl;?>admin/dashboard.php">My Account</a></p>
         </li>
