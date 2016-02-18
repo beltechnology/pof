@@ -19,7 +19,7 @@ class  htmlFactory extends  dataFactory
 					$carouselHTML = $carouselHTML."<div class='item active'>
 	 <img class='center-block img-responsive first-slider' src='".BaseUrl."admin/upload/".$carousel->sliderImage."' alt='...'>
       <div class='carousel-caption'>
-		<h1 class='text-center'>".$carousel->text."</h1>   
+		<h1 class='text-center carousel-heading'>".$carousel->text."</h1>   
 	 </div>
     </div>";
 				}
@@ -115,11 +115,14 @@ class  htmlFactory extends  dataFactory
 		$moreinformations = $this->getDataFromServerBytableName("moreinformation");
 		foreach($moreinformations as $moreinformation)
 		{
-			$moreinformationHTML = $moreinformationHTML."<div class='col-lg-3 col-md-3 text'>
-			<img class='img-responsive' src='".BaseUrl."admin/upload/".$moreinformation->upload."'>
+			$moreinformationHTML = $moreinformationHTML."<div class='text'>
+		 <div class='contain'>
+			<img class='img-responsive image' src='".BaseUrl."admin/upload/".$moreinformation->upload."'>
         <div class='written'>
           <h2 class='center-block'>".$moreinformation->title."</h2>
-          <a href='".$moreinformation->link."'><span class='glyphicon glyphicon-play-circle' aria-hidden='true'></span></a> </div>
+          <a href='".$moreinformation->link."'><span class='glyphicon glyphicon-play-circle' aria-hidden='true'></span></a>
+        </div>		  
+		</div>
       </div>";
 		
 		} 
@@ -134,7 +137,7 @@ class  htmlFactory extends  dataFactory
 		$aboutPofDetials = $this->getDataFromServer("aboutpof");
 		foreach($aboutPofDetials as $aboutPofDetail)
 		{
-			$aboutPofHTML = $aboutPofHTML."<div class='col-md-4 col-lg-4 grey-1'>
+			$aboutPofHTML = $aboutPofHTML."<div class='col-md-4 col-lg-4 grey-1 aboutpof".$aboutPofDetail->aboutId."'>
 		     <img class='center-block img-responsive' src='".BaseUrl."admin/upload/".$aboutPofDetail->upload."' alt='pencil-photo'>
 			 <div class='heading'><h2>".$aboutPofDetail->title."</h2></div>
 			 <div>&nbsp;</div>
