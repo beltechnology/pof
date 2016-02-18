@@ -7,3 +7,12 @@ $(".tab").click(function(e) {
 	$(".hideToggle").css({"display":"none"});
 	$("."+getId).css({"display":"block"});
 });
+
+$("ul li").click(function()
+{
+	$(this).find("i").toggleClass("fa-minus-square-o");
+});
+
+$('.carousel').carousel({
+	interval: 3000
+});

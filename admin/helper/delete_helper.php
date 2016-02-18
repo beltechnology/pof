@@ -14,7 +14,7 @@ if(isset($_POST['tableName']) &&($_POST['value']) &&($_POST['fieldName']))
 		$response = $delete->deleteRecord($deleteInfo);
 		if($response != true)
 		{
-		   throw new Exception("genrel eroor.");	
+		   throw new Exception("general error.");	
 		}
 	}
 	catch(Exception $e) {
@@ -22,7 +22,7 @@ if(isset($_POST['tableName']) &&($_POST['value']) &&($_POST['fieldName']))
 	}
 	
 }
-elseif(isset($_POST['category_id']) &&($_POST['checkType']))
+elseif(isset($_POST['category_id']) && ($_POST['checkType']))
 {
 	try
 	{	
@@ -31,9 +31,10 @@ elseif(isset($_POST['category_id']) &&($_POST['checkType']))
 		$featuredInfo->checkType = $_POST['checkType'];
 		$updateFeatured = new deleteinfo ();
 		$response = $updateFeatured->checkFeatured($featuredInfo);
+		var_dump($response);
 		if($response != true)
 		{
-		   throw new Exception("genrel eroor.");	
+		   throw new Exception("general error.");	
 		}
 	}
 	catch(Exception $e) {

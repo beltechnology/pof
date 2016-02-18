@@ -65,7 +65,7 @@ class dataFactory
 	function getMenuData()
 	{
 	  $allData = "";
-	  $res=mysql_query("SELECT * FROM category where deleted = 0 and status= 0 ");
+	  $res=mysql_query("SELECT * FROM category where deleted = 0 and status= 0 and featured=1 ");
 	  while($obj=mysql_fetch_object($res))
 	  {
 	  	$allData[] = $obj;

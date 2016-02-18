@@ -98,7 +98,6 @@ $("input.featured").click(function()
 			data:"category_id="+val+"&checkType="+checkType,
 			type:"POST",
 			success: function(result){
-				alert(result);
 				if(result !="")
 				{
 				//location.reload();

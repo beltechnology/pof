@@ -58,20 +58,5 @@
   <script src="<?php echo $pathCss;?>js/jquery.js"></script>
   <script src="<?php echo $pathCss;?>js/bootstrap.min.js"></script>
   <script src="<?php echo $pathCss;?>js/common.js"></script>
-  
-  <script>
-$("ul li i").click(function()
-{
-	$(this).toggleClass("fa-minus-square-o");
-});
-
-</script>
-	<script>
-    $('.carousel').carousel({
-        interval: 3000
-    })
-	
-	
-</script>
   </body>
 </html>

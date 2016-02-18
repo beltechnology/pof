@@ -603,7 +603,7 @@ public function getSubmenu($parentId)
 				 if($menuInfoData != "")
 				 {
 					 $sumMenuFlag = true;
-					 $iHTML = "<i class='fa fa-plus-square pull-right' href='#demo".$submenu->category_id."'  data-toggle='collapse'></i>";
+					 $iHTML = "<i class='fa fa-plus-square pull-right'></i>";
 				}
 				else
 				{
@@ -611,7 +611,7 @@ public function getSubmenu($parentId)
 				}
 				
 				
-			   $liHTML= $liHTML."<li id='".$submenu->category_id."'><a href='".$_SERVER['PHP_SELF']."?category_id=".$submenu->category_id."'>'".$submenu->title."'<a/>".$iHTML." </li>".$htmlFactory->createPages($submenu->category_id);
+			   $liHTML= $liHTML."<li id='".$submenu->category_id."'  class='category'><a href='#demo".$submenu->category_id."'  data-toggle='collapse'>".$submenu->title."".$iHTML." <a/></li>".$htmlFactory->createPages($submenu->category_id);
 								
 				$submenuHtml = $this->getSubmenu($submenu->category_id);
 				$closeliHTML = "";
