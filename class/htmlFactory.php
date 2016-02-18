@@ -120,10 +120,26 @@ class  htmlFactory extends  dataFactory
 			<img class='img-responsive image' src='".BaseUrl."admin/upload/".$moreinformation->upload."'>
         <div class='written'>
           <h2 class='center-block'>".$moreinformation->title."</h2>
-          <a href='".$moreinformation->link."'><span class='glyphicon glyphicon-play-circle' aria-hidden='true'></span></a>
-        </div>		  
-		</div>
+          <a href='".$moreinformation->link."'><span class='glyphicon glyphicon-play-circle' aria-hidden='true'></span></a> </div>
       </div>";
+		
+		} 
+		return $moreinformationHTML;
+	}
+
+	function  moreInformationInnerPage()
+	{
+		$moreinformationHTML = "";
+		$moreinformations = $this->getDataFromServerBytableName("moreinformation");
+		foreach($moreinformations as $moreinformation)
+		{
+			$moreinformationHTML = $moreinformationHTML."<div class='col-lg-11 col-md-11 col-lg-offset-1 col-md-offset-1 text'><img class='img-responsive pull-left' src='".BaseUrl."admin/upload/".$moreinformation->upload."' style='width:290px; height:170px;'>
+			   <div class='written'> <h2 class='center-block'>".$moreinformation->title."</h2>
+		        <h3> &nbsp; Click here to check</h3>
+                <a href='".$moreinformation->link."'><span class='glyphicon glyphicon-play-circle' aria-hidden='true'></span></a>
+			   </div>
+			  </div>
+			  <div>&nbsp;</div>";
 		
 		} 
 		return $moreinformationHTML;
@@ -157,7 +173,7 @@ function createPages($categoryId)
 	{
 		foreach($pages as $page)
 		{
-			$pageLinkHTML =$pageLinkHTML."<li><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$categoryId."&pageId=".$page->pageId."'>".$page->pageTitle."</a></li>";
+			$pageLinkHTML =$pageLinkHTML."<li class='pages'><span class='glyphicon glyphicon-ok' aria-hidden='true'></span> <a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$categoryId."&pageId=".$page->pageId."'>".$page->pageTitle."</a></li>";
 		}
 	}
 	return $pageLinkHTML;
@@ -170,41 +186,14 @@ function getHomeMenu ()
 	$count = 0;
 	$homeMenu = "";
 	$loopCounter = 1;
+	$cssArray = ["first","second","third","fourth","fifth","sixth"];
 	//var_dump($allMenu);
 		foreach($allMenu as $menu)
 		{
-			
-			if(strtoupper($menu->title) == "NCO")
-			{
-			$homeMenu .= "<div class='col-lg-3 col-md-3 first-b col-md-offset-1 col-lg-offset-1'><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$menu->category_id."'>NCO</a></div>";
+
+			$homeMenu .= "<div class='col-lg-3 col-md-3 ".$cssArray[$count]."-b col-md-offset-1 col-lg-offset-1'><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$menu->category_id."'>".$menu->title."</a></div>";
 			$count++;
-			}
-			elseif(strtoupper($menu->title) == "NSO")
-			{
-			$homeMenu .= "<div class='col-lg-3 col-md-3 second-b col-md-offset-1 col-lg-offset-1'><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$menu->category_id."'>NSO </a></div>";
-			$count++;
-			}
-			elseif(strtoupper($menu->title) == "IEO")
-			{
-			$homeMenu .= "<div class='col-lg-3 col-md-3 third-b col-md-offset-1 col-lg-offset-1'><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$menu->category_id."'>IEO</a> </div>";
-			$count++;
-			}
-			elseif(strtoupper($menu->title) == "IMO")
-			{
-			$homeMenu .= "<div class='col-lg-3 col-md-3 fourth-b col-md-offset-1 col-lg-offset-1'><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$menu->category_id."'>IMO </a></div>";
-			$count++;
-			}
-			elseif(strtoupper($menu->title) == strtoupper("Ask Expert"))
-			{
-			$homeMenu .= "<div class='col-lg-3 col-md-3 fifth-b col-md-offset-1 col-lg-offset-1'><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$menu->category_id."'>Ask Expert</a></div>";
-			$count++;
-			}
-			elseif(strtoupper($menu->title) == "FAQ")
-			{
-			$homeMenu .= "<div class='col-lg-3 col-md-3 sixth-b col-md-offset-1 col-lg-offset-1'><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$menu->category_id."'>FAQ</a></div>";
-			$count++;
-			}
-			
+			if($count == 6) $count=0;
 			
 		}
 	
@@ -225,10 +214,9 @@ function getHomeMenu ()
 				<div class='row'>
 				<div class='stage col-lg-12 col-md-12'>
 				 <div class='contain'>
-                      <img src='/vibhor/pof/img/stage-1.png' alt='Norway' >
-                       <div class='alignment'><p class='first-line'>Lorem Ispum Dummy</p>
-				<p>1 July 2014</p>
-				<p><a href='".$olympaidInfo->link."'>Read Full Story &gt;&gt;</a></p>
+					<img  src='".BaseUrl."admin/upload/".$olympaidInfo->upload."' alt='Norway' >
+					<div class='alignment'><p class='first-line'>". substr(strip_tags($olympaidInfo->description),0,30)."</p>
+					<p><a href='".$olympaidInfo->link."'>Read Full Story &gt;&gt;</a></p>
 				</div>
 				</div>
 				</div>
