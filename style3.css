@@ -99,6 +99,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
 .content .header .top-header  .phone{
 	font-size:23px;
 }
+.content .header .top-header a.myCart{
+	font-size:;
+	color:#ffffcc;
+    text-decoration:none;
+	outline:none;
+} 
+.content .header .top-header a.myCart:hover{
+	text-decoration:none;
+	color:#fbede6;
+	outline:none;
+}
+.content .header .top-header a.myCart:active{
+	text-decoration:none;
+	color:#c5710b;
+	outline:none;
+}
+.content .header .top-header a.myCart:active:focus{
+	outline:none;
+	border:none;
+}
 .content .header .medium-header .home  a{
 	color:#209de2;
 	font-size:16px;
@@ -475,16 +495,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
 	color:#83ba3c;
 }
 .text{
-	float:left;
-	margin-right:1%;
+	float:;
+	margin-right:5%;
 }
 .text img{
 	border-radius:5px;
 	width:320px;
 	height:200px;
+	float:;
+	margin-right:5px;
 }
-.text{
+.text .contain{
 	position:relative;
+	float:left;
 }
 .text .written{
 	color:#ffffff;
@@ -509,13 +532,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
 .text .written{
 	position:absolute;
 	top:20%;
-	left:30%;
+	left:20%;
 	color:#ffffff;
 	font-size:25px;
 }
 .text .written span{
 	position:absolute;
-	margin-left:40px;
+	margin-left:70px;
 	top:100%;
 }
 .main-page .slider-heading{
@@ -1065,10 +1088,12 @@ h1.carousel-heading{
 	display:;
 	text-align:;
 }
-
+/*end of index-inner.html-css*/
+/*ravi.css*/
   ul ul{
     padding-left: 30px;
 }
 ul{list-style:none;}
 .pages
-{padding-left:63px !important;
+{padding-left:63px !important;}
+/*end of ravi.css*/
