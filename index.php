@@ -3,7 +3,7 @@
     <div class="main-content">
       <div class="row container-fluid">
         <div class="col-lg-12 col-md-12 schedule">
-          <h1 class="first-h text-center">Olympaid Schedule:<span class="second-h"> Academic Year 2016-17</span></h1>
+          <h1 class="first-h text-center"><?php echo  $htmlFactory->mSliderHeading();?></h1>
         </div>
         <!--end of schedule--> 
         <!--		   <div class="col-lg-3 col-md-3 col-lg-offset-1 col-md-offset-1">

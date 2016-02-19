@@ -84,7 +84,7 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
               <div class="col-lg-6 col-md-6 col-lg-offset-1 col-md-offset-1">
                 <div class="navbar-header">
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                  <a class="navbar-brand" href="#"><img class="" src="<?php echo BaseUrl?>img/logo.png"></a> </div>
+                  <a class="navbar-brand" href="<?php echo BaseUrl;?>"><img class="" src="<?php echo BaseUrl?>img/logo.png"></a> </div>
               </div>
               <div class="col-lg-2 col-md-2">&nbsp;</div>
             </div>

@@ -158,7 +158,7 @@ class  htmlFactory extends  dataFactory
 			 <div class='heading'><h2>".$aboutPofDetail->title."</h2></div>
 			 <div>&nbsp;</div>
 			 <p>". substr(strip_tags($aboutPofDetail->description),0,110). "..."."</p>
-			 <a class='second center-block' href='#'>READ MORE &gt;&gt;</a>
+			 <a class='second center-block' href='".BaseUrl."pages/index.php?aboutId=".$aboutPofDetail->aboutId."'>READ MORE &gt;&gt;</a>
 			 </div>";
 		
 		} 

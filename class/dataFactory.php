@@ -106,6 +106,20 @@ class dataFactory
 	  return $obj;
 	} 
 	 
+	function mSliderHeading()
+	{
+	  $res=mysql_query("SELECT * FROM mSliderHead where deleted = 0 ");
+	  $obj=mysql_fetch_object($res);
+	  return $obj->title;
+	} 
+	 
+	function getPagesDataById($table,$fieldName,$fieldValue)
+	{
+	  $res=mysql_query("SELECT * FROM ".$table." where ".$fieldName."=".$fieldValue." and deleted = 0 ");
+	  $obj=mysql_fetch_object($res);
+	  return $obj;
+	} 
+	 
 	
 } 
 ?>

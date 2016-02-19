@@ -826,6 +826,27 @@ public function getSubmenu($parentId)
 	}
 	 
  
+	function updatemSliderHeading($sliderHeadData)
+	{
+			$title = $sliderHeadData->title;
+			$mSliderHeadId = $sliderHeadData->mSliderHeadId;				
+			
+			mysql_query("SET AUTOCOMMIT=0");
+			mysql_query("START TRANSACTION");
+			
+			$res = mysql_query("UPDATE mSliderHead SET title='$title'  WHERE mSliderHeadId='$mSliderHeadId'");
+			if ($res) {
+			mysql_query("COMMIT");
+			$response = "Heading   successfully upadted.";
+			} else {        
+			mysql_query("ROLLBACK");
+			$response = "Heading  update failed.";
+			}	
+			
+			return 	$response;		
+	}
+	 
+ 
 }
 
 

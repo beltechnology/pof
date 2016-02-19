@@ -19,12 +19,14 @@ $menuType = "slider";
 			<?php 
             $sliderInfo = new dataInfo();
             $sliderInfoData = $sliderInfo->selectAll("slider");
+            $mSliderHeading = $sliderInfo->selectAll("mSliderHead");
+			foreach($mSliderHeading as $mSliderHeadingData);
      //       var_dump($sliderInfoData);
             ?>
           <table width="100%" border="1" align="center">
           <tbody>
             <tr>
-            <td colspan="5"><h1 align="center"> main Slider</h1></td>
+            <td colspan="5"><h1 align="center"> Main Slider</h1></td>
           </tr>
             <tr>
               <th scope="col">Sr. no</th>
@@ -41,6 +43,16 @@ $menuType = "slider";
 			{?>
             <tr>
             <td colspan="5"><h1 align="center"> Middle Slider</h1></td>
+          </tr>
+            <tr>
+            <form role="form"  action="<?php $_SERVER['PHP_SELF'];?>" method="post" enctype="multipart/form-data">
+            <td>Heading</td>
+            <td colspan="3">
+            <input type="text" class="form-control" required name="title" value="<?php echo  $mSliderHeadingData->title;?>" />
+            <input type="hidden" class="form-control" name="mSliderHeadId" value="<?php echo  $mSliderHeadingData->mSliderHeadId;?>" />
+            </td>
+            <td><input type="submit" value="update" name="sliderUpdate" class="form-control btn-primary" /></td>
+            </form>
           </tr>
 			<?php }
 			?>

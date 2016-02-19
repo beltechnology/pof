@@ -24,6 +24,17 @@ if(isset($_POST['sliderUpdate']))
 				$succesMsg = $response;
 				//header("location:viewPages.php?msg=".$succesMsg);
 			}
+			elseif(isset($_POST['mSliderHeadId']))
+			{
+				$sliderHeadData = new stdClass();
+				$sliderHeadData->title = $_POST['title'];
+				$sliderHeadData->mSliderHeadId = $_POST['mSliderHeadId'];
+
+				
+				$sliderInfo = new dataInfo();
+				$response = $sliderInfo->updatemSliderHeading($sliderHeadData);
+				$succesMsg = $response;
+			}
 			else
 			{
 			throw new Exception("fill required field.");
