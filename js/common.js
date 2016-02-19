@@ -10,7 +10,7 @@ $(".tab").click(function(e) {
 
 $("ul li").click(function()
 {
-	$(this).find("i").toggleClass("fa-minus-square-o");
+	$(this).find("i.pull-right").toggleClass("fa-minus-square-o");
 });
 
 $('.carousel').carousel({

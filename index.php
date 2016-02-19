@@ -24,17 +24,17 @@
     <div class="container-fluid">
       <div class="row ">
         <div class="col-md-8 col-lg-8">
-          <div id="carousel-example-generic" class="carousel slide align" data-ride="carousel"> 
+          <div id="carousel-example-generic1" class="carousel slide align" data-ride="carousel"> 
             <!-- Indicators -->
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox"> <?php echo  $htmlFactory->getIndexCarousel();?> </div>
             
             <!-- Controls --> 
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <a class="left carousel-control" href="#carousel-example-generic1" role="button" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+  <a class="right carousel-control" href="#carousel-example-generic1" role="button" data-slide="next">
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
@@ -83,7 +83,7 @@
   <div>&nbsp;</div>
   <div class="combined-image">
     <div class="container-fluid">
-     <marquee>
+     <marquee onMouseOver="stop()" onMouseOut="start();">
 	  <ul>
 	   <li>
         <?php echo $htmlFactory->moreInformation();?>

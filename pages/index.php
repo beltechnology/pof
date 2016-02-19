@@ -9,7 +9,18 @@ if(isset($_REQUEST['aboutId']))
 	$innerTitle = $innerHtml->title;
 	$innerDescription = $innerHtml->description;
 }
-
+elseif(isset($_REQUEST['pageId']) && ($_REQUEST['categoryId']))
+{
+	$innerHtml = $htmlFactory->getPagesDataById("pages","pageId",$_REQUEST['pageId']);
+	//var_dump($innerHtml);
+	$innerTitle = $innerHtml->pageTitle;
+	$innerDescription = $innerHtml->pageDescription;
+}
+elseif(isset($_REQUEST['categoryId']))
+{
+	$innerTitle = "";
+	$innerDescription = $htmlFactory->createPages($_REQUEST['categoryId']);;
+}
 ?>
 
 
@@ -30,7 +41,7 @@ if(isset($_REQUEST['aboutId']))
 	  <div>&nbsp;</div>
 	  <div class="combined-image container-fluid center-block">
 	   <div class="">
-	     <marquee direction="up">
+	     <marquee direction="up"  onMouseOver="stop()" onMouseOut="start();">
 <?php echo $htmlFactory->moreInformationInnerPage();?>
 		 </marquee>
 		 </div><!--end of container-fluid-->

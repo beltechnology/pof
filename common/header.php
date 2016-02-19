@@ -94,7 +94,7 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <div class="col-md-5 col-md-offset-2 col-lg-5 col-lg-offset-2">
               <ul class="nav navbar-nav navigation pull-right">
-                <li class="home"><a href="#">Home | <span class="sr-only">(current)</span></a></li>
+                <li class="home"><a href="<?php echo BaseUrl;?>">Home | <span class="sr-only">(current)</span></a></li>
                 <li><a href="#">About Us |</a></li>
                 <li><a href="#">What We Do |</a></li>
                 <li><a href="#">Contact Us |</a></li>

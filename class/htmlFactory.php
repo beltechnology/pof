@@ -120,8 +120,8 @@ class  htmlFactory extends  dataFactory
 			<img class='img-responsive image' src='".BaseUrl."admin/upload/".$moreinformation->upload."'>
         <div class='written'>
           <h2 class='center-block'>".$moreinformation->title."</h2>
-          <a href='".$moreinformation->link."'><span class='glyphicon glyphicon-play-circle' aria-hidden='true'></span></a> </div>
-      </div>";
+          <a href='".$moreinformation->link."' target='_blank'><span class='glyphicon glyphicon-play-circle' aria-hidden='true'></span></a> </div>
+      </div></div>";
 		
 		} 
 		return $moreinformationHTML;
@@ -135,8 +135,7 @@ class  htmlFactory extends  dataFactory
 		{
 			$moreinformationHTML = $moreinformationHTML."<div class='col-lg-11 col-md-11 col-lg-offset-1 col-md-offset-1 text'><img class='img-responsive pull-left' src='".BaseUrl."admin/upload/".$moreinformation->upload."' style='width:290px; height:170px;'>
 			   <div class='written'> <h2 class='center-block'>".$moreinformation->title."</h2>
-		        <h3> &nbsp; Click here to check</h3>
-                <a href='".$moreinformation->link."'><span class='glyphicon glyphicon-play-circle' aria-hidden='true'></span></a>
+                <a href='".$moreinformation->link."' target='_blank'><span class='glyphicon glyphicon-play-circle' aria-hidden='true'></span></a>
 			   </div>
 			  </div>
 			  <div>&nbsp;</div>";
@@ -216,7 +215,7 @@ function getHomeMenu ()
 				 <div class='contain'>
 					<img  src='".BaseUrl."admin/upload/".$olympaidInfo->upload."' alt='Norway' >
 					<div class='alignment'><p class='first-line'>". substr(strip_tags($olympaidInfo->description),0,30)."</p>
-					<p><a href='".$olympaidInfo->link."'>Read Full Story &gt;&gt;</a></p>
+					<p><a href='".$olympaidInfo->link."' target='_blank'>Read Full Story &gt;&gt;</a></p>
 				</div>
 				</div>
 				</div>
