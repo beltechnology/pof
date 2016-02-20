@@ -12,13 +12,13 @@ $menuType = "viewNotesCategory";
               <!-- general form elements -->
               <div class="box box-primary">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Notes Category</h3>
+                  <h3 class="box-title">Notes Subject</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
                 <form role="form" action="<?php $_SERVER['PHP_SELF']; ?>" method="post">
                   <div class="box-body">
                     <div class="form-group">
-                      <label>Parent category</label>
+                      <label>Parent Subject</label>
                       <?php 
 					  $selectCategory = new dataInfo();
 					  $selectCategoryData = $selectCategory->selectAll("notescategory");
@@ -26,7 +26,7 @@ $menuType = "viewNotesCategory";
 					  $seletedCategoryid = "";
 					?>
                       <select class="form-control" name="parentCategory" id="parentCategory">
-                      <option value="0">Select parent category</option>
+                      <option value="0">Select parent Subject</option>
                       <?php
 					  if($selectCategoryData)
 					  {
@@ -53,14 +53,14 @@ $menuType = "viewNotesCategory";
                        <div class="form-group"><label><input type="checkbox" name="top" id="top" onClick="isTop(this)" /> Is top</label></div>
                     </div>
                     <div class="form-group">
-                      <label for="categoryName">Category name</label>
-                      <input type="text" class="form-control" id="categoryName" name="categoryName" placeholder="Category name" value="<?php if( $edit) echo $category->CategoryName; ?>"  required />
+                      <label for="categoryName">Subject name</label>
+                      <input type="text" class="form-control" id="categoryName" name="categoryName" placeholder="Subject name" value="<?php if( $edit) echo $category->CategoryName; ?>"  required />
                       <?php if( $edit){?>
                       <input type="hidden" class="form-control" id="notesCategoryId" name="notesCategoryId" placeholder="Category name" value="<?php echo $category->notesCategoryId ?>" required />
                       <?php }?>
                     </div>
                 <div class="box-body pad">
-                <label>Category description</label>
+                <label>Subject description</label>
                     <textarea id="editor1" name="categoryDescription" rows="10" cols="80">
                        <?php if( $edit) echo $category->categoryDescription ?>                     
                     </textarea>

@@ -7,7 +7,7 @@ $menuType = "viewNotesCategory";
         <section class="content-header">
           <h1>&nbsp;          </h1>
           <ol class="breadcrumb">
-            <li><b><a href="notesCategory.php"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Note Category</a></b></li>
+            <li><b><a href="notesCategory.php"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Subject</a></b></li>
           </ol>
         </section>
         <section class="content">
@@ -16,7 +16,7 @@ $menuType = "viewNotesCategory";
 
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Notes Category</h3>
+                  <h3 class="box-title">Notes Subject</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <table id="category" class="table table-bordered table-striped">
@@ -24,8 +24,8 @@ $menuType = "viewNotesCategory";
                       <tr>
                         <th>Sr. no.</th>
 <!--                        <th>Parent category</th>
--->                        <th>Category</th>
-                        <th>Category description</th>
+-->                        <th>Subject</th>
+                        <th>Subject description</th>
                         <th>Seo title</th>
                         <th>Meta</th>
                         <th>Keyword</th>

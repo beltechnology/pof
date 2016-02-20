@@ -33,7 +33,7 @@ $menuType = "registration";
                         <th>Mobile</th>
                         <th>Email</th>
                         <th>City</th>
-                        <th>State</th>
+                        <th>School Code</th>
                         <th>Pin code</th>
                         <th>School Name</th>
 <!--                        <th>School Code</th>
@@ -63,14 +63,14 @@ $menuType = "registration";
                         <td><?php  echo $registration->fatherName ;?></td>
                         <td><?php  echo $registration->motherName ;?></td>
                         <td><?php echo $registration->dob ;?></td>
-                        <td><?php echo $registration->address ;?></td>
-                        <td><?php echo $registration->city ;?></td>
-                        <td><?php echo $registration->addressState ;?></td>
-                        <td><?php echo $registration->mobile ;?></td>
-                        <td><?php echo $registration->email ;?></td>
-                        <td><?php echo $registration->pinCode ;?></td>
                         <td><?php echo $registration->subject ;?></td>
                         <td><?php echo $registration->studentClass ;?></td>
+                        <td><?php echo $registration->address ;?></td>
+                        <td><?php echo $registration->mobile ;?></td>
+                        <td><?php echo $registration->email ;?></td>
+                        <td><?php echo $registration->city ;?></td>
+                        <td><?php echo $registration->schoolCode ;?></td>
+                        <td><?php echo $registration->pinCode ;?></td>
                         <td><?php echo $registration->schoolName ;?></td>
 <?php /*?>                        <td><?php echo $registration->schoolCode ;?></td>
                         <td><?php echo $registration->principalName ;?></td>

@@ -179,6 +179,7 @@ class dataInfo
 				
 				$response = $this->checkExitNotesDetail($categoryData);
 				$notesTitle = $categoryData->notesTitle;
+				$studentClass = $categoryData->studentClass;
 				$notesDescription = $categoryData->notesDescription;
 				$notesCategoryId = $categoryData->notesCategoryId;
 				$seoTitle = $categoryData->seoTitle;
@@ -205,7 +206,7 @@ class dataInfo
 				
 			if($response == true && $categoryData->state == 1 )
 			{
-				$res = mysql_query("INSERT INTO notesdetail (notesCategoryId, notesTitle, notesDescription,uploads, seoTitle, metaTag, keyword, status, sort_order)VALUES ('$notesCategoryId','$notesTitle','$notesDescription','$newfilename','$seoTitle','$metaTag','$keyWord ', '$status', '$sort_order')");
+				$res = mysql_query("INSERT INTO notesdetail (notesCategoryId, notesTitle, notesDescription,uploads,studentClass, seoTitle, metaTag, keyword, status, sort_order)VALUES ('$notesCategoryId','$notesTitle','$notesDescription','$newfilename','$studentClass','$seoTitle','$metaTag','$keyWord ', '$status', '$sort_order')");
 				if ($res) {
 					mysql_query("COMMIT");
 					$response = "Notes Detail successfully added.";
@@ -218,7 +219,7 @@ class dataInfo
 			elseif($response == true && $categoryData->state == 2 )
 			{
 				$notesId = $categoryData->notesId;
-				$res = mysql_query("UPDATE notesdetail SET notesCategoryId='$notesCategoryId',notesTitle='$notesTitle', notesDescription='$notesDescription', uploads='$newfilename', seoTitle='$seoTitle',metaTag='$metaTag',keyWord='$keyWord' ,status='$status' ,sort_order='$sort_order'  WHERE notesId='$notesId'");
+				$res = mysql_query("UPDATE notesdetail SET notesCategoryId='$notesCategoryId',notesTitle='$notesTitle', notesDescription='$notesDescription', uploads='$newfilename',studentClass='$studentClass', seoTitle='$seoTitle',metaTag='$metaTag',keyWord='$keyWord' ,status='$status' ,sort_order='$sort_order'  WHERE notesId='$notesId'");
 				if ($res) {
 					mysql_query("COMMIT");
 					$response = "Notes detail successfully upadted.";
@@ -846,7 +847,7 @@ public function getSubmenu($parentId)
 			return 	$response;		
 	}
 	 
- 
+	 
 }
 
 

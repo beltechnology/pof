@@ -1,8 +1,27 @@
 <?php ob_start(); ?>
 <?php
  include("conn.php");
+ include("../class/constant.php");
+ include("../class/htmlFactory.php");
  $login = new userAuth ();
  $login->userLoginAuth();
+ 
+$htmlFactory = new htmlFactory();
+$studentLogin = false;
+ 
+if(isset($_SESSION['userInfo']))
+{
+	$userInfo = $_SESSION['userInfo'];
+	$userType = $userInfo->userType;
+	if($userType == "student")
+	{
+		$registrationId = $userInfo->registrationId;
+		$studentLogin = true;
+		$studentInfo = $htmlFactory->getStudentInfoById($registrationId);
+		//var_dump($studentInfo);
+
+	}
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -65,7 +84,14 @@
                   <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                   <span class="hidden-xs"><?php 
 				  $userInfo = $_SESSION['userInfo'];
+				  if($studentLogin)
+				  {
+					echo $studentInfo->studentName;  
+				  }
+				  else
+				  {
 			 	  echo $userInfo->userName;
+				  }
 				  ?></span>
                 </a>
                 <ul class="dropdown-menu">
@@ -98,13 +124,27 @@
           <ul class="sidebar-menu">
             
             <li class="active treeview">
-              <a href="#">
-                <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
-              </a>
+              <?php
+				  if($studentLogin)
+				  {?>
+                  <a href="<?php echo BaseUrl; ?>">
+                    <i class="fa fa-dashboard"></i> <span>Home</span> <i class="fa fa-angle-left pull-right"></i>
+                  </a>
+              <ul class="treeview-menu">
+                <li class="active index"><a href="viewNotes.php"><span aria-hidden="true" class="glyphicon  glyphicon-download-alt"></span> Notes</a></li>
+               </ul>
+				 <?php
+				  }
+				  else
+				  {
+			  ?>
+                  <a href="#">
+                    <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
+                  </a>
               <ul class="treeview-menu">
                 <li class="active index"><a href="dashboard.php"><i class="fa fa-circle-o"></i> Dashboard</a></li>
                 <li class="viewCategory" ><a href="viewCategory.php"><i class="fa fa-circle-o"></i> view Category</a></li>
-                <li class="viewNotesCategory" ><a href="viewNotesCategory.php"><i class="fa fa-circle-o"></i> view Notes Category</a></li>
+                <li class="viewNotesCategory" ><a href="viewNotesCategory.php"><i class="fa fa-circle-o"></i> view Subject</a></li>
                 <li class="viewNotes" ><a href="viewNotes.php"><i class="fa fa-circle-o"></i> view Notes</a></li>
                 <li class="viewPages" ><a href="viewPages.php"><i class="fa fa-circle-o"></i> view pages</a></li>
                 <li class="registration" ><a href="viewRegistration.php"><i class="fa fa-circle-o"></i> view registration</a></li>
@@ -115,7 +155,11 @@
                 <li class="contactus" ><a href="contactus.php"><i class="fa fa-circle-o"></i>Update Contact us</a></li>
                 <li class="olympaidInformation" ><a href="viewOlympaidInformation.php"><i class="fa fa-circle-o"></i>View Olympaid Information</a></li>
                <!-- <li><a href="index2.html"><i class="fa fa-circle-o"></i> moreInformation v2</a></li>-->
-              </ul>
+               </ul>
+               <?php
+				  }
+				  ?>
+              
             </li>
           </ul>
         </section>

@@ -144,6 +144,35 @@ var $tbl_name ;
 	  
 	  return $allData;
 	 }
+	 
+	function showNotesByClass($notesData)
+	{
+			$class = $notesData->studentClass;
+			$subject = $notesData->subject;
+		$limit = 20; 	//how many items to show per page
+		if(isset($_GET['page'])) 
+		{								//how many items to show per page
+		$page = $_GET['page'];
+		if($page) 
+			$start = ($page - 1) * $limit;
+		}//first item to display on this page
+		else{
+			$page = 0;
+			$start = 0;
+		}//if no page var is given, set start to 0
+		/* Get data. */
+		$allData ="";
+		$sql = "SELECT * FROM  notesdetail where deleted = 0 and studentClass='".$class."' and status= 0 and notesCategoryId in(".$subject.")   LIMIT $start, $limit";
+		$result = mysql_query($sql);
+	  while($obj=mysql_fetch_object($result))
+	  {
+	  	$allData[] = $obj;
+	  }
+	  	
+
+	  return $allData;
+	 }
+	 
 
 }
 ?>

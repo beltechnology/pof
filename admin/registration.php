@@ -68,26 +68,40 @@ $menuType = "registration";
                       <div class="form-group">
                         <label class="col-sm-2 control-label" for="subject">Subject</label>
                         <div class="col-sm-10">
-                          <select id="subject" name="subject" class="form-control"  required >
-                          	<option value="">Select subject</option>
-                            <?php
-							foreach($subjectData as $subject)
-							{
-								if($edit && $subject == $registrationData->subject)
-								{
-								?>
-								<option value="<?php echo $subject; ?>" selected="selected"><?php echo $subject; ?></option>
-							<?php 
-								}
-								else
-								{
-								?>
-								<option value="<?php echo $subject; ?>"><?php echo $subject; ?></option>
-							<?php 
-								}
-							}
-							?>
-                          </select>
+                          <select id="subject" name="subject[]" class="form-control"  required  multiple>
+                          <?php
+					  $selectCategory = new dataInfo();
+					  $selectCategoryData = $selectCategory->selectAll("notescategory");
+					?>
+                      <option >Select notes Subject</option>
+                      <?php
+					  if($selectCategoryData)
+					  {
+						foreach($selectCategoryData as $categoryData)
+						{
+						   $seletedCategoryid = "";
+						   if($edit)
+						   {
+							   $subjects = explode(",",$registrationData->subject);
+							  // var_dump( $subjects);
+							   foreach($subjects as $subject)
+							   {
+									  if( $subject == $categoryData->notesCategoryId)
+									  {
+										$seletedCategoryid = $categoryData->notesCategoryId ;
+									  }
+							   }
+						   }
+							$parent = $categoryData->parentId;
+							$title = $categoryData->CategoryName;
+							$category_id = $categoryData->notesCategoryId;
+							$ele = "option";
+							$dropDown = $selectCategory->genrateNotesCategory($category_id,$title,$parent,$seletedCategoryid,$ele);
+							echo $dropDown;
+						}
+					  }
+					?>
+                      </select>
                         </div>
                       </div>
                       <div class="form-group">

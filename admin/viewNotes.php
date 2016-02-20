@@ -7,7 +7,13 @@ $menuType = "viewNotes";
         <section class="content-header">
           <h1>&nbsp;          </h1>
           <ol class="breadcrumb">
+                        <?php
+				  if(!$studentLogin)
+				  {?>
             <li><b><a href="notesDetail.php"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Note Detail</a></b></li>
+            <?php
+				  }
+				  ?>
           </ol>
         </section>
         <section class="content">
@@ -19,11 +25,66 @@ $menuType = "viewNotes";
                   <h3 class="box-title">Notes detail</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
+              <?php
+				  if($studentLogin)
+				  {?>
                   <table id="category" class="table table-bordered table-striped">
                     <thead>
                       <tr>
                         <th>Sr. no.</th>
-                        <th>Notes category</th>
+                        <th>Notes Subject</th>
+                        <th>Notes title</th>
+                        <th>Notes description</th>
+                        <th>Download</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php 
+						$pagination = new pagination();
+						$selectCategory = new dataInfo();
+						$notesData = new stdClass();
+						$notesData->studentClass = $studentInfo->studentClass;
+						$notesData->subject = $studentInfo->subject;
+						$tbl_name = "notesdetail";
+						$targetpage = "viewNotes.php";
+						$selectCategoryData = $pagination->showNotesByClass($notesData);
+						//var_dump($selectCategoryData);
+						$sr= 1;
+						if($selectCategoryData)
+						{
+                     foreach($selectCategoryData as $category)
+					  {
+						$seletedCategoryid = "";
+						$notesCategoryDesc = $selectCategory->getNotesCategoryDataByCategoryId($category->notesCategoryId);
+						$parent = $notesCategoryDesc->parentId;
+						$title = $notesCategoryDesc->CategoryName;
+						$category_id = $notesCategoryDesc->notesCategoryId;
+						$ele = "span";
+						$dropDown = $selectCategory->genrateNotesCategory($category_id,$title,$parent,$seletedCategoryid,$ele);
+						?>
+                      <tr>
+                        <td><?php echo $sr++;?> </td>
+                        <td><?php  echo $dropDown ;?></td>
+                        <td><?php  echo $category->	notesTitle ;?></td>
+                        <td><?php  echo $category->notesDescription ;?></td>
+                        <td> <a download href="<?php  echo BaseUrl."admin/upload/".$category->uploads;?>">Download <span aria-hidden="true" class="glyphicon  glyphicon-download-alt"></span></a></td>
+                      </tr>
+                      <?php
+						}
+					}
+					  ?>
+                    </tbody>
+                    
+                  </table>
+                <?php
+				  }
+				  else
+				  {?>
+                  <table id="category" class="table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th>Sr. no.</th>
+                        <th>Notes Subject</th>
                         <th>Notes title</th>
                         <th>Notes description</th>
                         <th>Seo title</th>
@@ -74,6 +135,9 @@ $menuType = "viewNotes";
                     </tbody>
                     
                   </table>
+                  <?php
+				  }
+                  ?>
                 </div><!-- /.box-body -->
                 
               </div><!-- /.box -->

@@ -6,6 +6,7 @@ if(isset($_POST['addNotesDetail']))
 			{
 				$notesDetailData = new stdClass();
 				$notesDetailData->notesTitle = $_POST['notesTitle'];
+				$notesDetailData->studentClass = $_POST['studentClass'];
 				$notesDetailData->notesDescription = $_POST['notesDescription'];
 				if(isset($_FILES["notesFile"]["name"]) && !empty($_FILES["notesFile"]["name"]))
 				{
@@ -36,7 +37,7 @@ if(isset($_POST['addNotesDetail']))
 				$categoryInfo = new dataInfo();
 				$response = $categoryInfo ->addNotesDetail($notesDetailData);
 				$succesMsg = $response;
-				header("location:viewNotes.php");
+				header("location:viewNotes.php?msg=".$succesMsg);
 			}
 			else
 			{

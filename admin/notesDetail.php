@@ -1,6 +1,9 @@
 <?php
 include("controller/notesDetail_controller.php");
 $menuType = "viewNotes";
+  $objectInfoData = new objectInfo();
+  $classData = $objectInfoData->getClass();
+
 ?>
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
@@ -18,7 +21,7 @@ $menuType = "viewNotes";
                 <form role="form"  action="<?php $_SERVER['PHP_SELF'];?>" method="post" enctype="multipart/form-data">
                   <div class="box-body">
                     <div class="form-group">
-                      <label>Notes category</label>
+                      <label>Notes Subject</label>
                       <?php 
 					  $edit = "";
 					  $selectCategory = new dataInfo();
@@ -30,7 +33,7 @@ $menuType = "viewNotes";
 					  }
 					?>
                       <select class="form-control" name="notesCategoryId" id="notesCategoryId" required>
-                      <option >Select notes category</option>
+                      <option >Select notes Subject</option>
                       <?php
 					  if($selectCategoryData)
 					  {
@@ -51,6 +54,30 @@ $menuType = "viewNotes";
 					  }
 					?>
                       </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="categoryName">Class</label>
+                          <select id="studentClass" name="studentClass" class="form-control"  required >
+                          	<option value="">Select class</option>
+                            <?php
+                            foreach($classData as $classess)
+                            {
+								if($edit && $classess == $notesDteailData->studentClass)
+								{
+								?>
+								<option value="<?php echo $classess; ?>" selected="selected"><?php echo $classess; ?></option>
+							<?php 
+								}
+								else
+								{
+								?>
+								<option value="<?php echo $classess; ?>"><?php echo $classess; ?></option>
+							<?php 
+								}
+                            }
+                            ?>
+                          </select>
+
                     </div>
                     <div class="form-group">
                       <label for="categoryName">Notes title</label>
