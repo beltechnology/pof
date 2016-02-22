@@ -6,13 +6,20 @@ $menuType = "viewNotes";
         <!-- Main content -->
         <section class="content-header">
           <h1>&nbsp;          </h1>
-          <ol class="breadcrumb">
+          
                         <?php
 				  if(!$studentLogin)
 				  {?>
+                  <ol class="breadcrumb">
             <li><b><a href="notesDetail.php"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Note Detail</a></b></li>
             <?php
 				  }
+				  else
+				  {?>
+                  <ol class="breadcrumb-student">
+                  <li ><b><?php echo $CategoryName ;?></b></li>
+                  <?php
+                  }
 				  ?>
           </ol>
         </section>
@@ -22,29 +29,25 @@ $menuType = "viewNotes";
 
               <div class="box">
                 <div class="box-header">
+				 <?php  if(!$studentLogin)
+				  {?>
                   <h3 class="box-title">Notes detail</h3>
+            <?php
+				  }
+				?>
                 </div><!-- /.box-header -->
                 <div class="box-body">
               <?php
 				  if($studentLogin)
 				  {?>
-                  <table id="category" class="table table-bordered table-striped">
-                    <thead>
-                      <tr>
-                        <th>Sr. no.</th>
-                        <th>Notes Subject</th>
-                        <th>Notes title</th>
-                        <th>Notes description</th>
-                        <th>Download</th>
-                      </tr>
-                    </thead>
-                    <tbody>
+                  
+<div class="row">
                       <?php 
 						$pagination = new pagination();
 						$selectCategory = new dataInfo();
 						$notesData = new stdClass();
 						$notesData->studentClass = $studentInfo->studentClass;
-						$notesData->subject = $studentInfo->subject;
+						$notesData->subject = $notesCategoryId;
 						$tbl_name = "notesdetail";
 						$targetpage = "viewNotes.php";
 						$selectCategoryData = $pagination->showNotesByClass($notesData);
@@ -54,29 +57,33 @@ $menuType = "viewNotes";
 						{
                      foreach($selectCategoryData as $category)
 					  {
-						$seletedCategoryid = "";
-						$notesCategoryDesc = $selectCategory->getNotesCategoryDataByCategoryId($category->notesCategoryId);
-						$parent = $notesCategoryDesc->parentId;
-						$title = $notesCategoryDesc->CategoryName;
-						$category_id = $notesCategoryDesc->notesCategoryId;
-						$ele = "span";
-						$dropDown = $selectCategory->genrateNotesCategory($category_id,$title,$parent,$seletedCategoryid,$ele);
+						$string = strip_tags($category->notesDescription);
+						$stringCut = "";
+						if (strlen($string) > 200) {
+							
+							$stringCut = substr($string, 0, 200);
+							$string = substr($stringCut, 0, strrpos($stringCut, ' ')).'...'; 
+						}
 						?>
-                      <tr>
-                        <td><?php echo $sr++;?> </td>
-                        <td><?php  echo $dropDown ;?></td>
-                        <td><?php  echo $category->	notesTitle ;?></td>
-                        <td><?php  echo $category->notesDescription ;?></td>
-                        <td> <a download href="<?php  echo BaseUrl."admin/upload/".$category->uploads;?>">Download <span aria-hidden="true" class="glyphicon  glyphicon-download-alt"></span></a></td>
-                      </tr>
+						 
+							<div class="col-sm-4" >
+							<div class="card card-block studentCard">
+						  <h3 class="card-title"><?php  echo $category->notesTitle ;?></h3>
+						  <p class="card-text"><?php   echo $string ;?></p>
+						  <?php
+						  if($stringCut)
+						  {?>
+						  <a href="<?php  echo BaseUrl."admin/readmore.php?notesCategoryId=".$category->notesCategoryId."&notesId=".$category->notesId;?>" class="btn btn-primary">Read More..</a>
+						  <?php } ?>
+						  <a download href="<?php  echo BaseUrl."admin/upload/".$category->uploads;?>" class="btn btn-primary pull-right">Download</a>
+						</div>
+						  </div>
                       <?php
 						}
 					}
 					  ?>
-                    </tbody>
-                    
-                  </table>
-                <?php
+                      </div>
+             <?php
 				  }
 				  else
 				  {?>
@@ -86,7 +93,7 @@ $menuType = "viewNotes";
                         <th>Sr. no.</th>
                         <th>Notes Subject</th>
                         <th>Notes title</th>
-                        <th>Notes description</th>
+                        <!--<th>Notes description</th>-->
                         <th>Seo title</th>
                         <th>Meta</th>
                         <th>Keyword</th>
@@ -120,7 +127,7 @@ $menuType = "viewNotes";
                         <td><?php echo $sr++;?> </td>
                         <td><?php  echo $dropDown ;?></td>
                         <td><?php  echo $category->	notesTitle ;?></td>
-                        <td><?php  echo $category->notesDescription ;?></td>
+                        <?php /*?><td><?php  echo $category->notesDescription ;?></td><?php */?>
                         <td><?php echo $category->seoTitle ;?></td>
                         <td><?php echo $category->metaTag ;?></td>
                         <td><?php echo $category->keyWord ;?></td>

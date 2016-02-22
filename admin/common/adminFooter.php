@@ -54,9 +54,14 @@
   </body>
 </html>
 <script>
+              <?php
+				  if(!$studentLogin)
+				  {?>
+
 $("ul.treeview-menu li").removeClass("active");
 $("li.<?php echo $menuType; ?>").addClass("active");
-
+<?php
+				  }?>
 $("a.delete").click(function()
 {
 	var response = confirm("Do you relly want delete.");

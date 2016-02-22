@@ -43,6 +43,7 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
 <link rel="stylesheet" href="<?php echo BaseUrl;?>font-awesome/css/font-awesome.min.css">
 <!-- Bootstrap -->
 <link href="<?php echo BaseUrl;?>css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" media="screen" href="https://mainlinetest.vismc.com/gladstone/portal/bloom/vitals/scripts/css/bootstrap-datetimepicker.min.css">
 </head>
 <body class="body">
 <div class="content">
@@ -61,6 +62,9 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
         <?php if($studentLogin){?>
         <li>
           <p><a class ="myCart" href="<?php echo BaseUrl;?>admin/dashboard.php">My Account</a></p>
+        </li>
+        <li>
+          <p><a class ="myCart" href="<?php echo BaseUrl;?>admin/logout.php">Logout</a></p>
         </li>
        <?php }  ?>
         <li>
@@ -222,8 +226,9 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
               <div class="col-md-5 col-lg-5">
                 <input class="group-form" type="text" class="form-control" name="userName" placeholder=" User name" required>
               </div>
-              <div class="col-md-5 col-lg-5">
-                <input class="group-form" type="password" class="form-control" name="password" placeholder="Password" required>
+              <div class="col-md-5 col-lg-5 date" id="passwordDate">
+	             
+                <input class="group-form " type="password" class="form-control" name="password" placeholder="Password" required>
               </div>
               <div class="col-md-1 col-lg-1">&nbsp;</div>
             </div>

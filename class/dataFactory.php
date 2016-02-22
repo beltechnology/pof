@@ -120,6 +120,28 @@ class dataFactory
 	  return $obj;
 	} 
 	 
-	
+	function getSubjectById($subject)
+	{
+		$allData ="";
+		$sql = "SELECT * FROM  notescategory where deleted = 0 and  status= 0 and notesCategoryId in(".$subject.") ";
+		$result = mysql_query($sql);
+	  while($obj=mysql_fetch_object($result))
+	  {
+	  	$allData[] = $obj;
+	  }
+	  return $allData;
+	}
+	 
+	function getPagesById($notesId)
+	{
+		$allData ="";
+		$sql = "SELECT * FROM  notesdetail where deleted = 0 and  status= 0 and $notesId= $notesId ";
+		$result = mysql_query($sql);
+	  while($obj=mysql_fetch_object($result))
+	  {
+	  	$allData[] = $obj;
+	  }
+	  return $allData;
+	}
 } 
 ?>

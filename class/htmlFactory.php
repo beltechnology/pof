@@ -115,13 +115,13 @@ class  htmlFactory extends  dataFactory
 		$moreinformations = $this->getDataFromServerBytableName("moreinformation");
 		foreach($moreinformations as $moreinformation)
 		{
-			$moreinformationHTML = $moreinformationHTML."<div class='text'>
+			$moreinformationHTML = $moreinformationHTML."<li><div class='text'>
 		 <div class='contain'>
 			<img class='img-responsive image' src='".BaseUrl."admin/upload/".$moreinformation->upload."'>
         <div class='written'>
           <h2 class='center-block'>".$moreinformation->title."</h2>
           <a href='".$moreinformation->link."' target='_blank'><span class='glyphicon glyphicon-play-circle' aria-hidden='true'></span></a> </div>
-      </div></div>";
+      </div></div></li>";
 		
 		} 
 		return $moreinformationHTML;
@@ -237,7 +237,7 @@ function getHomeMenu ()
 			foreach ($getTestimonialData as $testimonial)
 			{
 				
-				$testimonialHTML .= "<div class='col-lg-12 col-md-12 item ".$active."'> <img class='center-block img-responsive fixed-size' src='".BaseUrl."admin/upload/".$testimonial->upload."'>
+				$testimonialHTML .= "<div class='col-lg-12 col-md-12 item ".$active."'> <img class='center-block img-responsive img-circle fixed-size' src='".BaseUrl."admin/upload/".$testimonial->upload."'>
         <h1 class='text-center'>".$testimonial->title."</h1>
         <p class='text-center'".$testimonial->description."</p>
       </div>";

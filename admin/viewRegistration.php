@@ -24,6 +24,7 @@ $menuType = "registration";
                       <tr>
                         <th>Sr. no.</th>
                         <th>Name</th>
+                        <th>User Name</th>
                         <th>Father Name</th>
                         <th>Mother Name</th>
                         <th>Date of Brith</th>
@@ -60,10 +61,11 @@ $menuType = "registration";
                       <tr>
                         <td><?php echo $sr++;?> </td>
                         <td><?php  echo $registration->studentName	 ;?></td>
+                        <td><?php  echo $registration->studentName.$registration->studentId;?></td>
                         <td><?php  echo $registration->fatherName ;?></td>
                         <td><?php  echo $registration->motherName ;?></td>
                         <td><?php echo $registration->dob ;?></td>
-                        <td><?php echo $registration->subject ;?></td>
+                        <td><?php $subjects = $htmlFactory->getSubjectById($registration->subject); if($subjects != ""){foreach($subjects as $subject){ echo $subject->CategoryName.","; }}?></td>
                         <td><?php echo $registration->studentClass ;?></td>
                         <td><?php echo $registration->address ;?></td>
                         <td><?php echo $registration->mobile ;?></td>

@@ -85,9 +85,7 @@
     <div class="container-fluid">
      <marquee onMouseOver="stop()" onMouseOut="start();">
 	  <ul>
-	   <li>
         <?php echo $htmlFactory->moreInformation();?>
-	   </li>
 	  </ul>
      </marquee>
    </div>

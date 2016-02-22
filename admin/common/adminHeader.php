@@ -66,11 +66,23 @@ if(isset($_SESSION['userInfo']))
 
       <header class="main-header">
         <!-- Logo -->
-        <a href="index.php" class="logo">
+        
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <!-- logo for regular state and mobile devices -->
+          <?php
+if($studentLogin)
+{
+	?><a href="../" class="logo">
+          <span class="logo-lg"><img src="<?php echo BaseUrl;?>/img/logo.png"</span>
+        </a>
+        <?php
+}
+else
+{?><a href="index.php" class="logo">
           <span class="logo-lg"><b>Admin</b></span>
         </a>
+        <?php
+}?>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top" role="navigation">
           <!-- Sidebar toggle button-->
@@ -126,14 +138,43 @@ if(isset($_SESSION['userInfo']))
             <li class="active treeview">
               <?php
 				  if($studentLogin)
-				  {?>
+				  {
+					  $subjects = $htmlFactory->getSubjectById($studentInfo->subject);
+					//  var_dump( $subjects);
+					  ?>
                   <a href="<?php echo BaseUrl; ?>">
                     <i class="fa fa-dashboard"></i> <span>Home</span> <i class="fa fa-angle-left pull-right"></i>
                   </a>
               <ul class="treeview-menu">
-                <li class="active index"><a href="viewNotes.php"><span aria-hidden="true" class="glyphicon  glyphicon-download-alt"></span> Notes</a></li>
+              <?php
+			  $count = 0;
+			  foreach($subjects as $subject)
+			  {
+				  if(isset($_REQUEST['notesCategoryId']))
+				  {
+					  $notesCategoryId = $_REQUEST['notesCategoryId'];
+					  if($subject->notesCategoryId == $notesCategoryId ) {
+					  $CategoryName = $subject->CategoryName;
+					  }
+				  }
+				  else
+				  {
+					  if($count == 0)
+					  {
+					  $notesCategoryId = $subject->notesCategoryId;
+					  $CategoryName = $subject->CategoryName;
+					  }
+				  }
+				  $count ++;
+			  ?>
+                <li class="<?php if($subject->notesCategoryId == $notesCategoryId ) {echo "active"; }?> index"><a href="viewNotes.php?notesCategoryId=<?php echo $subject->notesCategoryId;?>"><span aria-hidden="true" class="glyphicon  glyphicon-download-alt"></span><?php echo $subject->CategoryName;?></a></li>
+                				 <?php
+				  
+				  }
+?>
                </ul>
 				 <?php
+				  
 				  }
 				  else
 				  {
@@ -165,3 +206,21 @@ if(isset($_SESSION['userInfo']))
         </section>
         <!-- /.sidebar -->
       </aside>
+<style>
+.logo-lg img {
+    width: 50%;
+    padding: 0px 0px 0px 0px;
+    height: 50%;
+}
+ol.breadcrumb-student {
+    list-style: none;
+    text-align: center;
+    font-size: 20px;
+}
+.card.card-block.studentCard {
+    border: 1px solid #ccc;
+    padding: 0px 10px 10px 10px;
+    border-radius: 5px;
+    background-color: #ccc;
+}
+</style>

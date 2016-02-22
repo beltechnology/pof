@@ -1101,5 +1101,8 @@ ul{list-style:none;}
     margin-left: 6px;
     padding: 24px 0 0 !important;
 }
+marquee ul li {
+    float: left;
+}
 
 /*end of ravi.css*/
