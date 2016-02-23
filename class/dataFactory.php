@@ -108,7 +108,7 @@ class dataFactory
 	 
 	function mSliderHeading()
 	{
-	  $res=mysql_query("SELECT * FROM mSliderHead where deleted = 0 ");
+	  $res=mysql_query("SELECT * FROM msliderhead where deleted = 0 ");
 	  $obj=mysql_fetch_object($res);
 	  return $obj->title;
 	} 

@@ -1,0 +1,71 @@
+/*--css of contact.html--*/
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("fonts/Roboto-Regular.eot?") format("eot"),
+  url("fonts/Roboto-Regular.woff") format("woff"),
+  url("fonts/Roboto-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("fonts/Roboto-Regular.eot?") format("eot"),
+  url("fonts/Roboto-Regular.woff") format("woff"),
+  url("fonts/Roboto-Regular.ttf") format("truetype");
+}
+.content{
+   max-width:1366px;
+   margin:auto;
+}
+.contact-page  h2{
+	color:#99cc33;
+	font-size:25px;
+	font-family:Roboto-Regular;
+}
+.contact-page .border{
+	border-bottom:1px solid #99cc33;
+	width:130px;
+}
+.contact-page  p{
+	color:#666666;
+	font-size:16px;
+	font-family:Roboto-Regular;
+}
+.contact-page h3{
+	color:#ff6633;
+	font-size:25px;
+	font-family:Roboto-Regular;
+}
+.contact-page .border-2{
+	border-bottom:1px solid #ff6633;
+	width:90px;
+}
+.contact-page .form-control{
+	border-radius:0;
+}
+.form .btn{
+	background:#ff6633;
+} 
+.form .btn{
+	color:#ffffff;
+	font-size:16px;
+	border:none;	
+	padding-top:7%;
+	padding-bottom:7%;
+	font-family:Roboto-Regular;
+	border-radius:0;
+	margin-top:-4%;
+}
+.form .btn:focus{
+	outline:none;
+	background:#cccccc;
+	color:#000000
+}
+.form .btn:active:focus{
+	outline:none;
+	background:#cccccc;
+	color:#000000;
+}
+.form .btn:hover{
+	outline:none;
+	background:#cccccc;
+	color:#ffffff;
+}

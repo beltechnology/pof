@@ -119,6 +119,8 @@ var $tbl_name ;
 	}
 	return $pagination;
 	}
+
+
 	
 	public function selectAll($tbl_name)
 	 {
@@ -144,6 +146,37 @@ var $tbl_name ;
 	  
 	  return $allData;
 	 }
+	 
+	 
+	 
+	public function selectAllDataByNotes($pagenationInfo)
+	 {
+		$notesCategoryId = $pagenationInfo->notesCategoryId;
+		$page = $pagenationInfo->page;
+		
+		$limit = 2; 
+		$start = ($page - 1) * $limit;
+		$allData ="";
+		$sql = "SELECT * FROM notesdetail  where notesCategoryId =$notesCategoryId and deleted = 0 LIMIT $start, $limit ";
+		$result = mysql_query($sql);
+		  while($obj=mysql_fetch_object($result))
+		  {
+			$allData[] = $obj;
+		  }
+			  return $allData;
+	 }
+	 
+	function numRows($pagenationInfo) {
+		$notesCategoryId = $pagenationInfo->notesCategoryId;
+		$page = $pagenationInfo->page;
+		$sql = "SELECT * FROM notesdetail  where notesCategoryId =$notesCategoryId and deleted = 0 ";
+		$result = mysql_query($sql);
+		$rowcount = mysql_num_rows($result);
+		$limit = 2; 
+		$rowcount  = ceil($rowcount/$limit);
+		return $rowcount;	
+	}
+	 
 	 
 	function showNotesByClass($notesData)
 	{

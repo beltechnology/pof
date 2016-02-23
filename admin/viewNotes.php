@@ -38,49 +38,14 @@ $menuType = "viewNotes";
                 </div><!-- /.box-header -->
                 <div class="box-body">
               <?php
+			  
+			  
 				  if($studentLogin)
 				  {?>
                   
-<div class="row">
+<div class="row" id='pagenationResult'>
                       <?php 
-						$pagination = new pagination();
-						$selectCategory = new dataInfo();
-						$notesData = new stdClass();
-						$notesData->studentClass = $studentInfo->studentClass;
-						$notesData->subject = $notesCategoryId;
-						$tbl_name = "notesdetail";
-						$targetpage = "viewNotes.php";
-						$selectCategoryData = $pagination->showNotesByClass($notesData);
-						//var_dump($selectCategoryData);
-						$sr= 1;
-						if($selectCategoryData)
-						{
-                     foreach($selectCategoryData as $category)
-					  {
-						$string = strip_tags($category->notesDescription);
-						$stringCut = "";
-						if (strlen($string) > 200) {
-							
-							$stringCut = substr($string, 0, 200);
-							$string = substr($stringCut, 0, strrpos($stringCut, ' ')).'...'; 
-						}
-						?>
-						 
-							<div class="col-sm-4" >
-							<div class="card card-block studentCard">
-						  <h3 class="card-title"><?php  echo $category->notesTitle ;?></h3>
-						  <p class="card-text"><?php   echo $string ;?></p>
-						  <?php
-						  if($stringCut)
-						  {?>
-						  <a href="<?php  echo BaseUrl."admin/readmore.php?notesCategoryId=".$category->notesCategoryId."&notesId=".$category->notesId;?>" class="btn btn-primary">Read More..</a>
-						  <?php } ?>
-						  <a download href="<?php  echo BaseUrl."admin/upload/".$category->uploads;?>" class="btn btn-primary pull-right">Download</a>
-						</div>
-						  </div>
-                      <?php
-						}
-					}
+					  include("pagenationResult.php");
 					  ?>
                       </div>
              <?php
@@ -148,9 +113,11 @@ $menuType = "viewNotes";
                 </div><!-- /.box-body -->
                 
               </div><!-- /.box -->
-            <?php
-			$paginations = $pagination->paginations($tbl_name,$targetpage);
-			echo $paginations;
+				 <?php  if(!$studentLogin)
+				  {
+					$paginations = $pagination->paginations($tbl_name,$targetpage);
+					echo $paginations;
+				  }
 			?>
             </div><!-- /.col -->
             
@@ -159,4 +126,41 @@ $menuType = "viewNotes";
           
         </section><!-- /.content -->
       </div>
-<?php include("common/adminFooter.php");?>
+<?php include("common/adminFooter.php");
+ if($studentLogin)
+  {
+
+?>
+<script>
+$(document).ready(function(){
+	function getresult(url) {
+		$.ajax({
+			url: url,
+			type: "GET",
+			data:  {rowcount:$("#rowcount").val()},
+			beforeSend: function(){
+			$('#loader-icon').show();
+			},
+			complete: function(){
+			$('#loader-icon').hide();
+			},
+			success: function(data){
+			$("#pagenationResult").append(data);
+			},
+			error: function(){} 	        
+	   });
+	}
+	$(window).scroll(function(){
+		
+		if ($(window).scrollTop() == $(document).height() - $(window).height()){
+			if($(".pagenum:last").val() < $(".total-page").val()) {
+				var pagenum = parseInt($(".pagenum:last").val()) + 1;
+				getresult('pagenationResult.php?page='+pagenum+'&notesCategoryId='+<?php echo $_REQUEST['notesCategoryId'];?>);
+			}
+		}
+	}); 
+});
+</script>
+<?php
+  }
+  ?>

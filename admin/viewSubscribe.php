@@ -44,7 +44,10 @@ $menuType = "olympaidInformation";
                       <tr>
                         <td><?php echo $sr++;?> </td>
                         <td><?php  echo $category->email ;?></td>
-                        <td><a href="#" class="delete" data="emailId=<?php  echo $category->emailId;?>=emailsubscribe">Delete <span aria-hidden="true" class="glyphicon glyphicon-trash"></span></a></td>
+                        <td>
+                        <a href="#" class="delete" data="emailId=<?php  echo $category->emailId;?>=emailsubscribe">Delete
+                         <span aria-hidden="true" class="glyphicon glyphicon-trash"></span>
+                         </a></td>
                       </tr>
                       <?php
 						}
