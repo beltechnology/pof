@@ -51,7 +51,7 @@
           <div>&nbsp;</div>
           <div class="row container-fluid">
             <div class="schedule-2 col-lg-12 col-md-12">
-              <h1 class="second-h text-center">Olympaid Information</h1>
+              <h1 class="second-h text-center">Olympiad Information</h1>
             </div>
           </div>
           <div class="row container-fluid">

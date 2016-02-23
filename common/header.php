@@ -54,10 +54,10 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
 	<div class="col-lg-12 col-md-12">
       <ul class="nav nav-justified">
         <li>
-          <p> &nbsp; <i class="fa fa-envelope-square envevlope"></i> <?php echo  $contactData->email ;?></p>
+          <p> &nbsp; <i class="fa fa-envelope-square envevlope"></i> <span class="register-2"><?php echo  $contactData->email ;?></span></p>
         </li>
         <li>
-          <p class="welcome">Welcome <?php if($studentLogin){echo $studentInfo->studentName; }else{echo "Visitor !";}?></p>
+          <p class="welcome"><span class="register-2">Welcome </span> <?php if($studentLogin){echo $studentInfo->studentName; }else{echo "Visitor !";}?></p>
         </li>
         <?php if($studentLogin){?>
         <li>
@@ -68,7 +68,7 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
         </li>
        <?php }  ?>
         <li>
-          <p><i class="fa fa-phone-square phone"></i> + 91 <?php echo  $contactData->mobile ;?></p>
+          <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <i class="fa fa-phone-square phone"></i> <span class="register-2">+ 91 <?php echo  $contactData->mobile ;?></span></p>
         </li>
       </ul>
 	 </div>
@@ -96,12 +96,12 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
           </div>
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <div class="col-md-5 col-md-offset-2 col-lg-5 col-lg-offset-2">
+            <div class="col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1">
               <ul class="nav navbar-nav navigation pull-right">
-                <li class="home"><a href="<?php echo BaseUrl;?>">Home | <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">About Us |</a></li>
-                <li><a href="#">What We Do |</a></li>
-                <li><a href="#">Contact Us |</a></li>
+                <li class="home"><a href="<?php echo BaseUrl;?>">Home &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">About Us &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp;</a></li>
+                <li><a href="#">What We Do &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp;</a></li>
+                <li><a href="#">Contact Us &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp;</a></li>
               </ul>
             </div>
             <div class="col-md-3 col-lg-3">
@@ -151,10 +151,10 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
             <div class="col-md-1 col-lg-1">&nbsp;</div>
             <div class="col-md-10 col-lg-10">
               <div class="register">
-               <a class="brown tab" data="registered">
+               <a class="brown tab" data="registered" href="#">
                	<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;  REGISTER </span>
                </a>
-                 <span class="straight-line">&nbsp; | </span> <a class="grey tab" data="logged"><span>&nbsp; LOGIN</span></a> </div>
+                 <span class="straight-line">&nbsp; | </span> <a class="grey tab" data="logged" href="#"><span>&nbsp; LOGIN</span></a> </div>
             </div>
             <div class="col-md-1 col-lg-1">&nbsp;</div>
           </div>
@@ -205,7 +205,7 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
             <div class="row">
               <div class="col-md-1 col-lg-1">&nbsp;</div>
               <div class="col-md-5 col-lg-5">
-                <input class="group-form" type="text" class="form-control" placeholder="state" name="state" required>
+                <input class="group-form" type="text" class="form-control" placeholder="State" name="state" required>
               </div>
               <div class="col-md-5 col-lg-5">
                 <input class="group-form" type="text" class="form-control" placeholder="School Name"  name="schoolName" required>

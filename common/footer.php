@@ -2,7 +2,7 @@
 	   <div class="container-fluid">
 	    <div class="row">
 		  <div class="col-lg-2 col-md-2">&nbsp;</div>
-		  <div class="col-lg-4 col-md-4"><h2 class="text-center">Subscribe our newsletter</h2>
+		  <div class="col-lg-4 col-md-4"><h2 class="text-center">Subscribe Our Newsletter</h2>
 		  </div>
 		  <div>&nbsp;</div>
 		  <div class="col-lg-4 col-md-4">

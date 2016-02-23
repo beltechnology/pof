@@ -213,7 +213,7 @@ function getHomeMenu ()
 				<div class='row'>
 				<div class='stage col-lg-12 col-md-12'>
 				 <div class='contain'>
-					<img  src='".BaseUrl."admin/upload/".$olympaidInfo->upload."' alt='Norway' >
+					<img  src='".BaseUrl."admin/upload/".$olympaidInfo->upload."' alt='Norway' class='".$olympaidInfo->olympaidInformationId."medium-image'>
 					<div class='alignment'><p class='first-line'>". substr(strip_tags($olympaidInfo->description),0,30)."</p>
 					<p><a href='".$olympaidInfo->link."' target='_blank'>Read Full Story &gt;&gt;</a></p>
 				</div>
