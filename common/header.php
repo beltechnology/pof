@@ -171,9 +171,9 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
           <div class="row hideToggle logged" style="display:none;">
             <div class="col-md-1 col-lg-1">&nbsp;</div>
             <div class="col-md-10 col-lg-10">
-              <div class="register">
-                <h3>Student Login </h3>
-              </div>
+              <!--<div class="register">
+                <h3>Student Login </h3>*/
+              </div>-->
             </div>
             <div class="col-md-1 col-lg-1">&nbsp;</div>
           </div>
@@ -223,16 +223,22 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
           <form class="form hideToggle logged" style="display:none" action="<?php echo BaseUrl;?>admin/index.php" method="post">
             <div class="row">
               <div class="col-md-1 col-lg-1">&nbsp;</div>
-              <div class="col-md-5 col-lg-5">
-                <input class="group-form" type="text" class="form-control" name="userName" placeholder=" User name" required>
+              <div class="col-md-10 col-lg-10">
+			  <label for="exampleInputText">User Name</label>
+                <input class="group-form" type="text" class="form-control" name="userName" placeholder=" " required>
               </div>
-              <div class="col-md-5 col-lg-5 date" id="passwordDate">
-	             
-                <input class="group-form " type="password" class="form-control" name="password" placeholder="Password" required>
+			  <div class="col-md-1 col-lg-1">&nbsp;</div>
+			</div>
+			<div>&nbsp;</div>
+			<div class="row">
+			  <div class="col-md-1 col-lg-1">&nbsp;</div>
+              <div class="col-md-10 col-lg-10">
+	           <label for="exampleInputPassword">Password</label>  
+                <input class="group-form " type="password" class="form-control" name="password" placeholder="" required>
               </div>
               <div class="col-md-1 col-lg-1">&nbsp;</div>
             </div>
-            <div>&nbsp;</div>
+            <div>&nbsp;</div><div>&nbsp;</div>
             <button class="btn btn-default center-block" name="login" type="submit">Login</button>
             <div>&nbsp;</div>
             <div>&nbsp;</div>
@@ -248,7 +254,7 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
   </div>
   <!--end of bottom-header--> 
 </div>
-<!--end of header-->
+<!--end of header--><div>&nbsp;</div>
 <div class="container-fluid">
   <div class="main-content">
     <div class="row container-fluid"> <?php echo $htmlFactory->aboutPof();?> </div>
@@ -256,4 +262,4 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
   </div>
   <!--end of container-fluid--> 
 </div>
-<!--end of main-content--> 
+<!--end of main-content--><div>&nbsp;</div> 

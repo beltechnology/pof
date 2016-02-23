@@ -22,41 +22,94 @@ if(!empty($_POST['userName']) || !empty($_POST['password']))
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     </head>
   <body class="hold-transition skin-blue sidebar-mini">
+         <div class="">
+		  <div>&nbsp;</div>
+		  <div class="container">
           <div class="row">
               <!-- Horizontal Form -->
-              <div class="box box-info " style="margin: 5% 25% 15% 25%;">
+			  <div class="col-lg-6 col-md-6">
+              <div class="box box-info" style="background:#e5dfdf;  border-radius:5px;">
               <div class="mainDiv">
                 <div class="box-header with-border">
                   <h3 class="box-title">Login</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
                 <form class="form-horizontal" method="post">
+				 <fieldset class="fieldset">
                   <div class="box-body">
                     <div class="form-group">
-                      <label for="userName" class="col-sm-2 control-label">User Name</label>
-                      <div class="col-sm-10">
+                      <label for="userName" class="col-lg-3 col-md-3 control-label">User Name</label>
+                      <div class="col-lg-9 col-md-9">
                         <input type="text" class="form-control" name="userName" id="userName" placeholder="User Name" required>
                       </div>
                     </div>
                     <div class="form-group">
-                      <label for="password" class="col-sm-2 control-label">Password</label>
-                      <div class="col-sm-10">
+                      <label for="password" class="col-lg-3 col-md-3 control-label">Password &nbsp;</label>
+                      <div class="col-lg-9 col-md-9">
                         <input type="password" class="form-control" id="password"  name="password" placeholder="Password" required>
                       </div>
                     </div>
                     
                   </div><!-- /.box-body -->
                   <div class="box-footer">
-                    <button type="submit" class="btn btn-default">Cancel</button>
-                    <button type="submit" class="btn btn-info pull-right">Sign in</button>
+				    <div class="col-lg-6 col-md-6">&nbsp;</div>
+                    <button type="submit" class="btn btn-default col-lg-3 col-md-3">Cancel</button>
+                    <button type="submit" class="btn btn-info col-lg-3 col-md-3 pull-right">Sign in</button>
                      <?php if(isset($_REQUEST['msg'])){?><br/><br/>
-					<div class="alert alert-warning"><?php  echo $_REQUEST['msg']; ?></div><?php } ?>
+					 
+					 <div class="col-lg-12 col-md-12">
+					<div class="alert alert-warning" style="margin-top:10px; margin-left:18px; margin-right:-15px;"><?php  echo $_REQUEST['msg']; ?></div><?php } ?>
+					</div>
                   </div><!-- /.box-footer -->
+				  </fieldset>
                 </form>
                 </div>
               </div>
             <!--/.col (right) -->
+			</div><!--end of col-lg-6 col-md-6-->
+			 <div class="col-lg-6 col-md-6">
+              <div class="box box-info" style="background:#e5dfdf;  border-radius:5px;">
+              <div class="mainDiv">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Login</h3>
+                </div><!-- /.box-header -->
+                <!-- form start -->
+                <form class="form-horizontal" method="post">
+				 <fieldset class="fieldset">
+                  <div class="box-body">
+                    <div class="form-group">
+                      <label for="userName" class="col-lg-3 col-md-3 control-label">User Name</label>
+                      <div class="col-lg-9 col-md-9">
+                        <input type="text" class="form-control" name="userName" id="userName" placeholder="User Name" required>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="password" class="col-lg-3 col-md-3 control-label">Password &nbsp;</label>
+                      <div class="col-lg-9 col-md-9">
+                        <input type="password" class="form-control" id="password"  name="password" placeholder="Password" required>
+                      </div>
+                    </div>
+                    
+                  </div><!-- /.box-body -->
+                  <div class="box-footer">
+				    <div class="col-lg-6 col-md-6">&nbsp;</div>
+                    <button type="submit" class="btn btn-default col-lg-3 col-md-3">Cancel</button>
+                    <button type="submit" class="btn btn-info col-lg-3 col-md-3 pull-right">Sign in</button>
+                     <?php if(isset($_REQUEST['msg'])){?><br/><br/>
+					 
+					 <div class="col-lg-12 col-md-12">
+					<div class="alert alert-warning" style="margin-top:10px; margin-left:18px; margin-right:-15px;"><?php  echo $_REQUEST['msg']; ?></div><?php } ?>
+					</div>
+                  </div><!-- /.box-footer -->
+				  </fieldset>
+                </form>
+                </div>
+              </div>
+            <!--/.col (right) -->
+			</div><!--end of col-lg-6 col-md-6-->
           </div>   <!-- /.row -->
+		  </div><!--end of container-->
+		 </div><!--end of jumbotron-->
 
   </body>
 </html>

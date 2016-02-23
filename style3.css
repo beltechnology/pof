@@ -213,14 +213,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
 }
 .content .header .bottom-header .white{
 	background:url(img/white.png);
-	width:;
-	height:auto;
+	width:400px;
+	height:320px;
 	margin-top:;
 	margin-bottom:;
 	border-radius:;
 	font-family:CALIST_1;
 	text-shadow:none;
 	border-radius:5px;
+}
+.content .header .bottom-header .white label{
+	font-size:20px;
+	color:#797676;
+	font-family:CALIST_1;
+	font-weight:normal;
+	margin-top:;
 }
 .content .header .bottom-header .white .register{
 	border-bottom:1px solid #83ba3c;
@@ -812,10 +819,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
 	font-size:15px;
 	border:none;
 	outline:none;
-	margin-left:-1%;
+	margin-left:-2%;
 	background:transparent;
-	padding-top:4px;
-	padding-bottom:4px;
+	padding-top:5px;
+	padding-bottom:5px;
 	padding-left:16px;
 	padding-right:16px;
 	color:#ffffff;
@@ -838,6 +845,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
 .subscribe .send:hover{	
     color:#333333;
 	border:1px solid #ffffff;
+	margin-left:-5px;
 }
 .subscribe .send:focus{
 	outline:none;
@@ -1106,3 +1114,4 @@ marquee ul li {
 }
 
 /*end of ravi.css*/
+
