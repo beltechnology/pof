@@ -5,9 +5,7 @@ $menuType = "viewNotes";
 <div class="content-wrapper">
         <!-- Main content -->
         <section class="content-header">
-          <h1>&nbsp;          </h1>
-          
-                        <?php
+          <?php
 				  if(!$studentLogin)
 				  {?>
                   <ol class="breadcrumb">
@@ -118,11 +116,13 @@ $menuType = "viewNotes";
 					$paginations = $pagination->paginations($tbl_name,$targetpage);
 					echo $paginations;
 				  }
+				  
 			?>
+                      <a href="#" class="pull-right">Top</a>
+
             </div><!-- /.col -->
             
           </div><!-- /.row -->
-          
           
         </section><!-- /.content -->
       </div>

@@ -7,7 +7,7 @@ if(isset($_POST['updateAboutPof']))
 				$aboutPofData = new stdClass();
 				$aboutPofData->title = $_POST['title'];
 				$aboutPofData->description = $_POST['description'];
-				if(isset($_FILES["aboutFile"]["name"]) && !empty($_FILES["aboutFile"]["name"]))
+				if(!empty($_FILES["aboutFile"]["name"]))
 				{
 					$aboutPofData->upload = $_FILES["aboutFile"]["name"];
 					$aboutPofData->tmp_name = $_FILES["aboutFile"]["tmp_name"];

@@ -52,6 +52,7 @@ if(isset($_SESSION['userInfo']))
     <link rel="stylesheet" href="plugins/datepicker/datepicker3.css">
     <!-- Daterange picker -->
     <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- bootstrap wysihtml5 - text editor -->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -92,8 +93,9 @@ else
           <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
               <li class="dropdown user user-menu">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">
                   <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                  <span class="caret"></span>
                   <span class="hidden-xs"><?php 
 				  $userInfo = $_SESSION['userInfo'];
 				  if($studentLogin)
@@ -219,8 +221,25 @@ ol.breadcrumb-student {
 }
 .card.card-block.studentCard {
     border: 1px solid #ccc;
-    padding: 0px 10px 10px 10px;
     border-radius: 5px;
-    background-color: #ccc;
+    float: left;
+    margin-bottom: 10px;
+    padding: 0 10px 10px;
+    width: 100%;
+}
+h3.title {
+    font-size: 21px;
+    font-family: Roboto-Medium;
+    text-align: center;
+	color:#fff;
+}
+p.titleDes {
+ 	color: #2c3b41;
+    font-family: CALIST_1;
+    font-size: 16px;
+    text-align: justify;
+}
+.studentCard a.btn {
+    margin: 0;
 }
 </style>
