@@ -154,7 +154,7 @@ var $tbl_name ;
 		$notesCategoryId = $pagenationInfo->notesCategoryId;
 		$page = $pagenationInfo->page;
 		
-		$limit = 2; 
+		$limit = 20; 
 		$start = ($page - 1) * $limit;
 		$allData ="";
 		$sql = "SELECT * FROM notesdetail  where notesCategoryId =$notesCategoryId and deleted = 0 LIMIT $start, $limit ";
@@ -172,7 +172,7 @@ var $tbl_name ;
 		$sql = "SELECT * FROM notesdetail  where notesCategoryId =$notesCategoryId and deleted = 0 ";
 		$result = mysql_query($sql);
 		$rowcount = mysql_num_rows($result);
-		$limit = 2; 
+		$limit = 20; 
 		$rowcount  = ceil($rowcount/$limit);
 		return $rowcount;	
 	}

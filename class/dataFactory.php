@@ -135,7 +135,7 @@ class dataFactory
 	function getPagesById($notesId)
 	{
 		$allData ="";
-		$sql = "SELECT * FROM  notesdetail where deleted = 0 and  status= 0 and $notesId= $notesId ";
+		$sql = "SELECT * FROM  notesdetail where deleted = 0 and  status= 0 and notesId= $notesId ";
 		$result = mysql_query($sql);
 	  while($obj=mysql_fetch_object($result))
 	  {
