@@ -38,7 +38,7 @@ $menuType = "viewPages";
                       <?php 
 						$pagination = new pagination();
 						$selectCategory = new dataInfo();
-
+						$dropDown = "";
 						$tbl_name = "pages";
 						$targetpage = "viewPages.php";
 						$selectCategoryData = $pagination->selectAll($tbl_name);
@@ -47,6 +47,8 @@ $menuType = "viewPages";
 						{
                      foreach($selectCategoryData as $category)
 					  {
+						if($category->categoryId !=0)
+						{
 						$seletedCategoryid = "";
 						$notesCategoryDesc = $selectCategory->getCategoryDataByCategoryId($category->categoryId);
 						$parent = $notesCategoryDesc->parentid;
@@ -54,6 +56,7 @@ $menuType = "viewPages";
 						$category_id = $notesCategoryDesc->category_id;
 						$ele = "span";
 						$dropDown = $selectCategory->genrateCategory($category_id,$title,$parent,$seletedCategoryid,$ele);
+						}
 						?>
                       <tr>
                         <td><?php echo $sr++;?> </td>

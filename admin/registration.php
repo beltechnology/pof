@@ -79,25 +79,29 @@ $menuType = "registration";
 					  {
 						foreach($selectCategoryData as $categoryData)
 						{
-						   $seletedCategoryid = "";
-						   if($edit)
-						   {
-							   $subjects = explode(",",$registrationData->subject);
-							  // var_dump( $subjects);
-							   foreach($subjects as $subject)
-							   {
-									  if( $subject == $categoryData->notesCategoryId)
-									  {
-										$seletedCategoryid = $categoryData->notesCategoryId ;
-									  }
-							   }
-						   }
-							$parent = $categoryData->parentId;
-							$title = $categoryData->CategoryName;
-							$category_id = $categoryData->notesCategoryId;
-							$ele = "option";
-							$dropDown = $selectCategory->genrateNotesCategory($category_id,$title,$parent,$seletedCategoryid,$ele);
-							echo $dropDown;
+							  //var_dump( $selectCategoryData);
+							if($categoryData->status == 0)
+							{
+								   $seletedCategoryid = "";
+								   if($edit)
+								   {
+									   $subjects = explode(",",$registrationData->subject);
+									 
+									   foreach($subjects as $subject)
+									   {
+											  if( $subject == $categoryData->notesCategoryId)
+											  {
+												$seletedCategoryid = $categoryData->notesCategoryId ;
+											  }
+									   }
+								   }
+									$parent = $categoryData->parentId;
+									$title = $categoryData->CategoryName;
+									$category_id = $categoryData->notesCategoryId;
+									$ele = "option";
+									$dropDown = $selectCategory->genrateNotesCategory($category_id,$title,$parent,$seletedCategoryid,$ele);
+									echo $dropDown;
+							}
 						}
 					  }
 					?>
