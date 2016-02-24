@@ -79,7 +79,7 @@ if($studentLogin)
         <?php
 }
 else
-{?><a href="index.php" class="logo">
+{?><a href="dashboard.php" class="logo">
           <span class="logo-lg"><b>Admin</b></span>
         </a>
         <?php

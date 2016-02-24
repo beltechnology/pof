@@ -122,8 +122,8 @@ $menuType = "viewNotes";
 					<div class="form-group">
                       <label>Status</label>
                       <select class="form-control" name="status">
-                      <option value="0">Enbled</option>
-                      <option value="1" <?php if($edit &&  $notesDteailData->status == 1){?> selected="selected" <?php }?>>disabled</option>
+                      <option value="0">Enabled</option>
+                      <option value="1" <?php if($edit &&  $notesDteailData->status == 1){?> selected="selected" <?php }?>>Disabled</option>
                       </select>
                     </div>
                   </div><!-- /.box-body -->

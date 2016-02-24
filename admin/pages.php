@@ -12,7 +12,7 @@ $menuType = "viewPages";
               <!-- general form elements -->
               <div class="box box-primary">
                 <div class="box-header with-border">
-                  <h3 class="box-title">Notes Detail</h3>
+                  <h3 class="box-title">Pages Detail</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
                 <form role="form"  action="<?php $_SERVER['PHP_SELF'];?>" method="post" enctype="multipart/form-data">
@@ -92,8 +92,8 @@ $menuType = "viewPages";
 					<div class="form-group">
                       <label>Status</label>
                       <select class="form-control" name="status">
-                      <option value="0">Enbled</option>
-                      <option value="1" <?php if($edit &&  $pagesDetail->status == 1){?> selected="selected" <?php }?>>disabled</option>
+                      <option value="0">Enabled </option>
+                      <option value="1" <?php if($edit &&  $pagesDetail->status == 1){?> selected="selected" <?php }?>>Disabled</option>
                       </select>
                     </div>
                   </div><!-- /.box-body -->

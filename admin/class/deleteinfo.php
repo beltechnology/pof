@@ -19,16 +19,7 @@ class deleteinfo
 		
 		if($featuredInfo->checkType == true)
 		{
-			if($row < 7)
-			{	
-				
-				$response = mysql_query("UPDATE category SET featured= ".$featuredInfo->checkType." WHERE category_id=".$featuredInfo->category_id);
-			}
-			else
-			{
-				$response = "no update";
-			}
-				
+				$response = mysql_query("UPDATE category SET featured= 1 WHERE category_id=".$featuredInfo->category_id);
 		}
 		else
 		{

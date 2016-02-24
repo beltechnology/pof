@@ -31,7 +31,7 @@ elseif(isset($_POST['category_id']) && ($_POST['checkType']))
 		$featuredInfo->checkType = $_POST['checkType'];
 		$updateFeatured = new deleteinfo ();
 		$response = $updateFeatured->checkFeatured($featuredInfo);
-		var_dump($response);
+		//var_dump($response);
 		if($response != true)
 		{
 		   throw new Exception("general error.");	

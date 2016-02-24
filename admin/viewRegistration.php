@@ -27,17 +27,17 @@ $menuType = "registration";
                         <th>User Name</th>
                         <th>Father Name</th>
                         <th>Mother Name</th>
-                        <th>Date of Brith</th>
+                        <th>Date of Birth</th>
                         <th>Subject</th>
                         <th>Class</th>
-                        <th>Address</th>
+                    <th>Address</th>
                         <th>Mobile</th>
                         <th>Email</th>
-                        <th>City</th>
+<!--                        <th>City</th>
                         <th>School Code</th>
                         <th>Pin code</th>
                         <th>School Name</th>
-<!--                        <th>School Code</th>
+                    <th>School Code</th>
                         <th>Principal Name</th>
                         <th>Principal Mobile</th>
                         <th>Status</th>
@@ -65,16 +65,16 @@ $menuType = "registration";
                         <td><?php  echo $registration->fatherName ;?></td>
                         <td><?php  echo $registration->motherName ;?></td>
                         <td><?php echo $registration->dob ;?></td>
-                        <td><?php $subjects = $htmlFactory->getSubjectById($registration->subject); if($subjects != ""){foreach($subjects as $subject){ echo $subject->CategoryName.","; }}?></td>
+                        <td><?php $subjects = $htmlFactory->getSubjectById($registration->subject); $comma= ""; if($subjects != ""){foreach($subjects as $subject){ echo $comma.$subject->CategoryName; $comma= ","; }}?></td>
                         <td><?php echo $registration->studentClass ;?></td>
                         <td><?php echo $registration->address ;?></td>
                         <td><?php echo $registration->mobile ;?></td>
                         <td><?php echo $registration->email ;?></td>
-                        <td><?php echo $registration->city ;?></td>
+<?php /*?>              <td><?php echo $registration->city ;?></td>
                         <td><?php echo $registration->schoolCode ;?></td>
                         <td><?php echo $registration->pinCode ;?></td>
                         <td><?php echo $registration->schoolName ;?></td>
-<?php /*?>                        <td><?php echo $registration->schoolCode ;?></td>
+                       <td><?php echo $registration->schoolCode ;?></td>
                         <td><?php echo $registration->principalName ;?></td>
                         <td><?php echo $registration->principalMobile ;?></td>
                         <td><?php if($registration->status == 0){echo "Enabled";} else{echo "Disabled";} ;?></td>
