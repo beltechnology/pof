@@ -468,6 +468,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
 .main-content .grey-1:hover{
 	background:#83ba3c;
 	border:1px solid #83ba3c;
+	color:#ffffff !important;
 }
 .main-content .grey-2{
 	background:url(img/grey-2.png);
@@ -731,27 +732,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
 	background:none;
 }
 .stage img{
-	width:410px;
+	width:412px;
 	height:240px;
-	margin-right:;
 }
 .stage img:hover{
 }
+.1same-size-image{
+	
+}
+.row2same-size-image{
+	margin-left:5%;
+}
 .book img{
-	width:432px;
-	height:240px
+	width:420px;
+	height:240px;
 }
 .stage .alignment {
     position: absolute;
-    font-size: ;
+    font-size:;
     top:28%;
     left:28%;
-}
-.1medium-image{
-	margin-left:130px;
-}
-.2medium-image{
-	margin-right:-100px;
 }
 .book .alignment {
     position: absolute;
@@ -934,7 +934,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
     text-decoration: none;
 }
 .item img.fixed-size{
-	width:340px;
+	width:220px;
 	height:220px !important;
 }
 img.first-slider{
