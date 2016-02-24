@@ -449,7 +449,14 @@ class dataInfo
 // notes category data	 fetch
 	public function getParentNotesCategoryData($category_id,$parent,$title,$seletedCategoryid,$ele)
 	 {
-			 $query = mysql_query("SELECT * FROM  notescategory where deleted = 0 and notesCategoryId ='$parent' order by sort_order");
+				if($ele == "option")
+				{
+ 					$query = mysql_query("SELECT * FROM  notescategory where status = 0 and deleted = 0 and notesCategoryId ='$parent'");	
+				}
+				else
+				{
+ 					$query = mysql_query("SELECT * FROM  notescategory where deleted = 0 and notesCategoryId ='$parent'");	
+				}
 			 $obj = mysql_fetch_object($query);
 			if($obj !="")
 			{
