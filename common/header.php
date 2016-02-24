@@ -224,8 +224,8 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
             <div class="row">
               <div class="col-md-1 col-lg-1">&nbsp;</div>
               <div class="col-md-10 col-lg-10">
-			  <label for="exampleInputText">User Name</label>
-                <input class="group-form" type="text" class="form-control" name="userName" placeholder=" " required>
+			  <label for="exampleInputText"></label>
+                <input class="group-form" type="text" class="form-control" name="userName" placeholder="User Name" required>
               </div>
 			  <div class="col-md-1 col-lg-1">&nbsp;</div>
 			</div>
@@ -233,8 +233,8 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
 			<div class="row">
 			  <div class="col-md-1 col-lg-1">&nbsp;</div>
               <div class="col-md-10 col-lg-10">
-	           <label for="exampleInputPassword">Password</label>  
-                <input class="group-form " type="password" class="form-control" name="password" placeholder="" required>
+	           <label for="exampleInputPassword"></label>  
+                <input class="group-form " type="password" class="form-control" name="password" placeholder="Password" required>
               </div>
               <div class="col-md-1 col-lg-1">&nbsp;</div>
             </div>

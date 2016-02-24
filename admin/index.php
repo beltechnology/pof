@@ -52,11 +52,11 @@ if(!empty($_POST['userName']) || !empty($_POST['password']))
                     
                   </div><!-- /.box-body -->
                   <div class="box-footer">
-				    <div class="col-lg-6 col-md-6">&nbsp;</div>
-                    <button type="reset" class="btn btn-default col-lg-3 col-md-3">Cancel</button>
-                    <button type="submit" class="btn btn-info col-lg-3 col-md-3 pull-right">Sign in</button>
+				    <div class="col-lg-5 col-md-5">&nbsp;</div>
+                    <button type="reset" class="btn btn-default col-lg-3 col-md-3" style="position:relative; left:35px;">Cancel</button>
+					<div class="col-lg-1 col-md-1">&nbsp;</div>
+                    <button type="submit" class="btn btn-info col-lg-3 col-md-3">Sign in</button>
                      <?php if(isset($_REQUEST['msg'])){?><br/><br/>
-					 
 					 <div class="col-lg-12 col-md-12">
 					<div class="alert alert-warning" style="margin-top:10px; margin-left:18px; margin-right:-15px;"><?php  echo $_REQUEST['msg']; ?></div><?php } ?>
 					</div>
@@ -92,9 +92,10 @@ if(!empty($_POST['userName']) || !empty($_POST['password']))
                     
                   </div><!-- /.box-body -->
                   <div class="box-footer">
-				    <div class="col-lg-6 col-md-6">&nbsp;</div>
-                    <button type="reset" class="btn btn-default col-lg-3 col-md-3">Cancel</button>
-                    <button type="submit" class="btn btn-info col-lg-3 col-md-3 pull-right">Sign in</button>
+				   <div class="col-lg-5 col-md-5">&nbsp;</div>
+                    <button type="reset" class="btn btn-default col-lg-3 col-md-3" style="position:relative; left:35px;">Cancel</button>
+					<div class="col-lg-1 col-md-1">&nbsp;</div>
+                    <button type="submit" class="btn btn-info col-lg-3 col-md-3">Sign in</button>
                      <?php if(isset($_REQUEST['msg'])){?><br/><br/>
 					 
 					 <div class="col-lg-12 col-md-12">

@@ -121,8 +121,9 @@ class  htmlFactory extends  dataFactory
         <div class='written'>
           <h2 class='center-block'>".$moreinformation->title."</h2>
           <a href='".$moreinformation->link."' target='_blank'>
-		  <span class='glyphicon glyphicon-play-circle' aria-hidden='true' style='display:none'></span>
-		  </a> </div>
+		  <span class='glyphicon glyphicon-play-circle' aria-hidden='true'></span>
+		  </a>
+		  </div>
       </div></div></li>";
 		
 		} 
@@ -223,8 +224,8 @@ function getHomeMenu ()
 				$olympaidInfoHTML .= "<div class='col-lg-6 col-md-6'>
 				<h2 class='text-center blue' style='margin-left:-10%;'>".$olympaidInfo->title."</h2>
 				<div>&nbsp;</div>
-				<div class='row'>
-				<div class='stage col-lg-12 col-md-12'>
+				<div class=''>
+				<div class='stage row".$olympaidInfo->olympaidInformationId."same-size-image'>
 				 <div class='contain'>
 					<img  src='".BaseUrl."admin/upload/".$olympaidInfo->upload."' alt='Norway' class='".$olympaidInfo->olympaidInformationId."medium-image'>
 					<div class='alignment'><p class='first-line'>". substr(strip_tags($olympaidInfo->description),0,30)."</p>
