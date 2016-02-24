@@ -13,20 +13,24 @@ foreach($allMenus as $menu)
 	{
 		$sumMenuFlag = false;
 		 $menuInfo = $categoryInfo->getCatagoryDataByParentId($menu->category_id);
-		 if($menuInfo != "")
+		 $pageInfo = $categoryInfo->getpagesByCategoryId($menu->category_id);
+		 if($menuInfo != "" || $pageInfo != "")
 		 {
 			 $sumMenuFlag = true;
-		}
+		 }
+		 		 
  ?>
     <div class="black-line"><li id="<?php echo $menu->category_id; ?>" class="category"><a href="#demo<?php echo $menu->category_id; ?>" data-toggle="collapse"><?php echo $menu->title; ?><?php if($sumMenuFlag){?><i class="fa fa-plus-square pull-right" ></i><?php } ?></a></li></div>
-    <?php
+<?php
 	 echo $categoryInfo->getSubmenu($menu->category_id);
 	 echo $htmlFactory->createPages($menu->category_id);
-	
-    ?>
-    
-  <?php
+
 	}
+}
+$singlePagesInfo = $categoryInfo->getpagesByCategoryId(0);
+if($singlePagesInfo)
+{
+ 	echo $htmlFactory->createPages(0);
 }
 ?>
   </ul>
