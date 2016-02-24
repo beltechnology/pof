@@ -38,7 +38,7 @@ $menuType = "viewPages";
                       <?php 
 						$pagination = new pagination();
 						$selectCategory = new dataInfo();
-						$dropDown = "";
+						
 						$tbl_name = "pages";
 						$targetpage = "viewPages.php";
 						$selectCategoryData = $pagination->selectAll($tbl_name);
@@ -47,6 +47,7 @@ $menuType = "viewPages";
 						{
                      foreach($selectCategoryData as $category)
 					  {
+						 $dropDown = "";
 						if($category->categoryId !=0)
 						{
 						$seletedCategoryid = "";
