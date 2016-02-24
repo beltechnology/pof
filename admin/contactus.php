@@ -39,7 +39,7 @@ $menuType = "contactus";
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="col-sm-2 control-label" for="description">description</label>
+                        <label class="col-sm-2 control-label" for="description">Description</label>
                         <div class="col-sm-10">
                           <input type="text" placeholder="Father name" id="description" name="description" class="form-control" required value="<?php if($edit) echo $contactData->description; ?> ">
                         </div>
@@ -47,42 +47,40 @@ $menuType = "contactus";
                       <div class="form-group">
                         <label class="col-sm-2 control-label" for="email">Email</label>
                         <div class="col-sm-10">
-                          <input type="text" placeholder="Email" id="email" name="email" class="form-control" required value="<?php if($edit) echo $contactData->email; ?> ">
+                          <input type="email" placeholder="Email" id="email" name="email" class="form-control" required value="<?php if($edit) echo $contactData->email; ?> ">
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="col-sm-2 control-label" for="mobile">Mobile</label>
                         <div class="col-sm-10">
-                <div class='input-group'>
                     <input type='text' class="form-control"  name="mobile" id="mobile" required placeholder="Mobile" value="<?php if($edit) echo $contactData->mobile; ?> " />
-                </div>
                         </div>
                       </div>
 
    </div>
  <div class="col-md-6">
                       <div class="form-group">
-                        <label class="col-sm-2 control-label" for="twitter">twitter</label>
+                        <label class="col-sm-2 control-label" for="twitter">Twitter</label>
                         <div class="col-sm-10">
-                          <input type="email" placeholder="Email" id="twitter" name="twitter" class="form-control"  required value="<?php if($edit) echo $contactData->twitter; ?> " >
+                          <input type="url" placeholder="Twitter" id="twitter" name="twitter" class="form-control"  required value="<?php if($edit) echo $contactData->twitter; ?> " >
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="col-sm-2 control-label" for="facebook">Facebook</label>
                         <div class="col-sm-10">
-                          <input type="text" placeholder="Facebook" id="facebook" name="facebook" class="form-control"  required value="<?php if($edit) echo $contactData->facebook; ?> " >
+                          <input type="url" placeholder="Facebook" id="facebook" name="facebook" class="form-control"  required value="<?php if($edit) echo $contactData->facebook; ?> " >
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="col-sm-2 control-label" for="google">google</label>
+                        <label class="col-sm-2 control-label" for="google">Google</label>
                         <div class="col-sm-10">
-                          <input type="text" placeholder="google" id="google" name="google" class="form-control" required value="<?php if($edit) echo $contactData->google; ?> " >
+                          <input type="url" placeholder="Google" id="google" name="google" class="form-control" required value="<?php if($edit) echo $contactData->google; ?> " >
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="col-sm-2 control-label" for="pin">Pintrist</label>
                         <div class="col-sm-10">
-                          <input type="text" placeholder="Pintrist code" id="pin" name="pin" class="form-control"  required value="<?php if($edit) echo $contactData->pin; ?> " >
+                          <input type="url" placeholder="Pintrist code" id="pin" name="pin" class="form-control"  required value="<?php if($edit) echo $contactData->pin; ?> " >
                         </div>
                       </div>
                       <div class="form-group">
