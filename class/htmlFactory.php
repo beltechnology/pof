@@ -120,7 +120,9 @@ class  htmlFactory extends  dataFactory
 			<img class='img-responsive image' src='".BaseUrl."admin/upload/".$moreinformation->upload."'>
         <div class='written'>
           <h2 class='center-block'>".$moreinformation->title."</h2>
-          <a href='".$moreinformation->link."' target='_blank'><span class='glyphicon glyphicon-play-circle' aria-hidden='true'></span></a> </div>
+          <a href='".$moreinformation->link."' target='_blank'>
+		  <span class='glyphicon glyphicon-play-circle' aria-hidden='true' style='display:none'></span>
+		  </a> </div>
       </div></div></li>";
 		
 		} 
@@ -167,12 +169,17 @@ class  htmlFactory extends  dataFactory
 function createPages($categoryId)
 {
 	$pageLinkHTML = "";
+	$putStyle = "";
 	$pages = $this->getPageDataByCategoryId($categoryId);
+	if($categoryId != 0)
+	{
+	 $putStyle = "style='display:none;'";
+	}
 	if($pages != "")
 	{
 		foreach($pages as $page)
 		{
-			$pageLinkHTML =$pageLinkHTML."<li class='pages'><span class='glyphicon glyphicon-ok' aria-hidden='true'></span> <a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$categoryId."&pageId=".$page->pageId."'>".$page->pageTitle."</a></li>";
+			$pageLinkHTML =$pageLinkHTML."<li class='pages pagesLi".$categoryId."' ".$putStyle."><span class='glyphicon glyphicon-ok' aria-hidden='true'></span> <a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$categoryId."&pageId=".$page->pageId."'>".$page->pageTitle."</a></li>";
 		}
 	}
 	return $pageLinkHTML;
