@@ -34,7 +34,7 @@ $menuType = "viewmoreInformation";
 						$pagination = new pagination();
 						$selectCategory = new dataInfo();
 
-						$tbl_name = "moreInformation";
+						$tbl_name = "moreinformation";
 						$targetpage = "viewMoreInformation.php";
 						$testimonial = $pagination->selectAll($tbl_name);
 						$sr= 1;
