@@ -53,7 +53,7 @@ if(!empty($_POST['userName']) || !empty($_POST['password']))
                   </div><!-- /.box-body -->
                   <div class="box-footer">
 				    <div class="col-lg-6 col-md-6">&nbsp;</div>
-                    <button type="submit" class="btn btn-default col-lg-3 col-md-3">Cancel</button>
+                    <button type="reset" class="btn btn-default col-lg-3 col-md-3">Cancel</button>
                     <button type="submit" class="btn btn-info col-lg-3 col-md-3 pull-right">Sign in</button>
                      <?php if(isset($_REQUEST['msg'])){?><br/><br/>
 					 
@@ -93,7 +93,7 @@ if(!empty($_POST['userName']) || !empty($_POST['password']))
                   </div><!-- /.box-body -->
                   <div class="box-footer">
 				    <div class="col-lg-6 col-md-6">&nbsp;</div>
-                    <button type="submit" class="btn btn-default col-lg-3 col-md-3">Cancel</button>
+                    <button type="reset" class="btn btn-default col-lg-3 col-md-3">Cancel</button>
                     <button type="submit" class="btn btn-info col-lg-3 col-md-3 pull-right">Sign in</button>
                      <?php if(isset($_REQUEST['msg'])){?><br/><br/>
 					 
