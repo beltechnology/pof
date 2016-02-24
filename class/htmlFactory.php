@@ -196,8 +196,14 @@ function getHomeMenu ()
 	//var_dump($allMenu);
 		foreach($allMenu as $menu)
 		{
+			$title = $menu->title;
+			if(strlen($title) >10)
+			{
+				$title = substr($title, 0, 10)."..";
+				
+			}
 
-			$homeMenu .= "<div class='col-lg-3 col-md-3 ".$cssArray[$count]."-b col-md-offset-1 col-lg-offset-1'><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$menu->category_id."'>".$menu->title."</a></div>";
+			$homeMenu .= "<div class='col-lg-3 col-md-3 ".$cssArray[$count]."-b col-md-offset-1 col-lg-offset-1'><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$menu->category_id."'>".$title."</a></div>";
 			$count++;
 			if($count == 6) $count=0;
 			

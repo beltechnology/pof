@@ -30,8 +30,8 @@ $menuType = "registration";
                         <th>Date of Birth</th>
                         <th>Subject</th>
                         <th>Class</th>
-                    <th>Address</th>
-                        <th>Mobile</th>
+<!--                    <th>Address</th>
+-->                        <th>Mobile</th>
                         <th>Email</th>
 <!--                        <th>City</th>
                         <th>School Code</th>
@@ -67,8 +67,8 @@ $menuType = "registration";
                         <td><?php echo $registration->dob ;?></td>
                         <td><?php $subjects = $htmlFactory->getSubjectById($registration->subject); $comma= ""; if($subjects != ""){foreach($subjects as $subject){ echo $comma.$subject->CategoryName; $comma= ","; }}?></td>
                         <td><?php echo $registration->studentClass ;?></td>
-                        <td><?php echo $registration->address ;?></td>
-                        <td><?php echo $registration->mobile ;?></td>
+<?php /*?>                        <td><?php echo $registration->address ;?></td>
+<?php */?>                        <td><?php echo $registration->mobile ;?></td>
                         <td><?php echo $registration->email ;?></td>
 <?php /*?>              <td><?php echo $registration->city ;?></td>
                         <td><?php echo $registration->schoolCode ;?></td>

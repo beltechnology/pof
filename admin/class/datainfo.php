@@ -457,6 +457,8 @@ class dataInfo
 				{
  					$query = mysql_query("SELECT * FROM  notescategory where deleted = 0 and notesCategoryId ='$parent'");	
 				}
+				
+				
 			 $obj = mysql_fetch_object($query);
 			if($obj !="")
 			{
