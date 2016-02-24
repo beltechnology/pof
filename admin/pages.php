@@ -30,7 +30,7 @@ $menuType = "viewPages";
 					  }
 					?>
                       <select class="form-control" name="categoryId" id="categoryId" required>
-                      <option >Select category</option>
+                      <option value="0" >Select category</option>
                       <?php
 					  if($selectCategoryData)
 					  {
