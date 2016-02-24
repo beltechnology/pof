@@ -9,7 +9,7 @@ if(isset($_REQUEST['aboutId']))
 	$innerTitle = $innerHtml->title;
 	$innerDescription = $innerHtml->description;
 }
-elseif(isset($_REQUEST['pageId']) && ($_REQUEST['categoryId']))
+elseif(isset($_REQUEST['pageId']))
 {
 	$innerHtml = $htmlFactory->getPagesDataById("pages","pageId",$_REQUEST['pageId']);
 	//var_dump($innerHtml);
