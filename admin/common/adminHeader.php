@@ -186,16 +186,16 @@ else
                   </a>
               <ul class="treeview-menu">
                 <li class="active index"><a href="dashboard.php"><i class="fa fa-circle-o"></i> Dashboard</a></li>
-                <li class="viewCategory" ><a href="viewCategory.php"><i class="fa fa-circle-o"></i> view Category</a></li>
-                <li class="viewNotesCategory" ><a href="viewNotesCategory.php"><i class="fa fa-circle-o"></i> view Subject</a></li>
-                <li class="viewNotes" ><a href="viewNotes.php"><i class="fa fa-circle-o"></i> view Notes</a></li>
-                <li class="viewPages" ><a href="viewPages.php"><i class="fa fa-circle-o"></i> view pages</a></li>
-                <li class="registration" ><a href="viewRegistration.php"><i class="fa fa-circle-o"></i> view registration</a></li>
-                <li class="slider" ><a href="slider.php"><i class="fa fa-circle-o"></i> Update slider</a></li>
-                <li class="viewAboutPof" ><a href="viewAboutPof.php"><i class="fa fa-circle-o"></i> View about pof Detail</a></li>
-                <li class="viewTestimonial" ><a href="viewTestimonial.php"><i class="fa fa-circle-o"></i> View testimonial</a></li>
-                <li class="viewmoreInformation" ><a href="viewMoreInformation.php"><i class="fa fa-circle-o"></i>View moreinformation</a></li>
-                <li class="contactus" ><a href="contactus.php"><i class="fa fa-circle-o"></i>Update Contact us</a></li>
+                <li class="viewCategory" ><a href="viewCategory.php"><i class="fa fa-circle-o"></i> View Category</a></li>
+                <li class="viewNotesCategory" ><a href="viewNotesCategory.php"><i class="fa fa-circle-o"></i>View Subject</a></li>
+                <li class="viewNotes" ><a href="viewNotes.php"><i class="fa fa-circle-o"></i> View Notes</a></li>
+                <li class="viewPages" ><a href="viewPages.php"><i class="fa fa-circle-o"></i> View Pages</a></li>
+                <li class="registration" ><a href="viewRegistration.php"><i class="fa fa-circle-o"></i> View Registration</a></li>
+                <li class="slider" ><a href="slider.php"><i class="fa fa-circle-o"></i> Update Slider</a></li>
+                <li class="viewAboutPof" ><a href="viewAboutPof.php"><i class="fa fa-circle-o"></i> View About Pof Detail</a></li>
+                <li class="viewTestimonial" ><a href="viewTestimonial.php"><i class="fa fa-circle-o"></i> View Testimonial</a></li>
+                <li class="viewmoreInformation" ><a href="viewMoreInformation.php"><i class="fa fa-circle-o"></i>View More Information</a></li>
+                <li class="contactus" ><a href="contactus.php"><i class="fa fa-circle-o"></i>Update Contact Us</a></li>
                 <li class="olympaidInformation" ><a href="viewOlympaidInformation.php"><i class="fa fa-circle-o"></i>View Olympaid Information</a></li>
                <!-- <li><a href="index2.html"><i class="fa fa-circle-o"></i> moreInformation v2</a></li>-->
                </ul>

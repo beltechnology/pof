@@ -19,7 +19,7 @@ $menuType = "slider";
 			<?php 
             $sliderInfo = new dataInfo();
             $sliderInfoData = $sliderInfo->selectAll("slider");
-            $mSliderHeading = $sliderInfo->selectAll("mSliderHead");
+            $mSliderHeading = $sliderInfo->selectAll("msliderHead");
 			foreach($mSliderHeading as $mSliderHeadingData);
      //       var_dump($sliderInfoData);
             ?>
