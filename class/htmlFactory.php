@@ -121,7 +121,7 @@ class  htmlFactory extends  dataFactory
         <div class='written'>
           <h2 class='center-block'>".$moreinformation->title."</h2>
           <a href='".$moreinformation->link."' target='_blank'>
-		  <span class='glyphicon glyphicon-play-circle' aria-hidden='true'></span>
+		  <!--<span class='glyphicon glyphicon-play-circle' aria-hidden='true'></span> this is comment coding-->
 		  </a>
 		  </div>
       </div></div></li>";
