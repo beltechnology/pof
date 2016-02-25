@@ -53,9 +53,9 @@ $menuType = "viewTestimonial";
 <!-- /.content-wrapper -->
 <?php include("common/adminFooter.php");?>
 <script>
-      $(function () {
-        CKEDITOR.replace('editor1');
-      });
-	  
-	//  CKEDITOR.instances.editor1.updateElement();
+CKEDITOR.replace('editor1', {
+"filebrowserImageUploadUrl": "<?php echo BaseUrl;?>admin/plugins/ckeditor/plugins/imgupload.php",
+"filebrowserBrowseUrl": "<?php echo BaseUrl;?>admin/plugins/ckeditor/plugins/imgupload.php",
+"filebrowserUploadUrl": "<?php echo BaseUrl;?>admin/plugins/ckeditor/plugins/imgupload.php"
+});
     </script>

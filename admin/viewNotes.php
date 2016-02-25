@@ -5,6 +5,7 @@ $menuType = "viewNotes";
 <div class="content-wrapper">
         <!-- Main content -->
         <section class="content-header">
+         <h1>&nbsp;          </h1>
           <?php
 				  if(!$studentLogin)
 				  {?>
