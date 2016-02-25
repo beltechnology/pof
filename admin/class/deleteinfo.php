@@ -13,20 +13,8 @@ class deleteinfo
 	}
 	public function checkFeatured($featuredInfo)
 	{
-
-		$query = mysql_query("SELECT * FROM category where featured= 1 and deleted= 0 ");
-		$row = mysql_num_rows($query);
-		
-		if($featuredInfo->checkType == true)
-		{
-				$response = mysql_query("UPDATE category SET featured= 1 WHERE category_id=".$featuredInfo->category_id);
-		}
-		else
-		{
-			$response = mysql_query("UPDATE category SET featured= 0 WHERE category_id=".$featuredInfo->category_id);
-			
-		}
-		return $row;
+				$response = mysql_query("UPDATE category SET featured= ".$featuredInfo->checkType." WHERE category_id=".$featuredInfo->category_id);
+				return $response;
 	}
 }
 

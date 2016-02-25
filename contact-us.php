@@ -5,22 +5,18 @@
      <div class="container-fluid">
        <div class="row">
         <div class="col-md-8 col-lg-8">
-		 <h2>Get In Touch With Us<div class="border"></div></h2>
-		 <p>Lorem Ispum dolor sit amet,consectetur adiscing elit, sed do eiusmod tempor incidunt at labore at dolore magna aliqua. ut enima ad mainm veniam, quos nostrud excerution allimcaklo laboris utmo at commoda conseqquet.
-		 Lorem Ispum dolor sit amet,consectetur adiscing elit, sed do eiusmod tempor incidunt at labore at dolore magna aliqua. ut enima ad mainm veniam, quos nostrud excerution allimcaklo laboris utmo at commoda conseqquet.</p>
+		 <h2><?php echo  $contactData->title ;?><div class="border"></div></h2>
+		 <p><?php echo  $contactData->description ;?></p>
 	  <div class="row">
 		    <div class="col-lg-8 col-md-8">
-			 <h2>Lorem Ispum Dolor Sit Amet</h2>
-			  <p>1/18 lorem ispum avem<br>
-			     Near-Raddison blue hotel,<br>
-				 Outer-ring-road.lorem ispum 1102,<br>
-				 Tel:012345789;
+			 <h2>Address</h2>
+			  <p><?php echo  $contactData->address ;?>
 			  </p>
 			</div>
 			<div class="col-lg-4 col-md-4">
 			 <h2>Call Us:</h2>
-			 <p>Mobile:&nbsp; &nbsp; +91 123457890</p>
-			 <p>E-mail:&nbsp; &nbsp; info@example.com</p> 
+			 <p>Mobile:&nbsp; &nbsp; +91 <?php echo  $contactData->mobile ;?></p>
+			 <p>E-mail:&nbsp; &nbsp; <?php echo  $contactData->email ;?></p> 
 			</div>	
 			<div class="col-lg-12 col-md-12">
 			 <h3>Contact Form: <div class="border-2"></div></h3>

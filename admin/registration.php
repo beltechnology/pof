@@ -55,7 +55,7 @@ $menuType = "registration";
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="col-sm-2 control-label" for="dob">Date of Brith</label>
+                        <label class="col-sm-2 control-label" for="dob">Date of Birth</label>
                         <div class="col-sm-10">
                 <div class='input-group date' id='datetimepicker1'>
                     <input type='text' class="form-control"  name="dob" id="dob" required placeholder="dd/mm/yyyy" value="<?php if($edit) echo $registrationData->dob; ?>" />
