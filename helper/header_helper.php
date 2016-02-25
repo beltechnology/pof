@@ -8,10 +8,10 @@ if(isset($_POST['register']))
 	$city = $_POST['city'];
 	$state = $_POST['state'];
 	
-	$to = "ravi@bel-technology.com";
-	$subject = "My subject";
-	$txt = "Name:$name<br />Phone:$phone<br />Email:$email<br />School Name:$schoolName<br />City:$city<br />State:$state<br />";
-	$headers = "From: webmaster@example.com" . "\r\n";
+	$to = $contactData->email;
+	$subject = "Registration Requiest";
+	$txt = "Name : $name<br />Phone : $phone<br />Email : $email<br />School Name : $schoolName<br />City : $city<br />State : $state<br />";
+	$headers = "From: $email" . "\r\n";
 	$headers .= "MIME-Version: 1.0" . "\r\n";
 	$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 	mail($to,$subject,$txt,$headers);
@@ -37,5 +37,5 @@ elseif(isset($_POST['emailSubscribe']))
 	}
 
 }
-echo $msg;
+//echo $msg;
 ?>

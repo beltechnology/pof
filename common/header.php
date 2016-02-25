@@ -6,7 +6,6 @@ include($path."class/constant.php");
 include($path."admin/common/conn.php");
 include($path."admin/class/datainfo.php");
 include($path."class/htmlFactory.php");
-include($path."helper/header_helper.php");
 $htmlFactory = new htmlFactory();
 $studentLogin = false;
 if(isset($_SESSION['userInfo']))
@@ -23,7 +22,7 @@ if(isset($_SESSION['userInfo']))
 	}
 }
  $contactData = $htmlFactory->getContactData();
- 
+include($path."helper/header_helper.php");
 
 if(isset($_REQUEST['pageId']))
 {
