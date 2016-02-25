@@ -20,7 +20,7 @@ foreach($allMenus as $menu)
 		 }
 		 		 
  ?>
-    <div class="black-line"><li id="<?php echo $menu->category_id; ?>" class="category"><a href="#demo<?php echo $menu->category_id; ?>" data-toggle="collapse"><?php echo $menu->title; ?><?php if($sumMenuFlag){?><i class="fa fa-plus-square pull-right" ></i><?php } ?></a></li></div>
+    <div class="Right-navigation"><li id="<?php echo $menu->category_id; ?>" class="category"><a href="#demo<?php echo $menu->category_id; ?>" data-toggle="collapse"><?php echo $menu->title; ?><?php if($sumMenuFlag){?><i class="fa fa-plus-square pull-right" ></i><?php } ?></a></li></div>
 <?php
 	 echo $categoryInfo->getSubmenu($menu->category_id);
 	 echo $htmlFactory->createPages($menu->category_id);

@@ -98,7 +98,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
 }
 .content .header .top-header  .envevlope{
 	font-size:23px;
-	margin-left:-38%;
+	margin-left:;
 }
 .content .header .top-header  .phone{
 	font-size:23px;
@@ -579,7 +579,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
 .carousel-sign{
 	color:#fba945;
 }
-.main-page .black-line a{
+.main-page .Right-navigation a{
 	border-bottom:1px solid #999999;
 	border:none;
 	outline:none;
@@ -587,10 +587,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
 	color:#5e5e5e;
 	font-family:CALIST_1;
 }
-.main-page .black-line a:hover{
+.main-page .Right-navigation a:hover{
 	color:#8d8787;
 }
-.main-page .black-line a:active{
+.main-page .Right-navigation a:active{
 	color:#000000;
 }
 .main-page .grey-line a{
@@ -624,9 +624,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
 .main-page .grey-line{
 	border-bottom:1px solid #cccccc;
 }
-.main-page ul li{
-	font-size:18px;
-	padding:3% 10%;
+.main-page  li.category{
+	font-size:16px;
+	padding:3% 1%;
 	border-bottom:1px solid #999999;
 	font-family:CALIST_1
 }

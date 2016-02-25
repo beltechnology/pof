@@ -1142,3 +1142,33 @@ h2{
 	background:#c7a96d;
 	border-radius:5px;
 }
+/* css of admin header.php*/
+.main-header{
+	background:#39a8e8;
+}
+.skin-blue .main-header .logo{
+	background:#39a8e8;
+}
+.skin-blue .main-header {
+	height:;
+}
+.logo:hover{
+	background:#39a8e8 !important;
+}
+.navbar .sidebar-toggle{
+	background:#39a8e8 !important;
+}
+.nav .dropdown .dropdown-toggle{
+	background:#39a8e8 !important;
+	position:relative;
+	top:8px;
+}
+.logo-lg  img{
+	position:relative;
+	top:7px;
+	margin-bottom:;
+}
+.main-header .logo{
+	height:auto;
+	overflow:visible !important;
+}

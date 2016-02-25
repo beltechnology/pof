@@ -211,8 +211,7 @@ else
 <style>
 .logo-lg img {
     width: 50%;
-    padding: 0px 0px 0px 0px;
-    height: 50%;
+    height:auto ;
 }
 ol.breadcrumb-student {
     list-style: none;
