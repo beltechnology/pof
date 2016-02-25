@@ -48,7 +48,7 @@
     <script src="dist/js/pages/dashboard.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="dist/js/demo.js"></script>
-    <script src="https://cdn.ckeditor.com/4.4.3/standard/ckeditor.js"></script>
+    <script src="plugins/ckeditor/ckeditor.js"></script>
     <!-- Bootstrap WYSIHTML5 -->
     <script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
   </body>
