@@ -323,6 +323,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
 	outline:none;
 	background:#cccccc;
 }
+.content .header .bottom-header .white .input-group-addon{
+	border:none;
+	background:transparent;
+}
+.content .header .bottom-header .white .glyphicon-calendar{
+	font-size:22px;
+	position:relative;
+	top:-5px;
+}
 .main-content{
 	margin-top:1%;
 	width:;
