@@ -119,9 +119,10 @@ class  htmlFactory extends  dataFactory
 		 <div class='contain'>
 			<img class='img-responsive image' src='".BaseUrl."admin/upload/".$moreinformation->upload."'>
         <div class='written'>
-          <h2 class='center-block'>".$moreinformation->title."</h2>
+          
           <a href='".$moreinformation->link."' target='_blank'>
 		  <!--<span class='glyphicon glyphicon-play-circle' aria-hidden='true'></span> this is comment coding-->
+		  <h2 class='center-block'>".$moreinformation->title."</h2>
 		  </a>
 		  </div>
       </div></div></li>";
@@ -137,8 +138,8 @@ class  htmlFactory extends  dataFactory
 		foreach($moreinformations as $moreinformation)
 		{
 			$moreinformationHTML = $moreinformationHTML."<div class='col-lg-11 col-md-11 col-lg-offset-1 col-md-offset-1 text'><img class='img-responsive pull-left' src='".BaseUrl."admin/upload/".$moreinformation->upload."' style='width:290px; height:170px;'>
-			   <div class='written'> <h2 class='center-block'>".$moreinformation->title."</h2>
-                <a href='".$moreinformation->link."' target='_blank'><span class='glyphicon glyphicon-play-circle' aria-hidden='true'></span></a>
+			   <div class='written'><a href='".$moreinformation->link."' target='_blank'> <h2 class='center-block'>".$moreinformation->title."</h2></a>
+                
 			   </div>
 			  </div>
 			  <div>&nbsp;</div>";
@@ -180,7 +181,14 @@ function createPages($categoryId)
 	{
 		foreach($pages as $page)
 		{
+			if($categoryId == 0)
+			{		
+			$pageLinkHTML =$pageLinkHTML."<li class='singlepages pagesLi".$categoryId."' ".$putStyle."><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$categoryId."&pageId=".$page->pageId."'>".$page->pageTitle."</a></li>";
+			}
+			else
+			{
 			$pageLinkHTML =$pageLinkHTML."<li class='pages pagesLi".$categoryId."' ".$putStyle."><span class='glyphicon glyphicon-ok' aria-hidden='true'></span> <a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$categoryId."&pageId=".$page->pageId."'>".$page->pageTitle."</a></li>";
+			}
 		}
 	}
 	return $pageLinkHTML;

@@ -60,7 +60,7 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
         </li>
         <?php if($studentLogin){?>
         <li>
-          <p><a class ="myCart" href="<?php echo BaseUrl;?>admin/viewPages.php">My Account</a></p>
+          <p><a class ="myCart" href="<?php echo BaseUrl;?>admin/viewNotes.php">My Account</a></p>
         </li>
         <li>
           <p><a class ="myCart" href="<?php echo BaseUrl;?>admin/logout.php">Logout</a></p>

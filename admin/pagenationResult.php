@@ -4,12 +4,17 @@ $pageinationHtml = new paginationHtml();
 $pagenationInfo = new stdClass();
 	if(isset($_REQUEST['notesCategoryId']))
 	{
+	  $notesCategoryId = $_REQUEST['notesCategoryId'];
+	}
+	
+	if($notesCategoryId)
+	{
 		$page = 1;
 		if(!empty($_GET["page"])) {
 		$page = $_GET["page"];
 		}
 
-		$pagenationInfo->notesCategoryId = $_REQUEST['notesCategoryId'];
+		$pagenationInfo->notesCategoryId = $notesCategoryId;
 		$pagenationInfo->page = $page;
 		$selectCategoryData = $pageinationHtml->getDataForNotes($pagenationInfo);
 		$pages = $pageinationHtml->numRows($pagenationInfo);

@@ -25,9 +25,20 @@ if(!empty($_POST['userName']) || !empty($_POST['password']))
          <div class="">
 		  <div>&nbsp;</div>
 		  <div class="container">
-          <div class="row">
+<!--          <div class="row">
+<div class="col-md-12">
+        <a class="btn btn-warning btn-responsive" href="#">Warning</a>
+        <a class="btn btn-success btn-responsive" href="#">Success</a>
+   </div>
+             </div>
+-->          <div class="row">
               <!-- Horizontal Form -->
-			  <div class="col-lg-6 col-md-6">
+              <div class="panel panel-default col-lg-6 col-md-6 formDiv">
+  			  <div class="panel-body"><a class="btn btn-warning btn-responsive" href="#">Warning</a>
+              <a class="btn btn-warning btn-responsive" href="#">Warning</a>
+              </div>
+				</div>
+			  <div class="col-lg-6 col-md-6 formDiv">
               <div class="box box-info" style="background:#e5dfdf;  border-radius:5px;">
               <div class="mainDiv">
                 <div class="box-header with-border">
@@ -67,7 +78,7 @@ if(!empty($_POST['userName']) || !empty($_POST['password']))
               </div>
             <!--/.col (right) -->
 			</div><!--end of col-lg-6 col-md-6-->
-			 <div class="col-lg-6 col-md-6">
+			 <div class="col-lg-6 col-md-6 formDiv" style="display:none;">
               <div class="box box-info" style="background:#e5dfdf;  border-radius:5px;">
               <div class="mainDiv">
                 <div class="box-header with-border">
@@ -126,6 +137,10 @@ if(!empty($_POST['userName']) || !empty($_POST['password']))
 }
 .mainDiv {
     padding: 0 20px 10px 20px;
+}
+.col-lg-6.formDiv {
+    width: 50%;
+    margin-left: 25%;
 }
 </style> 
 <?php

@@ -15,6 +15,7 @@ $menuType = "viewNotes";
 				  else
 				  {?>
                   <ol class="breadcrumb-student">
+                  <li ><b><?php echo $studentInfo->studentClass ;?></b></li>
                   <li ><b><?php echo $CategoryName ;?></b></li>
                   <?php
                   }

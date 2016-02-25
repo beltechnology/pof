@@ -24,7 +24,7 @@ if($_REQUEST['notesId'] == $note->notesId)
                 <div class="box-header" style="height:50px;">
                   <h3 class="box-title"><b><?php echo $note->notesTitle;?></b></h3>
                   <a download href="<?php  echo BaseUrl."admin/upload/".$note->uploads;?>" class="btn btn-primary pull-right">Download</a>
-                  <a href="#" class="btn btn-primary pull-right btnPrint">Print</a>
+                 <!-- <a href="#" class="btn btn-primary pull-right btnPrint">Print</a>-->
                 </div><!-- /.box-header -->
                 <div class="box-body">
                 <?php echo $note->notesDescription; ?>
