@@ -101,7 +101,7 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
                 <li class="home"><a href="<?php echo BaseUrl;?>">Home &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; <span class="sr-only">(current)</span></a></li>
                 <li><a href="#">About Us &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp;</a></li>
                 <li><a href="#">What We Do &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp;</a></li>
-                <li><a href="#">Contact Us &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp;</a></li>
+                <li><a href="<?php echo BaseUrl;?>contact-us.php">Contact Us &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp;</a></li>
               </ul>
             </div>
             <div class="col-md-3 col-lg-3">
