@@ -20,7 +20,7 @@
     <!-- Bootstrap 3.3.5 -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- Morris.js charts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="<?php echo BaseUrl;?>admin/bootstrap/js/raphael-min.js"></script>
     <!-- Sparkline -->
     <script src="plugins/sparkline/jquery.sparkline.min.js"></script>
     <!-- jvectormap -->
@@ -29,7 +29,7 @@
     <!-- jQuery Knob Chart -->
     <script src="plugins/knob/jquery.knob.js"></script>
     <!-- daterangepicker -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+	<script type="text/javascript" src="<?php echo BaseUrl;?>admin/bootstrap/js/moment.js"></script>
     <script src="plugins/daterangepicker/daterangepicker.js"></script>
     <!-- datepicker -->
     <script src="plugins/datepicker/bootstrap-datepicker.js"></script>
@@ -64,7 +64,7 @@ $("li.<?php echo $menuType; ?>").addClass("active");
 				  }?>
 $("a.delete").click(function()
 {
-	var response = confirm("Do you relly want delete.");
+	var response = confirm("Do you really want to delete this ?");
 	if(response)
 	{
 		var url = $(this).attr("data").split("=");

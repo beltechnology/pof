@@ -224,8 +224,8 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
             <div class="row">
               <div class="col-md-1 col-lg-1">&nbsp;</div>
               <div class="col-md-10 col-lg-10">
-			  <label for="exampleInputText"></label>
-                <input class="group-form" type="text" class="form-control" name="userName" placeholder="User Name" required>
+			  <label for="userName"></label>
+                <input class="group-form" type="text" class="form-control" id="userName" name="userName" placeholder="User Name" required>
               </div>
 			  <div class="col-md-1 col-lg-1">&nbsp;</div>
 			</div>
@@ -233,9 +233,15 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
 			<div class="row">
 			  <div class="col-md-1 col-lg-1">&nbsp;</div>
               <div class="col-md-10 col-lg-10">
-	           <label for="exampleInputPassword"></label>  
-                <input class="group-form " type="password" class="form-control" name="password" placeholder="Password" required>
-              </div>
+                    <label for="userName"></label>
+<div class="form-group">
+                <div class='input-group date' id='passwordDate'>
+                <input class="group-form " type="password"  id="password" class="form-control" name="password" placeholder="Password" required>
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>              </div>
               <div class="col-md-1 col-lg-1">&nbsp;</div>
             </div>
             <div>&nbsp;</div><div>&nbsp;</div>

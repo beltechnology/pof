@@ -55,11 +55,11 @@
 			<!--<div class="footer-bottom">-->
 			</div>
 	</div><!--end of content-->
-  <script src="<?php echo $pathCss;?>js/jquery.js"></script>
-  <script src="<?php echo $pathCss;?>js/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://mainlinetest.vismc.com/gladstone/portal/bloom/common/script/js/moment.js"></script>
-<script type="text/javascript" src="https://mainlinetest.vismc.com/gladstone/portal/bloom/vitals/scripts/js/bootstrap-datetimepicker.min.js"></script>
-  <script src="<?php echo $pathCss;?>js/common.js"></script>
+  <script src="<?php echo BaseUrl;?>js/jquery.js"></script>
+  <script src="<?php echo BaseUrl;?>js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo BaseUrl;?>admin/bootstrap/js/moment.js"></script>
+<script type="text/javascript" src="<?php echo BaseUrl;?>admin/bootstrap/js/bootstrap-datetimepicker.min.js"></script>
+  <script src="<?php echo BaseUrl;?>js/common.js"></script>
   </body>
 </html>
 <script type="text/javascript">
