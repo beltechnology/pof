@@ -22,34 +22,34 @@
 			 <h3>Contact Form: <div class="border-2"></div></h3>
 			</div><!--end of col-lg-12 col-md-12-->
 			 <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>
-			<form class="form">
+			<form class="form" method="post">
 			 <div class="container-fluid">
 			 <div class="row">
 			  <div class="col-lg-4 col-md-4">
 			    <div class="form-group">
-                <label class="sr-only" for="exampleInputtext3">Name</label>
-               <input type="text" class="form-control" id="exampleInputtext3" placeholder="Name">
+                <label class="sr-only" for="name">Name</label>
+               <input type="text" class="form-control" id="name" name="name" placeholder="Name">
                </div>
 			  </div>
 			  <div class="col-lg-1 col-md-1">&nbsp;</div>
 			  <div class="col-lg-4 col-md-4">
 			    <div class="form-group">
-                <label class="sr-only" for="exampleInputtext3">Address</label>
-               <input type="email" class="form-control" id="exampleInputtext3" placeholder="Address">
+                <label class="sr-only" for="address">Address</label>
+               <input type="text" class="form-control" id="address" name="address" placeholder="Address">
                </div>
 			  </div>
 			  <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>
 			  <div class="col-lg-4 col-md-4">
 			    <div class="form-group">
-                <label class="sr-only" for="exampleInputtext3">Phone No</label>
-               <input type="email" class="form-control" id="exampleInputtext3" placeholder="Phone No">
+                <label class="sr-only" for="phone">Phone No</label>
+               <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone No">
                </div>
 			  </div>
 			  <div class="col-lg-1 col-md-1">&nbsp;</div>
 			  <div class="col-lg-4 col-md-4">
 			    <div class="form-group">
-                <label class="sr-only" for="exampleInputEmail3">Email address</label>
-               <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+                <label class="sr-only" for="email">Email address</label>
+               <input type="email" class="form-control" id="email" name="email" placeholder="Email">
                </div>
 			  </div>
 			  <div>&nbsp;</div><div>&nbsp;</div><div>&nbsp;</div>
@@ -58,14 +58,16 @@
 			  <div class="container-fluid">
 			 <div class="row">
 			  <div class="col-lg-7 col-md-7">
-			   <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+			   <textarea class="form-control" rows="3" placeholder="Message" id="message" name="message"></textarea>
 			   </div>
 			   <div>&nbsp;</div><div>&nbsp;</div>
-			   <div class="col-lg-2 col-md-2"><button type="button" class="btn btn-default btn-lg btn-block">SEND</button>
+			   <div class="col-lg-2 col-md-2"><button type="submit" name="contactus" class="btn btn-default btn-lg btn-block">SEND</button>
 			   </div>
 			  </div><!--end of row-->
 			  </div><!--end of container-fluid-->
 			  </form>
+              <div>&nbsp;</div>
+              <div>&nbsp;</div>
           </div><!--end of row-->			
 			</div><!--end of col-lg-8 col-md-8-->
 	    </div><!--end of row-->
