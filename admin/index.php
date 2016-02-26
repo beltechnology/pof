@@ -25,19 +25,13 @@ if(!empty($_POST['userName']) || !empty($_POST['password']))
          <div class="">
 		  <div>&nbsp;</div>
 		  <div class="container">
-<!--          <div class="row">
-<div class="col-md-12">
-        <a class="btn btn-warning btn-responsive" href="#">Warning</a>
-        <a class="btn btn-success btn-responsive" href="#">Success</a>
-   </div>
-             </div>
--->          <div class="row">
+          <div class="row">
               <!-- Horizontal Form -->
-              <div class="panel panel-default col-lg-6 col-md-6 formDiv">
-  			  <div class="panel-body"><a class="btn btn-warning btn-responsive" href="#">Warning</a>
-              <a class="btn btn-warning btn-responsive" href="#">Warning</a>
+<!--              <div class="panel panel-default col-lg-6 col-md-6 formDiv">
+  			  <div class="panel-body"><a class="btn btn-primary btn-responsive" href="#">Student</a>
+              <a class="btn btn-success btn-responsive" href="#">Admin</a>
               </div>
-				</div>
+				</div>-->
 			  <div class="col-lg-6 col-md-6 formDiv">
               <div class="box box-info" style="background:#e5dfdf;  border-radius:5px;">
               <div class="mainDiv">
