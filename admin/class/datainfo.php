@@ -853,7 +853,7 @@ public function getSubmenu($parentId)
 			mysql_query("SET AUTOCOMMIT=0");
 			mysql_query("START TRANSACTION");
 			
-			$res = mysql_query("UPDATE mSliderHead SET title='$title'  WHERE mSliderHeadId='$mSliderHeadId'");
+			$res = mysql_query("UPDATE msliderhead SET title='$title'  WHERE mSliderHeadId='$mSliderHeadId'");
 			if ($res) {
 			mysql_query("COMMIT");
 			$response = "Heading   successfully upadted.";
