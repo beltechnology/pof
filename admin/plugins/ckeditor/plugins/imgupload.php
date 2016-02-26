@@ -18,7 +18,7 @@ $re = '';
 
 if(isset($_FILES['upload']) && strlen($_FILES['upload']['name']) > 1) {
   $upload_dir = trim($upload_dir, '/') .'/';
-  $img_name = basename($_FILES['upload']['name']);
+  $img_name = date("ymdhis").basename($_FILES['upload']['name']);
 
   // get protocol and host name to send the absolute image path to CKEditor
   $protocol = !empty($_SERVER['HTTPS']) ? 'https://' : 'http://';
@@ -43,7 +43,7 @@ if(isset($_FILES['upload']) && strlen($_FILES['upload']['name']) > 1) {
     if(move_uploaded_file($_FILES['upload']['tmp_name'], $uploadpath)) {
       $CKEditorFuncNum = $_GET['CKEditorFuncNum'];
       $url = $site. $upload_dir . $img_name;
-      $message = $img_name .' successfully uploaded: \\n- Size: '. number_format($_FILES['upload']['size']/1024, 3, '.', '') .' KB \\n- Image Width x Height: '. $width. ' x '. $height;
+      $message = $img_name .' successfully uploaded: \\n- Size: '. number_format($_FILES['upload']['size']/1024, 3, '.', '');
       $re = "window.parent.CKEDITOR.tools.callFunction($CKEditorFuncNum, '$url', '$message')";
     }
     else $re = 'alert("Unable to upload the file")';

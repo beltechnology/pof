@@ -94,7 +94,8 @@ else
             <ul class="nav navbar-nav">
               <li class="dropdown user user-menu">
                 <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">
-                  <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+<!--                  <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+-->                  <span class="glyphicon glyphicon-user"></span>
                   <span class="caret"></span>
                   <span class="hidden-xs"><?php 
 				  $userInfo = $_SESSION['userInfo'];
@@ -111,7 +112,7 @@ else
                 <ul class="dropdown-menu">
                   <li class="user-footer">
                     <div class="pull-left">
-                      <a href="#" class="btn btn-default btn-flat">Profile</a>
+                      <!--<a href="#" class="btn btn-default btn-flat">Profile</a>-->
                     </div>
                     <div class="pull-right">
                       <a href="logout.php" class="btn btn-default btn-flat">Sign out</a>
@@ -145,7 +146,7 @@ else
 					//  var_dump( $subjects);
 					  ?>
                   <a href="<?php echo BaseUrl; ?>">
-                    <i class="fa fa-dashboard"></i> <span>Home</span> <i class="fa fa-angle-left pull-right"></i>
+                    <!--<i class="fa fa-dashboard"></i> <span>Home</span> <i class="fa fa-angle-left pull-right"></i>-->
                   </a>
               <ul class="treeview-menu">
               <?php
@@ -182,10 +183,10 @@ else
 				  {
 			  ?>
                   <a href="#">
-                    <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
+                    <!--<i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>-->
                   </a>
               <ul class="treeview-menu">
-                <li class="active index"><a href="dashboard.php"><i class="fa fa-circle-o"></i> Dashboard</a></li>
+                <li class="active index "><a href="dashboard.php"><i class="fa fa-dashboard"></i> Dashboard</a></li>
                 <li class="viewCategory" ><a href="viewCategory.php"><i class="fa fa-circle-o"></i> View Category</a></li>
                 <li class="viewNotesCategory" ><a href="viewNotesCategory.php"><i class="fa fa-circle-o"></i>View Subject</a></li>
                 <li class="viewNotes" ><a href="viewNotes.php"><i class="fa fa-circle-o"></i> View Notes</a></li>
@@ -196,7 +197,7 @@ else
                 <li class="viewTestimonial" ><a href="viewTestimonial.php"><i class="fa fa-circle-o"></i> View Testimonial</a></li>
                 <li class="viewmoreInformation" ><a href="viewMoreInformation.php"><i class="fa fa-circle-o"></i>View More Information</a></li>
                 <li class="contactus" ><a href="contactus.php"><i class="fa fa-circle-o"></i>Update Contact Us</a></li>
-                <li class="olympaidInformation" ><a href="viewOlympaidInformation.php"><i class="fa fa-circle-o"></i>View Olympaid Information</a></li>
+                <li class="olympaidInformation" ><a href="viewOlympaidInformation.php"><i class="fa fa-circle-o"></i>View Olympiad Information</a></li>
                <!-- <li><a href="index2.html"><i class="fa fa-circle-o"></i> moreInformation v2</a></li>-->
                </ul>
                <?php

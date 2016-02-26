@@ -5,10 +5,11 @@ $menuType = "viewNotes";
 <div class="content-wrapper">
         <!-- Main content -->
         <section class="content-header">
-         <h1>&nbsp;          </h1>
-          <?php
+                <?php
 				  if(!$studentLogin)
 				  {?>
+         <h1>&nbsp;          </h1>
+  
                   <ol class="breadcrumb">
             <li><b><a href="notesDetail.php"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Add Note Detail</a></b></li>
             <?php
@@ -120,7 +121,7 @@ $menuType = "viewNotes";
 				  }
 				  
 			?>
-                      <a href="#" class="pull-right">Top</a>
+                     <!-- <a href="#" class="pull-right">Top</a>-->
 
             </div><!-- /.col -->
             

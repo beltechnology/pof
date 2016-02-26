@@ -16,7 +16,7 @@ $menuType = "olympaidInformation";
 
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Olympaid Information</h3>
+                  <h3 class="box-title">Olympiad Information</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <table id="category" class="table table-bordered table-striped">

@@ -233,9 +233,9 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
 			  <div class="col-md-1 col-lg-1">&nbsp;</div>
               <div class="col-md-10 col-lg-10">
                     <label for="userName"></label>
-<div class="form-group">
-                <div class='input-group date' id='passwordDate'>
-                <input class="group-form " type="password"  id="password" class="form-control" name="password" placeholder="Password" required>
+<div class="form-group date" id='passwordDate'>
+                <div class='input-group ' >
+                <input class="group-form " type="password"  id="password" class="form-control" name="password" placeholder="Password" readonly required>
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                     </span>
