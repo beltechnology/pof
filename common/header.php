@@ -51,23 +51,23 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
     <div class="container-fluid">
 	<div class="row">
 	<div class="col-lg-12 col-md-12">
-      <ul class="nav nav-justified">
+      <ul>
         <li>
-          <p> &nbsp; <i class="fa fa-envelope-square envevlope"></i> <span class="register-2"><?php echo  $contactData->email ;?></span></p>
+          <p> <i class="fa fa-envelope-square envevlope"></i> <span class="register-2"><?php echo  $contactData->email ;?></span></p>
         </li>
         <li>
-          <p class="welcome"><span class="register-2">Welcome </span> <?php if($studentLogin){echo $studentInfo->studentName; }else{echo "Visitor !";}?></p>
+          <p class="welcome"><span class="welcome-2">Welcome <?php if($studentLogin){echo $studentInfo->studentName; }else{echo "Visitor !";}?></span></p>
         </li>
         <?php if($studentLogin){?>
         <li>
-          <p><a class ="myCart" href="<?php echo BaseUrl;?>admin/viewNotes.php">My Account</a></p>
+          <p><a class ="myCart cart-align" href="<?php echo BaseUrl;?>admin/viewNotes.php">My Account</a></p>
         </li>
         <li>
-          <p><a class ="myCart" href="<?php echo BaseUrl;?>admin/logout.php">Logout</a></p>
+          <p><a class ="myCart log-align" href="<?php echo BaseUrl;?>admin/logout.php">Logout</a></p>
         </li>
        <?php }  ?>
         <li>
-          <p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <i class="fa fa-phone-square phone"></i> <span class="register-2">+ 91 <?php echo  $contactData->mobile ;?></span></p>
+          <p class="phone-align"> <i class="fa fa-phone-square phone"></i> <span class="register-2">+ 91 <?php echo  $contactData->mobile ;?></span></p>
         </li>
       </ul>
 	 </div>
