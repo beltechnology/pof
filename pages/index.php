@@ -19,7 +19,8 @@ elseif(isset($_REQUEST['pageId']))
 elseif(isset($_REQUEST['categoryId']))
 {
 	$innerTitle = "";
-	$innerDescription = $htmlFactory->createPages($_REQUEST['categoryId']);;
+	$innerDescription = $htmlFactory->createPagesInnnerPages($_REQUEST['categoryId']);
+	//var_dump($innerDescription);
 }
 ?>
 

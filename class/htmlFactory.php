@@ -194,6 +194,30 @@ function createPages($categoryId)
 	return $pageLinkHTML;
 	
 }
+// create pages for inner page
+function createPagesInnnerPages($categoryId)
+{
+	$pageLinkHTML = "";
+	$putStyle = "";
+	$pages = $this->getPageDataByCategoryId($categoryId);
+	if($categoryId != 0)
+	{
+	 $putStyle = "style='display:block;'";
+	}
+	if($pages != "")
+	{
+		foreach($pages as $page)
+		{
+			$pageLinkHTML =$pageLinkHTML."<li><span class='glyphicon glyphicon-ok' aria-hidden='true'></span> <a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$categoryId."&pageId=".$page->pageId."'>".$page->pageTitle."</a></li>";
+		}
+	}
+	return $pageLinkHTML;
+	
+}
+
+
+
+
 
 function getHomeMenu ()
 {
