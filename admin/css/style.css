@@ -1145,10 +1145,17 @@ h2{
 /* css of admin header.php*/
 .main-header{
 	background:#39a8e8;
+	border-color:#39a8e8;
+	outline-color:#39a8e8;
+	box-shadow:#39a8e8;
 }
 .skin-blue .main-header .logo{
 	background:#39a8e8;
+	border-right-color:1px solid red !important;
+	box-shadow:none;
+	outline:none;
 }
+
 .skin-blue .main-header {
 	height:;
 }
@@ -1159,16 +1166,51 @@ h2{
 	background:#39a8e8 !important;
 }
 .nav .dropdown .dropdown-toggle{
-	background:#39a8e8 !important;
+	background:transparent;
 	position:relative;
-	top:8px;
+	top:7px;
+	border:none;
+	outline:none;
+}
+.nav .dropdown .dropdown-toggle:hover{
+	background:transparent !important;
+	border:none;
+	outline:none;
+}
+.nav .dropdown .dropdown-toggle:focus{
+	background:transparent !important;
+	outline:none;
+	border:none;
+	box-shadow:none;
+}
+.nav .dropdown .dropdown-toggle:active{
+	background:transparent !important;
+	border:none;
+	outline:none;
+	box-shadow:none;
+}
+.nav .dropdown .dropdown-toggle:active:focus{
+	background:transparent !important;
+	outline:none;
+	border:none;
+	box-shadow:none;
 }
 .logo-lg  img{
 	position:relative;
-	top:7px;
+	top:6px;
 	margin-bottom:;
 }
 .main-header .logo{
 	height:auto;
 	overflow:visible !important;
+}
+.navbar .sidebar-toggle{
+	background:transparent !important;
+}
+.skin-blue .sidebar-menu>li:hover>a, .skin-blue .sidebar-menu>li.active>a{
+	border-left-color:transparent;
+}
+.main-header>.navbar{
+	outline:none;
+	box-shadow:none;
 }

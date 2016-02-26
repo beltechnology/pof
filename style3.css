@@ -95,14 +95,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
 	font-family:CALISTBI;
 	font-style:Italic;
 	font-weight:Bold;
+	position:relative;
+	top:2px;
+	left:150px;
 }
 .content .header .top-header  .envevlope{
 	font-size:23px;
 	margin-left:;
+	padding-left:75px;
 }
 .content .header .top-header  .phone{
 	font-size:23px;
-	margin-right:;
+	padding-right:;
+}
+.content .header .top-header  .phone-align{
+	padding-right:100px !important;
+	float:right !important;
 }
 .content .header .top-header a.myCart{
 	font-size:;
@@ -404,6 +412,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
 	font-size:17px;
 	text-align:justify;
 	font-family:CALIST_1;
+	word-wrap: break-word;
 }
 .main-content .grey-2 h2{
 	font-size:26px;
@@ -1139,3 +1148,24 @@ marquee ul li {
 
 /*end of ravi.css*/
 
+.top-header ul li{
+	float:left;
+}
+.top-header .welcomr-2{
+	padding-left:250px;
+}
+.top-header .cart-align{
+	position:relative;
+	top:6px;
+	left:200px;
+}
+.top-header .log-align{
+	position:relative;
+	top:8px;
+	left:250px;
+}
+.top-header .phone-align{
+	position:absolute;
+	top:-28px;
+	right:8px;
+}
