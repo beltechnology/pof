@@ -241,4 +241,9 @@ p.titleDes {
 .studentCard a.btn {
     margin: 0;
 }
+ol.breadcrumb-student li {
+    float: left;
+    padding: 0 0 5px;
+    width: 7%;
+}
 </style>
