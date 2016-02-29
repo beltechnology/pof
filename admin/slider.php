@@ -39,7 +39,7 @@ $menuType = "slider";
 			$srno = 0;
 		foreach($sliderInfoData as $slider)
 		{$srno++;
-			if($srno == 5)
+			if($srno == 6)
 			{?>
             <tr>
             <td colspan="5"><h1 align="center"> Middle Slider</h1></td>

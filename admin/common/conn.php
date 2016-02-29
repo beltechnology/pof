@@ -19,7 +19,7 @@ $dbname = "jkcomdel_pof";
 }
 error_reporting(E_ALL ^ E_DEPRECATED);
 $conn = mysql_connect($servername, $username, $password)or die("Unable to connect to MySQL");
-$selected = mysql_select_db($dbname,$conn)or die("Could not select examples");
+$selected = mysql_select_db($dbname,$conn)or die("Could not select db");
 
 class userAuth
 {
@@ -36,12 +36,12 @@ class userAuth
 			
 		}
 		else{
-			throw new Exception("Invalid username and password");			
+			throw new Exception("your are logout.");			
 		}
 	}
 	catch(Exception $e) {
   		$msg = $e->getMessage();
-		header("location:index.php?msg=".$msg);
+		header("location:../index.php?sessionout=".$msg);
 		}
 	}
 	function userLogin($userName,$password,$loginType)
@@ -81,7 +81,14 @@ class userAuth
 		}
 	catch(Exception $e) {
   		$msg = $e->getMessage();
-		header("location:index.php?msg=".$msg);
+			if($loginType == "admin")
+			{
+			header("location:index.php?msg=".$msg);
+			}
+			else
+			{
+				header("location:../index.php?msg=".$msg);
+			}
 		}
 
 	}	

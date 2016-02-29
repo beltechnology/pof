@@ -12,7 +12,7 @@ class  htmlFactory extends  dataFactory
 		foreach($carousels as $carousel)
 		{
 			$count ++;
-			if($count >= 0 && $count <= 4)
+			if($count >= 0 && $count <= 5)
 			{
 				if($ele == 0)
 				{
@@ -51,7 +51,7 @@ class  htmlFactory extends  dataFactory
 		foreach($carousels as $carousel)
 		{
 			$count ++;
-			if($count >= 5 && $count <= 8)
+			if($count >= 6 && $count <= 10)
 			{
 				if($ele == 0)
 				{

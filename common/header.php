@@ -128,11 +128,11 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
         <div id="carousel-example-generic" class="carousel slide align-up" data-ride="carousel"> 
           <!-- Indicators -->
           <ol class="carousel-indicators">
-            <?php echo $htmlFactory->getIndicators(0,4)?>
+            <?php echo $htmlFactory->getIndicators(0,5)?>
           </ol>
           
           <!-- Wrapper for slides -->
-          <div class="carousel-inner" role="listbox"> <?php echo $htmlFactory->getHeaderCarousel(0,4)?> </div>
+          <div class="carousel-inner" role="listbox"> <?php echo $htmlFactory->getHeaderCarousel(0,5)?> </div>
           
           <!-- Controls --> 
           <a class="" href="#carousel-example-generic" role="button" data-slide="prev"> <span class="glyphicon  carousel-sign" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="" href="#carousel-example-generic" role="button" data-slide="next"> <span class="glyphicon  carousel-sign" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
@@ -236,6 +236,7 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
 <div class="form-group date" id='passwordDate'>
                 <div class='input-group ' >
                 <input class="group-form " type="password"  id="password" class="form-control" name="password" placeholder="Password" readonly required>
+                <input name="loginType" type="hidden" class="input username" value="student"  />
                     <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>
                     </span>

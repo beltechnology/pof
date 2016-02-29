@@ -1,6 +1,6 @@
 <?php
 include("controller/olympaidInformation_controller.php");
-$menuType = "olympaidInformation";
+$menuType = "ViewEmail";
 ?>
 <div class="content-wrapper">
         <!-- Main content -->

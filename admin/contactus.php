@@ -53,7 +53,7 @@ $menuType = "contactus";
                       <div class="form-group">
                         <label class="col-sm-2 control-label" for="mobile">Mobile</label>
                         <div class="col-sm-10">
-                    <input type='text' class="form-control"  name="mobile" id="mobile" required placeholder="Mobile" value="<?php if($edit) echo $contactData->mobile; ?> " />
+                    <input type='text' class="form-control"  name="mobile" id="mobile" required placeholder="Mobile" maxlength="32" value="<?php if($edit) echo $contactData->mobile; ?> " />
                         </div>
                       </div>
 

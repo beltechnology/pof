@@ -198,6 +198,7 @@ else
                 <li class="viewmoreInformation" ><a href="viewMoreInformation.php"><i class="fa fa-circle-o"></i>View More Information</a></li>
                 <li class="contactus" ><a href="contactus.php"><i class="fa fa-circle-o"></i>Update Contact Us</a></li>
                 <li class="olympaidInformation" ><a href="viewOlympaidInformation.php"><i class="fa fa-circle-o"></i>View Olympiad Information</a></li>
+                <li class="ViewEmail" ><a href="viewSubscribe.php"><i class="fa fa-circle-o"></i>View Email Subscribe</a></li>
                <!-- <li><a href="index2.html"><i class="fa fa-circle-o"></i> moreInformation v2</a></li>-->
                </ul>
                <?php
