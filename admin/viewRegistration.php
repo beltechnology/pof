@@ -59,7 +59,7 @@ $menuType = "registration";
                      foreach($registrationData as $registration)
 					  {?>
                       <tr>
-                        <td><?php echo $sr++;?> </td>
+                        <td  ><?php echo $sr++;?> </td>
                         <td><?php  echo $registration->studentName	 ;?></td>
                         <td><?php  echo $registration->studentName.$registration->studentId;?></td>
                         <td><?php  echo $registration->fatherName ;?></td>

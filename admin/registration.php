@@ -156,7 +156,28 @@ $menuType = "registration";
                       <div class="form-group">
                         <label class="col-sm-2 control-label" for="city">City</label>
                         <div class="col-sm-10">
-                          <input type="text" placeholder="City" id="city" name="city" class="form-control"  required value="<?php if($edit) echo $registrationData->city; ?>" >
+                          <select name="city" class="form-control"  required>
+                          
+                          	<option value="">Select City</option>
+                            <?php
+							$cityData = $registrationInfo->selectAll("city");
+                            foreach($cityData as $city)
+                            {
+								if($edit && $city->cityId == $registrationData->city)
+								{
+								?>
+								<option value="<?php echo $city->cityId; ?>" selected="selected"><?php echo $city->name; ?></option>
+							<?php 
+								}
+								else
+								{
+								?>
+								<option value="<?php echo $city->cityId; ?>"><?php echo $city->name; ?></option>
+							<?php 
+								}
+                            }
+                            ?>
+                          </select>
                         </div>
                       </div>
                       <div class="form-group">
@@ -173,8 +194,29 @@ $menuType = "registration";
                       </div>
                       <div class="form-group">
                         <label class="col-sm-2 control-label" for="schoolName">School Name</label>
-                        <div class="col-sm-10">
-                          <input type="text" placeholder="School Name" id="schoolName" name="schoolName" class="form-control"  required value="<?php if($edit) echo $registrationData->schoolName; ?>" >
+                        <div class="col-sm-10">                          
+                          <select name="schoolName"  id="schoolName" class="form-control"  required>
+                          
+                          	<option value="">Select school name</option>
+                            <?php
+							$schoolData = $registrationInfo->selectAll("school");
+                            foreach($schoolData as $school)
+                            {
+								if($edit && $school->schoolId == $registrationData->schoolName)
+								{
+								?>
+								<option value="<?php echo $school->schoolId; ?>" selected="selected"><?php echo $school->name; ?></option>
+							<?php 
+								}
+								else
+								{
+								?>
+								<option value="<?php echo $school->schoolId; ?>"><?php echo $school->name; ?></option>
+							<?php 
+								}
+                            }
+                            ?>
+                          </select>
                         </div>
                       </div>
                       <div class="form-group">

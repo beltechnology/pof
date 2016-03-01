@@ -9,20 +9,18 @@ if(isset($_POST['submitRegistration']))
 				$registrationData->fatherName = $_POST['fatherName'];				
 				$registrationData->motherName = $_POST['motherName'];
 				$registrationData->dob = $_POST['dob'];
+				$subjectArray = "";
+				$comma = "";
+				$shift=$_POST['subject'];
 				
-				
-$subjectArray = "";
-$comma = "";
-$shift=$_POST['subject'];
-
-if ($shift)
-{
-    foreach ($shift as $value)
-    {
-        $subjectArray .= $comma.$value;
-		$comma = ",";
-    }
-}				
+				if ($shift)
+				{
+					foreach ($shift as $value)
+					{
+						$subjectArray .= $comma.$value;
+						$comma = ",";
+					}
+				}				
 				$registrationData->subject = $subjectArray;
 				$registrationData->studentClass = $_POST['studentClass'];	
 				$registrationData->address = $_POST['address'];

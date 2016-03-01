@@ -865,6 +865,66 @@ public function getSubmenu($parentId)
 			return 	$response;		
 	}
 	
+// check exit data
+
+	public function  checkExitData($exitData)
+	{
+		$tableName = $exitData->tableName;
+		$value = $exitData->name;
+		$query = mysql_query("SELECT * FROM  ".$tableName." where deleted = 0 and name ='$value' ");
+		$row = mysql_num_rows($query);
+		if(!$row >0)
+		{
+		$response = true;
+		}
+		else
+		{
+		$response = false;
+		}
+		return $response;
+	}	
+	
+// add city 
+
+ 	public function insertField($insertData)
+	 {
+				
+				$name = $insertData->name;
+				$sort_order = $insertData->sort_order;
+				$tableName = $insertData->tableName;
+				$responseCheck = $this->checkExitData($insertData);
+				if($responseCheck)
+				{
+					mysql_query("SET AUTOCOMMIT=0");
+					mysql_query("START TRANSACTION");
+					
+					if($insertData->state == 1 )
+					{
+					$res = mysql_query("INSERT INTO ".$tableName." (name, sort_order)VALUES('$name','$sort_order')");
+						if ($res) {
+							mysql_query("COMMIT");
+							$response = ucfirst($tableName)." Successfully Added.";
+						} else {        
+							mysql_query("ROLLBACK");
+							$response = ucfirst($tableName)." Falied.";
+						}				
+		
+					}
+					else
+					{
+						$response = "Required data fill.";
+					}
+				}
+				else
+				{
+					$response = ucfirst($tableName)." already  Exit.";
+				}
+			
+			return $response;
+	 }
+ 
+ 
+	
 	 
 	 
 }

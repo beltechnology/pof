@@ -42,7 +42,7 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
 <link rel="stylesheet" href="<?php echo BaseUrl;?>font-awesome/css/font-awesome.min.css">
 <!-- Bootstrap -->
 <link href="<?php echo BaseUrl;?>css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" media="screen" href="https://mainlinetest.vismc.com/gladstone/portal/bloom/vitals/scripts/css/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="<?php echo BaseUrl;?>/css/bootstrap-datetimepicker.min.css">
 </head>
 <body class="body">
 <div class="content">
@@ -67,7 +67,7 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
         </li>
        <?php }  ?>
         <li>
-          <p class="phone-align"> <i class="fa fa-phone-square phone"></i> <span class="register-2">+ 91 <?php echo  $contactData->mobile ;?></span></p>
+          <p class="phone-align"> <i class="fa fa-phone-square phone"></i> <span class="register-2"><?php echo  $contactData->mobile ;?></span></p>
         </li>
       </ul>
 	 </div>
@@ -150,76 +150,17 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
             <div class="col-md-1 col-lg-1">&nbsp;</div>
             <div class="col-md-10 col-lg-10">
               <div class="register">
-               <a class="brown tab" data="registered" href="#">
-               	<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;  REGISTER </span>
-               </a>
-                 <span class="straight-line">&nbsp; | </span> <a class="grey tab" data="logged" href="#"><span>&nbsp; LOGIN</span></a> </div>
+				<a class="brown" href="#"><span>&nbsp; STUDENT LOGIN</span></a> </div>
             </div>
             <div class="col-md-1 col-lg-1">&nbsp;</div>
           </div>
           <!--end of row-->
-          <div class="row hideToggle registered">
-            <div class="col-md-1 col-lg-1">&nbsp;</div>
-            <div class="col-md-10 col-lg-10">
-              <div class="register">
-                <h3>REGISTER HERE FOR FREE</h3>
-              </div>
-            </div>
-            <div class="col-md-1 col-lg-1">&nbsp;</div>
-          </div>
-          <div class="row hideToggle logged" style="display:none;">
-            <div class="col-md-1 col-lg-1">&nbsp;</div>
-            <div class="col-md-10 col-lg-10">
-              <!--<div class="register">
-                <h3>Student Login </h3>*/
-              </div>-->
-            </div>
-            <div class="col-md-1 col-lg-1">&nbsp;</div>
-          </div>
           <!--end of row-->
           <div>&nbsp;</div>
-          <form class="form hideToggle registered" method="post">
-            <div class="row">
-              <div class="col-md-1 col-lg-1">&nbsp;</div>
-              <div class="col-md-5 col-lg-5">
-                <input class="group-form" type="text" class="form-control" name="name" placeholder="Name" required>
-              </div>
-              <div class="col-md-5 col-lg-5">
-                <input class="group-form" type="text" class="form-control" name="phone" placeholder="Phone" required>
-              </div>
-              <div class="col-md-1 col-lg-1">&nbsp;</div>
-            </div>
-            <div>&nbsp;</div>
-            <div class="row">
-              <div class="col-md-1 col-lg-1">&nbsp;</div>
-              <div class="col-md-5 col-lg-5">
-                <input class="group-form" type="email" class="form-control" name="email" placeholder="Email" required>
-              </div>
-              <div class="col-md-5 col-lg-5">
-                <input class="group-form" type="text" class="form-control" placeholder="City" name="city" required>
-              </div>
-              <div class="col-md-1 col-lg-1">&nbsp;</div>
-            </div>
-            <div>&nbsp;</div>
-            <div class="row">
-              <div class="col-md-1 col-lg-1">&nbsp;</div>
-              <div class="col-md-5 col-lg-5">
-                <input class="group-form" type="text" class="form-control" placeholder="State" name="state" required>
-              </div>
-              <div class="col-md-5 col-lg-5">
-                <input class="group-form" type="text" class="form-control" placeholder="School Name"  name="schoolName" required>
-              </div>
-              <div class="col-md-1 col-lg-1">&nbsp;</div>
-            </div>
-            <div>&nbsp;</div>
-            <div>&nbsp;</div>
-            <button class="btn btn-default center-block" name="register" type="submit">Register</button>
-            <div>&nbsp;</div>
-            <div>&nbsp;</div>
-          </form>
+
 
          
-          <form class="form hideToggle logged" style="display:none" action="<?php echo BaseUrl;?>admin/index.php" method="post">
+          <form class="form hideToggle logged" action="<?php echo BaseUrl;?>admin/index.php" method="post">
             <div class="row">
               <div class="col-md-1 col-lg-1">&nbsp;</div>
               <div class="col-md-10 col-lg-10">
@@ -244,7 +185,8 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
             </div>              </div>
               <div class="col-md-1 col-lg-1">&nbsp;</div>
             </div>
-            <div>&nbsp;</div><div>&nbsp;</div>
+            <div align="center" style="color:red;"><?php if(isset($_GET['msg'])){echo $_GET['msg'];}?></div>
+            <div>&nbsp;</div>
             <button class="btn btn-default center-block" name="login" type="submit">Login</button>
             <div>&nbsp;</div>
             <div>&nbsp;</div>
