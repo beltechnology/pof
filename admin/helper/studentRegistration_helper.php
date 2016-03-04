@@ -41,13 +41,21 @@ if(isset($_POST['submitRegistration']))
 				else
 				{
 					$registrationData->state = 1;
+					$registrationData->status = 1;
 				}
 				$registrationInfo = new dataInfo();
-				$response = $registrationInfo ->addstudent($registrationData);
+				$response = $registrationInfo->addstudent($registrationData);
 				$succesMsg = $response;
 				
 				//var_dump($succesMsg);
-				header("location:viewRegistration.php?msg=".$succesMsg);
+				if(isset($_POST['url']))
+				{
+				header("location:".$_POST['url']);
+				}
+				else
+				{
+				header("location:viewRegistration.php");	
+				}
 			}
 			else
 			{

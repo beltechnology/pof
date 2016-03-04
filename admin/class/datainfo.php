@@ -131,6 +131,7 @@ class dataInfo
 				$categoryDescription = $categoryData->categoryDescription;
 				$parentCategory = $categoryData->parentCategory;
 				$seoTitle = $categoryData->seoTitle;
+				$examDate = $categoryData->examDate;
 				$metaTag = $categoryData->metaTag;
 				$keyWord = $categoryData->keyWord;
 				$status = $categoryData->status;
@@ -141,7 +142,7 @@ class dataInfo
 				
 			if($response == true && $categoryData->state == 1 )
 			{
-				$res = mysql_query("INSERT INTO notescategory (categoryName,categoryDescription,seoTitle ,parentId,metaTag,keyword,status,sort_order)VALUES ('$categoryName','$categoryDescription','$seoTitle','$parentCategory','$metaTag','$keyWord ', '$status', '$sort_order')");
+				$res = mysql_query("INSERT INTO notescategory (categoryName,categoryDescription,seoTitle ,examDate, parentId,metaTag,keyword,status,sort_order)VALUES ('$categoryName','$categoryDescription','$seoTitle','$examDate','$parentCategory','$metaTag','$keyWord ', '$status', '$sort_order')");
 				if ($res) {
 					mysql_query("COMMIT");
 					$response = "Notes Category successfully added.";
@@ -154,7 +155,7 @@ class dataInfo
 			elseif($response == true && $categoryData->state == 2 )
 			{
 				$notesCategoryId = $categoryData->notesCategoryId;
-				$res = mysql_query("UPDATE notescategory SET categoryName='$categoryName',categoryDescription='$categoryDescription',seoTitle='$seoTitle',parentId= '$parentCategory',metaTag='$metaTag',keyWord='$keyWord' ,status='$status' ,sort_order='$sort_order'  WHERE notesCategoryId='$notesCategoryId'");
+				$res = mysql_query("UPDATE notescategory SET categoryName='$categoryName',categoryDescription='$categoryDescription',seoTitle='$seoTitle', examDate='$examDate', parentId= '$parentCategory',metaTag='$metaTag',keyWord='$keyWord' ,status='$status' ,sort_order='$sort_order'  WHERE notesCategoryId='$notesCategoryId'");
 				if ($res) {
 					mysql_query("COMMIT");
 					$response = "Notes Category successfully upadted.";
@@ -565,13 +566,10 @@ class dataInfo
 				
 				if($registrationData->state == 1 )
 				{
-					$res = mysql_query("INSERT INTO studentregistration (studentName, fatherName, motherName,dob, subject, studentClass, address, mobile, email,city,addressState, pinCode, schoolName, schoolCode, principalName, principalMobile)VALUES ('$studentName','$fatherName','$motherName','$dob','$subject','$studentClass','$address', '$mobile','$email','$city','$addressState','$pinCode','$schoolName','$schoolCode', '$principalName','$principalMobile')");
-					$userName = $studentName.mysql_insert_id();
-					$registrationId = mysql_insert_id();
-					$userType = "student";
-					$userPassword = md5($dob);
-					$user = mysql_query("INSERT INTO user (userType, userName, 	password, registrationId)VALUES ('$userType','$userName','$userPassword','$registrationId')");
-					if ($res and $user) {
+					$status =$registrationData->status;
+					
+					$res = mysql_query("INSERT INTO studentregistration (studentName, status, fatherName, motherName,dob, subject, studentClass, address, mobile, email,city,addressState, pinCode, schoolName, schoolCode, principalName, principalMobile)VALUES ('$studentName', '$status','$fatherName','$motherName','$dob','$subject','$studentClass','$address', '$mobile','$email','$city','$addressState','$pinCode','$schoolName','$schoolCode', '$principalName','$principalMobile')");
+					if ($res) {
 					mysql_query("COMMIT");
 					$response = "Student registered successfully.";
 					} else {        
@@ -922,9 +920,69 @@ public function getSubmenu($parentId)
 			
 			return $response;
 	 }
+	 
+// update status	 
+	function updateStatus($registrationId)
+	{
+		$query = mysql_query("SELECT * FROM user where deleted = 0 and registrationId ='$registrationId' ");
+		$queryStudent = mysql_query("SELECT * FROM studentregistration where deleted = 0 and studentId ='$registrationId' ");
+		$row = mysql_num_rows($query);
+		if($row == 1)
+		{
+			$obj = mysql_fetch_array($query);
+			if($obj['status'] == 0)
+			{
+				$status = 1;
+			}
+			else 
+			{
+				$status = 0;
+			}
+			
+				mysql_query("UPDATE user SET status='$status'  WHERE registrationId='$registrationId'");
+				mysql_query("UPDATE studentregistration SET status='$status'  WHERE studentId='$registrationId'");
+			
+		}
+		else
+		{
+			$obj = mysql_fetch_array($queryStudent);
+			$userName = $obj['studentName'].$registrationId;
+			$registrationId = $registrationId;
+			$userType = "student";
+			$dob = $obj['dob'];
+			$userPassword = md5($dob);
+			$user = mysql_query("INSERT INTO user (userType, userName, 	password, registrationId)VALUES ('$userType','$userName','$userPassword','$registrationId')");
+			mysql_query("UPDATE studentregistration SET status= 0  WHERE studentId='$registrationId'");
+			
+			    $to = $obj['email'];
+				$subject = "Registration";
+				$message = "User Name : $userName <br> Password : $dob  ";
+				$headers = "MIME-Version: 1.0" . "\r\n";
+				$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+				mail($to,$subject,$message,$headers);	
+				//echo $message;		
+		}
+		
+		
+	}
  
  
-	
+	function getCityNameBycityId($cityId)
+	{
+		$query = mysql_query("SELECT * FROM city where deleted = 0 and cityId ='$cityId' ");
+		$obj = mysql_fetch_object($query);
+		return $obj->name ;
+		
+	}
+	 
+	 
+	function getSchoolNameByschoolId($schoolId)
+	{
+		$query = mysql_query("SELECT * FROM school where deleted = 0 and schoolId ='$schoolId' ");
+		$obj = mysql_fetch_object($query);
+		return $obj->name ;
+		
+	}
 	 
 	 
 }

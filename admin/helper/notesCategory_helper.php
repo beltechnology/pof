@@ -20,6 +20,7 @@ if(isset($_POST['addNotesCategory']))
 				$categoryData->categoryName = $_POST['categoryName'];
 				$categoryData->categoryDescription = $_POST['categoryDescription'];
 				$categoryData->seoTitle = $_POST['seoTitle'];
+				$categoryData->examDate = $_POST['examDate'];
 				$categoryData->metaTag = $_POST['metaTag'];
 				$categoryData->keyWord = $_POST['keyWord'];				
 				$categoryData->sort_order = $_POST['sort_order'];				
@@ -41,7 +42,7 @@ if(isset($_POST['addNotesCategory']))
 				{
 				$response = $categoryInfo ->addNotesCategory($categoryData);
 				$succesMsg = $response;
-				header("location:viewNotesCategory.php");
+				header("location:viewNotesCategory.php?msg=".$succesMsg);
 				}
 				else
 				{

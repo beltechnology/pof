@@ -28,7 +28,7 @@ $menuType = "registration";
               <div class="nav-tabs-custom">       
                 <div class="tab-content">
                   <div id="settings" class="tab-pane active">
-                    <form class="form-horizontal" method="post" action="<?php $_SERVER['PHP_SELF'];?>">
+                    <form class="form-horizontal" method="post" action="<?php echo  $_SERVER['REQUEST_URI']?>">
  <div class="row">                   
  <div class="col-md-6">
                        <div class="form-group">
@@ -38,6 +38,7 @@ $menuType = "registration";
                           <?php
 						  if($edit){?>
                           	<input type="hidden" placeholder="Name" id="studentId" name="studentId" class="form-control" required value="<?php if($edit) echo $registrationData->studentId; ?>">
+      <input type="hidden" name="url" value="<?php echo $_SERVER['HTTP_REFERER']; ?>" />
 							<?php  }
 						  ?>
                         </div>

@@ -6,8 +6,12 @@ class deleteinfo
 	{
 				if($deleteData->tableName !="" && $deleteData->value !="" &&  $deleteData->fieldName !="" &&  $deleteData->state !="" && $deleteData->state == 3)
 				{
-				$response = mysql_query("UPDATE ".$deleteData->tableName." SET deleted= 1 WHERE ". $deleteData->fieldName."=".$deleteData->value);
-				return $response;
+					if($deleteData->tableName == "studentregistration")
+					{
+						$response = mysql_query("UPDATE user SET deleted= 1 WHERE registrationId=".$deleteData->value);
+					}
+					$response = mysql_query("UPDATE ".$deleteData->tableName." SET deleted= 1 WHERE ". $deleteData->fieldName."=".$deleteData->value);
+					return $response;
 				}
 		
 	}

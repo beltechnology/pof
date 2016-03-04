@@ -31,6 +31,7 @@ if(isset($_SESSION['userInfo']))
     <title>Admin</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    
     <!-- Bootstrap 3.3.5 -->
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome -->
@@ -54,7 +55,6 @@ if(isset($_SESSION['userInfo']))
     <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker-bs3.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- bootstrap wysihtml5 - text editor -->
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -191,7 +191,7 @@ else
                 <li class="viewNotesCategory" ><a href="viewNotesCategory.php"><i class="fa fa-circle-o"></i>View Subject</a></li>
                 <li class="viewNotes" ><a href="viewNotes.php"><i class="fa fa-circle-o"></i> View Notes</a></li>
                 <li class="viewPages" ><a href="viewPages.php"><i class="fa fa-circle-o"></i> View Pages</a></li>
-                <li class="registration" ><a href="viewRegistration.php"><i class="fa fa-circle-o"></i> View Registration</a></li>
+                <li class="registration" ><a href="viewRegistration.php?page=1"><i class="fa fa-circle-o"></i> View Registration</a></li>
                 <li class="slider" ><a href="slider.php"><i class="fa fa-circle-o"></i> Update Slider</a></li>
                 <li class="viewAboutPof" ><a href="viewAboutPof.php"><i class="fa fa-circle-o"></i> View About Pof Detail</a></li>
                 <li class="viewTestimonial" ><a href="viewTestimonial.php"><i class="fa fa-circle-o"></i> View Testimonial</a></li>

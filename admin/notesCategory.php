@@ -71,6 +71,16 @@ $menuType = "viewNotesCategory";
                     </div>
                     
                     <div class="form-group">
+                      <label for="categoryName">Exam Date</label>
+                    <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control"  name="examDate" id="dob" required placeholder="dd/mm/yyyy" value="<?php if($edit) echo $category->examDate; ?>" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+
+                    </div>
+                    
+                    <div class="form-group">
                       <label for="categoryName">Meta</label>
                       <input type="text" class="form-control" id="metaTag" name="metaTag" placeholder="Meta" value="<?php if($edit)  echo $category->metaTag; ?>"  />
                     </div>
@@ -115,3 +125,22 @@ CKEDITOR.replace('editor1', {
 "filebrowserUploadUrl": "<?php echo BaseUrl;?>admin/plugins/ckeditor/plugins/imgupload.php"
 });
     </script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.min.js"></script>
+ <script type="text/javascript">
+ $(document).ready(function(e) {
+            $('#datetimepicker1').datepicker({
+            format: 'dd/mm/yyyy',
+			pickTime: false,
+			startDate: new Date(),
+        	autoclose: true
+});
+
+});
+        </script>
+    <!-- InputMask -->
+    <script src="plugins/input-mask/jquery.inputmask.js"></script>
+    <script src="plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+    <script src="plugins/input-mask/jquery.inputmask.extensions.js"></script>
+<script>
+$("#dob").inputmask("dd/mm/yyyy", {"placeholder": "dd/mm/yyyy"});
+</script>

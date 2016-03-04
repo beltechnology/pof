@@ -27,6 +27,7 @@ $menuType = "viewNotesCategory";
 -->                        <th>Subject</th>
                         <th>Subject description</th>
                         <th>Seo title</th>
+                        <th>Examination Date</th>
                         <th>Meta</th>
                         <th>Keyword</th>
                         <th>Status</th>
@@ -60,6 +61,7 @@ $menuType = "viewNotesCategory";
 <?php /*?>                        <td><?php  echo $category->CategoryName ;?></td>
 <?php */?>                        <td><?php  echo $category->categoryDescription ;?></td>
                         <td><?php echo $category->seoTitle ;?></td>
+                        <td><?php echo $category->examDate ;?></td>
                         <td><?php echo $category->metaTag ;?></td>
                         <td><?php echo $category->keyWord ;?></td>
                         <td><?php if($category->status == 0){echo "Enabled";} else{echo "Disabled";} ;?></td>
