@@ -17,8 +17,8 @@ class  htmlFactory extends  dataFactory
 				if($ele == 0)
 				{
 					$carouselHTML = $carouselHTML."<div class='item active'>
-	 <img class='center-block img-responsive first-slider' src='".BaseUrl."admin/upload/".$carousel->sliderImage."' alt='...'>
-      <div class='carousel-caption'>
+	 <img class='center-block img-responsive first-slider bottom-text' src='".BaseUrl."admin/upload/".$carousel->sliderImage."' alt='...'>
+      <div class='carousel-caption bottom-indicators'>
 		<h1 class='text-center carousel-heading'>".$carousel->text."</h1>   
 	 </div>
     </div>";
@@ -26,8 +26,8 @@ class  htmlFactory extends  dataFactory
 				else
 				{
 					$carouselHTML = $carouselHTML."<div class='item'>
-	 <img class='center-block img-responsive first-slider' src='".BaseUrl."admin/upload/".$carousel->sliderImage."'  alt='...'>
-      <div class='carousel-caption'>
+	 <img class='center-block img-responsive first-slider bottom-text' src='".BaseUrl."admin/upload/".$carousel->sliderImage."'  alt='...'>
+      <div class='carousel-caption bottom-indicators'>
 		<h1 class='text-center'>".$carousel->text."</h1>   
 	 </div>
     </div>";

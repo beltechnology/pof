@@ -212,7 +212,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
 	margin-top:-2%;
 }
 .content .header .bottom-header .carousel-inner img{
-	padding-top:15%;
+	padding-top:12%;
 }
 .content .header .bottom-header .carousel-inner h1{
 	text-align:;
@@ -221,7 +221,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
 	font-family:Roboto-Medium;
 	font-style:medium;
 	margin-top:;
-	font-size:36px;
+	font-size:22px;
 	text-shadow:none;
 }
 .content .header .bottom-header .white{
@@ -956,13 +956,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', end
 	height:220px !important;
 }
 img.first-slider{
-	width:500px;
-	height:380px!important;
+	width:550px;
+	height:420px!important;
 	border-radius:5px;
 }
 h1.carousel-heading{
 	font-family:Roboto-Medium;
 	font-style:medium;
+}
+img.bottom-text{
+	margin-bottom:88px;
+}
+.bottom-indicators{
+	margin-bottom:-118px;
 }
 /*css documents of index-inner.html*/
 .main-page .sky-line h1{

@@ -50,7 +50,7 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
   <div class="top-header">
     <div class="container-fluid">
 	<div class="row">
-	<div class="col-lg-12 col-md-12">
+	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
       <ul>
         <li>
           <p> <i class="fa fa-envelope-square envevlope"></i> <span class="register-2"><?php echo  $contactData->email ;?></span></p>
