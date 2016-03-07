@@ -69,7 +69,7 @@ $menuType = "registration";
                       <div class="form-group">
                         <label class="col-sm-2 control-label" for="subject">Subject</label>
                         <div class="col-sm-10">
-                          <select id="subject" name="subject[]" class="form-control"  required  multiple>
+                          <select id="subject" name="subject[]" class="form-control"  required  >
                           <?php
 					  $selectCategory = new dataInfo();
 					  $selectCategoryData = $selectCategory->selectAll("notescategory");

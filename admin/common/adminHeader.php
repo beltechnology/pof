@@ -112,7 +112,12 @@ else
                 <ul class="dropdown-menu">
                   <li class="user-footer">
                     <div class="pull-left">
-                      <!--<a href="#" class="btn btn-default btn-flat">Profile</a>-->
+                    <?php
+					if(!$studentLogin)
+					  { echo "<a href='changePassword.php' class='btn btn-default btn-flat'>Change Password</a>";
+					  }
+                   ?>
+				
                     </div>
                     <div class="pull-right">
                       <a href="logout.php" class="btn btn-default btn-flat">Sign out</a>
@@ -191,6 +196,8 @@ else
                 <li class="viewNotesCategory" ><a href="viewNotesCategory.php"><i class="fa fa-circle-o"></i>View Subject</a></li>
                 <li class="viewNotes" ><a href="viewNotes.php"><i class="fa fa-circle-o"></i> View Notes</a></li>
                 <li class="viewPages" ><a href="viewPages.php"><i class="fa fa-circle-o"></i> View Pages</a></li>
+                <li class="registration" ><a href="viewCity.php"><i class="fa fa-circle-o"></i> View City</a></li>
+                <li class="registration" ><a href="viewSchool.php"><i class="fa fa-circle-o"></i> View School</a></li>
                 <li class="registration" ><a href="viewRegistration.php?page=1"><i class="fa fa-circle-o"></i> View Registration</a></li>
                 <li class="slider" ><a href="slider.php"><i class="fa fa-circle-o"></i> Update Slider</a></li>
                 <li class="viewAboutPof" ><a href="viewAboutPof.php"><i class="fa fa-circle-o"></i> View About Pof Detail</a></li>
@@ -199,7 +206,7 @@ else
                 <li class="contactus" ><a href="contactus.php"><i class="fa fa-circle-o"></i>Update Contact Us</a></li>
                 <li class="olympaidInformation" ><a href="viewOlympaidInformation.php"><i class="fa fa-circle-o"></i>View Olympiad Information</a></li>
                 <li class="ViewEmail" ><a href="viewSubscribe.php"><i class="fa fa-circle-o"></i>View Email Subscribe</a></li>
-                <li class="ViewAbout" ><a href="viewAbout.php"><i class="fa fa-circle-o"></i>View About</a></li>
+                <li class="viewAbout" ><a href="viewAbout.php"><i class="fa fa-circle-o"></i>View About</a></li>
                <!-- <li><a href="index2.html"><i class="fa fa-circle-o"></i> moreInformation v2</a></li>-->
                </ul>
                <?php

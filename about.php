@@ -43,39 +43,16 @@ elseif(isset($_REQUEST['categoryId']))
 			 <h2>Our Team Focused On You</h2>
 			 <div>&nbsp;</div><div>&nbsp;</div>
 			  <div class="row">
-              
-              
-			    <div class="col-lg-3 col-md-3">
-				  <img class="center-block img-circle img-responsive" src="img/pencil.png">
-				  <div>&nbsp;</div>
-				  <p class="second">Lorem Ispum Dummy </p><p class="second">+91 123 456 7890</p> <p class="second">sed do eiusmod unde ommise uytio set yui prespective
-				  </p>
-				</div>
-			    <div class="col-lg-3 col-md-3">
-				  <img class="center-block img-circle img-responsive" src="img/pencil.png">
-				  <div>&nbsp;</div>
-				  <p class="second">Lorem Ispum Dummy </p><p class="second">+91 123 456 7890</p> <p class="second">sed do eiusmod unde ommise uytio set yui prespective
-				  </p>
-				</div>
-			    <div class="col-lg-3 col-md-3">
-				  <img class="center-block img-circle img-responsive" src="img/pencil.png">
-				  <div>&nbsp;</div>
-				  <p class="second">Lorem Ispum Dummy </p><p class="second">+91 123 456 7890</p> <p class="second">sed do eiusmod unde ommise uytio set yui prespective
-				  </p>
-				</div>
-
-			    <div class="col-lg-3 col-md-3">
-				  <img class="center-block img-circle img-responsive" src="img/pencil.png">
-				  <div>&nbsp;</div>
-				  <p class="second">Lorem Ispum Dummy </p><p class="second">+91 123 456 7890</p> <p class="second">sed do eiusmod unde ommise uytio set yui prespective
-				  </p>
-				</div>
+              <?php
+			  echo $htmlFactory->createAboutHtml();
+			  ?>
+                 </div><!--end of row-->
 				<div class="row">
 					   <div class="col-md-5">&nbsp;</div>
 					   <div class="col-md-2"><button class="btn btn-default" type="submit">Contact Us</button></div>
 					   <div class="col-md-5">&nbsp;</div>
 				  </div>
-			  </div><!--end of row-->
+			 
 			</div><!--end of about-us-->
 		  </div><!--end of col-lg-8 col-md-8-->
 		  <div class="col-md-4 col-lg-4 container-fluid">

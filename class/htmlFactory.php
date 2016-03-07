@@ -293,6 +293,22 @@ function getHomeMenu ()
 			
 		}
 
+		function createAboutHtml()
+		{
+			$aboutData = $this->getDataFromServer("about");
+			$aboutHtml = "";
+			if($aboutData)
+			{
+			foreach ($aboutData as $about)
+			{
+				
+				$aboutHtml .= "<div class='col-lg-3 col-md-3'><img class='center-block img-circle img-responsive' src='".BaseUrl."admin/upload/".$about->uploads."'><div>&nbsp;</div><p class='second'>".$about->name."</p><p class='second'>".$about->phone."</p> <p class='second'>".$about->description."</p></div>";
+			}
+			}
+			return $aboutHtml;
+			
+		}
+
 
 }
 ?>

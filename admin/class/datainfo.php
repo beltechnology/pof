@@ -1024,7 +1024,24 @@ public function getSubmenu($parentId)
 			return $response;
 	 }
  
- 
+	 public function changePassword($changePassData)
+	 {
+			$userId = $changePassData->userId;
+			$password = $changePassData->password;
+			mysql_query("SET AUTOCOMMIT=0");
+			mysql_query("START TRANSACTION");
+			$res = mysql_query("UPDATE user SET password='$password'  WHERE userId='$userId'");
+			if ($res) {
+			mysql_query("COMMIT");
+			$response = "Password  successfully changed.";
+			} else {        
+			mysql_query("ROLLBACK");
+			$response = "change password failed.";
+			}	
+			
+			return $response;			
+		 
+	}
 	 
 	 
 }
