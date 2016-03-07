@@ -34,6 +34,7 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<title>POF INDIA</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -98,7 +99,7 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
             <div class="col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1">
               <ul class="nav navbar-nav navigation pull-right">
                 <li class="home"><a href="<?php echo BaseUrl;?>">Home &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">About Us &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp;</a></li>
+                <li><a href="<?php echo BaseUrl;?>about.php">About Us &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp;</a></li>
                 <li><a href="#">What We Do &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp;</a></li>
                 <li><a href="<?php echo BaseUrl;?>contact-us.php">Contact Us &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp;</a></li>
               </ul>

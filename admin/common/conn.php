@@ -13,9 +13,9 @@ $dbname = "sof";
 else
 {
 $servername = "localhost";
-$username = "jkcomdel_pof";
+$username = "pofindia_user";
 $password = "admin@123";
-$dbname = "jkcomdel_pof";
+$dbname = "pofindia_db";
 }
 error_reporting(E_ALL ^ E_DEPRECATED);
 $conn = mysql_connect($servername, $username, $password)or die("Unable to connect to MySQL");

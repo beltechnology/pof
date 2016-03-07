@@ -983,6 +983,48 @@ public function getSubmenu($parentId)
 		return $obj->name ;
 		
 	}
+	
+	
+	
+ //  add Testimonial 
+ 
+ 	public function addAbout($addAboutData)
+	 {
+				
+				$name = $addAboutData->name;
+				$description = $addAboutData->description;
+				$phone = $addAboutData->phone;
+				$uploads = $addAboutData->uploads;
+				$tmp_name = $addAboutData->tmp_name;
+				$temp = explode(".", $uploads);
+				$newfilename = $temp[0].round(microtime(true)) . '.' . end($temp);
+				move_uploaded_file($tmp_name, "upload/" . $newfilename);
+				$sort_order = $addAboutData->sort_order;
+				
+				mysql_query("SET AUTOCOMMIT=0");
+				mysql_query("START TRANSACTION");
+				
+				if($addAboutData->state == 1 )
+				{
+				$res = mysql_query("INSERT INTO about (name, phone, description, uploads, sort_order)VALUES('$name','$phone','$description','$newfilename','$sort_order')");
+					if ($res) {
+						mysql_query("COMMIT");
+						$response = "About detail  successfully Added.";
+					} else {        
+						mysql_query("ROLLBACK");
+						$response = "About detail failed.";
+					}				
+	
+				}
+				else
+				{
+					$response = "Required data fill.";
+				}
+			
+			return $response;
+	 }
+ 
+ 
 	 
 	 
 }
