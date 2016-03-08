@@ -30,5 +30,29 @@ if(isset($_POST['addAbout']))
 
 
 }
+elseif(isset($_POST['updateAboutDesc']))
+{
+	try {
+			if(isset($_POST['aboutdescId']))
+			{
+				$aboutData = new stdClass();
+				$aboutData->aboutDes = $_POST['aboutDes'];
+				$aboutData->aboutdescId = $_POST['aboutdescId'];
+				$aboutInfo = new dataInfo();
+				$response = $aboutInfo ->updateAboutDesc($aboutData);
+				$succesMsg = $response;
+			}
+			else
+			{
+			throw new Exception("fill required field.");
+			}
+	}
+	catch(Exception $e) {
+	  $msg = $e->getMessage();
+	}
+
+
+
+}
 
 ?>

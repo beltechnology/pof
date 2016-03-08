@@ -1042,6 +1042,26 @@ public function getSubmenu($parentId)
 			return $response;			
 		 
 	}
+	
+	public function updateAboutDesc($aboutData)
+	{
+			$aboutDes = $aboutData->aboutDes;
+			$aboutdescId = $aboutData->aboutdescId;
+			mysql_query("SET AUTOCOMMIT=0");
+			mysql_query("START TRANSACTION");
+			$res = mysql_query("UPDATE aboutdesc SET text='$aboutDes'  WHERE aboutdescId='$aboutdescId'");
+			if ($res) {
+			mysql_query("COMMIT");
+			$response = "about  successfully updated.";
+			} else {        
+			mysql_query("ROLLBACK");
+			$response = "About data failed.";
+			}	
+			
+			return $response;			
+		
+		
+	}
 	 
 	 
 }

@@ -1,5 +1,5 @@
 <?php
-include("controller/testimonial_controller.php");
+include("controller/about_controller.php");
 $menuType = "viewAbout";
 ?>
 <div class="content-wrapper">
@@ -19,6 +19,26 @@ $menuType = "viewAbout";
                   <h3 class="box-title">About Us</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
+                <form  action="" method="post">
+                <div class="box-body pad">
+                <?php
+					  $aboutdesc = new dataInfo();
+					  $aboutdescData = $aboutdesc->selectAll("aboutdesc");
+					  foreach($aboutdescData as $aboutdes);
+				?>
+                <label>Description</label>
+                <input type="hidden" name="aboutdescId" value="<?php echo $aboutdes->aboutdescId;?> " />
+                    <textarea id="editor1" name="aboutDes" rows="10" cols="80" required>
+                    <?php echo $aboutdes->text;?>
+                                            
+                    </textarea>
+                </div>
+
+                  <div class="form-group">
+                    <button type="submit" class="btn btn-primary" style="margin-bottom:10px;" name="updateAboutDesc">Submit</button>
+                  </div>
+                               </form>
+                
                   <table id="category" class="table table-bordered table-striped">
                     <thead>
                       <tr>
@@ -75,3 +95,10 @@ $menuType = "viewAbout";
         </section><!-- /.content -->
       </div>
 <?php include("common/adminFooter.php");?>
+<script>
+CKEDITOR.replace('editor1', {
+"filebrowserImageUploadUrl": "<?php echo BaseUrl;?>admin/plugins/ckeditor/plugins/imgupload.php",
+"filebrowserBrowseUrl": "<?php echo BaseUrl;?>admin/plugins/ckeditor/plugins/imgupload.php",
+"filebrowserUploadUrl": "<?php echo BaseUrl;?>admin/plugins/ckeditor/plugins/imgupload.php"
+});
+    </script>
