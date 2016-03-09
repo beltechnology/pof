@@ -30,10 +30,10 @@ $menuType = "contactus";
                        <div class="form-group">
                         <label class="col-sm-2 control-label" for="inputName">Title</label>
                         <div class="col-sm-10">
-                          <input type="text" placeholder="Title" id="title" name="title" class="form-control" required value="<?php if($edit) echo $contactData->title; ?> ">
+                          <input type="text" placeholder="Title" id="title" name="title" class="form-control" required value="<?php if($edit) echo $contactData->title; ?>" maxlength="200">
                           <?php
 						  if($edit){?>
-                          	<input type="hidden" placeholder="Name" id="contactId" name="contactId" class="form-control" required value="<?php if($edit) echo $contactData->contactId; ?> ">
+                          	<input type="hidden" placeholder="Name" id="contactId" name="contactId" class="form-control" required value="<?php if($edit) echo $contactData->contactId; ?>">
 							<?php  }
 						  ?>
                         </div>
@@ -41,19 +41,19 @@ $menuType = "contactus";
                       <div class="form-group">
                         <label class="col-sm-2 control-label" for="description">Description</label>
                         <div class="col-sm-10">
-                          <input type="text" placeholder="Father name" id="description" name="description" class="form-control" required value="<?php if($edit) echo $contactData->description; ?> ">
+                          <input type="text" placeholder="Description" id="description" name="description" class="form-control" required value="<?php if($edit) echo $contactData->description; ?>" maxlength="300">
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="col-sm-2 control-label" for="email">Email</label>
                         <div class="col-sm-10">
-                          <input type="email" placeholder="Email" id="email" name="email" class="form-control" required value="<?php if($edit) echo $contactData->email; ?> ">
+                          <input type="email" placeholder="Email" id="email" name="email" class="form-control" required value="<?php if($edit) echo $contactData->email; ?>" maxlength="100">
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="col-sm-2 control-label" for="mobile">Mobile</label>
                         <div class="col-sm-10">
-                    <input type='text' class="form-control"  name="mobile" id="mobile" required placeholder="Mobile" maxlength="32" value="<?php if($edit) echo $contactData->mobile; ?> " />
+                    <input type='text' class="form-control"  name="mobile" id="mobile" required placeholder="Mobile" maxlength="32" value="<?php if($edit) echo $contactData->mobile; ?>" />
                         </div>
                       </div>
 
@@ -62,31 +62,31 @@ $menuType = "contactus";
                       <div class="form-group">
                         <label class="col-sm-2 control-label" for="twitter">Twitter</label>
                         <div class="col-sm-10">
-                          <input type="url" placeholder="Twitter" id="twitter" name="twitter" class="form-control"  required value="<?php if($edit) echo $contactData->twitter; ?> " >
+                          <input type="url" placeholder="Twitter" id="twitter" name="twitter" class="form-control"  required value="<?php if($edit) echo $contactData->twitter; ?>" maxlength="200" >
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="col-sm-2 control-label" for="facebook">Facebook</label>
                         <div class="col-sm-10">
-                          <input type="url" placeholder="Facebook" id="facebook" name="facebook" class="form-control"  required value="<?php if($edit) echo $contactData->facebook; ?> " >
+                          <input type="url" placeholder="Facebook" id="facebook" name="facebook" class="form-control"  required value="<?php if($edit) echo $contactData->facebook; ?>" maxlength="200" >
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="col-sm-2 control-label" for="google">Google</label>
                         <div class="col-sm-10">
-                          <input type="url" placeholder="Google" id="google" name="google" class="form-control" required value="<?php if($edit) echo $contactData->google; ?> " >
+                          <input type="url" placeholder="Google" id="google" name="google" class="form-control" required value="<?php if($edit) echo $contactData->google; ?>" maxlength="200" >
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="col-sm-2 control-label" for="pin">Pintrist</label>
+                        <label class="col-sm-2 control-label" for="pin">Pinterest</label>
                         <div class="col-sm-10">
-                          <input type="url" placeholder="Pintrist code" id="pin" name="pin" class="form-control"  required value="<?php if($edit) echo $contactData->pin; ?> " >
+                          <input type="url" placeholder="Pinterest code" id="pin" name="pin" class="form-control"  required value="<?php if($edit) echo $contactData->pin; ?>" maxlength="200">
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="col-sm-2 control-label" for="address">Address</label>
                         <div class="col-sm-10">
-                          <input type="text" placeholder="Address" id="address" name="address" class="form-control"  required value="<?php if($edit) echo $contactData->address; ?> " >
+                          <input type="text" placeholder="Address" id="address" name="address" class="form-control"  required value="<?php if($edit) echo $contactData->address; ?>" maxlength="500" >
                         </div>
                       </div>
                         </div>

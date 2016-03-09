@@ -19,7 +19,7 @@ $menuType = "viewmoreInformation";
 					
                     <div class="form-group">
                       <label for="title">Title</label>
-                      <input type="text" class="form-control" id="title" name="title" placeholder="Title" required />
+                      <input type="text" class="form-control" id="title" name="title" placeholder="Title" maxlength="20" required />
                     </div>
                     
                     <div class="form-group">
@@ -29,7 +29,7 @@ $menuType = "viewmoreInformation";
                                         
                     <div class="form-group">
                       <label for="link"> Link </label>
-                      <input type="url" class="form-control" id="link" name="link"  placeholder="Link" />
+                      <input type="url" class="form-control" id="link" name="link"  placeholder="Link" required />
                     </div>
                   </div><!-- /.box-body -->
 

@@ -413,7 +413,13 @@ class dataInfo
 
 	public function getParentCategoryData($category_id,$parent,$title,$seletedCategoryid,$ele)
 	 {
+		 	if($ele == "option")
+			{
+				$query = mysql_query("SELECT * FROM  category where deleted = 0 and status = 0 and category_id ='$parent' order by sort_order");
+			}
+			else{
 			 $query = mysql_query("SELECT * FROM  category where deleted = 0 and category_id ='$parent' order by sort_order");
+			}
 			 $obj = mysql_fetch_object($query);
 			 
 			if($obj !="")

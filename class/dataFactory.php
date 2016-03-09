@@ -26,7 +26,7 @@ class dataFactory
 	function getPageDataByCategoryId($category_id)
 	{
 		$allData = "";
-		$query = "select * from  pages where categoryId ='$category_id' and status = 0 and deleted=0";
+		$query = "select * from  pages where categoryId ='$category_id' and status = 0 and deleted=0  ORDER BY sort_order ASC ";
 		$result = mysql_query($query);
 		while($obj=mysql_fetch_object($result))
 		{

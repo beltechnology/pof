@@ -43,7 +43,7 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
 <link rel="stylesheet" href="<?php echo BaseUrl;?>font-awesome/css/font-awesome.min.css">
 <!-- Bootstrap -->
 <link href="<?php echo BaseUrl;?>css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" media="screen" href="<?php echo BaseUrl;?>/css/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="<?php echo BaseUrl;?>css/bootstrap-datetimepicker.min.css">
 </head>
 <body class="body">
 <div class="content">

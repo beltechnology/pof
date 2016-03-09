@@ -36,6 +36,8 @@ $menuType = "viewPages";
 					  {
 						foreach($selectCategoryData as $categoryData)
 						{
+						if($categoryData->status == 0)
+						{
 							$seletedCategoryid = "";
 						  if(isset($_REQUEST['pageId'])&& ($pagesDetail->categoryId == $categoryData->category_id))
 						  {
@@ -47,6 +49,7 @@ $menuType = "viewPages";
 							$ele = "option";
 							$dropDown = $selectCategory->genrateCategory($category_id,$title,$parent,$seletedCategoryid,$ele);
 							echo $dropDown;
+						}
 						}
 					  }
 					?>

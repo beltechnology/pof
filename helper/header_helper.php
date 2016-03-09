@@ -8,7 +8,7 @@ if(isset($_POST['contactus']))
 	$address = $_POST['address'];
 	
 	$to = $contactData->email;
-	$subject = "Contact Requiest";
+	$subject = "Contact Request";
 	$txt = "Name : $name<br />Phone : $phone<br />Email : $email<br />Address : $address <br />Message : $message<br />";
 	$headers = "From: $email" . "\r\n";
 	$headers .= "MIME-Version: 1.0" . "\r\n";
@@ -26,7 +26,7 @@ elseif(isset($_POST['register']))
 	$state = $_POST['state'];
 	
 	$to = $contactData->email;
-	$subject = "Registration Requiest";
+	$subject = "Registration Request";
 	$txt = "Name : $name<br />Phone : $phone<br />Email : $email<br />School Name : $schoolName<br />City : $city<br />State : $state<br />";
 	$headers = "From: $email" . "\r\n";
 	$headers .= "MIME-Version: 1.0" . "\r\n";
