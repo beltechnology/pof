@@ -194,11 +194,34 @@ function createPages($categoryId)
 	return $pageLinkHTML;
 	
 }
+
+
+function getChildCategoryHTML($categoryId)
+{
+	$categoryLinkHTML = "";
+	$categoryData = $this->getChildCategoryByCategoryId($categoryId);
+	if($categoryId != 0)
+	{
+	 $putStyle = "style='display:block;'";
+	}
+	if($categoryData != "")
+	{
+		foreach($categoryData as $category)
+		{
+			$categoryLinkHTML =$categoryLinkHTML."<li><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$category->category_id."'>".$category->title."</a></li>";
+		}
+	}
+	return $categoryLinkHTML;
+	
+}
+
+
 // create pages for inner page
 function createPagesInnnerPages($categoryId)
 {
 	$pageLinkHTML = "";
 	$putStyle = "";
+	$pageLinkHTML = $this->getChildCategoryHTML($categoryId);
 	$pages = $this->getPageDataByCategoryId($categoryId);
 	if($categoryId != 0)
 	{
@@ -227,6 +250,8 @@ function getHomeMenu ()
 	$loopCounter = 1;
 	$cssArray = ["first","second","third","fourth","fifth","sixth"];
 	//var_dump($allMenu);
+	if($allMenu !="")
+	{
 		foreach($allMenu as $menu)
 		{
 			$title = $menu->title;
@@ -241,6 +266,7 @@ function getHomeMenu ()
 			if($count == 6) $count=0;
 			
 		}
+	}
 	
 	return $homeMenu;
 }

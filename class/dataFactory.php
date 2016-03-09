@@ -75,10 +75,24 @@ class dataFactory
 	 
 
 	
+	function getChildCategoryByCategoryId($parentid)
+	{
+	  $allData = "";
+	  $res=mysql_query("SELECT * FROM category where deleted = 0 and status= 0 and parentid='$parentid'   ORDER BY sort_order ASC  ");
+	  while($obj=mysql_fetch_object($res))
+	  {
+	  	$allData[] = $obj;
+	  }
+	 
+	  return $allData;
+	}	 
+	 
+
+	
 	function getOlympaidInformation()
 	{
 	  $allData = "";
-	  $res=mysql_query("SELECT * FROM olympaidinformation where deleted = 0 ");
+	  $res=mysql_query("SELECT * FROM olympaidinformation where deleted = 0   ORDER BY sort_order ASC ");
 	  while($obj=mysql_fetch_object($res))
 	  {
 	  	$allData[] = $obj;
@@ -91,7 +105,7 @@ class dataFactory
 	function getTestimonialData()
 	{
 	  $allData = "";
-	  $res=mysql_query("SELECT * FROM testimonial where deleted = 0 ");
+	  $res=mysql_query("SELECT * FROM testimonial where deleted = 0  ORDER BY sort_order ASC ");
 	  while($obj=mysql_fetch_object($res))
 	  {
 	  	$allData[] = $obj;

@@ -7,7 +7,7 @@ class dataInfo
 	public function selectAll($tableName)
 	 {
 	  $allData = "";
-	  $res=mysql_query("SELECT * FROM ".$tableName." where deleted = 0 order by sort_order");
+	  $res=mysql_query("SELECT * FROM ".$tableName." where deleted = 0  ORDER BY sort_order ASC ");
 	  while($obj=mysql_fetch_object($res))
 	  {
 	  	$allData[] = $obj;
@@ -415,10 +415,10 @@ class dataInfo
 	 {
 		 	if($ele == "option")
 			{
-				$query = mysql_query("SELECT * FROM  category where deleted = 0 and status = 0 and category_id ='$parent' order by sort_order");
+				$query = mysql_query("SELECT * FROM  category where deleted = 0 and status = 0 and category_id ='$parent'  ORDER BY sort_order ASC ");
 			}
 			else{
-			 $query = mysql_query("SELECT * FROM  category where deleted = 0 and category_id ='$parent' order by sort_order");
+			 $query = mysql_query("SELECT * FROM  category where deleted = 0 and category_id ='$parent'  ORDER BY sort_order ASC ");
 			}
 			 $obj = mysql_fetch_object($query);
 			 
@@ -438,7 +438,7 @@ class dataInfo
 
 	public function getCatagoryDataById($parent)
 	 {
-			 $query = mysql_query("SELECT * FROM  category where deleted = 0 and category_id ='$parent' order by sort_order");
+			 $query = mysql_query("SELECT * FROM  category where deleted = 0 and category_id ='$parent'  ORDER BY sort_order ASC ");
 			 $obj = mysql_fetch_object($query);			
 			 return $obj;
 	 } 
@@ -446,7 +446,7 @@ class dataInfo
 	public function getCatagoryDataByParentId($parent)
 	 {			
 	 		$objData = "";
-			 $query = mysql_query("SELECT * FROM  category where deleted = 0 and parentid ='$parent' order by sort_order");
+			 $query = mysql_query("SELECT * FROM  category where deleted = 0 and parentid ='$parent'  ORDER BY sort_order ASC ");
 			 while($obj = mysql_fetch_object($query))
 			 {
 				 $objData[] = $obj;
@@ -483,7 +483,7 @@ class dataInfo
 // get Notes descrpion by notesCategoryId
 	public function getNotesCategoryDataByCategoryId($notesCategoryId)
 	 {
-			 $query = mysql_query("SELECT * FROM  notescategory where deleted = 0 and notesCategoryId ='$notesCategoryId' order by sort_order");
+			 $query = mysql_query("SELECT * FROM  notescategory where deleted = 0 and notesCategoryId ='$notesCategoryId'  ORDER BY sort_order ASC ");
 			 $obj = mysql_fetch_object($query);
 			 return $obj;
 	 }
@@ -491,7 +491,7 @@ class dataInfo
 // get pages descrpion by CategoryId
 	public function getCategoryDataByCategoryId($category_id)
 	 {
-			 $query = mysql_query("SELECT * FROM  category where deleted = 0 and category_id ='$category_id' order by sort_order");
+			 $query = mysql_query("SELECT * FROM  category where deleted = 0 and category_id ='$category_id'  ORDER BY sort_order ASC ");
 			 $obj = mysql_fetch_object($query);
 			 return $obj;
 	 }
@@ -499,7 +499,7 @@ class dataInfo
 	 // get pages by CategoryId
 	public function getpagesByCategoryId($category_id)
 	 {
-			 $query = mysql_query("SELECT * FROM  pages where deleted = 0 and categoryId ='$category_id' order by sort_order");
+			 $query = mysql_query("SELECT * FROM  pages where deleted = 0 and categoryId ='$category_id'  ORDER BY sort_order ASC  ");
 			 $obj = mysql_fetch_object($query);
 			 return $obj;
 	 }
@@ -508,7 +508,7 @@ class dataInfo
 // get all data by id
 	public function getDataById($table,$field,$id)
 	 {
-			 $query = mysql_query("SELECT * FROM  ".$table." where deleted = 0 and ".$field." =".$id." order by sort_order");
+			 $query = mysql_query("SELECT * FROM  ".$table." where deleted = 0 and ".$field." =".$id."  ORDER BY sort_order ASC ");
 			 $obj = mysql_fetch_object($query);
 			 return $obj;
 	 }

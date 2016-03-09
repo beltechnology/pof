@@ -37,7 +37,21 @@ $menuType = "viewmoreInformation";
 						$tbl_name = "moreinformation";
 						$targetpage = "viewMoreInformation.php";
 						$testimonial = $pagination->selectAll($tbl_name);
-						$sr= 1;
+						if(isset($_REQUEST['page']))
+						{
+							if($_REQUEST['page'] > 1)
+							{
+							$sr= $_REQUEST['page']*LIMIT-1;
+							}
+							else
+							{
+								$sr= 1;
+							}
+						}
+						else
+						{
+							$sr= 1;
+						}
 						if($testimonial)
 						{
                      foreach($testimonial as $testimonials)

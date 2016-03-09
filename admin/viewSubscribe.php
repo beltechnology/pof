@@ -35,7 +35,21 @@ $menuType = "ViewEmail";
 						$tbl_name = "emailsubscribe";
 						$targetpage = "viewOlympaidInformation.php";
 						$selectCategoryData = $pagination->selectAll($tbl_name);
-						$sr= 1;
+						if(isset($_GET['page']))
+						{
+							if($_GET['page'] > 1)
+							{
+							$sr= $_GET['page']*LIMIT-1;
+							}
+							else
+							{
+								$sr= 1;
+							}
+						}
+						else
+						{
+							$sr= 1;
+						}
 						if($selectCategoryData)
 						{
                      foreach($selectCategoryData as $category)

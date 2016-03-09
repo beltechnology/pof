@@ -58,7 +58,22 @@ $menuType = "viewAbout";
 						$tbl_name = "about";
 						$targetpage = "viewAbout.php";
 						$aboutData = $pagination->selectAll($tbl_name);
-						$sr= 1;
+						if(isset($_REQUEST['page']))
+						{
+							if($_REQUEST['page'] > 1)
+							{
+							$sr= $_REQUEST['page']*LIMIT-1;
+							}
+							else
+							{
+								$sr= 1;
+							}
+						}
+						else
+						{
+							$sr= 1;
+						}
+
 						if($aboutData)
 						{
                      foreach($aboutData as $abouts)

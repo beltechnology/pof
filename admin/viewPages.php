@@ -42,7 +42,21 @@ $menuType = "viewPages";
 						$tbl_name = "pages";
 						$targetpage = "viewPages.php";
 						$selectCategoryData = $pagination->selectAll($tbl_name);
-						$sr= 1;
+						if(isset($_REQUEST['page']))
+						{
+							if($_REQUEST['page'] > 1)
+							{
+							$sr= $_REQUEST['page']*LIMIT-1;
+							}
+							else
+							{
+								$sr= 1;
+							}
+						}
+						else
+						{
+							$sr= 1;
+						}
 						if($selectCategoryData)
 						{
                      foreach($selectCategoryData as $category)

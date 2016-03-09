@@ -37,23 +37,36 @@ $menuType = "viewTestimonial";
 						$tbl_name = "testimonial";
 						$targetpage = "viewTestimonial.php";
 						$testimonial = $pagination->selectAll($tbl_name);
-						$sr= 1;
+						if(isset($_GET['page']))
+						{
+							if($_GET['page'] > 1)
+							{
+							$sr= $_GET['page']*LIMIT-1;
+							}
+							else
+							{
+								$sr= 1;
+							}
+						}
+						else
+						{
+							$sr= 1;
+						}
 						if($testimonial)
 						{
-                     foreach($testimonial as $testimonials)
-					  {
-						?>
-                      <tr>
-                        <td><?php echo $sr++;?> </td>
-                        
-                        <td><?php  echo $testimonials->title ;?></td>
-                        <td><?php  echo $testimonials->description ;?></td>
-                        <td><img src="upload/<?php  echo $testimonials->upload ;?>" width="50" /></td>
-                        <td> <a href="#" class="delete" data="testimonialId=<?php  echo $testimonials->testimonialId;?>=testimonial">Delete <span aria-hidden="true" class="glyphicon glyphicon-pencil"></span></a></td>
-                      </tr>
-                      <?php
-						}
-					}
+							foreach($testimonial as $testimonials)
+							{
+							?>
+							<tr>
+							<td><?php echo $sr++;?> </td>
+							<td><?php  echo $testimonials->title ;?></td>
+							<td><?php  echo $testimonials->description ;?></td>
+							<td><img src="upload/<?php  echo $testimonials->upload ;?>" width="50" /></td>
+							<td> <a href="#" class="delete" data="testimonialId=<?php  echo $testimonials->testimonialId;?>=testimonial">Delete <span aria-hidden="true" class="glyphicon glyphicon-pencil"></span></a></td>
+							</tr>
+							<?php
+							}
+					   }
 					  ?>
                     </tbody>
                     

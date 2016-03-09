@@ -35,7 +35,22 @@ $menuType = "viewSchool";
 						$tbl_name = "school";
 						$targetpage = "viewSchool.php";
 						$testimonial = $pagination->selectAll($tbl_name);
-						$sr= 1;
+						if(isset($_GET['page']))
+						{
+							if($_GET['page'] > 1)
+							{
+							$sr= $_GET['page']*LIMIT-1;
+							}
+							else
+							{
+								$sr= 1;
+							}
+						}
+						else
+						{
+							$sr= 1;
+						}
+
 						if($testimonial)
 						{
                      foreach($testimonial as $testimonials)
