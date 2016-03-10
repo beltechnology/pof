@@ -22,7 +22,7 @@
 		    <div class="col-lg-2 col-md-2"><p class="one"><?php echo  $contactData->address ;?></p>
 			</div>
 			<div class="col-lg-1 col-md-1">&nbsp;</div>
-			<div class="col-lg-3 col-md-3 center-block"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d227748.38256849028!2d75.65047220499973!3d26.885447914969156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396c4adf4c57e281%3A0xce1c63a0cf22e09!2sJaipur%2C+Rajasthan+302001!5e0!3m2!1sen!2sin!4v1457594348957" width="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<div class="col-lg-3 col-md-3 center-block"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d910995.4401255129!2d75.790558!3d26.885211!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db15569897029%3A0x57d3f3a2975b89f0!2sJaipur%2C+Rajasthan+302001%2C+India!5e0!3m2!1sen!2sin!4v1457609324435" width="100%"  frameborder="0" style="border:0" allowfullscreen></iframe>
 			</div>
 			<div class="col-lg-2 col-md-2 col-lg-offset-1 col-md-offset-1">
             <p class="two">
@@ -65,6 +65,17 @@
 <script src="<?php echo BaseUrl;?>js/jquery.marquee.min.js"></script> 
   </body>
 </html>
+<?php 
+if($menuType !="")
+{?>
+<script>
+$("ul.navigation  li").removeClass("home");
+$("li.<?php echo $menuType; ?>").addClass("home");
+</script>
+<?php
+}
+?>
+
 <script type="text/javascript">
 	$(function () {
 		$('#passwordDate').datetimepicker({

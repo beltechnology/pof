@@ -1,4 +1,7 @@
-<?php include("common/header.php");?>
+<?php include("common/header.php");
+$menuType = "about";
+
+?>
 	 <div class="main-page">
 	  <div class="container-fluid">
 	    <div class="row">

@@ -1,7 +1,7 @@
 <?php 
  $path = $_SERVER['DOCUMENT_ROOT']."/vibhor/pof/";
  $pathCss = "/vibhor/pof/";
-
+ $menuType = "";
 include($path."class/constant.php");
 include($path."admin/common/conn.php");
 include($path."admin/class/datainfo.php");
@@ -99,18 +99,28 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
             <div class="col-md-6 col-md-offset-1 col-lg-6 col-lg-offset-1">
               <ul class="nav navbar-nav navigation pull-right">
                 <li class="home"><a href="<?php echo BaseUrl;?>">Home &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp; <span class="sr-only">(current)</span></a></li>
-                <li><a href="<?php echo BaseUrl;?>about.php">About Us &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp;</a></li>
+                <li class="about"><a href="<?php echo BaseUrl;?>about.php">About Us &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp;</a></li>
                 <li><a href="#">What We Do &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp;</a></li>
-                <li><a href="<?php echo BaseUrl;?>contact-us.php">Contact Us &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp;</a></li>
+                <li class="contact"><a href="<?php echo BaseUrl;?>contact-us.php">Contact Us &nbsp; &nbsp; &nbsp; &nbsp; | &nbsp;</a></li>
               </ul>
             </div>
             <div class="col-md-3 col-lg-3">
               <form class="navbar-form" role="search">
                 <div class="form-group">
                   <div class="form-group has-default has-feedback">
-                    <input type="text" class="form-control pull-left" id="inputSuccess2" aria-describedby="inputSuccess2Status"
-		  placeholder="Search For ......">
-                    <span class="glyphicon glyphicon-search form-control-feedback" aria-hidden="true"></span> <span id="inputSuccess2Status" class="sr-only">(success)</span> </div>
+                    <script>
+  (function() {
+    var cx = '013359958246192933599:xzpzuvrang4';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search> </div>
                 </div>
               </form>
             </div>

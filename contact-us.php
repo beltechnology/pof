@@ -1,10 +1,12 @@
-<?php include("common/header.php");?>
+<?php include("common/header.php");
+$menuType = "contact";
+?>
 <link rel="stylesheet" type="text/css" href="css/contact.css">
   <div class="content">
     <div class="contact-page">
      <div class="container-fluid">
        <div class="row">
-        <div class="col-md-8 col-lg-8">
+        <div class="col-md-12 col-lg-12">
 		 <h2><?php echo  $contactData->title ;?><div class="border"></div></h2>
 		 <p><?php echo  $contactData->description ;?></p>
 	  <div class="row">
@@ -15,7 +17,7 @@
 			</div>
 			<div class="col-lg-4 col-md-4">
 			 <h2>Call Us:</h2>
-			 <p>Mobile:&nbsp; &nbsp; +91 <?php echo  $contactData->mobile ;?></p>
+			 <p>Mobile:&nbsp; &nbsp; <?php echo  $contactData->mobile ;?></p>
 			 <p>E-mail:&nbsp; &nbsp; <?php echo  $contactData->email ;?></p> 
 			</div>	
 			<div class="col-lg-12 col-md-12">
