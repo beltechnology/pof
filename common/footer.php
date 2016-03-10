@@ -62,14 +62,16 @@
 <script type="text/javascript" src="<?php echo BaseUrl;?>admin/bootstrap/js/moment.js"></script>
 <script type="text/javascript" src="<?php echo BaseUrl;?>admin/bootstrap/js/bootstrap-datetimepicker.min.js"></script>
   <script src="<?php echo BaseUrl;?>js/common.js"></script>
+<script src="<?php echo BaseUrl;?>js/jquery.marquee.min.js"></script> 
   </body>
 </html>
 <script type="text/javascript">
-            $(function () {
-                $('#passwordDate').datetimepicker({
-        pickTime: false,
-        maxDate: moment(),
+	$(function () {
+		$('#passwordDate').datetimepicker({
+		pickTime: false,
+		maxDate: moment(),
 		format: 'DD/MM/YYYY'
 		
-    }); });
+		});
+});
         </script>
