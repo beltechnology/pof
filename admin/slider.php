@@ -30,7 +30,7 @@ $menuType = "slider";
           </tr>
             <tr>
               <th scope="col">Sr. no</th>
-              <th scope="col">Text</th>
+              <!--<th scope="col">Text</th>-->
               <th scope="col">Image</th>
               <th scope="col">&nbsp;</th>
               <th scope="col">&nbsp;</th>
@@ -42,12 +42,12 @@ $menuType = "slider";
 			if($srno == 6)
 			{?>
             <tr>
-            <td colspan="5"><h1 align="center"> Middle Slider</h1></td>
+            <td colspan="4"><h1 align="center"> Middle Slider</h1></td>
           </tr>
             <tr>
             <form role="form"  action="<?php $_SERVER['PHP_SELF'];?>" method="post" enctype="multipart/form-data">
             <td>Heading</td>
-            <td colspan="3">
+            <td colspan="2">
             <input type="text" class="form-control" required name="title" value="<?php echo  $mSliderHeadingData->title;?>" />
             <input type="hidden" class="form-control" name="mSliderHeadId" value="<?php echo  $mSliderHeadingData->mSliderHeadId;?>" />
             </td>
@@ -60,7 +60,7 @@ $menuType = "slider";
             <tr>
             <td><?php echo $srno;?>
               <input type="hidden" class="form-control" name="sliderId" value="<?php echo $slider->sliderId; ?>" /></td>
-            <td><input type="text" class="form-control" name="text"  value="<?php echo $slider->text; ?>" /> </td>
+            <!--<td>--><input type="hidden" class="form-control" name="text"  value="<?php echo $slider->text; ?>" /><!-- </td>-->
             <td>
             <input type="file" class="form-control" name="sliderImage" /> 
             <input type="hidden" class="form-control" name="oldSliderImage" value="<?php echo $slider->sliderImage; ?>" />

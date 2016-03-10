@@ -157,6 +157,21 @@ class dataFactory
 	  }
 	  return $allData;
 	}
+//
+
+	 
+	function getPofDesc()
+	{
+		$allData ="";
+		$sql = "SELECT * FROM aboutdesc where deleted = 0 and  status= 0 ";
+		$result = mysql_query($sql);
+	  while($obj=mysql_fetch_object($result))
+	  {
+	  	$allData = $obj->text;
+	  }
+	  return $allData;
+	}
+	
 	
 } 
 ?>

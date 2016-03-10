@@ -54,14 +54,22 @@
   </body>
 </html>
 <script>
-              <?php
-				  if(!$studentLogin)
-				  {?>
-
+<?php
+  if(!$studentLogin)
+  {?>
 $("ul.treeview-menu li").removeClass("active");
 $("li.<?php echo $menuType; ?>").addClass("active");
 <?php
-				  }?>
+}
+else
+{
+	if($menuType !="viewNotes")
+	{
+		header("location:logout.php");
+		
+	}
+}
+?>
 $("a.delete").click(function()
 {
 	var response = confirm("Do you really want to delete this ?");
@@ -131,3 +139,4 @@ else
 }
 ?>
 <?php ob_end_flush(); ?>
+

@@ -74,7 +74,7 @@ if(isset($_SESSION['userInfo']))
 if($studentLogin)
 {
 	?><a href="../" class="logo">
-          <span class="logo-lg"><img src="<?php echo BaseUrl;?>/img/logo.png"</span>
+          <span class="logo-lg"><img src="<?php echo BaseUrl;?>img/logo.png"</span>
         </a>
         <?php
 }

@@ -1,30 +1,4 @@
 <?php include("common/header.php");?>
-<?php
-$innerTitle = "";
-$innerDescription = "";
-if(isset($_REQUEST['aboutId']))
-{
-	$innerHtml = $htmlFactory->getPagesDataById("aboutpof","aboutId",$_REQUEST['aboutId']);
-	//var_dump($innerHtml);
-	$innerTitle = $innerHtml->title;
-	$innerDescription = $innerHtml->description;
-}
-elseif(isset($_REQUEST['pageId']))
-{
-	$innerHtml = $htmlFactory->getPagesDataById("pages","pageId",$_REQUEST['pageId']);
-	//var_dump($innerHtml);
-	$innerTitle = $innerHtml->pageTitle;
-	$innerDescription = $innerHtml->pageDescription;
-}
-elseif(isset($_REQUEST['categoryId']))
-{
-	$innerTitle = "";
-	$innerDescription = $htmlFactory->createPagesInnnerPages($_REQUEST['categoryId']);
-	//var_dump($innerDescription);
-}
-?>
-
-
 	 <div class="main-page">
 	  <div class="container-fluid">
 	    <div class="row">
@@ -32,13 +6,7 @@ elseif(isset($_REQUEST['categoryId']))
 		    <div class="about-us container-fluid">
 			 <h1>Shortly About Us</h1>
 			 <div>&nbsp;</div>
-			 <p class="first">For the academic year 2015-16. SOF will spend over Rs Ten Crores on awards, scholarships, gifts and facilities etc.For the academic year 2015-16. SOF will spend over Rs Ten Crores on awards, scholarships, gifts and facilities etc.For the academic year 2015-16. SOF will spend over Rs Ten Crores on awards, scholarships, gifts and facilities etc.For the academic year 2015-16. SOF will spend over Rs Ten Crores on awards, scholarships, gifts and facilities etc.
-			 </p>
-			 <p class="first">During the academic year 2014-15, over 31500 schools from more than 1400 cities registred and millions of students appeared for the four olympiad exams. These olympiad were conducted across 19 countries. During the academic year 2014-15, over 31500 schools from more than 1400 cities registred and millions of students appeared for the four olympiad exams. These olympiad were conducted across 19 countries.
-			 </p>
-			 <p class="first">
-			  The following awards will be provided to the winners of olympiad being held during the academic year 2015-16.The following awards will be provided to the winners of olympiad being held during the academic year 2015-16.
-			 </p>
+			 <?php echo $htmlFactory->getPofDesc(); ?>
 			 <div>&nbsp;</div>
 			 <h2>Our Team Focused On You</h2>
 			 <div>&nbsp;</div><div>&nbsp;</div>
@@ -49,7 +17,7 @@ elseif(isset($_REQUEST['categoryId']))
                  </div><!--end of row-->
 				<div class="row">
 					   <div class="col-md-5">&nbsp;</div>
-					   <div class="col-md-2"><button class="btn btn-default" type="submit">Contact Us</button></div>
+					   <div class="col-md-2"><a class="btn btn-warning" href="<?php echo BaseUrl;?>contact-us.php"><b>Contact Us</b></a></div>
 					   <div class="col-md-5">&nbsp;</div>
 				  </div>
 			 
