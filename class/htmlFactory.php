@@ -19,7 +19,6 @@ class  htmlFactory extends  dataFactory
 					$carouselHTML = $carouselHTML."<div class='item active'>
 	 <img class='center-block img-responsive first-slider bottom-text' src='".BaseUrl."admin/upload/".$carousel->sliderImage."' alt='...'>
       <div class='carousel-caption bottom-indicators'>
-		<h1 class='text-center carousel-heading'>".$carousel->text."</h1>   
 	 </div>
     </div>";
 				}
@@ -28,7 +27,6 @@ class  htmlFactory extends  dataFactory
 					$carouselHTML = $carouselHTML."<div class='item'>
 	 <img class='center-block img-responsive first-slider bottom-text' src='".BaseUrl."admin/upload/".$carousel->sliderImage."'  alt='...'>
       <div class='carousel-caption bottom-indicators'>
-		<h1 class='text-center'>".$carousel->text."</h1>   
 	 </div>
     </div>";
 				}
@@ -56,17 +54,11 @@ class  htmlFactory extends  dataFactory
 				if($ele == 0)
 				{
 					$carouselHTML = $carouselHTML."<div class='item active'> <img class='center-block img-responsive big-slide' src='".BaseUrl."admin/upload/".$carousel->sliderImage."' alt='...' width=''>
-                <div class='carousel-caption slider-heading'>
-				".$carousel->text."
-                </div>
               </div>";
 				}
 				else
 				{
 					$carouselHTML = $carouselHTML."<div class='item'> <img class='center-block img-responsive big-slide' src='".BaseUrl."admin/upload/".$carousel->sliderImage."' alt='...' width=''>
-                <div class='carousel-caption slider-heading'>
-				".$carousel->text."
-                </div>
               </div>";
 				}
 				$ele++;
@@ -153,17 +145,19 @@ class  htmlFactory extends  dataFactory
 	function  aboutPof()
 	{
 		$aboutPofHTML = "";
+		$abutArr = [2,3,1];
+		$i=0;
 		$aboutPofDetials = $this->getDataFromServer("aboutpof");
 		foreach($aboutPofDetials as $aboutPofDetail)
 		{
-			$aboutPofHTML = $aboutPofHTML."<div class='col-md-4 col-lg-4 grey-1 aboutpof".$aboutPofDetail->aboutId."'>
+			$aboutPofHTML = $aboutPofHTML."<div class='col-md-4 col-lg-4 grey-1 aboutpof".$abutArr[$i]."'>
 		     <img class='center-block img-responsive' src='".BaseUrl."admin/upload/".$aboutPofDetail->upload."' alt='pencil-photo'>
 			 <div class='heading'><h2>".$aboutPofDetail->title."</h2></div>
 			 <div>&nbsp;</div>
 			 <p>". substr(strip_tags($aboutPofDetail->description),0,110). "..."."</p>
 			 <a class='second center-block' href='".BaseUrl."pages/index.php?aboutId=".$aboutPofDetail->aboutId."'>READ MORE &gt;&gt;</a>
 			 </div>";
-		
+		$i++;
 		} 
 		return $aboutPofHTML;
 	}
