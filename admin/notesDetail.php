@@ -33,7 +33,7 @@ $menuType = "viewNotes";
 					  }
 					?>
                       <select class="form-control" name="notesCategoryId" id="notesCategoryId" required>
-                      <option >Select notes Subject</option>
+                      <option value="" >Select notes Subject</option>
                       <?php
 					  if($selectCategoryData)
 					  {
@@ -94,7 +94,7 @@ $menuType = "viewNotes";
                 </div>
                     <div class="form-group">
                       <label for="categoryName">Upload</label>
-                      <input type="file" class="form-control" id="notesFile" name="notesFile" placeholder=""  />
+                      <input type="file" class="form-control" id="notesFile" name="notesFile" placeholder="" <?php if(!$edit){echo "required";}?> />
 					<?php if( $edit){?>
 					  <input type="hidden" class="form-control" id="oldFile" name="oldFile" placeholder="Category name" value="<?php  if( $edit) echo $notesDteailData->uploads ?>" required />
                       <?php }?>

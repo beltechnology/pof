@@ -199,11 +199,12 @@ var $tbl_name ;
 	 {
 		$notesCategoryId = $pagenationInfo->notesCategoryId;
 		$page = $pagenationInfo->page;
+		$studentClass = $pagenationInfo->studentClass;
 		
 		$limit = LIMIT; 
 		$start = ($page - 1) * $limit;
 		$allData ="";
-		$sql = "SELECT * FROM notesdetail  where notesCategoryId =$notesCategoryId and deleted = 0 LIMIT $start, $limit ";
+		$sql = "SELECT * FROM notesdetail  where notesCategoryId =$notesCategoryId and  studentClass ='$studentClass' and  deleted = 0 and status=0  ORDER BY sort_order ASC  LIMIT $start, $limit ";
 		$result = mysql_query($sql);
 		  while($obj=mysql_fetch_object($result))
 		  {
@@ -215,7 +216,8 @@ var $tbl_name ;
 	function numRows($pagenationInfo) {
 		$notesCategoryId = $pagenationInfo->notesCategoryId;
 		$page = $pagenationInfo->page;
-		$sql = "SELECT * FROM notesdetail  where notesCategoryId =$notesCategoryId and deleted = 0 ";
+		$studentClass = $pagenationInfo->studentClass;
+		$sql = "SELECT * FROM notesdetail  where notesCategoryId =$notesCategoryId and deleted = 0  and status=0  and  studentClass ='$studentClass' ORDER BY sort_order ASC ";
 		$result = mysql_query($sql);
 		$rowcount = mysql_num_rows($result);
 		$limit = LIMIT; 
@@ -241,7 +243,7 @@ var $tbl_name ;
 		}//if no page var is given, set start to 0
 		/* Get data. */
 		$allData ="";
-		$sql = "SELECT * FROM  notesdetail where deleted = 0 and studentClass='".$class."' and status= 0 and notesCategoryId in(".$subject.")   LIMIT $start, $limit";
+		$sql = "SELECT * FROM  notesdetail where deleted = 0 and studentClass='".$class."' and status= 0 and notesCategoryId in(".$subject.")   LIMIT $start, $limit   ORDER BY sort_order ASC  ";
 		$result = mysql_query($sql);
 	  while($obj=mysql_fetch_object($result))
 	  {

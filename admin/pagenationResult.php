@@ -16,6 +16,7 @@ $pagenationInfo = new stdClass();
 
 		$pagenationInfo->notesCategoryId = $notesCategoryId;
 		$pagenationInfo->page = $page;
+		$pagenationInfo->studentClass = $studentInfo->studentClass;
 		$selectCategoryData = $pageinationHtml->getDataForNotes($pagenationInfo);
 		$pages = $pageinationHtml->numRows($pagenationInfo);
 		$output = '<input type="hidden" class="pagenum" value="' . $page . '" /><input type="hidden" class="total-page" value="' . $pages . '" />';
@@ -24,6 +25,8 @@ $pagenationInfo = new stdClass();
 		$classArray = [" btn-primary"," btn-success"," btn-info"," btn-warning"," btn-primary"," btn-danger"];
 		
 		$count = 0;
+		if($selectCategoryData !="")
+		{
 		foreach($selectCategoryData as $category)
 				{
 				$string = strip_tags($category->notesDescription);
@@ -48,8 +51,14 @@ $pagenationInfo = new stdClass();
 					if($stringCut)
 					{?>
 					<a href="<?php  echo BaseUrl."admin/readmore.php?notesCategoryId=".$category->notesCategoryId."&notesId=".$category->notesId;?>" class="btn <?php echo $classArray[$count];?>">Read More..</a>
-					<?php } ?>
+					<?php } 
+					if($category->uploads !="")
+					{
+					?>
 					<a download href="<?php  echo BaseUrl."admin/upload/".$category->uploads;?>" class="btn <?php echo $classArray[$count];?> pull-right">Download</a>
+                    <?php
+					}
+					?>
 					</div>
 					</div>
 					<?php 
@@ -61,6 +70,7 @@ $pagenationInfo = new stdClass();
 					$count++;
 					}
 				}
+		}
 				echo $output;
 
 		//var_dump($response);
