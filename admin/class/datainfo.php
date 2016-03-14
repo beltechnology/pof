@@ -158,7 +158,7 @@ class dataInfo
 				$res = mysql_query("UPDATE notescategory SET categoryName='$categoryName',categoryDescription='$categoryDescription',seoTitle='$seoTitle', examDate='$examDate', parentId= '$parentCategory',metaTag='$metaTag',keyWord='$keyWord' ,status='$status' ,sort_order='$sort_order'  WHERE notesCategoryId='$notesCategoryId'");
 				if ($res) {
 					mysql_query("COMMIT");
-					$response = "Notes Category successfully upadted.";
+					$response = "Notes Category successfully updated.";
 				} else {        
 					mysql_query("ROLLBACK");
 					$response = "Notes Category update failed.";
@@ -220,10 +220,10 @@ class dataInfo
 			elseif($response == true && $categoryData->state == 2 )
 			{
 				$notesId = $categoryData->notesId;
-				$res = mysql_query("UPDATE notesdetail SET notesCategoryId='$notesCategoryId',notesTitle='$notesTitle', notesDescription='$notesDescription', uploads='$newfilename',studentClass='$studentClass', seoTitle='$seoTitle',metaTag='$metaTag',keyWord='$keyWord' ,status='$status' ,sort_order='$sort_order'  WHERE notesId='$notesId'");
+				$res = mysql_query("UPDATE notesdetail SET notesCategoryId='$notesCategoryId',notesTitle='$notesTitle', notesDescription='$notesDescription', uploads='$newfilename',studentClass='$studentClass', seoTitle='$seoTitle', metaTag='$metaTag', keyWord='$keyWord' , status='$status' , sort_order='$sort_order'  WHERE notesId='$notesId'");
 				if ($res) {
 					mysql_query("COMMIT");
-					$response = "Notes detail successfully upadted.";
+					$response = "Notes detail successfully updated.";
 				} else {        
 					mysql_query("ROLLBACK");
 					$response = "Notes detail update failed.";
@@ -270,7 +270,7 @@ class dataInfo
 				$res = mysql_query("UPDATE category SET title='$categoryName',seoTitle='$seoTitle',parentid= '$parentCategory',meta='$meta',keyword='$keyword' ,status='$status' ,sort_order='$sort_order'  WHERE category_id='$category_id'");
 				if ($res) {
 					mysql_query("COMMIT");
-					$response = "Category successfully upadted.";
+					$response = "Category successfully updated.";
 				} else {        
 					mysql_query("ROLLBACK");
 					$response = "Category update failed.";
@@ -321,7 +321,7 @@ class dataInfo
 				$res = mysql_query("UPDATE pages SET categoryId='$categoryId', pageTitle='$pageTitle', pageDescription='$pageDescription', specialNote= '$specialNote', seoTitle='$seoTitle', metaTag='$metaTag', keyWord='$keyWord', status='$status', sort_order='$sort_order'  WHERE pageId='$pageId'");
 				if ($res) {
 					mysql_query("COMMIT");
-					$response = "Page successfully upadted.";
+					$response = "Page successfully updated.";
 				} else {        
 					mysql_query("ROLLBACK");
 					$response = "page detail failed.";
@@ -537,7 +537,7 @@ class dataInfo
 					$res = mysql_query("UPDATE slider SET text='$text', sliderImage='$newfilename' WHERE sliderId='$sliderId'");
 					if ($res) {
 					$response = mysql_query("COMMIT");
-					$response = "Slider successfully upadted.";
+					$response = "Slider successfully updated.";
 					} else {        
 					mysql_query("ROLLBACK");
 					$response = "Slider update failed.";
@@ -590,7 +590,7 @@ class dataInfo
 					$res = mysql_query("UPDATE studentregistration SET studentName='$studentName',fatherName='$fatherName', motherName='$motherName', dob='$dob', subject='$subject',studentClass='$studentClass', address='$address', mobile='$mobile', email='$email', city='$city', addressState='$addressState', pinCode='$pinCode', schoolName='$schoolName', schoolCode='$schoolCode', principalName='$principalName', principalMobile='$principalMobile' WHERE studentId='$studentId'");
 					if ($res) {
 					$response = mysql_query("COMMIT");
-					$response = "Student registered successfully upadted.";
+					$response = "Student registered successfully updated.";
 					} else {        
 					mysql_query("ROLLBACK");
 					$response = "Student registered update failed.";
@@ -681,7 +681,7 @@ public function getSubmenu($parentId)
 				$res = mysql_query("UPDATE aboutpof SET title='$title', description='$description', upload='$newfilename',seoTitle='$seoTitle',metaTag='$metaTag',keyWord='$keyWord' , sort_order='$sort_order'  WHERE aboutId='$aboutId'");
 				if ($res) {
 					mysql_query("COMMIT");
-					$response = "About pof detail  successfully upadted.";
+					$response = "About pof detail  successfully updated.";
 				} else {        
 					mysql_query("ROLLBACK");
 					$response = "About pof detail update failed.";
@@ -731,7 +731,7 @@ public function getSubmenu($parentId)
 				$res = mysql_query("UPDATE olympaidinformation SET title='$title', description='$description', upload='$newfilename',seoTitle='$seoTitle', link = '$link',metaTag='$metaTag',keyWord='$keyWord' , sort_order='$sort_order'  WHERE olympaidinformationId='$olympaidinformationId'");
 				if ($res) {
 					mysql_query("COMMIT");
-					$response = "Olympaid information  successfully upadted.";
+					$response = "Olympaid information  successfully updated.";
 				} else {        
 					mysql_query("ROLLBACK");
 					$response = "Olympaid information update failed.";
@@ -839,7 +839,7 @@ public function getSubmenu($parentId)
 			$res = mysql_query("UPDATE contactus SET title='$title', description='$description', email='$email',mobile='$mobile', twitter = '$twitter',facebook='$facebook',google='$google' , pin='$pin', address='$address'  WHERE contactId='$contactId'");
 			if ($res) {
 			mysql_query("COMMIT");
-			$response = "Contact us  successfully upadted.";
+			$response = "Contact us  successfully updated.";
 			} else {        
 			mysql_query("ROLLBACK");
 			$response = "Contact us  update failed.";
@@ -860,7 +860,7 @@ public function getSubmenu($parentId)
 			$res = mysql_query("UPDATE msliderhead SET title='$title'  WHERE mSliderHeadId='$mSliderHeadId'");
 			if ($res) {
 			mysql_query("COMMIT");
-			$response = "Heading   successfully upadted.";
+			$response = "Heading   successfully updated.";
 			} else {        
 			mysql_query("ROLLBACK");
 			$response = "Heading  update failed.";

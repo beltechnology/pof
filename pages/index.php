@@ -53,3 +53,8 @@ elseif(isset($_REQUEST['categoryId']))
 		</div><!--end of container-fluid-->
 	  </div><!--end of main-page-->
   <?php include("../common/footer.php");?>
+<script>
+$(document).ready(function(e) {
+    $(document).scrollTop($(document).height()/3);
+});
+</script>
