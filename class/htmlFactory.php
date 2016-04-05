@@ -139,9 +139,6 @@ class  htmlFactory extends  dataFactory
 		} 
 		return $moreinformationHTML;
 	}
-
-
-
 	function  aboutPof()
 	{
 		$aboutPofHTML = "";
@@ -150,13 +147,15 @@ class  htmlFactory extends  dataFactory
 		$aboutPofDetials = $this->getDataFromServer("aboutpof");
 		foreach($aboutPofDetials as $aboutPofDetail)
 		{
-			$aboutPofHTML = $aboutPofHTML."<div class='col-md-4 col-lg-4 grey-1 aboutpof".$abutArr[$i]."'>
-		     <img class='center-block img-responsive' src='".BaseUrl."admin/upload/".$aboutPofDetail->upload."' alt='pencil-photo'>
-			 <div class='heading'><h2>".$aboutPofDetail->title."</h2></div>
-			 <div>&nbsp;</div>
+			$aboutPofHTML = $aboutPofHTML."<div class='col-sm-4 text-center padding wow fadeIn aboutpof".$abutArr[$i]."' data-wow-duration='1000ms' data-wow-delay='300ms'>
+		     <div class='single-service'>
+             <div class='wow scaleIn' data-wow-duration='500ms' data-wow-delay='300ms'>
+			 <img src='".BaseUrl."admin/upload/".$aboutPofDetail->upload."' alt='pencil-photo'>
+			 </div>
+			 <h2>".$aboutPofDetail->title."</h2>
 			 <p>". substr(strip_tags($aboutPofDetail->description),0,110). "..."."</p>
-			 <a class='second center-block' href='".BaseUrl."pages/index.php?aboutId=".$aboutPofDetail->aboutId."'>READ MORE &gt;&gt;</a>
-			 </div>";
+			 <a class='btn btn-common Service_Btn' href='".BaseUrl."pages/index.php?aboutId=".$aboutPofDetail->aboutId."'>Know More..</a>
+			 </div></div>";
 		$i++;
 		} 
 		return $aboutPofHTML;

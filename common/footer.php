@@ -1,88 +1,122 @@
-	  <div class="subscribe">
-	   <div class="container-fluid">
-	    <div class="row">
-		  <div class="col-lg-2 col-md-2">&nbsp;</div>
-		  <div class="col-lg-4 col-md-4"><h2 class="text-center">Subscribe Our Newsletter</h2>
-		  </div>
-		  <div>&nbsp;</div>
-		  <div class="col-lg-4 col-md-4">
-		  <form class="form-inline" action="" method="post">
-           <input type="email" class="form-control input-group-lg" id="sEmail" name="sEmail" placeholder="Enter your E-mail" required>
-           <span><input class="btn btn-default send btn-sm" type="submit" name="emailSubscribe" value="SEND" /></span>
-		   </form>
-		  </div>
-		  <div class="col-lg-2 col-md-2">&nbsp;</div>
-		</div><!--end of row-->
-		</div><!--end of container-fluid-->
-	  </div><!--end of subscribe-->
-	  <div>&nbsp;</div>
-	  <div class="footer">
-	   <div class="container-fluid">
-	     <div class="row">
-		    <div class="col-lg-2 col-md-2"><p class="one"><?php echo  $contactData->address ;?></p>
-			</div>
-			<div class="col-lg-1 col-md-1">&nbsp;</div>
-			<div class="col-lg-3 col-md-3 center-block"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d910995.4401255129!2d75.790558!3d26.885211!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db15569897029%3A0x57d3f3a2975b89f0!2sJaipur%2C+Rajasthan+302001%2C+India!5e0!3m2!1sen!2sin!4v1457609324435" width="100%"  frameborder="0" style="border:0" allowfullscreen></iframe>
-			</div>
-			<div class="col-lg-2 col-md-2 col-lg-offset-1 col-md-offset-1">
-            <p class="two">
-            <a href="#">Our Team</a> <br><a href="#">News & Updates</a><br><a href="<?php echo BaseUrl;?>contact-us.php">Contact Us</a> <br><a href="#">Privacy & Policy</a></p>
-			</div>
-			<div class="col-lg-3 col-md-3"><div class="icons pull-right">
-			<div>&nbsp;</div>
-			<div style="text-align:center;">
-			 <a href="<?php echo  $contactData->facebook ;?>" target="_blank"><span class="fa-stack">
-             <i class="fa fa-circle fa-stack-2x"></i>
-               <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-            </span></a>
-			 <a  href="<?php echo  $contactData->google ;?>" target="_blank"><span class="fa-stack">
-             <i class="fa fa-circle fa-stack-2x"></i>
-               <i class="fa fa-google fa-stack-1x fa-inverse"></i>
-            </span></a>
-			 <a  href="<?php echo  $contactData->twitter ;?>" target="_blank"><span class="fa-stack">
-             <i class="fa fa-circle fa-stack-2x"></i>
-               <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-            </span></a>
-			 <a  href="<?php echo  $contactData->pin ;?>" target="_blank"><span class="fa-stack">
-             <i class="fa fa-circle fa-stack-2x"></i>
-               <i class="fa fa-pinterest-p fa-stack-1x fa-inverse"></i>
-            </span></a>
-			</div>
-			<p>Copyright © 2015 All Rights Reserved</p> 
-			</div><!-- end of icons-->
-			</div>
-			</div><!--end of row-->
-			 </div><!--end of container-fluid-->
-			</div><!--end of footer-->
-			<!--<div class="footer-bottom">-->
-			</div>
-	</div><!--end of content-->
-  <script src="<?php echo BaseUrl;?>js/jquery.js"></script>
-  <script src="<?php echo BaseUrl;?>js/bootstrap.min.js"></script>
-<script type="text/javascript" src="<?php echo BaseUrl;?>admin/bootstrap/js/moment.js"></script>
-<script type="text/javascript" src="<?php echo BaseUrl;?>admin/bootstrap/js/bootstrap-datetimepicker.min.js"></script>
-  <script src="<?php echo BaseUrl;?>js/common.js"></script>
-<script src="<?php echo BaseUrl;?>js/jquery.marquee.min.js"></script> 
-  </body>
-</html>
-<?php 
-if($menuType !="")
-{?>
-<script>
-$("ul.navigation  li").removeClass("home");
-$("li.<?php echo $menuType; ?>").addClass("home");
-</script>
-<?php
-}
-?>
 
-<script type="text/javascript">
-	$(function () {
-		$('#passwordDate').datetimepicker({
-		pickTime: false,
-		maxDate: moment(),
-		format: 'DD/MM/YYYY'
-		
-		});
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center bottom-separator">
+                    <img src="images/home/under.png" class="img-responsive inline" alt="">
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="testimonial bottom">
+                        <h2>Testimonial</h2>
+                        <div class="media">
+                            <div class="pull-left Footer_Img">
+                                <a href="#"><img src="images/home/profile1.png" alt="abc"></a>
+                            </div>
+                            <div class="media-body">
+                                <blockquote>Lorem ipsum dolor sit amet,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</blockquote>
+                                <h3><a href="#">- Jhon Kalis</a></h3>
+                            </div>
+                         </div>
+                        <div class="media">
+                            <div class="pull-left Footer_Img">
+                                <a href="#"><img src="images/home/profile2.png" alt="def"></a>
+                            </div>
+                            <div class="media-body">
+                                <blockquote>Lorem ipsum dolor sit amet,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</blockquote>
+                                <h3><a href="">- Abraham Josef</a></h3>
+                            </div>
+                        </div>   
+                    </div> 
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="contact-info bottom">
+                        <h2>Contacts</h2>
+                        <address>
+                        E-mail: <a href="mailto:someone@example.com"> admin@gmail.com</a> <br> 
+                        Phone:8192900900<br> 
+                        Fax:7792834040 <br> 
+                        </address>
+
+                        <h2>Address</h2>
+                        <address>
+                      Our Example:Location-<br>
+                      5435, N-L-Enclave,Lorem<br>
+                      Ispum Ave. (123):123-<br>
+                      1212<br>
+                        </address>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <div class="contact-form bottom">
+                        <h2>Send a message</h2>
+                        <form id="main-contact-form" name="contact-form" method="post" action="sendemail.php">
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-control" required placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control" required placeholder="Email Id">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" id="message" required class="form-control" rows="8" placeholder="Your text here"></textarea>
+                            </div>                        
+                            <div class="form-group">
+                                <input type="submit" name="submit" class="btn btn-submit" value="Submit">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                <div class="row">
+                <div class="col-sm-7 overflow">
+                   <div class="social-icons pull-right Footer_icon">
+                        <ul class="nav nav-pills">
+                            <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                            <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href=""><i class="fa fa-pinterest-p"></i></a></li>
+  
+                        </ul>
+                    </div> 
+                </div>
+                
+                <div class="col-sm-10">
+                <nav id="menu">
+  				 <ul>
+    			<li><a href="#menu">Our Team</a></li>
+   				 <li><a href="#menu">News & Updates</a></li>
+    			<li><a href="contact.html">Contact Us</a></li>
+   				<li><a href="#menu">Privacy & Policy</a></li>
+    			<li><a href="#top">Back to top &uarr;</a></li>
+  				</ul>
+				</nav>
+                </div>
+             </div>
+                    <div class="copyright-text text-center">
+                        <p>&copy; POF India 2016. All Rights Reserved.</p>
+                       <!-- <p>Designed by <a target="_blank" href="http://www.themeum.com">Themeum</a></p>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--/#footer-->
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="js/lightbox.min.js"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>   
+    <script type="text/javascript">
+$(function() {
+    $('input[name="password"]').datepicker({
+        timePicker: true,
+        timePickerIncrement: 30,
+        locale: {
+            format: 'MM/DD/YYYY'
+        }
+    });
 });
-        </script>
+</script>
+</body>
+</html>
