@@ -263,30 +263,49 @@ function getHomeMenu ()
 	
 	return $homeMenu;
 }
+               /* <div class="single-features">
+                    <div class="col-sm-6 col-sm-offset-1 align-right wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <h2>Olympaid Award</h2>
+                        <P>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</P><a href="#">  READ FULL STORY</a>
+                    </div>
+                    <div class="col-sm-5 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <img src="images/home/image2.png" class="img-responsive single-img" alt="">
+                    </div>
+                </div>*/
 
-
+ 
 		public  function createOlympaidInformation()
 		{
 			$olympaidInformation = $this->getOlympaidInformation();
 			$olympaidInfoHTML = "";
+			$i = 0;
 			foreach ($olympaidInformation as $olympaidInfo)
 			{
-				
-				$olympaidInfoHTML .= "<div class='col-lg-6 col-md-6'>
-				<h2 class='text-center blue' style='margin-left:-10%;'>".$olympaidInfo->title."</h2>
-				<div>&nbsp;</div>
-				<div class=''>
-				<div class='stage row".$olympaidInfo->olympaidInformationId."same-size-image'>
-				 <div class='contain'>
-					<img  src='".BaseUrl."admin/upload/".$olympaidInfo->upload."' alt='Norway' class='".$olympaidInfo->olympaidInformationId."medium-image'>
-					<div class='alignment'><p class='first-line'>". substr(strip_tags($olympaidInfo->description),0,30)."</p>
-					<p><a href='".$olympaidInfo->link."' target='_blank'>Read Full Story &gt;&gt;</a></p>
-				</div>
-				</div>
-				</div>
+				if($i % 2 == 0)
+				{
+				$olympaidInfoHTML .= "<div class='single-features'>
+				<div class='col-sm-5 wow fadeInLeft' data-wow-duration='500ms' data-wow-delay='300ms'>
+                        <img src='".BaseUrl."admin/upload/".$olympaidInfo->upload."' class='img-responsive single-img' alt=''>
+                    </div>
+				<div class='col-sm-6 wow fadeInRight' data-wow-duration='500ms' data-wow-delay='300ms'>
+				<h2>".$olympaidInfo->title."</h2>
+				<p>".strip_tags($olympaidInfo->description)."</p><a href='".$olympaidInfo->link."' target='_blank'>  READ FULL STORY</a>
 				</div>
 				</div>";
-			
+				}
+				else
+				{
+					$olympaidInfoHTML .= "<div class='single-features'>				
+				<div class='col-sm-6 col-sm-offset-1 align-right wow fadeInLeft' data-wow-duration='500ms' data-wow-delay='300ms'>
+				<h2>".$olympaidInfo->title."</h2>
+				<p>".strip_tags($olympaidInfo->description)."</p><a href='".$olympaidInfo->link."' target='_blank'>  READ FULL STORY</a>
+				</div>
+				<div class='col-sm-5 wow fadeInLeft' data-wow-duration='500ms' data-wow-delay='300ms'>
+                     <img src='".BaseUrl."admin/upload/".$olympaidInfo->upload."' class='img-responsive single-img' alt=''>
+                    </div>
+				</div>";
+				}
+			$i++;
 			}
 			return $olympaidInfoHTML;
 			

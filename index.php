@@ -15,23 +15,18 @@
 						  <div class="col-md-6 col-lg-6" id="dateTimePassword">
                           <input class="group-form" type="password" class="form-control" placeholder="Password" required name="password" id="password" readonly>
                           <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>                   
-                         </span> 
-                         
-                          </div>
+                        <span class="glyphicon glyphicon-calendar"></span>                         </span>                          </div>
                           </div>
                           <div align="center" style="color:red;"><?php if(isset($_GET['msg'])){echo $_GET['msg'];}?></div>
                           <input name="loginType" type="hidden" class="input username" value="student"  />
                            <button type="submit"  class="btn btn-common" name="login">LOGIN</button>  
                           </form>
-                          
-                          
                                          </div>
-                    <img src="images/home/slider/hill.png" class="slider-hill" alt="slider image">
-                    <img src="images/home/slider/house.png" class="slider-house" alt="slider image">
-                    <img src="images/home/slider/sun.png" class="slider-sun" alt="slider image">
-                    <img src="images/home/slider/birds1.png" class="slider-birds1" alt="slider image">
-                    <img src="images/home/slider/birds2.png" class="slider-birds2" alt="slider image">                </div>
+                    <img src="<?php echo BaseUrl;?>/images/home/slider/hill.png" class="slider-hill" alt="slider image">
+                    <img src="<?php echo BaseUrl;?>/images/home/slider/house.png" class="slider-house" alt="slider image">
+                    <img src="<?php echo BaseUrl;?>/images/home/slider/sun.png" class="slider-sun" alt="slider image">
+                    <img src="<?php echo BaseUrl;?>/images/home/slider/birds1.png" class="slider-birds1" alt="slider image">
+                    <img src="<?php echo BaseUrl;?>/images/home/slider/birds2.png" class="slider-birds2" alt="slider image">                </div>
           </div>
         </div>
         <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
@@ -47,12 +42,13 @@
                         <div class="col-sm-7 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
                             <h1 class="title">Subscribe Our Newsletter</h1>
                             
-                             <form action="#">
-              <div class="input-group">
-                 <input class="btn btn-lg" name="email" id="email" type="email" placeholder="Your Email" required>
-                 <button class="btn btn-info btn-lg" type="submit">Submit</button>
-              </div>
-             </form>
+                          <form action="" method="post">
+                          <div class="input-group">
+                             <input class="btn btn-lg" id="sEmail" name="sEmail" type="email" placeholder="Your Email" required>
+                             <input type="hidden" name="emailSubscribe"/>
+                             <button class="btn btn-info btn-lg" type="submit" name="emailSubscribe">Submit</button>
+                          </div>
+                         </form>
                           <!--  <p>A responsive, retina-ready &amp; wide multipurpose template.</p>-->
                         </div>
           
@@ -70,34 +66,8 @@
    <section id="features">
         <div class="container">
             <div class="row col-sm-9 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms ">
-                <div class="single-features">
-                    <div class="col-sm-5 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <img src="images/home/image3.png" class="img-responsive single-img" alt="">
-                    </div>
-                    <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <h2>Olympiad Schedule: Academic Year 2015-16</h2>
-                        <P>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</P><a href="#">  READ FULL STORY</a>
-                    </div>
-                </div>
-                <div class="single-features">
-                    <div class="col-sm-6 col-sm-offset-1 align-right wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <h2>Olympaid Award</h2>
-                        <P>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</P><a href="#">  READ FULL STORY</a>
-                    </div>
-                    <div class="col-sm-5 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <img src="images/home/image2.png" class="img-responsive single-img" alt="">
-                    </div>
-                </div>
-                <div class="single-features">
-                    <div class="col-sm-5 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <img src="images/home/image3.png" class="img-responsive single-img" alt="">
-                    </div>
-                    <div class="col-sm-6 wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <h2>Olympaid Prepration</h2>
-                        <P>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</P><a href="#">  READ FULL STORY</a>
-                    </div>
-                </div>
-           </div>
+             <?php  echo  $htmlFactory->createOlympaidInformation();?>
+        	</div>
           
           <?php include("common/menu.php");?>
          
