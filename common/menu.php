@@ -1,7 +1,8 @@
-<?php /*?><h1 class="sof">POF</h1>
-<div class="right-side">
-  <ul class='mainUl'>
-
+ <div class="Index col-sm-3 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+           
+                    <div class="Side_Menu">
+              <h2>POF</h2>
+ <ul id="nav1">
 <?php 
 $dataInfoInfo = new dataInfo();
 $categoryInfo = new dataInfo();
@@ -20,7 +21,7 @@ foreach($allMenus as $menu)
 		 }
 		 		 
  ?>
-    <div class="Right-navigation"><li id="<?php echo $menu->category_id; ?>" class="category"><a href="#demo<?php echo $menu->category_id; ?>" data-toggle="collapse"><?php echo $menu->title; ?><?php if($sumMenuFlag){?><i class="fa fa-plus-square pull-right" ></i><?php } ?></a></li></div>
+    <li id="<?php echo $menu->category_id; ?>" class="category"><a href=""><?php echo $menu->title; ?></a>
 <?php
 	 echo $categoryInfo->getSubmenu($menu->category_id);
 	 echo $htmlFactory->createPages($menu->category_id);
@@ -33,14 +34,16 @@ if($singlePagesInfo)
  	echo $htmlFactory->createPages(0);
 }
 ?>
+</li>
   </ul>
 
-</div><?php */?>
+</div></div>
+<?php /*?>
  <div class="Index col-sm-3 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
            
                     <div class="Side_Menu">
-              <h2>SOF</h2>
-              <ul id="nav1">
+              <h2>POF</h2>
+     <ul id="nav1">
     <li><a href="#">PMO – SYLLABUS GUIDANCE</a>
     <ul>
       <li><a href="#">PMO – Booklet</a></li>
@@ -92,3 +95,10 @@ if($singlePagesInfo)
     </div>
                  
             </div>
+<?php */?>
+<style>
+nav1.ul ul li
+{
+	background-color:#978989;
+}
+</style>
