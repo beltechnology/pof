@@ -99,25 +99,14 @@ class  htmlFactory extends  dataFactory
 		return $indicatiorHTML;
 		
 	}
-
-
 	function  moreInformation()
 	{
 		$moreinformationHTML = "";
 		$moreinformations = $this->getDataFromServerBytableName("moreinformation");
 		foreach($moreinformations as $moreinformation)
 		{
-			$moreinformationHTML = $moreinformationHTML."<li><div class='text'>
-		 <div class='contain'>
-			<img class='img-responsive image' src='".BaseUrl."admin/upload/".$moreinformation->upload."'>
-        <div class='written'>
-          
-          <a href='".$moreinformation->link."' target='_blank'>
-		  <!--<span class='glyphicon glyphicon-play-circle' aria-hidden='true'></span> this is comment coding-->
-		  <h2 class='center-block'>".$moreinformation->title."</h2>
-		  </a>
-		  </div>
-      </div></div></li>";
+			$moreinformationHTML = $moreinformationHTML."<div class='col-xs-4 col-sm-3'><a href='".$moreinformation->link."' target='_blank'>
+			<img class='img-responsive person' src='".BaseUrl."admin/upload/".$moreinformation->upload."'></a></div>";
 		
 		} 
 		return $moreinformationHTML;
@@ -233,8 +222,6 @@ function createPagesInnnerPages($categoryId)
 
 
 
-
-
 function getHomeMenu ()
 {
 	$allMenu = $this->getMenuData();
@@ -254,7 +241,7 @@ function getHomeMenu ()
 				
 			}
 
-			$homeMenu .= "<div class='col-lg-3 col-md-3 ".$cssArray[$count]."-b col-md-offset-1 col-lg-offset-1'><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$menu->category_id."'>".$title."</a></div>";
+			$homeMenu .= "<div class='col-sm-3 wow fadeInLeft Cat_Tab' data-wow-duration='500ms' data-wow-delay='300ms'><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$menu->category_id."' class='btn btn-common'>".$title."</a></div>";
 			$count++;
 			if($count == 6) $count=0;
 			
@@ -311,7 +298,6 @@ function getHomeMenu ()
 			
 			
 		}
-		
 		function createTestimonialHtml()
 		{
 			$getTestimonialData = $this->getTestimonialData();
@@ -321,10 +307,12 @@ function getHomeMenu ()
 			foreach ($getTestimonialData as $testimonial)
 			{
 				
-				$testimonialHTML .= "<div class='col-lg-12 col-md-12 item ".$active."'> <img class='center-block img-responsive img-circle fixed-size' src='".BaseUrl."admin/upload/".$testimonial->upload."'>
-        <h1 class='text-center'>".$testimonial->title."</h1>
-        <p class='text-center'".$testimonial->description."</p>
-      </div>";
+				$testimonialHTML .= "<div class='media'><div class='pull-left Footer_Img'><a href='#'><img class='center-block img-responsive img-circle fixed-size' src='".BaseUrl."admin/upload/".$testimonial->upload."'></a></div>
+                            <div class='media-body'>
+							 <blockquote>".$testimonial->description."</blockquote>
+                                <h3><a href='#'>".$testimonial->title."</a></h3>
+                            </div>
+                         </div>";
 			$active = "";
 			}
 			return $testimonialHTML;

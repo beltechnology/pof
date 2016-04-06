@@ -5,10 +5,14 @@
                 <div class="col-sm-12 text-center bottom-separator">
                     <img src="images/home/under.png" class="img-responsive inline" alt="">
                 </div>
+                
                 <div class="col-md-4 col-sm-6">
+                
                     <div class="testimonial bottom">
-                        <h2>Testimonial</h2>
-                        <div class="media">
+                        <h2>Testimonial</h2>                        
+                       <marquee behavior="scroll" direction="up">
+                       <?php echo $htmlFactory->createTestimonialHtml();?>
+                       <!-- <div class="media">
                             <div class="pull-left Footer_Img">
                                 <a href="#"><img src="images/home/profile1.png" alt="abc"></a>
                             </div>
@@ -25,24 +29,22 @@
                                 <blockquote>Lorem ipsum dolor sit amet,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</blockquote>
                                 <h3><a href="">- Abraham Josef</a></h3>
                             </div>
-                        </div>   
-                    </div> 
+                        </div>  -->
+                        </marquee>  
+                    </div>
+                    
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="contact-info bottom">
                         <h2>Contacts</h2>
                         <address>
-                        E-mail: <a href="mailto:someone@example.com"> admin@gmail.com</a> <br> 
-                        Phone:8192900900<br> 
-                        Fax:7792834040 <br> 
+                        E-mail: <a href="<?php echo  $contactData->email ;?>"><?php echo  $contactData->email ;?></a> <br> 
+                        Phone:<?php echo  $contactData->mobile ;?><br> 
                         </address>
 
                         <h2>Address</h2>
                         <address>
-                      Our Example:Location-<br>
-                      5435, N-L-Enclave,Lorem<br>
-                      Ispum Ave. (123):123-<br>
-                      1212<br>
+                      <?php echo $contactData->address ?>
                         </address>
                     </div>
                 </div>
@@ -51,16 +53,16 @@
                         <h2>Send a message</h2>
                         <form id="main-contact-form" name="contact-form" method="post" action="sendemail.php">
                             <div class="form-group">
-                                <input type="text" name="name" class="form-control" required placeholder="Name">
+                                <input type="text" id="name" name="name" placeholder="Name" maxlength="50" required>
                             </div>
                             <div class="form-group">
-                                <input type="email" name="email" class="form-control" required placeholder="Email Id">
+                                <input id="email" name="email" placeholder="Email" maxlength="50" required class="form-control" />
                             </div>
                             <div class="form-group">
-                                <textarea name="message" id="message" required class="form-control" rows="8" placeholder="Your text here"></textarea>
+                                <textarea id="message" name="message" maxlength="300" class="form-control" rows="8" placeholder="Your text here" required></textarea>
                             </div>                        
                             <div class="form-group">
-                                <input type="submit" name="submit" class="btn btn-submit" value="Submit">
+                                <input type="submit" class="btn btn-submit" value="Submit" name="contactus">
                             </div>
                         </form>
                     </div>

@@ -81,8 +81,8 @@
                 <h1 class="Icon_Category">Categories</h1>
                     <div class="Category_Tabs">
                     
-                    	
-                        <div class="col-sm-3 wow fadeInLeft Cat_Tab" data-wow-duration="500ms" data-wow-delay="300ms">
+                    	 <?php  echo  $htmlFactory->getHomeMenu();?>
+                      <!--  <div class="col-sm-3 wow fadeInLeft Cat_Tab" data-wow-duration="500ms" data-wow-delay="300ms">
                         <a href="#" class="btn btn-common">PLANET</a>
                         </div>
                         
@@ -96,7 +96,7 @@
                         
                         <div class="col-sm-3 wow fadeInLeft Cat_Tab" data-wow-duration="500ms" data-wow-delay="300ms">
                         <a href="#" class="btn btn-common">PMO-PR</a>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
      </div>
@@ -114,7 +114,8 @@
                     </div>
                     <marquee>
                     <div class="clients-logo wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
-                        <div class="col-xs-4 col-sm-3">
+                    <?php echo $htmlFactory->moreInformation();?>
+                        <!--<div class="col-xs-4 col-sm-3">
                             <a href="#"><img src="images/home/client1.png" class="img-responsive person" alt=""></a>
                             
                         </div>
@@ -129,15 +130,8 @@
                          <div class="col-xs-4 col-sm-3">
                             <a href="#"><img src="images/home/client4.png" class="img-responsive person" alt=""></a>
                             
-                        </div>
-                       <!--  <div class="col-xs-3 col-sm-2">
-                            <a href="#"><img src="images/home/client1.png" class="img-responsive person" alt=""></a>
-                            <h3>Lorem Ipsum</h3>
-                        </div>
-                         <div class="col-xs-3 col-sm-2">
-                            <a href="#"><img src="images/home/client2.png" class="img-responsive person" alt=""></a>
-                            <h3>Lorem Ipsum</h3>
                         </div>-->
+                     
                     </div>
                     </marquee>
                 </div>
