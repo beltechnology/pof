@@ -79,24 +79,29 @@
      <div class="container">
                 <div class="row">
                 <h1 class="Icon_Category">Categories</h1>
-                    <div class="Category_Tabs">
+                    <div class="Category_Tabs marquee">
                     
-                    	 <?php  echo  $htmlFactory->getHomeMenu();?>
-                      <!--  <div class="col-sm-3 wow fadeInLeft Cat_Tab" data-wow-duration="500ms" data-wow-delay="300ms">
+                    	 <?php  //echo  $htmlFactory->getHomeMenu();?>
+                        <!-- <marquee direction="right" scrolldelay="5">-->
+                        <ul>
+                        <li>
+                     <div class="col-sm-3 wow fadeInLeft Cat_Tab" data-wow-duration="500ms" data-wow-delay="300ms">
                         <a href="#" class="btn btn-common">PLANET</a>
-                        </div>
+                        </div></li>
                         
-                        <div class="col-sm-3 wow fadeInLeft Cat_Tab" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <li><div class="col-sm-3 wow fadeInLeft Cat_Tab" data-wow-duration="500ms" data-wow-delay="300ms">
                         <a href="#" class="btn btn-common">PMO-SY..</a>
-                        </div>
+                        </div></li>
                         
-                        <div class="col-sm-3 wow fadeInLeft Cat_Tab" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <li><div class="col-sm-3 wow fadeInLeft Cat_Tab" data-wow-duration="500ms" data-wow-delay="300ms">
                         <a href="#" class="btn btn-common">PMO-EX..</a>
-                        </div>
+                        </div></li>
                         
-                        <div class="col-sm-3 wow fadeInLeft Cat_Tab" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <li><div class="col-sm-3 wow fadeInLeft Cat_Tab" data-wow-duration="500ms" data-wow-delay="300ms">
                         <a href="#" class="btn btn-common">PMO-PR</a>
-                        </div>-->
+                        </div></li>
+                        </ul>
+                       <!-- </marquee>-->
                     </div>
                 </div>
      </div>
@@ -140,3 +145,5 @@
      </section>
     <!--/#clients-->
 <?php include("common/footer.php");?>
+
+

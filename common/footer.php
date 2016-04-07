@@ -6,11 +6,11 @@
                     <img src="images/home/under.png" class="img-responsive inline" alt="">
                 </div>
                 
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-4 col-sm-7">
                 
                     <div class="testimonial bottom">
                         <h2>Testimonial</h2>                        
-                       <marquee behavior="scroll" direction="up">
+                       <marquee behavior="scroll" direction="up" height="250px">
                        <?php echo $htmlFactory->createTestimonialHtml();?>
                        <!-- <div class="media">
                             <div class="pull-left Footer_Img">
@@ -34,7 +34,7 @@
                     </div>
                     
                 </div>
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-4 col-sm-5">
                     <div class="contact-info bottom">
                         <h2>Contacts</h2>
                         <address>

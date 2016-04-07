@@ -85,7 +85,7 @@
     border: 1px solid #0099ae;
     font-family: 'Open Sans', sans-serif;
     font-weight: 500;
-    padding: 10px 50px;
+    padding: 10px 25px;
 	background-color: #0099FF;
 }
 
@@ -428,7 +428,12 @@ ul.sub-menu {
 }
 
 .testimonial.bottom {
-    margin: -85px 0px 0px 110px;
+    margin: -85px 0px 0px 130px;
+}
+
+.testimonial.bottom p {
+    text-align: justify;
+    text-align: j;
 }
 
 .testimonial .media{
@@ -446,7 +451,7 @@ ul.sub-menu {
 }
 
 blockquote {
-    padding-left: 20px;
+    padding-left: 15px;
     padding-right: 0px;
     position: relative;
     border-left: 0;
@@ -485,7 +490,7 @@ blockquote {
 }
 
 .contact-form.bottom {
-    margin: -82px 0px 0px -45px;
+    margin: -82px 0px 0px -25px;
     padding-right: 75px;
 }
 
@@ -781,11 +786,13 @@ blockquote {
 }
 
 #team {
-  padding: 85px 0;
+    padding: 0px;
+    margin-top: -20px;
 }
 
 #team-carousel {
-  margin-top: 80px;
+  margin-top: 40px;
+  margin-bottom:40px;
 }
 
 #company-information .padding-top{
@@ -2824,16 +2831,17 @@ div ul li ul {
 input.btn.btn-lg {
     width: 40%;
     height: 45px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 	    border: 1px solid #ccc;
 }
+
 button.btn {
     width: 25%;
     height: 45px;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-	margin-left: -5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    margin-left: 0px;
 }
 
 .fa{color: #FF9900;
@@ -2875,6 +2883,13 @@ button.btn {
 
 .Icon_Category {
     text-align: center;
+}
+
+.marquee {
+  width:100%;
+  overflow: hidden;
+ /* border: 1px solid #ccc;
+  background: #ccc;*/
 }
 
 .pull-left.Footer_Img {
