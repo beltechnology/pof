@@ -14,6 +14,7 @@ class  htmlFactory extends  dataFactory
 			$count ++;
 			if($count >= 0 && $count <= 5)
 			{
+				
 				if($ele == 0)
 				{
 					$carouselHTML = $carouselHTML."<div class='item active'>
@@ -157,7 +158,7 @@ function createPages($categoryId)
 	$pages = $this->getPageDataByCategoryId($categoryId);
 	if($categoryId != 0)
 	{
-	 $putStyle = "style='display:none;'";
+	 $putStyle = "style='display:block;'";
 	}
 	if($pages != "")
 	{
@@ -169,7 +170,7 @@ function createPages($categoryId)
 			}
 			else
 			{
-			$pageLinkHTML =$pageLinkHTML."<li class='pages pagesLi".$categoryId."' ".$putStyle."><span class='glyphicon glyphicon-ok' aria-hidden='true'></span> <a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$categoryId."&pageId=".$page->pageId."'>".$page->pageTitle."</a></li>";
+			$pageLinkHTML =$pageLinkHTML."<li class='pages pagesLi".$categoryId."' ".$putStyle."><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$categoryId."&pageId=".$page->pageId."'>".$page->pageTitle."</a></li>";
 			}
 		}
 	}

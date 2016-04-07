@@ -626,7 +626,7 @@ public function getSubmenu($parentId)
 				 if($menuInfoData != "" || $pageInfo != "")
 				 {
 					 $sumMenuFlag = true;
-					 $iHTML = "<i class='fa fa-plus-square pull-right'></i>";
+					 $iHTML = "";
 				}
 				else
 				{
@@ -634,7 +634,7 @@ public function getSubmenu($parentId)
 				}
 				
 				
-			   $liHTML= $liHTML."<li id='".$submenu->category_id."'  class='category'><a href='#demo".$submenu->category_id."'  data-toggle='collapse'>".$submenu->title."".$iHTML." <a/></li>".$htmlFactory->createPages($submenu->category_id);
+			   $liHTML= $liHTML."<li id='".$submenu->category_id."'  class='category'><a href='#demo".$submenu->category_id."'>".$submenu->title."".$iHTML." </a>".$htmlFactory->createPages($submenu->category_id);
 								
 				$submenuHtml = $this->getSubmenu($submenu->category_id);
 				$closeliHTML = "";
@@ -643,7 +643,7 @@ public function getSubmenu($parentId)
 			   
 			}
 		}
-		$CloseulHTML =  "</ul>";
+		$CloseulHTML =  "</li></ul>";
 		$submenuHTML = $ulHTML.$fullSubmenu.$CloseulHTML;
 	 }
 		return $submenuHTML;
