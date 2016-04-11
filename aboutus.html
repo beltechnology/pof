@@ -1,48 +1,4 @@
-<?php include("common/header.php");
-$menuType = "about";
-
-?>
-	 <div class="main-page">
-	  <div class="container-fluid">
-	    <div class="row">
-		  <div class="col-md-8 col-lg-8">
-		    <div class="about-us container-fluid">
-			 <h1>Shortly About Us</h1>
-			 <div>&nbsp;</div>
-			 <?php echo $htmlFactory->getPofDesc(); ?>
-			 <div>&nbsp;</div>
-			 <h2>Our Team Focused On You</h2>
-			 <div>&nbsp;</div><div>&nbsp;</div>
-			  <div class="row">
-              <?php
-			  echo $htmlFactory->createAboutHtml();
-			  ?>
-                 </div><!--end of row-->
-				<div class="row">
-					   <div class="col-md-5">&nbsp;</div>
-					   <div class="col-md-2"><a class="btn btn-warning" href="<?php echo BaseUrl;?>contact-us.php"><b>Contact Us</b></a></div>
-					   <div class="col-md-5">&nbsp;</div>
-				  </div>
-			 
-			</div><!--end of about-us-->
-		  </div><!--end of col-lg-8 col-md-8-->
-		  <div class="col-md-4 col-lg-4 container-fluid">
-          <div>&nbsp;</div>
-				<?php include("common/menu.php");?>
-	  <div>&nbsp;</div>
-	  <div class="combined-image container-fluid center-block">
-	   <div class="">
-	     <marquee direction="up"  onMouseOver="stop()" onMouseOut="start();">
-<?php echo $htmlFactory->moreInformationInnerPage();?>
-		 </marquee>
-		 </div><!--end of container-fluid-->
-	  </div><!--end of combined-image-->
-	  </div><!--end of col-lg-4 col-md-4-->
-		</div><!--end of row-->
-		<div>&nbsp;</div>
-		</div><!--end of container-fluid-->
-	  </div><!--end of main-page-->
-          <section id="page-breadcrumb">
+    <section id="page-breadcrumb">
         <div class="vertical-center sun">
              <div class="container">
                 <div class="row">
@@ -65,7 +21,6 @@ $menuType = "about";
                     <img src="images/aboutus/1.png" class="img-responsive" alt="">
                 </div>
                 <div class="col-sm-6 padding-top">
-                <?php echo $htmlFactory->getPofDesc(); ?>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
                 </div>
@@ -73,6 +28,46 @@ $menuType = "about";
         </div>
     </section>
 
+    <!--  <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
+                    <div class="single-service">
+                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="300ms">
+                            <img src="images/home/icon1.png" alt="">
+                        </div>
+                        <h2>What Is POF?</h2>
+                        <p>POF is a Registered Not-For-Profit Organization Popularising Computer, Science, Mathematics and English Educat...</p>
+                        <a href="#" class="btn btn-common Service_Btn">Know More</a>
+                    </div>
+                </div>
+                <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
+                    <div class="single-service">
+                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="600ms">
+                            <img src="images/home/icon2.png" alt="">
+                        </div>
+                        <h2>What is unique about us?</h2>
+                       <p>POF is a Registered Not-For-Profit Organization Popularising Computer, Science, Mathematics and English Educat...</p>
+                       <a href="#" class="btn btn-common Service_Btn">Know More</a>
+                    </div>
+                </div>
+                <div class="col-sm-4 text-center padding wow fadeIn" data-wow-duration="1000ms" data-wow-delay="900ms">
+                    <div class="single-service">
+                        <div class="wow scaleIn" data-wow-duration="500ms" data-wow-delay="900ms">
+                            <img src="images/home/icon3.png" alt="">
+                        </div>
+                        <h2>How will this help ?</h2>
+                        <p>POF is a Registered Not-For-Profit Organization Popularising Computer, Science, Mathematics and English Educat...</p>
+                        <a href="#" class="btn btn-common Service_Btn">Know More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+    <!--/#services-->
+
+
+      
    
     <!--/#action-->
 
@@ -172,7 +167,7 @@ $menuType = "about";
                                 </div>
                             </div>
                         </div>
-                       <!-- <div class="item">
+                        <div class="item">
                             <div class="col-sm-3 col-xs-6">
                                 <div class="team-single-wrapper">
                                     <div class="team-single">
@@ -253,7 +248,7 @@ $menuType = "about";
                                     </div>
                                 </div>
                             </div>
-                        </div>-->
+                        </div>
                     </div>
 
                     <!-- Controls -->
@@ -265,5 +260,3 @@ $menuType = "about";
     </section>
     <!--/#team-->
 
-
-  <?php include("common/footer.php");?>
