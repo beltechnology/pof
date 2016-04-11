@@ -79,28 +79,28 @@
      <div class="container">
                 <div class="row">
                 <h1 class="Icon_Category">Categories</h1>
-                    <div class="Category_Tabs marquee">
-                    
-                    	 <?php  //echo  $htmlFactory->getHomeMenu();?>
-                        <!-- <marquee direction="right" scrolldelay="5">-->
-                        <ul>
-                        <li>
-                     <div class="col-sm-3 wow fadeInLeft Cat_Tab" data-wow-duration="500ms" data-wow-delay="300ms">
+                    <div class="Category_Tabs ">
+                    <ul class="marqueeUl">
+                    	 <?php  echo  $htmlFactory->getHomeMenu();?>
+					</ul>
+                        <!-- <marquee direction="right" scrolldelay="5">
+                        <ul class="marqueeUl">
+                        <li class=" wow fadeInLeft Cat_Tab" data-wow-duration="500ms" data-wow-delay="300ms">
                         <a href="#" class="btn btn-common">PLANET</a>
-                        </div></li>
+                        </li>
                         
-                        <li><div class="col-sm-3 wow fadeInLeft Cat_Tab" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <li class=" wow fadeInLeft Cat_Tab" data-wow-duration="500ms" data-wow-delay="300ms">
                         <a href="#" class="btn btn-common">PMO-SY..</a>
-                        </div></li>
+                        </li>
                         
-                        <li><div class="col-sm-3 wow fadeInLeft Cat_Tab" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <li class=" wow fadeInLeft Cat_Tab" data-wow-duration="500ms" data-wow-delay="300ms">
                         <a href="#" class="btn btn-common">PMO-EX..</a>
-                        </div></li>
+                        </li>
                         
-                        <li><div class="col-sm-3 wow fadeInLeft Cat_Tab" data-wow-duration="500ms" data-wow-delay="300ms">
+                        <li class=" wow fadeInLeft Cat_Tab" data-wow-duration="500ms" data-wow-delay="300ms">
                         <a href="#" class="btn btn-common">PMO-PR</a>
-                        </div></li>
-                        </ul>
+                       </li>
+                        </ul>-->
                        <!-- </marquee>-->
                     </div>
                 </div>
@@ -145,5 +145,25 @@
      </section>
     <!--/#clients-->
 <?php include("common/footer.php");?>
+<script type='text/javascript' src='<?php echo BaseUrl;?>js/jquery.marquee.min.js'></script>
+<script>
+$('.marqueeUl').marquee({
+	speed: 15000,
+	gap:50,
+	delayBeforeStart: 0,
+	direction: 'left',
+	duplicated: true,
+	pauseOnHover: true
+});
+</script>
 
-
+<style>
+.marqueeUl {
+    overflow: hidden;
+    width: 100%;
+}
+.wow.fadeInLeft.Cat_Tab.animated {
+    float: left;
+    margin: 0 20px;
+}
+</style>

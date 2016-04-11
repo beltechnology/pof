@@ -64,10 +64,10 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
                 <div class="col-sm-12 overflow">
                    <div class="social-icons pull-right">
                         <ul class="nav nav-pills">
-                            <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                            <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                            <li><a href=""><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href=""><i class="fa fa-pinterest-p"></i></a></li>
+                            <li><a  href="<?php echo  $contactData->facebook ;?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a  href="<?php echo  $contactData->twitter ;?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a  href="<?php echo  $contactData->google ;?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a  href="<?php echo  $contactData->pin ;?>" target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
                         </ul>
                     </div> 
                 </div>
@@ -80,11 +80,13 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>                    </button>
+                        <span class="icon-bar"></span>
+					</button>
 
                     <a class="navbar-brand" href="index.html">
                     	<h1><img src="images/logo.png" alt="logo"></h1>
-                    </a>                </div>
+                    </a> 
+				</div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="index.html">Home</a></li>
@@ -127,7 +129,19 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
                     <form role="form">
                         <i class="fa fa-search"></i>
                         <div class="field-toggle">
-                            <input type="text" class="search-form" autocomplete="off" placeholder="Search">
+                                                <script>
+  (function() {
+    var cx = '013359958246192933599:xzpzuvrang4';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
                         </div>
                     </form>
                 </div>

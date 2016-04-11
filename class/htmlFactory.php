@@ -242,7 +242,7 @@ function getHomeMenu ()
 				
 			}
 
-			$homeMenu .= "<div class='col-sm-3 wow fadeInLeft Cat_Tab' data-wow-duration='500ms' data-wow-delay='300ms'><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$menu->category_id."' class='btn btn-common'>".$title."</a></div>";
+			$homeMenu .= "<li><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$menu->category_id."' class='btn btn-common'>".$title."</a></li>";
 			$count++;
 			if($count == 6) $count=0;
 			
