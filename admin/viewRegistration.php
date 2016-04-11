@@ -9,6 +9,7 @@ $menuType = "registration";
           <h1>&nbsp;          </h1>
           <ol class="breadcrumb">
             <li><b><a href="registration.php"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Registration</a></b></li>
+			<li><b><a href="registrationCSV.php"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Registration With Excel</a></b></li>
           </ol>
         </section>
         <section class="content">

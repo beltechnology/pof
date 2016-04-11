@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-center bottom-separator">
-                    <img src="images/home/under.png" class="img-responsive inline" alt="">
+                    <img src="<?php echo BaseUrl;?>images/home/under.png" class="img-responsive inline" alt="">
                 </div>
                 
                 <div class="col-md-4 col-sm-7">
@@ -51,7 +51,7 @@
                 <div class="col-md-4 col-sm-12">
                     <div class="contact-form bottom">
                         <h2>Send a message</h2>
-                        <form id="main-contact-form" name="contact-form" method="post" action="sendemail.php">
+                        <form id="main-contact-form1" name="contact-form" method="post">
                             <div class="form-group">
                                 <input type="text" id="name" name="name" placeholder="Name" maxlength="50" required>
                             </div>
@@ -72,10 +72,10 @@
                 <div class="col-sm-7 overflow">
                    <div class="social-icons pull-right Footer_icon">
                         <ul class="nav nav-pills">
-                            <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                            <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                            <li><a href=""><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href=""><i class="fa fa-pinterest-p"></i></a></li>
+                            <li><a  href="<?php echo  $contactData->facebook ;?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a  href="<?php echo  $contactData->twitter ;?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a  href="<?php echo  $contactData->google ;?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a  href="<?php echo  $contactData->pin ;?>" target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
   
                         </ul>
                     </div> 
@@ -103,12 +103,12 @@
     </footer>
     <!--/#footer-->
 
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
-    <script type="text/javascript" src="js/lightbox.min.js"></script>
-    <script type="text/javascript" src="js/wow.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>   
+    <script type="text/javascript" src="<?php echo BaseUrl;?>js/jquery.js"></script>
+    <script type="text/javascript" src="<?php echo BaseUrl;?>js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?php echo BaseUrl;?>js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="<?php echo BaseUrl;?>js/lightbox.min.js"></script>
+    <script type="text/javascript" src="<?php echo BaseUrl;?>js/wow.min.js"></script>
+    <script type="text/javascript" src="<?php echo BaseUrl;?>js/main.js"></script>   
     <script type="text/javascript">
 $(function() {
     $('input[name="password"]').datepicker({

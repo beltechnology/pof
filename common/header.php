@@ -38,23 +38,23 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Index</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/Datepicker.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet"> 
-    <link href="css/lightbox.css" rel="stylesheet"> 
-	<link href="css/main.css" rel="stylesheet">
-	<link href="css/responsive.css" rel="stylesheet">
+    <link href="<?php echo BaseUrl;?>css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo BaseUrl;?>css/Datepicker.css" rel="stylesheet">
+    <link href="<?php echo BaseUrl;?>css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?php echo BaseUrl;?>css/animate.min.css" rel="stylesheet"> 
+    <link href="<?php echo BaseUrl;?>css/lightbox.css" rel="stylesheet"> 
+	<link href="<?php echo BaseUrl;?>css/main.css" rel="stylesheet">
+	<link href="<?php echo BaseUrl;?>css/responsive.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
 	    <script src="js/html5shiv.js"></script>
 	    <script src="js/respond.min.js"></script>
     <![endif]-->       
    <!-- <link rel="shortcut icon" href="images/ico/favicon.ico">-->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo BaseUrl;?>images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo BaseUrl;?>images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo BaseUrl;?>images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="<?php echo BaseUrl;?>images/ico/apple-touch-icon-57-precomposed.png">
 </head><!--/head-->
 
 <body>
@@ -64,10 +64,10 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
                 <div class="col-sm-12 overflow">
                    <div class="social-icons pull-right">
                         <ul class="nav nav-pills">
-                            <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                            <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                            <li><a href=""><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href=""><i class="fa fa-pinterest-p"></i></a></li>
+                            <li><a  href="<?php echo  $contactData->facebook ;?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a  href="<?php echo  $contactData->twitter ;?>" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a  href="<?php echo  $contactData->google ;?>" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a  href="<?php echo  $contactData->pin ;?>" target="_blank"><i class="fa fa-pinterest-p"></i></a></li>
                         </ul>
                     </div> 
                 </div>
@@ -80,14 +80,16 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>                    </button>
+                        <span class="icon-bar"></span>
+					</button>
 
-                    <a class="navbar-brand" href="index.html">
-                    	<h1><img src="images/logo.png" alt="logo"></h1>
-                    </a>                </div>
+                    <a class="navbar-brand" href="<?php echo BaseUrl;?>index.php">
+                    	<h1><img src="<?php echo BaseUrl;?>images/logo.png" alt="logo"></h1>
+                    </a> 
+				</div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="index.html">Home</a></li>
+                        <li class="active"><a href="<?php echo BaseUrl;?>index.php">Home</a></li>
                         <li class="#"><a href="aboutus.html">About US<!-- <i class="fa fa-angle-down"></i>--></a>
                            <!-- <ul role="menu" class="sub-menu">
                                 <li><a href="aboutus.html">About</a></li>
@@ -127,7 +129,19 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
                     <form role="form">
                         <i class="fa fa-search"></i>
                         <div class="field-toggle">
-                            <input type="text" class="search-form" autocomplete="off" placeholder="Search">
+                                                <script>
+  (function() {
+    var cx = '013359958246192933599:xzpzuvrang4';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>
                         </div>
                     </form>
                 </div>

@@ -2,14 +2,14 @@
 if(isset($_POST['contactus']))
 {
 	$name = $_POST['name'];
-	$phone = $_POST['phone'];
+//	$phone = $_POST['phone'];
 	$email = $_POST['email'];
 	$message = $_POST['message'];
-	$address = $_POST['address'];
+//	$address = $_POST['address'];
 	
 	$to = $contactData->email;
 	$subject = "Contact Request";
-	$txt = "Name : $name<br />Phone : $phone<br />Email : $email<br />Address : $address <br />Message : $message<br />";
+	$txt = "Name : $name<br />Email : $email <br />Message : $message<br />";
 	$headers = "From: $email" . "\r\n";
 	$headers .= "MIME-Version: 1.0" . "\r\n";
 	$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";

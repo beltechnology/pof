@@ -22,6 +22,7 @@ elseif(isset($_REQUEST['categoryId']))
 	$innerDescription = $htmlFactory->createPagesInnnerPages($_REQUEST['categoryId']);
 	//var_dump($innerDescription);
 }
+/*
 ?>
 
 
@@ -58,3 +59,63 @@ $(document).ready(function(e) {
     $(document).scrollTop($(document).height()/3);
 });
 </script>
+
+
+    <!--/#header-->
+*/?>
+    <section id="page-breadcrumb">
+        <div class="vertical-center sun">
+             <div class="container">
+                <div class="row">
+                    <div class="action">
+                        <div class="col-sm-12">
+                            <h1 class="title"><?php echo $innerTitle;?></h1>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </section>
+    <!--/#page-breadcrumb-->
+
+    <section id="blog" class="padding-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-7">
+                    <div class="row">
+
+
+                        <div class="col-sm-12 col-md-12">
+<?php echo $innerDescription;?>
+                        </div>
+                    </div>
+ 					
+                   </div> 
+                    <div class="Index col-md-4 col-sm-5 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
+                    <div class="sidebar blog-sidebar">
+                    
+
+<?php include("../common/menu.php");?>
+</div>
+                     <div class="sidebar blog-sidebar">                       
+                        <div class="sidebar-item popular">
+                            <h3>Latest Photos</h3>
+                            <ul class="gallery">
+                                <li><a href="#"><img src="images/portfolio/popular1.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/portfolio/popular2.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/portfolio/popular3.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/portfolio/popular4.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/portfolio/popular5.jpg" alt=""></a></li>
+                                <li><a href="#"><img src="images/portfolio/popular1.jpg" alt=""></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+    </section>
+    <!--/#blog-->
+
+  <?php include("../common/footer.php");?>
