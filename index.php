@@ -68,9 +68,9 @@
             <div class="row col-sm-9 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms ">
              <?php  echo  $htmlFactory->createOlympaidInformation();?>
         	</div>
-          
+           <div class="Index col-sm-3 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
           <?php include("common/menu.php");?>
-         
+         </div>
         </div>
     </section>
      <!--/#features-->

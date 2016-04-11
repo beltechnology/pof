@@ -1,4 +1,3 @@
- <div class="Index col-sm-3 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
            
                     <div class="Side_Menu">
               <h2>POF</h2>
@@ -37,7 +36,7 @@ if($singlePagesInfo)
 </li>
   </ul>
 
-</div></div>
+</div>
 <?php /*?>
  <div class="Index col-sm-3 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
            
