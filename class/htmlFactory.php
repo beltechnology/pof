@@ -324,12 +324,35 @@ function getHomeMenu ()
 		{
 			$aboutData = $this->getDataFromServer("about");
 			$aboutHtml = "";
+			$count = 1;
 			if($aboutData)
 			{
+				
 			foreach ($aboutData as $about)
 			{
+				if($count <=4)
+				{
+				$aboutHtml .= " <div class='col-sm-3 col-xs-6'>
+                                <div class='team-single-wrapper'>
+                                    <div class='team-single'>
+                                        <div class='person-thumb'>
+                                            <img src='".BaseUrl."admin/upload/".$about->uploads."' class='img-responsive' alt=''>
+                                        </div>
+                                    </div>
+                                    <div class='person-info'>
+                                        <h2>".$about->name."</h2>
+                                        <p>".$about->description."</p>
+                                    </div>
+                                </div>
+                            </div>";
+				}
+				else if($count == 4)
+				{
+					$aboutHtml = $aboutHtml."</div><div class='item'>";
+					$count = 1;
+				}
+				$count++;
 				
-				$aboutHtml .= "<div class='col-lg-3 col-md-3'><img class='center-block img-circle img-responsive' src='".BaseUrl."admin/upload/".$about->uploads."'><div>&nbsp;</div><p class='second'>".$about->name."</p><p class='second'>".$about->phone."</p> <p class='second'>".$about->description."</p></div>";
 			}
 			}
 			return $aboutHtml;

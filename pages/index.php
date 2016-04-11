@@ -98,7 +98,7 @@ $(document).ready(function(e) {
 
 <?php include("../common/menu.php");?>
 </div>
-                     <div class="sidebar blog-sidebar">                       
+                     <div class="sidebar blog-sidebar" style="margin:0px;">                       
                         <div class="sidebar-item popular">
                             <h3>Latest Photos</h3>
                             <ul class="gallery">
