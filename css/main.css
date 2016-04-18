@@ -2973,3 +2973,6 @@ button.btn {
 .contact {
     padding: 0px;
 }
+li.singlepages.category.pagesLi0 {
+    word-wrap: break-word;
+}

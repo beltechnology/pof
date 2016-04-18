@@ -92,7 +92,7 @@
   				 <ul>
     			<li><a href="#menu">Our Team</a></li>
    				 <li><a href="#menu">News & Updates</a></li>
-    			<li><a href="#">Contact Us</a></li>
+    			<li><a href="<?php echo BaseUrl;?>contact.php">Contact Us</a></li>
    				<li><a href="#menu">Privacy & Policy</a></li>
     			<li><a href="#top">Back to top &uarr;</a></li>
   				</ul>
@@ -117,9 +117,22 @@
     <script type="text/javascript" src="<?php echo BaseUrl;?>js/wow.min.js"></script>
     <script type="text/javascript" src="<?php echo BaseUrl;?>js/main.js"></script>   
     <script type="text/javascript">
+<?php
+if(isset($menuClass))
+{?>	
+$(document).ready(function()
+{
+	$("ul.navbar-nav li").removeClass("active");	
+	$("ul.navbar-nav li.<?php echo $menuClass;?>").addClass("active");	
+});	
+<?php
+}
+?>
+	
 $(function() {
-    $('input[name="password"]').datepicker({
-		format: 'dd/mm/yyyy'
+    $('.date').datepicker({
+		format: 'dd/mm/yyyy',
+		autoclose: true
     });
 });
 </script>

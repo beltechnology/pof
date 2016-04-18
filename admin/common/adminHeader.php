@@ -199,7 +199,7 @@ else
                 <li class="registration" ><a href="viewCity.php"><i class="fa fa-circle-o"></i> View City</a></li>
                 <li class="registration" ><a href="viewSchool.php"><i class="fa fa-circle-o"></i> View School</a></li>
                 <li class="registration" ><a href="viewRegistration.php?page=1"><i class="fa fa-circle-o"></i> View Registration</a></li>
-                <li class="slider" ><a href="slider.php"><i class="fa fa-circle-o"></i> Update Slider</a></li>
+             <!--    <li class="slider" ><a href="slider.php"><i class="fa fa-circle-o"></i> Update Slider</a></li>-->
                 <li class="viewAboutPof" ><a href="viewAboutPof.php"><i class="fa fa-circle-o"></i> View About Pof Detail</a></li>
                 <li class="viewTestimonial" ><a href="viewTestimonial.php"><i class="fa fa-circle-o"></i> View Testimonial</a></li>
                 <li class="viewmoreInformation" ><a href="viewMoreInformation.php"><i class="fa fa-circle-o"></i>View More Information</a></li>

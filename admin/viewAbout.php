@@ -19,7 +19,7 @@ $menuType = "viewAbout";
                   <h3 class="box-title">About Us</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
-                <form  action="" method="post">
+  <?php /*              <form  action="" method="post">
                 <div class="box-body pad">
                 <?php
 					  $aboutdesc = new dataInfo();
@@ -38,7 +38,7 @@ $menuType = "viewAbout";
                     <button type="submit" class="btn btn-primary" style="margin-bottom:10px;" name="updateAboutDesc">Submit</button>
                   </div>
                                </form>
-                
+                */?>
                   <table id="category" class="table table-bordered table-striped">
                     <thead>
                       <tr>

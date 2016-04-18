@@ -6,7 +6,7 @@
 $dataInfoInfo = new dataInfo();
 $categoryInfo = new dataInfo();
 $htmlFactory = new htmlFactory();
-$allMenus = $dataInfoInfo->selectAll("category"); 
+$allMenus = $dataInfoInfo->selectAllMenu("category"); 
 foreach($allMenus as $menu)
 {
 	if($menu->parentid == 0)

@@ -12,10 +12,10 @@
 					   <div class="row">
 					      
 					      <div class="col-md-6 col-lg-6"><input class="group-form" type="text" class="form-control" placeholder="Username" required id="userName" name="userName"></div>
-						  <div class="col-md-6 col-lg-6" id="dateTimePassword">
-                          <input class="group-form" type="password"  placeholder="Password" required name="password" id="password" readonly>
-                          <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>                         </span>                          </div>
+						  <div class="col-md-6 col-lg-6 " id="passwordDiv">
+                <div class="group-form date" >
+                    <input  type="password"  placeholder="Password" required name="password" id="password" readonly  class="span2"><span class="add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+                </div>                        </div>
                           </div>
                           <div align="center" style="color:red;"><?php if(isset($_GET['msg'])){echo $_GET['msg'];}?></div>
                           <input name="loginType" type="hidden" class="input username" value="student"  />

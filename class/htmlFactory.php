@@ -320,12 +320,13 @@ function getHomeMenu ()
 		{
 			$aboutData = $this->getDataFromServer("about");
 			$aboutHtml = "";
-			$count = 1;
+			$count = 0;
 			if($aboutData)
 			{
 				
 			foreach ($aboutData as $about)
 			{
+				$count++;
 				if($count <=4)
 				{
 				$aboutHtml .= " <div class='col-sm-3 col-xs-6'>
@@ -342,12 +343,24 @@ function getHomeMenu ()
                                 </div>
                             </div>";
 				}
-				else if($count == 4)
+				else if($count == 5)
 				{
 					$aboutHtml = $aboutHtml."</div><div class='item'>";
-					$count = 1;
+				$aboutHtml .= " <div class='col-sm-3 col-xs-6'>
+                                <div class='team-single-wrapper'>
+                                    <div class='team-single'>
+                                        <div class='person-thumb'>
+                                            <img src='".BaseUrl."admin/upload/".$about->uploads."' class='img-responsive' alt=''>
+                                        </div>
+                                    </div>
+                                    <div class='person-info'>
+                                        <h2>".$about->name."</h2>
+                                        <p>".$about->description."</p>
+                                    </div>
+                                </div>
+                            </div>";
+					$count = 0;
 				}
-				$count++;
 				
 			}
 			}

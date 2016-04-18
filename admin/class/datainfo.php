@@ -15,6 +15,19 @@ class dataInfo
 	  return $allData;
 	 }
 
+
+	public function selectAllMenu($tableName)
+	 {
+	  $allData = "";
+	  $res=mysql_query("SELECT * FROM ".$tableName." where deleted = 0 && status = 0  ORDER BY sort_order ASC ");
+	  while($obj=mysql_fetch_object($res))
+	  {
+	  	$allData[] = $obj;
+	  }
+	  return $allData;
+	 }
+
+	 
 // check exit category...
 	public function checkExitCategory($categoryData)
 	 {

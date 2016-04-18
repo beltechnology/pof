@@ -12,7 +12,13 @@ if(isset($_REQUEST['aboutId']))
 	if($_REQUEST['aboutId'] == 2)
 	{
 		$aboutPage = true;
-		
+		$menuClass = "about";
+
+	}
+	elseif($_REQUEST['aboutId'] == 3)
+	{
+		$menuClass = "whatwedo";
+
 	}
 }
 elseif(isset($_REQUEST['pageId']))
