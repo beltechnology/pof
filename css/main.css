@@ -446,10 +446,12 @@ ul.sub-menu {
 }
 
 .testimonial .media>.pull-left img{
-  margin-top: 6px;
+  margin-top: 0px;
       width: 65px;
 }
-
+.media > .pull-left {
+    padding-right: 0px;
+}
 blockquote {
     padding-left: 15px;
     padding-right: 0px;
@@ -486,7 +488,7 @@ blockquote {
 
 .contact-info.bottom {
     padding-left: 70px;
-    margin: -82px 0px 0px 0px;
+    margin: -82px 5px 0px 0px;
 }
 
 .contact-form.bottom {
@@ -550,6 +552,12 @@ blockquote {
 
 .copyright-text p {
   margin-bottom: 0;
+  text-align:center;
+}
+
+p {
+    margin: 0 0 10px;
+    text-align: justify;
 }
 
 /*************************
@@ -558,7 +566,7 @@ blockquote {
 #home-slider {
   background: url(../images/home/slider-bg.png) 0 100% repeat-x;
   position: relative;
-  margin-top: -115px;
+  margin-top: -68px;
 }
 
 #home-slider .main-slider {
@@ -755,7 +763,8 @@ blockquote {
 }
 
 .clients img {
-  display: inline-block;
+    display: inline-block;
+    height: 160px;
 }
 
 .clients-logo {
@@ -2763,6 +2772,7 @@ img.img-responsive.person {
 img.img-responsive.single-img {
    /* padding: 25px 0px;*/
     height: 200px;
+	border-radius:5px;
 }
 
 /*.row {float:left;}*/
@@ -2812,7 +2822,7 @@ div ul li ul {
   display: none;
 }
 
-#nav1{width:255px;}
+/*#nav1{width:255px;}*/
 
 .sidebar.blog-sidebar {
     margin: -65px 0px 0px 0px;
@@ -2938,4 +2948,28 @@ button.btn {
     box-shadow: 0px 5px 5px 0px #eaeaea;
     margin-top: 10px;
     margin-bottom: 5px;
+}
+.js-marquee > li {
+    display: inline;
+    margin-right: 50px;
+}
+.userName {
+    color: #ff9900;
+    display: block;
+    float: left;
+    text-align: center;
+    text-transform: uppercase;
+    width: 85%;
+}
+.userName li {
+    display: inline;
+    float: right;
+    margin-right: 10%;
+	 color: #ff9900;
+}
+
+/***********Contact Us***********/
+
+.contact {
+    padding: 0px;
 }

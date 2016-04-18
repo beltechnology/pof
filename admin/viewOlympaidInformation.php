@@ -24,11 +24,7 @@ $menuType = "olympaidInformation";
                       <tr>
                         <th>Sr. no.</th>
                         <th>Title</th>
-                        <th>Description</th>
                         <th>Image</th>
-                        <th>Seo title</th>
-                        <th>Meta</th>
-                        <th>Keyword</th>
                         <th>Edit</th>
                       </tr>
                     </thead>
@@ -64,11 +60,7 @@ $menuType = "olympaidInformation";
                         <td><?php echo $sr++;?> </td>
                         
                         <td><?php  echo $category->title ;?></td>
-                        <td><?php  echo $category->description ;?></td>
                         <td><img src="upload/<?php  echo $category->upload ;?>" width="50" /></td>
-                        <td><?php echo $category->seoTitle ;?></td>
-                        <td><?php echo $category->metaTag ;?></td>
-                        <td><?php echo $category->keyWord ;?></td>
                         <td> <a href="olympaidInformation.php?olympaidInformationId=<?php  echo $category->olympaidInformationId;?>" class="Edit">Edit <span aria-hidden="true" class="glyphicon glyphicon-pencil"></span></a></td>
                       </tr>
                       <?php

@@ -51,9 +51,15 @@
                 <div class="col-md-4 col-sm-12">
                     <div class="contact-form bottom">
                         <h2>Send a message</h2>
+						<?php
+						if(isset($contactResponse))
+						{?>
+						<p style="color:green">Request Successfully Sent</p>
+						<?php }
+						?>
                         <form id="main-contact-form1" name="contact-form" method="post">
                             <div class="form-group">
-                                <input type="text" id="name" name="name" placeholder="Name" maxlength="50" required>
+                                <input type="text" id="name" name="name" class="form-control"  placeholder="Name" maxlength="50" required>
                             </div>
                             <div class="form-group">
                                 <input id="email" name="email" placeholder="Email" maxlength="50" required class="form-control" />
@@ -86,7 +92,7 @@
   				 <ul>
     			<li><a href="#menu">Our Team</a></li>
    				 <li><a href="#menu">News & Updates</a></li>
-    			<li><a href="contact.html">Contact Us</a></li>
+    			<li><a href="#">Contact Us</a></li>
    				<li><a href="#menu">Privacy & Policy</a></li>
     			<li><a href="#top">Back to top &uarr;</a></li>
   				</ul>
@@ -95,6 +101,7 @@
              </div>
                     <div class="copyright-text text-center">
                         <p>&copy; POF India 2016. All Rights Reserved.</p>
+                        <p><a href="http://bel-technology.com/" target="_blank">Created & Managed By Bel-Technology</a></p>
                        <!-- <p>Designed by <a target="_blank" href="http://www.themeum.com">Themeum</a></p>-->
                     </div>
                 </div>
@@ -112,11 +119,7 @@
     <script type="text/javascript">
 $(function() {
     $('input[name="password"]').datepicker({
-        timePicker: true,
-        timePickerIncrement: 30,
-        locale: {
-            format: 'MM/DD/YYYY'
-        }
+		format: 'dd/mm/yyyy'
     });
 });
 </script>

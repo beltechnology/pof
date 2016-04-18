@@ -106,7 +106,7 @@ class  htmlFactory extends  dataFactory
 		$moreinformations = $this->getDataFromServerBytableName("moreinformation");
 		foreach($moreinformations as $moreinformation)
 		{
-			$moreinformationHTML = $moreinformationHTML."<div class='col-xs-4 col-sm-3'><a href='".$moreinformation->link."' target='_blank'>
+			$moreinformationHTML = $moreinformationHTML."<div class='col-xs-2 col-sm-2'><a href='admin/upload/".$moreinformation->upload."' class='fancybox'  data-fancybox-group='gallery' >
 			<img class='img-responsive person' src='".BaseUrl."admin/upload/".$moreinformation->upload."'></a></div>";
 		
 		} 
@@ -119,12 +119,7 @@ class  htmlFactory extends  dataFactory
 		$moreinformations = $this->getDataFromServerBytableName("moreinformation");
 		foreach($moreinformations as $moreinformation)
 		{
-			$moreinformationHTML = $moreinformationHTML."<div class='col-lg-11 col-md-11 col-lg-offset-1 col-md-offset-1 text'><img class='img-responsive pull-left' src='".BaseUrl."admin/upload/".$moreinformation->upload."' style='width:290px; height:170px;'>
-			   <div class='written'><a href='".$moreinformation->link."' target='_blank'> <h2 class='center-block'>".$moreinformation->title."</h2></a>
-                
-			   </div>
-			  </div>
-			  <div>&nbsp;</div>";
+			$moreinformationHTML = $moreinformationHTML."<li><a href=''><img src='".BaseUrl."admin/upload/".$moreinformation->upload."' alt=''></a></li>";
 		
 		} 
 		return $moreinformationHTML;
@@ -155,10 +150,17 @@ function createPages($categoryId)
 {
 	$pageLinkHTML = "";
 	$putStyle = "";
+	$ulHTML = "<ul>";
 	$pages = $this->getPageDataByCategoryId($categoryId);
 	if($categoryId != 0)
 	{
 	 $putStyle = "style='display:block;'";
+	 $ulHTML = "<ul>";
+	 $ulHTMLClose = "</ul>";
+	}
+	else{
+		$ulHTML = "";
+		$ulHTMLClose = "";
 	}
 	if($pages != "")
 	{
@@ -174,7 +176,7 @@ function createPages($categoryId)
 			}
 		}
 	}
-	return $pageLinkHTML;
+	return $ulHTML.$pageLinkHTML.$ulHTMLClose;
 	
 }
 
@@ -236,12 +238,6 @@ function getHomeMenu ()
 		foreach($allMenu as $menu)
 		{
 			$title = $menu->title;
-			if(strlen($title) >10)
-			{
-				$title = substr($title, 0, 10)."..";
-				
-			}
-
 			$homeMenu .= "<li><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$menu->category_id."' class='btn btn-common'>".$title."</a></li>";
 			$count++;
 			if($count == 6) $count=0;
@@ -277,7 +273,7 @@ function getHomeMenu ()
                     </div>
 				<div class='col-sm-6 wow fadeInRight' data-wow-duration='500ms' data-wow-delay='300ms'>
 				<h2>".$olympaidInfo->title."</h2>
-				<p>".strip_tags($olympaidInfo->description)."</p><a href='".$olympaidInfo->link."' target='_blank'>  READ FULL STORY</a>
+				<p>".strip_tags($olympaidInfo->description)."</p><a href='".BaseUrl."pages/index.php?olympaidInformationId=".$olympaidInfo->olympaidInformationId."'>  READ FULL STORY</a>
 				</div>
 				</div>";
 				}
@@ -286,7 +282,7 @@ function getHomeMenu ()
 					$olympaidInfoHTML .= "<div class='single-features'>				
 				<div class='col-sm-6 col-sm-offset-1 align-right wow fadeInLeft' data-wow-duration='500ms' data-wow-delay='300ms'>
 				<h2>".$olympaidInfo->title."</h2>
-				<p>".strip_tags($olympaidInfo->description)."</p><a href='".$olympaidInfo->link."' target='_blank'>  READ FULL STORY</a>
+				<p>".strip_tags($olympaidInfo->description)."</p><a href='".BaseUrl."pages/index.php?olympaidInformationId=".$olympaidInfo->olympaidInformationId."'>  READ FULL STORY</a>
 				</div>
 				<div class='col-sm-5 wow fadeInLeft' data-wow-duration='500ms' data-wow-delay='300ms'>
                      <img src='".BaseUrl."admin/upload/".$olympaidInfo->upload."' class='img-responsive single-img' alt=''>
@@ -308,7 +304,7 @@ function getHomeMenu ()
 			foreach ($getTestimonialData as $testimonial)
 			{
 				
-				$testimonialHTML .= "<div class='media'><div class='pull-left Footer_Img'><a href='#'><img class='center-block img-responsive img-circle fixed-size' src='".BaseUrl."admin/upload/".$testimonial->upload."'></a></div>
+				$testimonialHTML .= "<div class='media'><div class='pull-left Footer_Img'><a href='#'><img class='center-block img-responsive  fixed-size' src='".BaseUrl."admin/upload/".$testimonial->upload."'></a></div>
                             <div class='media-body'>
 							 <blockquote>".$testimonial->description."</blockquote>
                                 <h3><a href='#'>".$testimonial->title."</a></h3>

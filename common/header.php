@@ -62,6 +62,7 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 overflow">
+				<?php if($studentLogin){echo "<div class='userName'><ul><li><a  href='".BaseUrl."admin/logout.php'>Logout</a></li><li>HI ".$studentInfo->studentName."<li><li><a href='".BaseUrl."admin/viewNotes.php'>My Account</a></li></ul></div>";};?>
                    <div class="social-icons pull-right">
                         <ul class="nav nav-pills">
                             <li><a  href="<?php echo  $contactData->facebook ;?>" target="_blank"><i class="fa fa-facebook"></i></a></li>
@@ -90,7 +91,7 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="<?php echo BaseUrl;?>index.php">Home</a></li>
-                        <li class="#"><a href="aboutus.html">About US<!-- <i class="fa fa-angle-down"></i>--></a>
+                        <li class="#"><a href="<?php echo BaseUrl;?>pages/index.php?aboutId=2">About US<!-- <i class="fa fa-angle-down"></i>--></a>
                            <!-- <ul role="menu" class="sub-menu">
                                 <li><a href="aboutus.html">About</a></li>
                                 <li><a href="aboutus2.html">About 2</a></li>
@@ -102,7 +103,7 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
                                 <li><a href="coming-soon.html">Coming Soon</a></li>
                             </ul>-->
                         </li>                    
-                        <li class="dropdown"><a href="#">What We Do<!--<i class="fa fa-angle-down"></i>--></a>
+                        <li class="dropdown"><a href="<?php echo BaseUrl;?>pages/index.php?aboutId=3">What We Do<!--<i class="fa fa-angle-down"></i>--></a>
                             <!--<ul role="menu" class="sub-menu">
                                 <li><a href="blog.html">Blog Default</a></li>
                                 <li><a href="blogtwo.html">Timeline Blog</a></li>
@@ -112,7 +113,7 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
                                 <li><a href="blogdetails.html">Blog Details</a></li>
                             </ul>-->
                         </li>
-                        <li class="dropdown"><a href="contact.html">Contact Us <!--<i class="fa fa-angle-down"></i>--></a>
+                        <li class="dropdown"><a href="#">Contact Us <!--<i class="fa fa-angle-down"></i>--></a>
                             <!--<ul role="menu" class="sub-menu">
                                 <li><a href="portfolio.html">Portfolio Default</a></li>
                                 <li><a href="portfoliofour.html">Isotope 3 Columns + Right Sidebar</a></li>

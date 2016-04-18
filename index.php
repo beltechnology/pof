@@ -6,14 +6,14 @@
                 <div class="main-slider">
                     <div class="slide-text">
                         <h1>Significant Improvement In Learning Performance</h1>
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p>POF is promises to give you a good future. To see our world upclose provide your credentials and start your journey with us. </p>
                         
                         <form class="form" action="<?php echo BaseUrl;?>admin/index.php" method="post">
 					   <div class="row">
 					      
 					      <div class="col-md-6 col-lg-6"><input class="group-form" type="text" class="form-control" placeholder="Username" required id="userName" name="userName"></div>
 						  <div class="col-md-6 col-lg-6" id="dateTimePassword">
-                          <input class="group-form" type="password" class="form-control" placeholder="Password" required name="password" id="password" readonly>
+                          <input class="group-form" type="password"  placeholder="Password" required name="password" id="password" readonly>
                           <span class="input-group-addon">
                         <span class="glyphicon glyphicon-calendar"></span>                         </span>                          </div>
                           </div>
@@ -22,11 +22,11 @@
                            <button type="submit"  class="btn btn-common" name="login">LOGIN</button>  
                           </form>
                                          </div>
-                    <img src="<?php echo BaseUrl;?>/images/home/slider/hill.png" class="slider-hill" alt="slider image">
-                    <img src="<?php echo BaseUrl;?>/images/home/slider/house.png" class="slider-house" alt="slider image">
-                    <img src="<?php echo BaseUrl;?>/images/home/slider/sun.png" class="slider-sun" alt="slider image">
-                    <img src="<?php echo BaseUrl;?>/images/home/slider/birds1.png" class="slider-birds1" alt="slider image">
-                    <img src="<?php echo BaseUrl;?>/images/home/slider/birds2.png" class="slider-birds2" alt="slider image">                </div>
+                    <img src="<?php echo BaseUrl;?>images/home/slider/hill.png" class="slider-hill" alt="slider image">
+                    <img src="<?php echo BaseUrl;?>images/home/slider/house.png" class="slider-house" alt="slider image">
+                    <img src="<?php echo BaseUrl;?>images/home/slider/sun.png" class="slider-sun" alt="slider image">
+                    <img src="<?php echo BaseUrl;?>images/home/slider/birds1.png" class="slider-birds1" alt="slider image">
+                    <img src="<?php echo BaseUrl;?>images/home/slider/birds2.png" class="slider-birds2" alt="slider image">                </div>
           </div>
         </div>
         <div class="preloader"><i class="fa fa-sun-o fa-spin"></i></div>
@@ -113,11 +113,10 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="clients text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
-                        <p><img src="images/home/clients.png" class="img-responsive" alt=""></p>
-                        <h1 class="title">More Information</h1>
-                        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br> Ut enim ad minim veniam, quis nostrud </p>
+                        <p  style="text-align:center;" ><img src="images/home/clients.png" class="img-responsive" alt=""></p>
+                        <h1 class="title"> Recent Activities</h1>
+                        
                     </div>
-                    <marquee>
                     <div class="clients-logo wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
                     <?php echo $htmlFactory->moreInformation();?>
                         <!--<div class="col-xs-4 col-sm-3">
@@ -138,32 +137,52 @@
                         </div>-->
                      
                     </div>
-                    </marquee>
                 </div>
             </div>
         </div>
      </section>
     <!--/#clients-->
 <?php include("common/footer.php");?>
-<script type='text/javascript' src='<?php echo BaseUrl;?>js/jquery.marquee.min.js'></script>
+<link rel="stylesheet" href="<?php echo BaseUrl;?>css/jquery.fancybox.css?v=2.1.5" media="all" type="text/css">
+<link rel="stylesheet" href="<?php echo BaseUrl;?>css/jquery.simplyscroll.css" media="all" type="text/css">
+<script type='text/javascript' src='<?php echo BaseUrl;?>js/jquery.simplyscroll.js'></script>
+	<script type="text/javascript" src="<?php echo BaseUrl;?>js/jquery.fancybox.js?v=2.1.5"></script>
+
 <script>
-$('.marqueeUl').marquee({
-	speed: 15000,
-	gap:50,
-	delayBeforeStart: 0,
-	direction: 'left',
-	duplicated: true,
-	pauseOnHover: true
+$(document).ready(function() {
+	$('.fancybox').fancybox();
 });
+
+(function($) {
+	$(function() {
+		$(".marqueeUl").simplyScroll();
+	});
+	
+	$(function() {
+		$(".clients-logo").simplyScroll();
+	});
+	
+})(jQuery);
 </script>
 
 <style>
-.marqueeUl {
-    overflow: hidden;
-    width: 100%;
+	#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
+		background-image: url('images/fancybox_sprite@2x.png');
+		background-size: 44px 152px; /*The size of the normal image, half the size of the hi-res image*/
+	}
+.fancybox-lock .fancybox-overlay {
+    background-color: #ccc;
+    opacity: 0.79;
 }
-.wow.fadeInLeft.Cat_Tab.animated {
-    float: left;
-    margin: 0 20px;
+ .simply-scroll
+{
+	height:229px !important;
+}
+.simply-scroll .simply-scroll-clip
+{
+	height:229px !important;
+}
+.marqueeUl {
+	margin-top:1.5% !important;
 }
 </style>
