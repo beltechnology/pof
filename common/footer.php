@@ -90,8 +90,7 @@
                 <div class="col-sm-10">
                 <nav id="menu">
   				 <ul>
-    			<li><a href="#menu">Our Team</a></li>
-   				 <li><a href="#menu">News & Updates</a></li>
+    			<li><a href="<?php echo BaseUrl;?>pages/index.php?aboutId=2">Our Team</a></li>
     			<li><a href="<?php echo BaseUrl;?>contact.php">Contact Us</a></li>
    				<li><a href="#menu">Privacy & Policy</a></li>
     			<li><a href="#top">Back to top &uarr;</a></li>
@@ -102,7 +101,6 @@
                     <div class="copyright-text text-center">
                         <p>&copy; POF India 2016. All Rights Reserved.</p>
                         <p><a href="http://bel-technology.com/" target="_blank">Created & Managed By Bel-Technology</a></p>
-                       <!-- <p>Designed by <a target="_blank" href="http://www.themeum.com">Themeum</a></p>-->
                     </div>
                 </div>
             </div>

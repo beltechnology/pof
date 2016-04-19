@@ -37,9 +37,11 @@ elseif(isset($_REQUEST['olympaidInformationId']))
 }
 elseif(isset($_REQUEST['categoryId']))
 {
-	$innerTitle = "";
+	$innerHtml = $htmlFactory->getCategoryDataById($_REQUEST['categoryId']);
+	foreach($innerHtml as $innerHtmls)
 	$innerDescription = $htmlFactory->createPagesInnnerPages($_REQUEST['categoryId']);
-	//var_dump($innerDescription);
+	$innerTitle = $innerHtmls->title;
+//	var_dump($innerTitle);
 }
 /*
 ?>

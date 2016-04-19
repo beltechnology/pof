@@ -87,7 +87,19 @@ class dataFactory
 	  return $allData;
 	}	 
 	 
-
+	
+	function getCategoryDataById($category_id)
+	{
+	  $allData = "";
+	  $res=mysql_query("SELECT * FROM category where deleted = 0 and status= 0 and category_id='$category_id'   ORDER BY sort_order ASC  ");
+	  while($obj=mysql_fetch_object($res))
+	  {
+	  	$allData[] = $obj;
+	  }
+	 
+	  return $allData;
+	}	 
+	 
 	
 	function getOlympaidInformation()
 	{

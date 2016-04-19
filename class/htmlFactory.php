@@ -216,10 +216,10 @@ function createPagesInnnerPages($categoryId)
 	{
 		foreach($pages as $page)
 		{
-			$pageLinkHTML =$pageLinkHTML."<li><span class='glyphicon glyphicon-ok' aria-hidden='true'></span> <a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$categoryId."&pageId=".$page->pageId."'>".$page->pageTitle."</a></li>";
+			$pageLinkHTML =$pageLinkHTML."<li><span class='glyphicon glyphicon-hand-right' aria-hidden='true'></span><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$categoryId."&pageId=".$page->pageId."'>".$page->pageTitle."</a></li>";
 		}
 	}
-	return $pageLinkHTML;
+	return "<ul class='caregoryMenu'>".$pageLinkHTML."</ul>";
 	
 }
 

@@ -2976,3 +2976,14 @@ button.btn {
 li.singlepages.category.pagesLi0 {
     word-wrap: break-word;
 }
+.field-toggle {
+     right: 0px; 
+    -webkit-logical-width: 20%;
+	float:right;
+}
+.caregoryMenu li {
+    line-height: 53px;
+}
+ul.caregoryMenu li .glyphicon.glyphicon-hand-right {
+    margin-right: 16px;
+}

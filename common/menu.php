@@ -22,7 +22,7 @@ foreach($allMenus as $menu)
  ?>
     <li id="<?php echo $menu->category_id; ?>" class="category"><a href="<?php echo BaseUrl?>pages/index.php?categoryId=<?php echo $menu->category_id; ?>"><?php echo $menu->title; ?></a>
 <?php
-	// echo $categoryInfo->getSubmenu($menu->category_id);
+	 echo $categoryInfo->getSubmenu($menu->category_id);
 	 echo $htmlFactory->createPages($menu->category_id);
 	echo "</li>";
 	}

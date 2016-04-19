@@ -47,6 +47,18 @@
                              <input class="btn btn-lg" id="sEmail" name="sEmail" type="email" placeholder="Your Email" required>
                              <input type="hidden" name="emailSubscribe"/>
                              <button class="btn btn-info btn-lg" type="submit" name="emailSubscribe">Submit</button>
+							 <?php
+							 if(isset($response))
+							 {?>
+							 <p><?php echo $response; ?></p>
+							 <?php
+							 }
+							 elseif(isset($msg))
+							 {?>
+							 <p><?php echo $msg; ?></p>
+							 <?php
+							 }
+							 ?>
                           </div>
                          </form>
                           <!--  <p>A responsive, retina-ready &amp; wide multipurpose template.</p>-->

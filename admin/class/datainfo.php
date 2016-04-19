@@ -647,7 +647,7 @@ public function getSubmenu($parentId)
 				}
 				
 				
-			   $liHTML= $liHTML."<li id='".$submenu->category_id."'  class='category'><a href='#demo".$submenu->category_id."'>".$submenu->title."".$iHTML." </a>".$htmlFactory->createPages($submenu->category_id);
+			   $liHTML= $liHTML."<li id='".$submenu->category_id."'  class='category'><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$submenu->category_id."'>".$submenu->title."".$iHTML." </a>".$htmlFactory->createPages($submenu->category_id);
 								
 				$submenuHtml = $this->getSubmenu($submenu->category_id);
 				$closeliHTML = "";
