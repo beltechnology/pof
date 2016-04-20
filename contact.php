@@ -7,7 +7,7 @@ $menuClass = "contact";
                 <div class="row">
                     <div class="action">
                         <div class="col-sm-12">
-                            <h1 class="title">Get In Touch</h1>
+                            <h1 class="title"><?php echo  $contactData->title ;?></h1>
                             
                         </div>
                     </div>
@@ -26,7 +26,7 @@ $menuClass = "contact";
 
                         <div class="col-sm-12 col-md-12">
 						
-                        <p>To get more information and contact our representatives , use the following contact details.We are waiting to hear for you.</p>
+                        <p><?php echo  $contactData->description ;?></p>
                     <div class="col-sm-6 wow fadeInLeft contact" data-wow-duration="500ms" data-wow-delay="300ms">
                        <h2>Contact Information</h2>
                        <p><i class="fa fa-envelope-o" aria-hidden="true" style="color:#5BC0DE;padding-right: 5px;margin-left: 3px;"></i><b>E-mail:</b> <?php echo  $contactData->email ;?> </p>

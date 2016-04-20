@@ -1,6 +1,6 @@
 <?php
 include("controller/testimonial_controller.php");
-$menuType = "viewTestimonial";
+$menuType = "viewCity";
 ?>
 <div class="content-wrapper">
         <!-- Main content -->

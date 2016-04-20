@@ -1,11 +1,13 @@
 <?php 
  $path = $_SERVER['DOCUMENT_ROOT']."/vibhor/pof/";
- $pathCss = "/vibhor/pof/";
- $menuType = "";
+$menuType = "";
 include($path."class/constant.php");
 include($path."admin/common/conn.php");
 include($path."admin/class/datainfo.php");
 include($path."class/htmlFactory.php");
+
+ $pathCss = BaseUrl;
+
 $htmlFactory = new htmlFactory();
 $studentLogin = false;
 if(isset($_SESSION['userInfo']))

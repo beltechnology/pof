@@ -18,7 +18,7 @@ class  htmlFactory extends  dataFactory
 				if($ele == 0)
 				{
 					$carouselHTML = $carouselHTML."<div class='item active'>
-	 <img class='center-block img-responsive first-slider bottom-text' src='".BaseUrl."admin/upload/".$carousel->sliderImage."' alt='...'>
+	 <img class='center-block img-responsive first-slider bottom-text' src='".BaseUrl."upload/".$carousel->sliderImage."' alt='...'>
       <div class='carousel-caption bottom-indicators'>
 	 </div>
     </div>";
@@ -26,7 +26,7 @@ class  htmlFactory extends  dataFactory
 				else
 				{
 					$carouselHTML = $carouselHTML."<div class='item'>
-	 <img class='center-block img-responsive first-slider bottom-text' src='".BaseUrl."admin/upload/".$carousel->sliderImage."'  alt='...'>
+	 <img class='center-block img-responsive first-slider bottom-text' src='".BaseUrl."upload/".$carousel->sliderImage."'  alt='...'>
       <div class='carousel-caption bottom-indicators'>
 	 </div>
     </div>";
@@ -54,12 +54,12 @@ class  htmlFactory extends  dataFactory
 			{
 				if($ele == 0)
 				{
-					$carouselHTML = $carouselHTML."<div class='item active'> <img class='center-block img-responsive big-slide' src='".BaseUrl."admin/upload/".$carousel->sliderImage."' alt='...' width=''>
+					$carouselHTML = $carouselHTML."<div class='item active'> <img class='center-block img-responsive big-slide' src='".BaseUrl."upload/".$carousel->sliderImage."' alt='...' width=''>
               </div>";
 				}
 				else
 				{
-					$carouselHTML = $carouselHTML."<div class='item'> <img class='center-block img-responsive big-slide' src='".BaseUrl."admin/upload/".$carousel->sliderImage."' alt='...' width=''>
+					$carouselHTML = $carouselHTML."<div class='item'> <img class='center-block img-responsive big-slide' src='".BaseUrl."upload/".$carousel->sliderImage."' alt='...' width=''>
               </div>";
 				}
 				$ele++;
@@ -106,8 +106,8 @@ class  htmlFactory extends  dataFactory
 		$moreinformations = $this->getDataFromServerBytableName("moreinformation");
 		foreach($moreinformations as $moreinformation)
 		{
-			$moreinformationHTML = $moreinformationHTML."<div class='col-xs-2 col-sm-2'><a href='admin/upload/".$moreinformation->upload."' class='fancybox'  data-fancybox-group='gallery' >
-			<img class='img-responsive person' src='".BaseUrl."admin/upload/".$moreinformation->upload."'></a></div>";
+			$moreinformationHTML = $moreinformationHTML."<div class='col-xs-2 col-sm-2'><a href='".BaseUrl."upload/".$moreinformation->upload."' class='fancybox'  data-fancybox-group='gallery' >
+			<img class='img-responsive person' src='".BaseUrl."upload/".$moreinformation->upload."'></a></div>";
 		
 		} 
 		return $moreinformationHTML;
@@ -119,7 +119,7 @@ class  htmlFactory extends  dataFactory
 		$moreinformations = $this->getDataFromServerBytableName("moreinformation");
 		foreach($moreinformations as $moreinformation)
 		{
-			$moreinformationHTML = $moreinformationHTML."<li><a href=''><img src='".BaseUrl."admin/upload/".$moreinformation->upload."' alt=''></a></li>";
+			$moreinformationHTML = $moreinformationHTML."<li><a href=''><img src='".BaseUrl."upload/".$moreinformation->upload."' alt=''></a></li>";
 		
 		} 
 		return $moreinformationHTML;
@@ -135,7 +135,7 @@ class  htmlFactory extends  dataFactory
 			$aboutPofHTML = $aboutPofHTML."<div class='col-sm-4 text-center padding wow fadeIn aboutpof".$abutArr[$i]."' data-wow-duration='1000ms' data-wow-delay='300ms'>
 		     <div class='single-service'>
              <div class='wow scaleIn' data-wow-duration='500ms' data-wow-delay='300ms'>
-			 <img src='".BaseUrl."admin/upload/".$aboutPofDetail->upload."' alt='pencil-photo'>
+			 <img src='".BaseUrl."upload/".$aboutPofDetail->upload."' alt='pencil-photo'>
 			 </div>
 			 <h2>".$aboutPofDetail->title."</h2>
 			 <p>". substr(strip_tags($aboutPofDetail->description),0,110). "..."."</p>
@@ -269,7 +269,7 @@ function getHomeMenu ()
 				{
 				$olympaidInfoHTML .= "<div class='single-features'>
 				<div class='col-sm-5 wow fadeInLeft' data-wow-duration='500ms' data-wow-delay='300ms'>
-                        <img src='".BaseUrl."admin/upload/".$olympaidInfo->upload."' class='img-responsive single-img' alt=''>
+                        <img src='".BaseUrl."upload/".$olympaidInfo->upload."' class='img-responsive single-img' alt=''>
                     </div>
 				<div class='col-sm-6 wow fadeInRight' data-wow-duration='500ms' data-wow-delay='300ms'>
 				<h2>".$olympaidInfo->title."</h2>
@@ -285,7 +285,7 @@ function getHomeMenu ()
 				<p>".strip_tags($olympaidInfo->description)."</p><a href='".BaseUrl."pages/index.php?olympaidInformationId=".$olympaidInfo->olympaidInformationId."'>  READ FULL STORY</a>
 				</div>
 				<div class='col-sm-5 wow fadeInLeft' data-wow-duration='500ms' data-wow-delay='300ms'>
-                     <img src='".BaseUrl."admin/upload/".$olympaidInfo->upload."' class='img-responsive single-img' alt=''>
+                     <img src='".BaseUrl."upload/".$olympaidInfo->upload."' class='img-responsive single-img' alt=''>
                     </div>
 				</div>";
 				}
@@ -304,7 +304,7 @@ function getHomeMenu ()
 			foreach ($getTestimonialData as $testimonial)
 			{
 				
-				$testimonialHTML .= "<div class='media'><div class='pull-left Footer_Img'><a href='#'><img class='center-block img-responsive  fixed-size' src='".BaseUrl."admin/upload/".$testimonial->upload."'></a></div>
+				$testimonialHTML .= "<div class='media'><div class='pull-left Footer_Img'><a href='#'><img class='center-block img-responsive  fixed-size' src='".BaseUrl."upload/".$testimonial->upload."'></a></div>
                             <div class='media-body'>
 							 <blockquote>".$testimonial->description."</blockquote>
                                 <h3><a href='#'>".$testimonial->title."</a></h3>
@@ -333,7 +333,7 @@ function getHomeMenu ()
                                 <div class='team-single-wrapper'>
                                     <div class='team-single'>
                                         <div class='person-thumb'>
-                                            <img src='".BaseUrl."admin/upload/".$about->uploads."' class='img-responsive' alt=''>
+                                            <img src='".BaseUrl."upload/".$about->uploads."' class='img-responsive' alt=''>
                                         </div>
                                     </div>
                                     <div class='person-info'>
@@ -350,7 +350,7 @@ function getHomeMenu ()
                                 <div class='team-single-wrapper'>
                                     <div class='team-single'>
                                         <div class='person-thumb'>
-                                            <img src='".BaseUrl."admin/upload/".$about->uploads."' class='img-responsive' alt=''>
+                                            <img src='".BaseUrl."upload/".$about->uploads."' class='img-responsive' alt=''>
                                         </div>
                                     </div>
                                     <div class='person-info'>

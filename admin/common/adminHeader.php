@@ -196,10 +196,9 @@ else
                 <li class="viewNotesCategory" ><a href="viewNotesCategory.php"><i class="fa fa-book"></i>View Subject</a></li>
                 <li class="viewNotes" ><a href="viewNotes.php"><i class="fa fa-sticky-note"></i> View Notes</a></li>
                 <li class="viewPages" ><a href="viewPages.php"><i class="fa fa-file-text"></i> View Pages</a></li>
-                <li class="registration" ><a href="viewCity.php"><i class="fa fa-location-arrow"></i> View City</a></li>
-                <li class="registration" ><a href="viewSchool.php"><i class="fa fa-building"></i> View School</a></li>
+                <li class="viewCity" ><a href="viewCity.php"><i class="fa fa-location-arrow"></i> View City</a></li>
+                <li class="viewSchool" ><a href="viewSchool.php"><i class="fa fa-building"></i> View School</a></li>
                 <li class="registration" ><a href="viewRegistration.php?page=1"><i class="fa fa-list-alt"></i> View Registration</a></li>
-                <li class="slider" ><a href="slider.php"><i class="fa fa-sliders"></i> Update Slider</a></li>
                 <li class="viewAboutPof" ><a href="viewAboutPof.php"><i class="fa fa-cog"></i> View About Pof Detail</a></li>
                 <li class="viewTestimonial" ><a href="viewTestimonial.php"><i class="fa fa-users"></i> View Testimonial</a></li>
                 <li class="viewmoreInformation" ><a href="viewMoreInformation.php"><i class="fa fa-info-circle"></i>View More Information</a></li>
