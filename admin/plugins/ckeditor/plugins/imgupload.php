@@ -2,13 +2,13 @@
 // PHP Upload Script for CKEditor:  http://coursesweb.net/
 
 // HERE SET THE PATH TO THE FOLDER WITH IMAGES ON YOUR SERVER (RELATIVE TO THE ROOT OF YOUR WEBSITE ON SERVER)
-$upload_dir = 'vibhor/pof/admin/upload/';
+$upload_dir = 'vibhor/pof/upload/';
 
 // HERE PERMISSIONS FOR IMAGE
 $imgsets = array(
- 'maxsize' => 2000,          // maximum file size, in KiloBytes (2 MB)
- 'maxwidth' => 900,          // maximum allowed width, in pixels
- 'maxheight' => 800,         // maximum allowed height, in pixels
+ 'maxsize' => 20000,          // maximum file size, in KiloBytes (2 MB)
+ 'maxwidth' => 2000,          // maximum allowed width, in pixels
+ 'maxheight' => 2000,         // maximum allowed height, in pixels
  'minwidth' => 10,           // minimum allowed width, in pixels
  'minheight' => 10,          // minimum allowed height, in pixels
  'type' => array('bmp', 'gif', 'jpg', 'jpe', 'png','pdf')        // allowed extensions

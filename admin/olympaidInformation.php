@@ -46,11 +46,11 @@ $menuType = "olympaidInformation";
                       <?php }?>
                     </div>
                     
-                    <div class="form-group">
+ <?php /*                   <div class="form-group">
                       <label for="link">Link</label>
                       <input type="url" class="form-control" id="link" name="link" placeholder="Link"  value="<?php if( $edit) echo $updateOlympaidData->link; ?>" />
                     </div>
-                    
+     */?>               
                     <div class="form-group">
                       <label for="seoTitle">Seo title</label>
                       <input type="text" class="form-control" id="seoTitle" name="seoTitle" placeholder="Seo title"  value="<?php if( $edit) echo $updateOlympaidData->seoTitle; ?>" />

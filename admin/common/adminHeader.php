@@ -192,21 +192,21 @@ else
                   </a>
               <ul class="treeview-menu">
                 <li class="active index "><a href="dashboard.php"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-                <li class="viewCategory" ><a href="viewCategory.php"><i class="fa fa-circle-o"></i> View Category</a></li>
-                <li class="viewNotesCategory" ><a href="viewNotesCategory.php"><i class="fa fa-circle-o"></i>View Subject</a></li>
-                <li class="viewNotes" ><a href="viewNotes.php"><i class="fa fa-circle-o"></i> View Notes</a></li>
-                <li class="viewPages" ><a href="viewPages.php"><i class="fa fa-circle-o"></i> View Pages</a></li>
-                <li class="registration" ><a href="viewCity.php"><i class="fa fa-circle-o"></i> View City</a></li>
-                <li class="registration" ><a href="viewSchool.php"><i class="fa fa-circle-o"></i> View School</a></li>
-                <li class="registration" ><a href="viewRegistration.php?page=1"><i class="fa fa-circle-o"></i> View Registration</a></li>
-             <!--    <li class="slider" ><a href="slider.php"><i class="fa fa-circle-o"></i> Update Slider</a></li>-->
-                <li class="viewAboutPof" ><a href="viewAboutPof.php"><i class="fa fa-circle-o"></i> View About Pof Detail</a></li>
-                <li class="viewTestimonial" ><a href="viewTestimonial.php"><i class="fa fa-circle-o"></i> View Testimonial</a></li>
-                <li class="viewmoreInformation" ><a href="viewMoreInformation.php"><i class="fa fa-circle-o"></i>View More Information</a></li>
-                <li class="contactus" ><a href="contactus.php"><i class="fa fa-circle-o"></i>Update Contact Us</a></li>
-                <li class="olympaidInformation" ><a href="viewOlympaidInformation.php"><i class="fa fa-circle-o"></i>View Olympiad Information</a></li>
-                <li class="ViewEmail" ><a href="viewSubscribe.php"><i class="fa fa-circle-o"></i>View Email Subscribe</a></li>
-                <li class="viewAbout" ><a href="viewAbout.php"><i class="fa fa-circle-o"></i>View About</a></li>
+                <li class="viewCategory" ><a href="viewCategory.php"><i class="fa fa-compass"></i> View Category</a></li>
+                <li class="viewNotesCategory" ><a href="viewNotesCategory.php"><i class="fa fa-book"></i>View Subject</a></li>
+                <li class="viewNotes" ><a href="viewNotes.php"><i class="fa fa-sticky-note"></i> View Notes</a></li>
+                <li class="viewPages" ><a href="viewPages.php"><i class="fa fa-file-text"></i> View Pages</a></li>
+                <li class="registration" ><a href="viewCity.php"><i class="fa fa-location-arrow"></i> View City</a></li>
+                <li class="registration" ><a href="viewSchool.php"><i class="fa fa-building"></i> View School</a></li>
+                <li class="registration" ><a href="viewRegistration.php?page=1"><i class="fa fa-list-alt"></i> View Registration</a></li>
+                <li class="slider" ><a href="slider.php"><i class="fa fa-sliders"></i> Update Slider</a></li>
+                <li class="viewAboutPof" ><a href="viewAboutPof.php"><i class="fa fa-cog"></i> View About Pof Detail</a></li>
+                <li class="viewTestimonial" ><a href="viewTestimonial.php"><i class="fa fa-users"></i> View Testimonial</a></li>
+                <li class="viewmoreInformation" ><a href="viewMoreInformation.php"><i class="fa fa-info-circle"></i>View More Information</a></li>
+                <li class="contactus" ><a href="contactus.php"><i class="fa fa-phone"></i>Update Contact Us</a></li>
+                <li class="olympaidInformation" ><a href="viewOlympaidInformation.php"><i class="fa fa-globe"></i>View Olympiad Information</a></li>
+                <li class="ViewEmail" ><a href="viewSubscribe.php"><i class="fa fa-envelope-o"></i>View Email Subscribe</a></li>
+                <li class="viewAbout" ><a href="viewAbout.php"><i class="fa fa-user"></i>View About</a></li>
                <!-- <li><a href="index2.html"><i class="fa fa-circle-o"></i> moreInformation v2</a></li>-->
                </ul>
                <?php
@@ -257,3 +257,14 @@ ol.breadcrumb-student li {
     width: 7%;
 }
 </style>
+
+<!--CSS FOR LOGO BACKGROUND-->
+
+<!--.main-header .logo .logo-lg {
+    display: block;
+    background-color: #fff;
+    margin: 0px -15px 0px -15px;
+}
+.logo-lg img {
+    margin: 0px 0px 13px 0px;
+}-->

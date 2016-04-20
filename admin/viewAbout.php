@@ -45,7 +45,6 @@ $menuType = "viewAbout";
                         <th>Sr. no.</th>
                         <th>Name</th>
                         <th>Phone</th>
-                        <th>Description</th>
                         <th>Image</th>
                         <th>Delete</th>
                       </tr>
@@ -84,8 +83,7 @@ $menuType = "viewAbout";
                         
                         <td><?php  echo $abouts->name ;?></td>
                         <td><?php  echo $abouts->phone ;?></td>
-                        <td><?php  echo $abouts->description ;?></td>
-                        <td><img src="upload/<?php  echo $abouts->uploads ;?>" width="50" /></td>
+                        <td><img src="<?php echo BaseUrl?>upload/<?php  echo $abouts->uploads ;?>" width="50" /></td>
                         <td> <a href="#" class="delete" data="aboutId=<?php  echo $abouts->aboutId;?>=about">Delete <span aria-hidden="true" class="glyphicon glyphicon-pencil"></span></a></td>
                       </tr>
                       <?php

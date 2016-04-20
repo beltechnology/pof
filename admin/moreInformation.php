@@ -27,7 +27,7 @@ $menuType = "viewmoreInformation";
                       <input type="file" class="form-control" id="moreFile" name="moreFile" placeholder=""  required />
                     </div>
                                         
-                    <div class="form-group">
+              <!--      <div class="form-group">
                       <label for="link"> Link </label>
                       <input type="url" class="form-control" id="link" name="link"  placeholder="Link" required />
                     </div>

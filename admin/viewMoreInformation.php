@@ -24,7 +24,6 @@ $menuType = "viewmoreInformation";
                       <tr>
                         <th>Sr. no.</th>
                         <th>Title</th>
-                        <th>Link</th>
                         <th>Image</th>
                         <th>Delete</th>
                       </tr>
@@ -61,8 +60,7 @@ $menuType = "viewmoreInformation";
                         <td><?php echo $sr++;?> </td>
                         
                         <td><?php  echo $testimonials->title ;?></td>
-                        <td><?php  echo $testimonials->link ;?></td>
-                        <td><img src="upload/<?php  echo $testimonials->upload ;?>" width="50" /></td>
+                        <td><img src="<?php echo BaseUrl;?>upload/<?php  echo $testimonials->upload ;?>" width="50" /></td>
                         <td> <a href="#" class="delete" data="moreInformationId=<?php  echo $testimonials->moreInformationId;?>=moreinformation">Delete <span aria-hidden="true" class="glyphicon glyphicon-pencil"></span></a></td>
                       </tr>
                       <?php

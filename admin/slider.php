@@ -66,7 +66,7 @@ $menuType = "slider";
             <input type="hidden" class="form-control" name="oldSliderImage" value="<?php echo $slider->sliderImage; ?>" />
             </td>
             <td align="center">
-             <img src="upload/<?php echo $slider->sliderImage; ?>" width="50" height="50" />
+             <img src="<?php echo BaseUrl?>upload/<?php echo $slider->sliderImage; ?>" width="50" height="50" />
             </td>
             <td><input type="submit" value="update" name="sliderUpdate" class="form-control btn-primary" /></td>
           </tr>

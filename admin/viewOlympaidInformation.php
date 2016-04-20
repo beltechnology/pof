@@ -60,7 +60,7 @@ $menuType = "olympaidInformation";
                         <td><?php echo $sr++;?> </td>
                         
                         <td><?php  echo $category->title ;?></td>
-                        <td><img src="upload/<?php  echo $category->upload ;?>" width="50" /></td>
+                        <td><img src="<?php echo BaseUrl?>upload/<?php  echo $category->upload ;?>" width="50" /></td>
                         <td> <a href="olympaidInformation.php?olympaidInformationId=<?php  echo $category->olympaidInformationId;?>" class="Edit">Edit <span aria-hidden="true" class="glyphicon glyphicon-pencil"></span></a></td>
                       </tr>
                       <?php

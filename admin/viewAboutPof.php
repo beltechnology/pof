@@ -24,7 +24,6 @@ $menuType = "viewAboutPof";
                       <tr>
                         <th>Sr. no.</th>
                         <th>Title</th>
-                        <th>Description</th>
                         <th>Image</th>
                         <th>Seo title</th>
                         <th>Meta</th>
@@ -65,8 +64,7 @@ $menuType = "viewAboutPof";
                         <td><?php echo $sr++;?> </td>
                         
                         <td><?php  echo $category->title ;?></td>
-                        <td><?php  echo $category->description ;?></td>
-                        <td><img src="upload/<?php  echo $category->upload ;?>" width="50" /></td>
+                        <td><img src="<?php echo BaseUrl?>upload/<?php  echo $category->upload ;?>" width="50" /></td>
                         <td><?php echo $category->seoTitle ;?></td>
                         <td><?php echo $category->metaTag ;?></td>
                         <td><?php echo $category->keyWord ;?></td>

@@ -61,7 +61,7 @@ $menuType = "viewTestimonial";
 							<td><?php echo $sr++;?> </td>
 							<td><?php  echo $testimonials->title ;?></td>
 							<td><?php  echo $testimonials->description ;?></td>
-							<td><img src="upload/<?php  echo $testimonials->upload ;?>" width="50" /></td>
+							<td><img src="<?php echo BaseUrl;?>upload/<?php  echo $testimonials->upload ;?>" width="50" /></td>
 							<td> <a href="#" class="delete" data="testimonialId=<?php  echo $testimonials->testimonialId;?>=testimonial">Delete <span aria-hidden="true" class="glyphicon glyphicon-pencil"></span></a></td>
 							</tr>
 							<?php

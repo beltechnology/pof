@@ -111,7 +111,7 @@ class dataInfo
 // check exit notes detail
 	public function checkExitNotesDetail($pagesData)
 	 {
-	 		$pageTitle = $pagesData->pageTitle;
+	 		$notesTitle = $pagesData->notesTitle;
 	 		$notesCategoryId = $pagesData->notesCategoryId;
 			$state = $pagesData->state;
 			if($state == 2)
@@ -205,7 +205,7 @@ class dataInfo
 				$temp = explode(".", $uploads);
 				$newfilename = $temp[0].round(microtime(true)) . '.' . end($temp);
 				
-				move_uploaded_file($tmp_name, "upload/" . $newfilename);
+				move_uploaded_file($tmp_name, "../upload/" . $newfilename);
 				}
 				else{
 				$newfilename = $categoryData->uploads;	
@@ -540,7 +540,7 @@ class dataInfo
 				$newFile = $sliderData->newFile;
 				$temp = explode(".", $sliderImage);
 				$newfilename = $temp[0].round(microtime(true)) . '.' . end($temp);
-				move_uploaded_file($tmp_name, "upload/" . $newfilename);
+				move_uploaded_file($tmp_name, "../upload/" . $newfilename);
 				}
 				else{
 				$newfilename = $sliderData->sliderImage;	
@@ -676,7 +676,7 @@ public function getSubmenu($parentId)
 				$newFile = $updateAboutPofData->newFile;
 				$temp = explode(".", $upload);
 				$newfilename = $temp[0].round(microtime(true)) . '.' . end($temp);
-				move_uploaded_file($tmp_name, "upload/" . $newfilename);
+				move_uploaded_file($tmp_name, "../upload/" . $newfilename);
 				}
 				else{
 				$newfilename = $updateAboutPofData->upload;	
@@ -726,7 +726,7 @@ public function getSubmenu($parentId)
 				$newFile = $updateOlympaidInformationData->newFile;
 				$temp = explode(".", $upload);
 				$newfilename = $temp[0].round(microtime(true)) . '.' . end($temp);
-				move_uploaded_file($tmp_name, "upload/" . $newfilename);
+				move_uploaded_file($tmp_name, "../upload/" . $newfilename);
 				}
 				else{
 				$newfilename = $updateOlympaidInformationData->upload;	
@@ -771,7 +771,7 @@ public function getSubmenu($parentId)
 				$tmp_name = $addTestimonialData->tmp_name;
 				$temp = explode(".", $upload);
 				$newfilename = $temp[0].round(microtime(true)) . '.' . end($temp);
-				move_uploaded_file($tmp_name, "upload/" . $newfilename);
+				move_uploaded_file($tmp_name, "../upload/" . $newfilename);
 				$sort_order = $addTestimonialData->sort_order;
 				
 				mysql_query("SET AUTOCOMMIT=0");
@@ -809,7 +809,7 @@ public function getSubmenu($parentId)
 				$tmp_name = $addMoreInformationData->tmp_name;
 				$temp = explode(".", $upload);
 				$newfilename = $temp[0].round(microtime(true)) . '.' . end($temp);
-				move_uploaded_file($tmp_name, "upload/" . $newfilename);
+				move_uploaded_file($tmp_name, "../upload/" . $newfilename);
 				
 				mysql_query("SET AUTOCOMMIT=0");
 				mysql_query("START TRANSACTION");
@@ -1017,7 +1017,7 @@ public function getSubmenu($parentId)
 				$tmp_name = $addAboutData->tmp_name;
 				$temp = explode(".", $uploads);
 				$newfilename = $temp[0].round(microtime(true)) . '.' . end($temp);
-				move_uploaded_file($tmp_name, "upload/" . $newfilename);
+				move_uploaded_file($tmp_name, "../upload/" . $newfilename);
 				$sort_order = $addAboutData->sort_order;
 				
 				mysql_query("SET AUTOCOMMIT=0");
