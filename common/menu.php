@@ -101,4 +101,11 @@ nav1.ul ul li
 {
 	background-color:#978989;
 }
+input.gsc-search-button-v2 {
+    height: 21px;
+    margin-top: 2px;
+    min-width: 35px;
+    padding: 2px 7px;
+    width: 13px;
+}
 </style>
