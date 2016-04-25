@@ -183,8 +183,7 @@ $(document).ready(function() {
 		background-size: 44px 152px; /*The size of the normal image, half the size of the hi-res image*/
 	}
 .fancybox-lock .fancybox-overlay {
-    background-color: #ccc;
-    opacity: 0.79;
+    background-color: rgba(204, 204, 204, 0.79);
 }
  .simply-scroll
 {
