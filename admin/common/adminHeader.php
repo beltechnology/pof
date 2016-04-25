@@ -73,7 +73,7 @@ if(isset($_SESSION['userInfo']))
           <?php
 if($studentLogin)
 {
-	?><a href="../" class="logo">
+	?><a href="../" class="logo logo1">
           <span class="logo-lg"><img src="<?php echo BaseUrl;?>img/logo.png"</span>
         </a>
         <?php
@@ -147,6 +147,7 @@ else
               <?php
 				  if($studentLogin)
 				  {
+					  error_reporting(0);
 					  $subjects = $htmlFactory->getSubjectById($studentInfo->subject);
 					//  var_dump( $subjects);
 					  ?>
@@ -163,6 +164,18 @@ else
 					  $notesCategoryId = $_REQUEST['notesCategoryId'];
 					  if($subject->notesCategoryId == $notesCategoryId ) {
 					  $CategoryName = $subject->CategoryName;
+					  
+					  }
+					  $allNotesCategory = $htmlFactory->getDataFromServer("notescategory");
+					  if(count($allNotesCategory)>0)
+					  {
+						  foreach($allNotesCategory as $notesCategory)
+						  {
+							  if($notesCategory->notesCategoryId == $notesCategoryId )
+							  {
+								$CategoryName = $notesCategory->CategoryName;  
+							  }
+						  }
 					  }
 				  }
 				  else
@@ -177,7 +190,7 @@ else
 			  ?>
                 <li class="<?php if($subject->notesCategoryId == $notesCategoryId ) {echo "active"; }?> index"><a href="viewNotes.php?notesCategoryId=<?php echo $subject->notesCategoryId;?>"><span aria-hidden="true" class="glyphicon  glyphicon-download-alt"></span><?php echo $subject->CategoryName;?></a></li>
                 				 <?php
-				  
+				  echo $htmlFactory->getChildCategoryByCategory($subject->notesCategoryId);
 				  }
 ?>
                </ul>
@@ -201,7 +214,7 @@ else
                 <li class="registration" ><a href="viewRegistration.php?page=1"><i class="fa fa-list-alt"></i> View Registration</a></li>
                 <li class="viewAboutPof" ><a href="viewAboutPof.php"><i class="fa fa-cog"></i> View About Pof Detail</a></li>
                 <li class="viewTestimonial" ><a href="viewTestimonial.php"><i class="fa fa-users"></i> View Testimonial</a></li>
-                <li class="viewmoreInformation" ><a href="viewMoreInformation.php"><i class="fa fa-info-circle"></i>View More Information</a></li>
+                <li class="viewmoreInformation" ><a href="viewMoreInformation.php"><i class="fa fa-info-circle"></i>View Recent Activities</a></li>
                 <li class="contactus" ><a href="contactus.php"><i class="fa fa-phone"></i>Update Contact Us</a></li>
                 <li class="olympaidInformation" ><a href="viewOlympaidInformation.php"><i class="fa fa-globe"></i>View Olympiad Information</a></li>
                 <li class="ViewEmail" ><a href="viewSubscribe.php"><i class="fa fa-envelope-o"></i>View Email Subscribe</a></li>

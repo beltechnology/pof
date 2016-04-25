@@ -64,7 +64,7 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 overflow">
-				<?php if($studentLogin){echo "<div class='userName'><ul><li><a  href='".BaseUrl."admin/logout.php'>Logout</a></li><li>HI ".$studentInfo->studentName."<li><li><a href='".BaseUrl."admin/viewNotes.php'>My Account</a></li></ul></div>";};?>
+				<?php if($studentLogin){echo "<div class='userName'><ul><li><a  href='".BaseUrl."admin/logout.php'>Log Out</a></li><li>HI ".$studentInfo->studentName."<li><li><a href='".BaseUrl."admin/viewNotes.php'>My Account</a></li></ul></div>";};?>
                    <div class="social-icons pull-right">
                         <ul class="nav nav-pills">
                             <li><a  href="<?php echo  $contactData->facebook ;?>" target="_blank"><i class="fa fa-facebook"></i></a></li>

@@ -39,7 +39,8 @@ $menuType = "viewSchool";
 						{
 							if($_GET['page'] > 1)
 							{
-							$sr= $_GET['page']*LIMIT-1;
+							$sr= $_REQUEST['page']*LIMIT;
+							$sr= $sr - LIMIT+1;
 							}
 							else
 							{

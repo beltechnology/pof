@@ -459,7 +459,7 @@ class dataInfo
 	public function getCatagoryDataByParentId($parent)
 	 {			
 	 		$objData = "";
-			 $query = mysql_query("SELECT * FROM  category where deleted = 0 and parentid ='$parent'  ORDER BY sort_order ASC ");
+			 $query = mysql_query("SELECT * FROM  category where  status = 0 and deleted = 0 and parentid ='$parent'  ORDER BY sort_order ASC ");
 			 while($obj = mysql_fetch_object($query))
 			 {
 				 $objData[] = $obj;

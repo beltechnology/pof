@@ -87,7 +87,18 @@ class dataFactory
 	  return $allData;
 	}	 
 	 
-	
+	function getDataByParentId($parentid)
+	{
+	  $allData = "";
+	  $res=mysql_query("SELECT * FROM notescategory where deleted = 0 and status= 0 and parentId='$parentid'   ORDER BY sort_order ASC  ");
+	  while($obj=mysql_fetch_object($res))
+	  {
+	  	$allData[] = $obj;
+	  }
+	 
+	  return $allData;
+	}	 
+	 
 	function getCategoryDataById($category_id)
 	{
 	  $allData = "";

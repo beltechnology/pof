@@ -46,7 +46,8 @@ $menuType = "viewPages";
 						{
 							if($_REQUEST['page'] > 1)
 							{
-							$sr= $_REQUEST['page']*LIMIT-1;
+							$sr= $_REQUEST['page']*LIMIT;
+							$sr= $sr - LIMIT+1;
 							}
 							else
 							{

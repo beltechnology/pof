@@ -12,7 +12,7 @@ $menuType = "viewmoreInformation";
         <!-- general form elements -->
         <div class="box box-primary">
           <div class="box-header with-border">
-            <h3 class="box-title">More information</h3>
+            <h3 class="box-title">Recent Activities</h3>
           </div>
                 <form role="form"  action="<?php $_SERVER['PHP_SELF'];?>" method="post" enctype="multipart/form-data">
                   <div class="box-body">

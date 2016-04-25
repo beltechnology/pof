@@ -7,7 +7,7 @@ $menuType = "viewmoreInformation";
         <section class="content-header">
           <h1>&nbsp;          </h1>
           <ol class="breadcrumb">
-            <li><b><a href="moreInformation.php">MoreInformation </a> </b></li>
+            <li><b><a href="moreInformation.php">Recent Activities </a> </b></li>
           </ol>
         </section>
         <section class="content">
@@ -16,7 +16,7 @@ $menuType = "viewmoreInformation";
 
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">More Information</h3>
+                  <h3 class="box-title">Recent Activities</h3>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <table id="category" class="table table-bordered table-striped">
@@ -40,7 +40,8 @@ $menuType = "viewmoreInformation";
 						{
 							if($_REQUEST['page'] > 1)
 							{
-							$sr= $_REQUEST['page']*LIMIT-1;
+							$sr= $_REQUEST['page']*LIMIT;
+							$sr= $sr - LIMIT+1;
 							}
 							else
 							{

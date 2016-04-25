@@ -18,7 +18,7 @@ $menuType = "viewNotes";
 				  {?>
                   <ol class="breadcrumb-student">
                   <li ><b><?php echo $studentInfo->studentClass ;?></b></li>
-                  <li ><b><?php echo $CategoryName ;?></b></li>
+                  <li style="width:20%"><b><?php echo $CategoryName ;?></b></li>
                   <?php
                   }
 				  ?>
@@ -80,7 +80,8 @@ $menuType = "viewNotes";
 						{
 							if($_REQUEST['page'] > 1)
 							{
-							$sr= $_REQUEST['page']*LIMIT-1;
+							$sr= $_REQUEST['page']*LIMIT;
+							$sr= $sr - LIMIT+1;
 							}
 							else
 							{

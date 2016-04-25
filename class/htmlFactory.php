@@ -367,7 +367,31 @@ function getHomeMenu ()
 			return $aboutHtml;
 			
 		}
-
+	function getChildCategoryByCategory($categoryId)
+	{
+	    $subjectMenuHtml = "";
+		$dataByParentData = $this->getDataByParentId($categoryId);
+		
+		if(count($dataByParentData)>0)
+		{
+			foreach($dataByParentData as $subjectMenu)
+			{
+				if(isset($_REQUEST['notesCategoryId']))
+				{				
+				 if($subjectMenu->notesCategoryId == $_REQUEST['notesCategoryId'] )
+				 {
+					$activeClass = "active"; 
+				 }
+				else{ $activeClass = ""; }
+				}
+				  $subjectMenuHtml =$subjectMenuHtml."<li class='".$activeClass."'><a href='viewNotes.php?notesCategoryId=".$subjectMenu->notesCategoryId."'><span aria-hidden='true' class='glyphicon  glyphicon-download-alt'></span>".$subjectMenu->CategoryName."</a></li>";
+				  $subjectMenuHtml = $subjectMenuHtml.$this->getChildCategoryByCategory($subjectMenu->notesCategoryId);
+				
+			}
+		}
+		return $subjectMenuHtml;
+	//	var_dump($dataByParentData);
+	}
 
 }
 ?>

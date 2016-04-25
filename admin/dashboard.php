@@ -1,4 +1,6 @@
-<?php include("common/adminHeader.php");
+<?php 
+include("controller/testimonial_controller.php");
+
  $menuType = "index";
 ?>
       <!-- Content Wrapper. Contains page content -->
@@ -20,7 +22,12 @@
               <!-- small box -->
               <div class="small-box bg-aqua">
                 <div class="inner">
-                  <h3>150</h3>
+                  <h3><?php
+						$selectCategory = new dataInfo();
+						$tbl_name = "emailsubscribe";				  
+						$selectCategoryData = $selectCategory->selectAll($tbl_name);
+						echo count($selectCategoryData);
+				?></h3>
                   <p>E-mail Subscription</p>
                 </div>
                 <div class="icon">
@@ -48,7 +55,12 @@
               <!-- small box -->
               <div class="small-box bg-yellow">
                 <div class="inner">
-                  <h3>44</h3>
+                  <h3><?php
+						$selectCategory = new dataInfo();
+						$tbl_name = "studentregistration";				  
+						$selectCategoryData = $selectCategory->selectAll($tbl_name);
+						echo count($selectCategoryData);
+				?></h3>
                   <p>User Registrations</p>
                 </div>
                 <div class="icon">

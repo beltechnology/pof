@@ -39,17 +39,20 @@ $menuType = "viewNotes";
 					  {
 						foreach($selectCategoryData as $categoryData)
 						{
-						$seletedCategoryid = "";
-						  if(isset($_REQUEST['notesId'])&& ( $notesDteailData->notesCategoryId == $categoryData->notesCategoryId))
-						  {
-							$seletedCategoryid = $notesDteailData->notesCategoryId ;
-						  }
-							$parent = $categoryData->parentId;
-							$title = $categoryData->CategoryName;
-							$category_id = $categoryData->notesCategoryId;
-							$ele = "option";
-							$dropDown = $selectCategory->genrateNotesCategory($category_id,$title,$parent,$seletedCategoryid,$ele);
-							echo $dropDown;
+						if($categoryData->status == 0)
+							{
+							$seletedCategoryid = "";
+							  if(isset($_REQUEST['notesId'])&& ( $notesDteailData->notesCategoryId == $categoryData->notesCategoryId))
+							  {
+								$seletedCategoryid = $notesDteailData->notesCategoryId ;
+							  }
+								$parent = $categoryData->parentId;
+								$title = $categoryData->CategoryName;
+								$category_id = $categoryData->notesCategoryId;
+								$ele = "option";
+								$dropDown = $selectCategory->genrateNotesCategory($category_id,$title,$parent,$seletedCategoryid,$ele);
+								echo $dropDown;
+							}
 						}
 					  }
 					?>

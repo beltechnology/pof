@@ -1172,6 +1172,14 @@ h2{
 	border:none;
 	outline:none;
 }
+.nav .dropdown .dropdown-toggle {
+    background: transparent;
+    position: relative;
+    top: 17px;
+    border: none;
+    outline: none;
+    left: -30px;
+}
 .nav .dropdown .dropdown-toggle:hover{
 	background:transparent !important;
 	border:none;

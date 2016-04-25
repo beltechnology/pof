@@ -55,7 +55,7 @@ $pagenationInfo = new stdClass();
 					if($category->uploads !="")
 					{
 					?>
-					<a download href="<?php  echo BaseUrl."admin/upload/".$category->uploads;?>" class="btn <?php echo $classArray[$count];?> pull-right">Download</a>
+					<a download href="<?php  echo BaseUrl."upload/".$category->uploads;?>" class="btn <?php echo $classArray[$count];?> pull-right">Download</a>
                     <?php
 					}
 					?>

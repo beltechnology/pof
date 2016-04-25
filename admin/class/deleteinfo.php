@@ -10,8 +10,16 @@ class deleteinfo
 					{
 						$response = mysql_query("UPDATE user SET deleted= 1 WHERE registrationId=".$deleteData->value);
 					}
+					if($deleteData->tableName == "emailsubscribe")
+					{
+					$response = mysql_query("delete from ".$deleteData->tableName."  WHERE ". $deleteData->fieldName."=".$deleteData->value);
+					return $response;
+					}
+					else
+					{
 					$response = mysql_query("UPDATE ".$deleteData->tableName." SET deleted= 1 WHERE ". $deleteData->fieldName."=".$deleteData->value);
 					return $response;
+					}
 				}
 		
 	}

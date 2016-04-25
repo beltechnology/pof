@@ -38,6 +38,7 @@ elseif(isset($_REQUEST['olympaidInformationId']))
 elseif(isset($_REQUEST['categoryId']))
 {
 	$innerHtml = $htmlFactory->getCategoryDataById($_REQUEST['categoryId']);
+	if(count($innerHtml)>0)
 	foreach($innerHtml as $innerHtmls)
 	$innerDescription = $htmlFactory->createPagesInnnerPages($_REQUEST['categoryId']);
 	$innerTitle = $innerHtmls->title;

@@ -33,13 +33,14 @@ $menuType = "ViewEmail";
 						$selectCategory = new dataInfo();
 
 						$tbl_name = "emailsubscribe";
-						$targetpage = "viewOlympaidInformation.php";
+						$targetpage = "viewSubscribe.php";
 						$selectCategoryData = $pagination->selectAll($tbl_name);
 						if(isset($_GET['page']))
 						{
 							if($_GET['page'] > 1)
 							{
-							$sr= $_GET['page']*LIMIT-1;
+							$sr= $_REQUEST['page']*LIMIT;
+							$sr= $sr - LIMIT+1;
 							}
 							else
 							{

@@ -2788,6 +2788,11 @@ a {
   margin: 0px;
 }
 
+
+#blog ul {
+    list-style: inherit;
+}
+
 #nav1 a {
   color: #FFFFFF;
 }
@@ -2986,4 +2991,8 @@ li.singlepages.category.pagesLi0 {
 }
 ul.caregoryMenu li .glyphicon.glyphicon-hand-right {
     margin-right: 16px;
+}
+
+.btn.dropdown-toggle {
+    padding-top: 0px;
 }
