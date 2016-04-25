@@ -196,4 +196,34 @@ $(document).ready(function() {
 .marqueeUl {
 	margin-top:1.5% !important;
 }
+@media only screen and (max-width : 992px) {
+	.simply-scroll
+{
+	height:139px !important;
+}
+.simply-scroll .simply-scroll-clip
+{
+	height:139px !important;
+}
+}
+@media only screen and (max-width : 360px) {
+	.simply-scroll
+{
+	height:54px !important;
+}
+.simply-scroll .simply-scroll-clip
+{
+	height:54px !important;
+}
+}
+@media only screen and (max-width : 360px) {
+	.simply-scroll
+{
+	height:51px !important;
+}
+.simply-scroll .simply-scroll-clip
+{
+	height:51px !important;
+}
+}
 </style>
