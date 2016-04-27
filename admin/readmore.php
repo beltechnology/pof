@@ -26,7 +26,7 @@ if($_REQUEST['notesId'] == $note->notesId)
                   <a download href="<?php  echo BaseUrl."upload/".$note->uploads;?>" class="btn btn-primary pull-right">Download</a>
                  <!-- <a href="#" class="btn btn-primary pull-right btnPrint">Print</a>-->
                 </div><!-- /.box-header -->
-                <div class="box-body">
+                <div class="box-body notes-description">
                 <?php echo $note->notesDescription; ?>
                 </div><!-- /.box-body -->
 <?php } }?> 

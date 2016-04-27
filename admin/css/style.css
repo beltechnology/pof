@@ -1222,3 +1222,6 @@ h2{
 	outline:none;
 	box-shadow:none;
 }
+.notes-description ul{
+	padding-left:16px;
+}
