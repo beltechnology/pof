@@ -2999,3 +2999,9 @@ ul.caregoryMenu li .glyphicon.glyphicon-hand-right {
 ul.caregoryMenu {
 	list-style-type:none !important;
 }
+#menu ul li a:hover{
+	color:#0d7e88;
+}
+#menu li:last-child a:hover{
+	color:#10373E;
+}
