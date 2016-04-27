@@ -2996,3 +2996,6 @@ ul.caregoryMenu li .glyphicon.glyphicon-hand-right {
 .btn.dropdown-toggle {
     padding-top: 0px;
 }
+ul.caregoryMenu {
+	list-style-type:none !important;
+}
