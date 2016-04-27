@@ -30,7 +30,7 @@ $menuClass = "contact";
                     <div class="col-sm-6 wow fadeInLeft contact" data-wow-duration="500ms" data-wow-delay="300ms">
                        <h2>Contact Information</h2>
                        <p><i class="fa fa-envelope-o" aria-hidden="true" style="color:#5BC0DE;padding-right: 5px;margin-left: 3px;"></i><b>E-mail:</b> <?php echo  $contactData->email ;?> </p>
-                       <p><i class="fa fa-phone" aria-hidden="true" style="color:#5BC0DE;padding-right: 5px;margin-left: 3px;"></i><b>Phone No.:</b>8192900900 , 7792834040 </p>
+                       <p><i class="fa fa-phone" aria-hidden="true" style="color:#5BC0DE;padding-right: 5px;margin-left: 3px;"></i><b>Phone No.:</b><?php echo  $contactData->mobile ;?> </p>
                        <h2>Address</h2>
                        
                        <address>
