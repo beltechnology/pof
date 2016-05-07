@@ -1,111 +1,186 @@
            
                     <div class="Side_Menu">
               <h2>POF</h2>
- <ul id="nav1">
-<?php 
-$dataInfoInfo = new dataInfo();
-$categoryInfo = new dataInfo();
-$htmlFactory = new htmlFactory();
-$allMenus = $dataInfoInfo->selectAllMenu("category"); 
-foreach($allMenus as $menu)
-{
-	if($menu->parentid == 0)
-	{
-		$sumMenuFlag = false;
-		 $menuInfo = $categoryInfo->getCatagoryDataByParentId($menu->category_id);
-		 $pageInfo = $categoryInfo->getpagesByCategoryId($menu->category_id);
-		 if($menuInfo != "" || $pageInfo != "")
-		 {
-			 $sumMenuFlag = true;
-		 }
-		 		 
- ?>
-    <li id="<?php echo $menu->category_id; ?>" class="category"><a href="<?php echo BaseUrl?>pages/index.php?categoryId=<?php echo $menu->category_id; ?>"><?php echo $menu->title; ?></a>
-<?php
-	 echo $categoryInfo->getSubmenu($menu->category_id);
-	 echo $htmlFactory->createPages($menu->category_id);
-	echo "</li>";
+ <style type="text/css">
+/* Menu container */
+.menu	{
+	padding:10px 5px 10px 5px;
+	margin:12px 12px 12px 50px;
 	}
-}
 
-$singlePagesInfo = $categoryInfo->getpagesByCategoryId(0);
-if($singlePagesInfo)
-{
- 	echo $htmlFactory->createPages(0);
-}
-?>
+/* Menu styles */
+.menu ul
+	{
+	margin:0px;
+	padding:0px;
+	text-decoration:none;
+	}
+.menu li
+	{
+	margin:0px 0px 0px 5px;
+	padding:0px;
+	list-style-type:none;
+	text-align:left;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:13px;
+	font-weight:normal;
+	}
 
-  </ul>
+/* Submenu styles */
+.menu ul ul 
+	{
+	background-color:#F6F6F6;
+	}
+.menu li li
+	{
+	margin:0px 0px 0px 16px;
+	}
 
-</div>
-<?php /*?>
- <div class="Index col-sm-3 text-center wow fadeInRight" data-wow-duration="500ms" data-wow-delay="300ms">
-           
-                    <div class="Side_Menu">
-              <h2>POF</h2>
-     <ul id="nav1">
-    <li><a href="#">PMO – SYLLABUS GUIDANCE</a>
-    <ul>
-      <li><a href="#">PMO – Booklet</a></li>
-      <li><a href="#">PMO – Syllabus</a></li>
-      <li><a href="#">PMO – Sample Papers</a></li>
-      <li><a href="#">PMO – Question Pattern with Marks</a></li>
-    </ul>
-    </li>
-    <li><a href="#">PMO – EXAM GUIDLINE </a>
-      <ul>
-      <li><a href="#">PMO – Enrolment Procedure</a></li>
-      <li><a href="#">PMO – Exam Detail (Level 1 & Level 2)</a></li>
-      <li><a href="#">PMO – 2 Level Olympiad Instruction</a></li>
-      <li><a href="#">PMO – Answer Key</a></li>
-    </ul>
-    </li>
-    <li><a href="#">PMO – PRIZES</a>
-    <ul>
-      <li><a href="#">PMO – Ranks</a></li>
-      <li><a href="#"> PMO – Prizes</a></li>
-     
-    </ul>
-    </li>
-    <li><a href="#">PLANET OLYMPIAD FOUNDATION</a>
-    <ul>
-      <li><a href="#">About POF</a></li>
-      <li><a href="#">POF Mission & Vision</a></li>
-      <li><a href="#">Advisory Committee</a></li>
-    </ul>
-    </li>
-    <li><a href="#">DOWNLOAD PMO REGISTRATION FORM (ONLY FOR SCHOOLS)</a>
-   <!-- <ul>
-      <li><a href="#">Stage1</a></li>
-      <li><a href="#">Stage2</a></li>
-      <li><a href="#">Stage3</a></li>
-      <li><a href="#">Stage4</a></li>
-    </ul>-->
-    </li>
-   
-    <li><a href="#">PMO – SCHOOL & STUDENT PROGRESS REPORT</a></li>
-    
-    <li><a href="#">PRINCIPAL/TEACHER/STUDENT/OTHERS – FEEDBACK</a></li>
-    
-    <li><a href="#">PMO FAQ’S</a></li>
-    
-    <li><a href="#">BECOME POF ASSOCIATE</a></li>
-    
-</ul>
-    </div>
-                 
-            </div>
-<?php */?>
-<style>
-nav1.ul ul li
-{
-	background-color:#978989;
-}
-input.gsc-search-button-v2 {
-    height: 21px;
-    margin-top: 2px;
-    min-width: 35px;
-    padding: 2px 7px;
-    width: 13px;
+/* Symbol styles */
+.menu .symbol-item,
+.menu .symbol-open,
+.menu .symbol-close
+	{
+	float:left;
+	width:16px;
+	height:1em;
+	background-position:left center;
+	background-repeat:no-repeat;
+	}
+.menu .symbol-item  { background-image:url(/vibhor/pof/icons/page.png); }
+.menu .symbol-close { background-image:url(/vibhor/pof/icons/plus.png);}
+.menu .symbol-open  { background-image:url(/vibhor/pof/icons/minus.png); }
+.menu .symbol-item.last  { }
+.menu .symbol-close.last { }
+.menu .symbol-open.last  { }
+
+/* Menu line styles */
+.menu li.item  { font-weight:normal; }
+.menu li.close { font-weight:normal; }
+.menu li.open  { font-weight:bold; }
+.menu li.item.last  { }
+.menu li.close.last { }
+.menu li.open.last  { }
+
+a.go:link, a.go:visited, a.go:active
+        {
+        display:block;
+        height:26px;
+        width:100px;
+        background-color:#FFFFFF;
+        color:#333333;
+        font-family:Arial,Helvetica,sans-serif;
+        font-size:12px;
+        font-weight:bold;
+        text-align:right;
+        text-decoration:none;
+        line-height:26px;
+        padding-right:30px;
+        background-image:url(go.gif);
+        background-position:right;
+        background-repeat:no-repeat;
+        }
+a.go:hover
+        {
+        text-decoration:none;
+        color:#488400;
+        }
+#example3 { width:40%; background-color:#F9F9F9; padding:0px; margin-left:24px; }
+#example3 li { list-style:none; margin:1px 0px; }
+#example3 li a { display:block; height:16px; padding:0px 4px; background-color:#EEEEFF; }
+#example3 li ul { margin:0px; padding:0px; }
+#example3 li ul li a { background-color:#F9F9F9; border-bottom: solid #ECECEC 1px; padding-left:20px; }
+.close {
+    color: #000;
+    float: left;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 1;
+    text-shadow: 0 1px 0 #fff;
 }
 </style>
+
+<script src="/vibhor/pof/TreeMenu.js" type="text/javascript"></script>
+
+<div class="menu" style="float:left;">
+<ul id="example2">
+<?php
+$query = "select * from  category where deleted=0 and parentid= 0 and status=0 ORDER BY sort_order ASC ";
+		$result = mysql_query($query);
+		while($obj=mysql_fetch_object($result))
+		{
+		$allData[] = $obj;
+		}
+		$categoryData = $allData;
+	//	var_dump($categoryData);
+foreach($categoryData as $category)
+{?>
+	<li><a href="#"><?php echo $category->title; ?></a>
+		<?php
+		echo getSubCategory($category->category_id) ;
+		echo "<ul>".createPagesMenu($category->category_id)."</ul>";
+		?>
+	</li>
+<?php	
+}
+
+function getSubCategory($parentid)
+{
+$querySubCat = "select * from  category where deleted=0 and parentid= '$parentid' and status=0 ORDER BY sort_order ASC  ";
+		$results = mysql_query($querySubCat);
+		$subUlOpen = "<ul>";
+		$subUlClose = "</ul>";
+		$subMenuHtml = "";
+		$subMenu = "";
+		$SubCategoryData = "";
+		while($obj=mysql_fetch_object($results))
+		{
+		$SubCategoryData[] = $obj;
+		}
+		if($SubCategoryData !="")
+		{
+			foreach( $SubCategoryData as $subcategory)
+			{
+				$subMenuHtml = $subMenuHtml."<li><a href='#'>".$subcategory->title."</a>".getSubCategory($subcategory->category_id)."</li>";
+				$subMenuHtml = $subMenuHtml.createPagesMenu($subcategory->category_id);
+			}
+			
+			$subMenu =   $subUlOpen.$subMenuHtml.$subUlClose;
+			
+		}
+		
+		
+		return $subMenu;
+}
+
+
+function createPagesMenu($categoryid)
+{
+$query = "select * from  pages where deleted=0 and categoryId= '$categoryid' and status=0 ORDER BY sort_order ASC ";
+		$result = mysql_query($query);
+		$pagesData = "";
+		$pagesHtml = "";
+		while($obj=mysql_fetch_object($result))
+		{
+		$pagesData[] = $obj;
+		}
+		
+		$pagesHtml = "";
+		if($pagesData !="")
+		{
+			foreach($pagesData as $pages)
+			{
+				$pagesHtml .= "<li><a href='#'>".$pages->pageTitle."</a></li>";
+				
+			}
+		}
+		
+		return $pagesHtml;
+}
+		
+?>
+
+</div>
+<script type="text/javascript">make_tree_menu('example2');</script>
+
