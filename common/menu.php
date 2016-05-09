@@ -6,6 +6,8 @@
 .menu	{
 	padding:10px 5px 10px 5px;
 	margin:12px 12px 12px 50px;
+	color:#000;
+	border: 1px solid #ccc;
 	}
 
 /* Menu styles */
@@ -24,16 +26,18 @@
 	font-family:Arial,Helvetica,sans-serif;
 	font-size:13px;
 	font-weight:normal;
+	width:100%
 	}
 
 /* Submenu styles */
 .menu ul ul 
 	{
-	background-color:#F6F6F6;
+	background-color:#fff;
 	}
 .menu li li
 	{
 	margin:0px 0px 0px 16px;
+	padding-top:5px;
 	}
 
 /* Symbol styles */
@@ -55,12 +59,17 @@
 .menu .symbol-open.last  { }
 
 /* Menu line styles */
-.menu li.item  { font-weight:normal; }
-.menu li.close { font-weight:normal; }
-.menu li.open  { font-weight:bold; }
+.menu li.item  { font-weight:normal; color:#000; padding-top:5px; }
+.menu li.close { font-weight:normal; color:#000; padding-top:5px; }
+.menu li.open  { font-weight:bold; color:#000; padding-top:5px; }
 .menu li.item.last  { }
 .menu li.close.last { }
 .menu li.open.last  { }
+
+	.menu a{
+		color:#000 !important;
+		
+	}
 
 a.go:link, a.go:visited, a.go:active
         {
@@ -68,7 +77,7 @@ a.go:link, a.go:visited, a.go:active
         height:26px;
         width:100px;
         background-color:#FFFFFF;
-        color:#333333;
+        color:#000;
         font-family:Arial,Helvetica,sans-serif;
         font-size:12px;
         font-weight:bold;
@@ -97,7 +106,7 @@ a.go:hover
     font-weight: 700;
     line-height: 1;
     opacity: 1;
-    text-shadow: 0 1px 0 #fff;
+    
 }
 </style>
 
@@ -116,15 +125,18 @@ $query = "select * from  category where deleted=0 and parentid= 0 and status=0 O
 	//	var_dump($categoryData);
 foreach($categoryData as $category)
 {?>
-	<li><a href="#"><?php echo $category->title; ?></a>
+	<li><a href="http://<?php echo $_SERVER['SERVER_NAME'].BaseUrl ?>pages/index.php?categoryId=<?php echo $category->category_id ;?>"><?php echo $category->title; ?></a>
 		<?php
 		echo getSubCategory($category->category_id) ;
-		echo "<ul>".createPagesMenu($category->category_id)."</ul>";
+		
+		
 		?>
 	</li>
+	
 <?php	
-}
 
+}
+	echo createPagesMenu(0);
 function getSubCategory($parentid)
 {
 $querySubCat = "select * from  category where deleted=0 and parentid= '$parentid' and status=0 ORDER BY sort_order ASC  ";
@@ -142,16 +154,22 @@ $querySubCat = "select * from  category where deleted=0 and parentid= '$parentid
 		{
 			foreach( $SubCategoryData as $subcategory)
 			{
-				$subMenuHtml = $subMenuHtml."<li><a href='#'>".$subcategory->title."</a>".getSubCategory($subcategory->category_id)."</li>";
+				$subMenuHtml = $subMenuHtml."<li  class='category'><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$subcategory->category_id."'>".$subcategory->title."</a>".getSubCategory($subcategory->category_id)."</li>";
 				$subMenuHtml = $subMenuHtml.createPagesMenu($subcategory->category_id);
 			}
 			
-			$subMenu =   $subUlOpen.$subMenuHtml.$subUlClose;
+			$subMenu =   $subMenuHtml;
 			
 		}
-		
-		
+		if(checkDataExit($parentid))
+		{
+		$subMenu = $subUlOpen.$subMenu.createPagesMenu($parentid).$subUlClose;
+		}
+		else{
+			$subMenu = $subMenu.createPagesMenu($parentid);
+		}
 		return $subMenu;
+		
 }
 
 
@@ -171,12 +189,29 @@ $query = "select * from  pages where deleted=0 and categoryId= '$categoryid' and
 		{
 			foreach($pagesData as $pages)
 			{
-				$pagesHtml .= "<li><a href='#'>".$pages->pageTitle."</a></li>";
+				$pagesHtml .= "<li class='pages'><a href='http://".$_SERVER['SERVER_NAME']."".BaseUrl."pages/index.php?categoryId=".$categoryid."&pageId=".$pages->pageId."'>".$pages->pageTitle."</a></li>";
 				
 			}
 		}
 		
 		return $pagesHtml;
+}
+
+function checkDataExit($categoryId)
+{
+	$queryCheck = "(SELECT title FROM category WHERE  deleted=0 and status =0 and parentid = ".$categoryId.") UNION (SELECT pageTitle FROM pages WHERE  deleted=0 and status =0 and categoryId = ".$categoryId.")";
+	$result = mysql_query($queryCheck);
+	$row = mysql_num_rows($result);
+	if($row > 0)
+	{
+		$status = true;
+	}
+	else
+	{
+		$status = false;
+	}
+	
+	return $status;
 }
 		
 ?>
