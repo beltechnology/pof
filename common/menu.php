@@ -7,7 +7,8 @@
 	padding:10px 5px 10px 5px;
 	margin:12px 12px 12px 50px;
 	color:#000;
-	border: 1px solid #ccc;
+	border: 1px solid #000;
+	background:#000 !important;
 	}
 
 /* Menu styles */
@@ -32,11 +33,12 @@
 /* Submenu styles */
 .menu ul ul 
 	{
-	background-color:#fff;
+	background-color:#000;
+	color:#fff;
 	}
 .menu li li
 	{
-	margin:0px 0px 0px 16px;
+	margin:-10px 0px -4px 16px;
 	padding-top:5px;
 	}
 
@@ -51,25 +53,29 @@
 	background-position:left center;
 	background-repeat:no-repeat;
 	}
-.menu .symbol-item  { background-image:url(/vibhor/pof/icons/page.png); }
-.menu .symbol-close { background-image:url(/vibhor/pof/icons/plus.png);}
-.menu .symbol-open  { background-image:url(/vibhor/pof/icons/minus.png); }
+.menu .symbol-item{
+	position:relative;
+	top:3px;
+}
+.menu .symbol-item  { background-image:url(/vibhor/pof/icons/page5.png); }
+.menu .symbol-close { background-image:url(/vibhor/pof/icons/plus4.png);}
+.menu .symbol-open  { background-image:url(/vibhor/pof/icons/minus2.png); }
 .menu .symbol-item.last  { }
 .menu .symbol-close.last { }
 .menu .symbol-open.last  { }
 
 /* Menu line styles */
-.menu li.item  { font-weight:normal; color:#000; padding-top:5px; }
+.menu li.item  { font-weight:normal; color:#000; padding-top:3px; }
 .menu li.close { font-weight:normal; color:#000; padding-top:5px; }
-.menu li.open  { font-weight:bold; color:#000; padding-top:5px; }
+.menu li.open  { font-weight:bold; color:#fff; padding-top:5px; background:#000; }
+.symbol-open  {position:relative; top:3px;}
 .menu li.item.last  { }
 .menu li.close.last { }
 .menu li.open.last  { }
 
 	.menu a{
-		color:#000 !important;
-		
-	}
+		color:#fff !important;
+		}
 
 a.go:link, a.go:visited, a.go:active
         {
