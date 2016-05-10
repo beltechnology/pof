@@ -2834,7 +2834,7 @@ div ul li ul {
 }
 
 .Side_Menu {
-    overflow: hidden;
+    /*overflow: hidden;*/
     padding-top: 40px;
     padding-bottom: 40px;
 }
