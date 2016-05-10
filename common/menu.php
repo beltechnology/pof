@@ -9,6 +9,8 @@
 	color:#000;
 	border: 1px solid #000;
 	background:#000 !important;
+	width:300px;
+	word-wrap: break-word;
 	}
 
 /* Menu styles */
@@ -66,7 +68,8 @@
 
 /* Menu line styles */
 .menu li.item  { font-weight:normal; color:#000; padding-top:3px; }
-.menu li.close { font-weight:normal; color:#000; padding-top:5px; }
+.menu li.close { font-weight:normal; color:#000; padding-top:8px;}
+.menu li.close { font-weight:normal; color:#000; padding-top:8px; padding-bottom:4px;}
 .menu li.open  { font-weight:bold; color:#fff; padding-top:5px; background:#000; }
 .symbol-open  {position:relative; top:3px;}
 .menu li.item.last  { }
