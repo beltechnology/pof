@@ -206,6 +206,56 @@ $(document).ready(function() {
 	height:139px !important;
 }
 }
+@media only screen and (max-width : 768px) {
+	.simply-scroll
+{
+	height:139px !important;
+}
+.simply-scroll .simply-scroll-clip
+{
+	height:139px !important;
+}
+}
+@media only screen and (max-width : 435px) {
+	.simply-scroll
+{
+	height:91px !important;
+}
+.simply-scroll .simply-scroll-clip
+{
+	height:91px !important;
+}
+}
+@media only screen and (max-width : 414px) {
+	.simply-scroll
+{
+	height:66px !important;
+}
+.simply-scroll .simply-scroll-clip
+{
+	height:66px !important;
+}
+}
+@media only screen and (max-width : 411px) {
+	.simply-scroll
+{
+	height:80px !important;
+}
+.simply-scroll .simply-scroll-clip
+{
+	height:80px !important;
+}
+}
+@media only screen and (max-width : 375px) {
+	.simply-scroll
+{
+	height:71px !important;
+}
+.simply-scroll .simply-scroll-clip
+{
+	height:71px !important;
+}
+}
 @media only screen and (max-width : 360px) {
 	.simply-scroll
 {
@@ -216,14 +266,15 @@ $(document).ready(function() {
 	height:54px !important;
 }
 }
-@media only screen and (max-width : 360px) {
+@media only screen and (max-width : 320px) {
 	.simply-scroll
 {
-	height:51px !important;
+	height:57px !important;
 }
 .simply-scroll .simply-scroll-clip
 {
-	height:51px !important;
+	height:57px !important;
 }
 }
+
 </style>
