@@ -193,6 +193,17 @@ $(document).ready(function() {
 {
 	height:229px !important;
 }
+
+.Category_Tabs .simply-scroll
+{
+	height:229px !important;
+}
+.Category_Tabs .simply-scroll .simply-scroll-clip
+{
+	height:157px !important;
+}
+
+
 .marqueeUl {
 	margin-top:1.5% !important;
 }
@@ -205,16 +216,35 @@ $(document).ready(function() {
 {
 	height:139px !important;
 }
+
+.Category_Tabs .simply-scroll
+{
+	height:164px !important;
 }
+.Category_Tabs .simply-scroll .simply-scroll-clip
+{
+	height:104px !important;
+}
+.marqueeUl {
+	margin-top:2% !important;
+}
+
+}
+
+@media only screen and (max-width : 800px) {
+.Category_Tabs .simply-scroll
+{
+	height:164px !important;
+}
+.Category_Tabs .simply-scroll .simply-scroll-clip
+{
+	height:106px !important;
+}
+}
+
+
 @media only screen and (max-width : 768px) {
-	.simply-scroll
-{
-	height:139px !important;
-}
-.simply-scroll .simply-scroll-clip
-{
-	height:139px !important;
-}
+	
 }
 @media only screen and (max-width : 435px) {
 	.simply-scroll
