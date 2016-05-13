@@ -9,7 +9,7 @@
 	color:#000;
 	border: 1px solid #000;
 	background:#000 !important;
-	width:;
+	width:100%;
 	word-wrap: break-word;
 	}
 

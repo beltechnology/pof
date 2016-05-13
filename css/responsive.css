@@ -667,10 +667,10 @@ h3{
 }
 }
 
-@media only screen and (max-width : 992px) {
+@media only screen and (max-width : 980px) {
 #action {
-    height: 37px;
-    background-size:210px;	
+    height: ;
+    background-size:;	
     }
 .btn-common {
     font-size: 10px;

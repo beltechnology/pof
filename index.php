@@ -205,7 +205,7 @@ $(document).ready(function() {
 
 
 .marqueeUl {
-	margin-top:1.5% !important;
+	margin-top:2% !important;
 }
 @media only screen and (max-width : 992px) {
 	.simply-scroll
@@ -226,7 +226,7 @@ $(document).ready(function() {
 	height:106px !important;
 }
 .marqueeUl {
-	margin-top:2% !important;
+	margin-top:1.5% !important;
 }
 
 }
