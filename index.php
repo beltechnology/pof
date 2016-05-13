@@ -223,7 +223,7 @@ $(document).ready(function() {
 }
 .Category_Tabs .simply-scroll .simply-scroll-clip
 {
-	height:104px !important;
+	height:106px !important;
 }
 .marqueeUl {
 	margin-top:2% !important;
@@ -244,8 +244,19 @@ $(document).ready(function() {
 
 
 @media only screen and (max-width : 768px) {
-	
+.Category_Tabs .simply-scroll
+{
+	height:156px !important;
 }
+.Category_Tabs .simply-scroll .simply-scroll-clip
+{
+	height:114px !important;
+}
+.marqueeUl {
+	margin-top:2% !important;
+}
+}
+
 @media only screen and (max-width : 435px) {
 	.simply-scroll
 {
