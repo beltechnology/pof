@@ -678,3 +678,13 @@ h3{
 }
 }
 
+@media only screen and (max-width : 414px) {
+#action {
+    height: ;
+    background-size:;	
+    }
+.btn-common {
+    font-size: 8px;
+	padding:4px 12px;
+}
+}

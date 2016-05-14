@@ -231,6 +231,41 @@ $(document).ready(function() {
 
 }
 
+@media only screen and (max-width : 1199px) {	
+  .simply-scroll .simply-scroll-list{
+	  margin-top:2.8%;
+  }
+}
+@media only screen and (max-width : 992px) {	
+  .simply-scroll .simply-scroll-list{
+	  margin-top:1.5%;
+  }
+  .marqueeUl {
+	margin-top:1% !important;
+}
+}
+@media only screen and (max-width : 800px) {	
+  .simply-scroll .simply-scroll-list{
+	  margin-top:2.2%;
+  }
+}
+@media only screen and (max-width : 768px) {	
+  .simply-scroll .simply-scroll-list{
+	  margin-top:3.4%;
+  }
+}
+
+@media only screen and (max-width : 414px) {
+	.simply-scroll .simply-scroll-list{
+	  margin-top:3.8%;
+}
+}
+@media only screen and (max-width : 320px) {
+	.simply-scroll .simply-scroll-list{
+	  margin-top:5.2%;
+}
+}
+
 @media only screen and (max-width : 800px) {
 .Category_Tabs .simply-scroll
 {
