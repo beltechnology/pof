@@ -213,6 +213,17 @@ $(document).ready(function() {
 {
 	height:229px !important;
 }
+
+.Category_Tabs .simply-scroll
+{
+	height:229px !important;
+}
+.Category_Tabs .simply-scroll .simply-scroll-clip
+{
+	height:157px !important;
+}
+
+
 .marqueeUl {
 	margin-top:1.5% !important;
 }
@@ -225,6 +236,124 @@ $(document).ready(function() {
 {
 	height:139px !important;
 }
+
+.Category_Tabs .simply-scroll
+{
+	height:164px !important;
+}
+.Category_Tabs .simply-scroll .simply-scroll-clip
+{
+	height:106px !important;
+}
+.marqueeUl {
+	margin-top:1.5% !important;
+}
+
+}
+
+@media only screen and (max-width : 1199px) {	
+  .simply-scroll .simply-scroll-list{
+	  margin-top:2.8%;
+  }
+}
+@media only screen and (max-width : 992px) {	
+  .simply-scroll .simply-scroll-list{
+	  margin-top:1.5%;
+  }
+  .marqueeUl {
+	margin-top:1% !important;
+}
+}
+@media only screen and (max-width : 800px) {	
+  .simply-scroll .simply-scroll-list{
+	  margin-top:2.2%;
+  }
+}
+@media only screen and (max-width : 768px) {	
+  .simply-scroll .simply-scroll-list{
+	  margin-top:3.4%;
+  }
+}
+
+@media only screen and (max-width : 414px) {
+	.simply-scroll .simply-scroll-list{
+	  margin-top:3.8%;
+}
+}
+@media only screen and (max-width : 320px) {
+	.simply-scroll .simply-scroll-list{
+	  margin-top:5.2%;
+}
+}
+
+@media only screen and (max-width : 800px) {
+.Category_Tabs .simply-scroll
+{
+	height:164px !important;
+}
+.Category_Tabs .simply-scroll .simply-scroll-clip
+{
+	height:106px !important;
+}
+.marqueeUl {
+	margin-top:2% !important;
+}
+}
+
+
+@media only screen and (max-width : 768px) {
+.Category_Tabs .simply-scroll
+{
+	height:156px !important;
+}
+.Category_Tabs .simply-scroll .simply-scroll-clip
+{
+	height:114px !important;
+}
+.marqueeUl {
+	margin-top:2% !important;
+}
+}
+
+@media only screen and (max-width : 435px) {
+	.simply-scroll
+{
+	height:91px !important;
+}
+.simply-scroll .simply-scroll-clip
+{
+	height:91px !important;
+}
+}
+@media only screen and (max-width : 414px) {
+	.simply-scroll
+{
+	height:66px !important;
+}
+.simply-scroll .simply-scroll-clip
+{
+	height:66px !important;
+}
+}
+@media only screen and (max-width : 411px) {
+	.simply-scroll
+{
+	height:80px !important;
+}
+.simply-scroll .simply-scroll-clip
+{
+	height:80px !important;
+}
+}
+@media only screen and (max-width : 375px) {
+	.simply-scroll
+{
+	height:71px !important;
+}
+.simply-scroll .simply-scroll-clip
+{
+	height:71px !important;
+}
 }
 @media only screen and (max-width : 360px) {
 	.simply-scroll
@@ -236,14 +365,15 @@ $(document).ready(function() {
 	height:54px !important;
 }
 }
-@media only screen and (max-width : 360px) {
+@media only screen and (max-width : 320px) {
 	.simply-scroll
 {
-	height:51px !important;
+	height:57px !important;
 }
 .simply-scroll .simply-scroll-clip
 {
-	height:51px !important;
+	height:57px !important;
 }
 }
+
 </style>

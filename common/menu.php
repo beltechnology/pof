@@ -5,13 +5,19 @@
 /* Menu container */
 .menu	{
 	padding:10px 5px 10px 5px;
-	margin:12px 12px 12px 50px;
+	margin:12px 2px 12px 0px;
 	color:#000;
 	border: 1px solid #000;
 	background:#000 !important;
-	width:300px;
+	width:;
 	word-wrap: break-word;
+	overflow: visible;
+	border-radius:4px;
 	}
+.Index{
+	padding-right:0px;
+	padding-left:0px;
+}
 
 /* Menu styles */
 .menu ul

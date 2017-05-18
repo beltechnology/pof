@@ -654,3 +654,37 @@ h3{
   
   .Cat_Tab{padding-bottom: 15px}
 }
+
+
+@media only screen and (max-width : 992px) {
+#action {
+    height: 37px;
+    background-size:200px;	
+    }
+.btn-common {
+    font-size: 12px;
+	padding:6px 16px;
+}
+}
+
+@media only screen and (max-width : 980px) {
+#action {
+    height: ;
+    background-size:;	
+    }
+.btn-common {
+    font-size: 10px;
+	padding:4px 12px;
+}
+}
+
+@media only screen and (max-width : 414px) {
+#action {
+    height: ;
+    background-size:;	
+    }
+.btn-common {
+    font-size: 8px;
+	padding:4px 12px;
+}
+}
