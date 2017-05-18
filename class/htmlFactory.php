@@ -371,7 +371,8 @@ function getHomeMenu ()
 	{
 	    $subjectMenuHtml = "";
 		$dataByParentData = $this->getDataByParentId($categoryId);
-		
+		$startUl = "<ul style='padding: 5px 0px 0px 22px;' class='studentUlClass'>";
+		$closetUl = "</ul>";
 		if(count($dataByParentData)>0)
 		{
 			foreach($dataByParentData as $subjectMenu)
@@ -381,17 +382,117 @@ function getHomeMenu ()
 				 if($subjectMenu->notesCategoryId == $_REQUEST['notesCategoryId'] )
 				 {
 					$activeClass = "active"; 
+					$color = "#fff";
 				 }
-				else{ $activeClass = ""; }
+				else{ $activeClass = ""; $color = ""; }
 				}
-				  $subjectMenuHtml =$subjectMenuHtml."<li class='".$activeClass."'><a href='viewNotes.php?notesCategoryId=".$subjectMenu->notesCategoryId."'><span aria-hidden='true' class='glyphicon  glyphicon-download-alt'></span>".$subjectMenu->CategoryName."</a></li>";
-				  $subjectMenuHtml = $subjectMenuHtml.$this->getChildCategoryByCategory($subjectMenu->notesCategoryId);
+				
+				  $subjectMenuHtml =$subjectMenuHtml.$startUl."<li style='list-style: none; color:".$color."' class='".$activeClass."'><a href='viewNotes.php?notesCategoryId=".$subjectMenu->notesCategoryId."' style='color:".$color."'><span aria-hidden='true' class='glyphicon  glyphicon-download-alt'></span> ".$subjectMenu->CategoryName."</a></li>".$closetUl;
+				   if($this->getChildCategoryByCategory($subjectMenu->notesCategoryId))
+				   {
+					   $subjectMenuHtml = $subjectMenuHtml.$startUl.$this->getChildCategoryByCategory($subjectMenu->notesCategoryId).$closetUl;
+					}
 				
 			}
 		}
 		return $subjectMenuHtml;
 	//	var_dump($dataByParentData);
 	}
+	
+	public  function  getMediaCovrageSession(){
+	    $mediaSessionHtml = "";
+		$sessionData = $this->selectAllDesc('tb_session','sessionId');
+		if($sessionData){
+			foreach($sessionData as $session){
+				$mediaSessionHtml = $mediaSessionHtml.'<a class="blue" href="mediaDetail.php?sesssionId='.$session->sessionId.'" ><div class="col-sm-2 card card-block">
+							<h4 class="card-title">Media Coverage '.$session->sessionName.'</h4>
+							<p class="card-text"><img class="media" src="'.BaseUrl.'/images/Icon.png" /></p>
+						</div></a>';
+			}
+		}
+		return $mediaSessionHtml;
+		
+	} 
+	
+	public  function  getMediaCovrageDetail(){
+	    $mediaSessionHtml = "";
+		$sessionData = $this->selectAllDesc('tb_media','mediaId');
+		if($sessionData){
+			foreach($sessionData as $session){
+				if(isset($_REQUEST['sesssionId']) && ($_REQUEST['sesssionId']== $session->sessionId)){
+					$mediaSessionHtml = $mediaSessionHtml.'<div class="col-lg-4">
+						<div class="thumbnail thumbnail-inner-img">
+							<a href="'.BaseUrl."upload/".$session->upload.'" class="fancybox"  data-fancybox-group="gallery">
+								<img src="'.BaseUrl."upload/".$session->upload.'" class="img-responsive">
+							</a>
+							<div class="caption text-center">
+								<h3 class="pof-h3-img">'.$session->title.'</h3>
+								<a href="'.BaseUrl."upload/".$session->upload.'" class="btn btn-default margin-top-10" download role="button">download</a>
+								<div>&nbsp;</div>
+							</div>
+						</div>
+					</div>';
+				}
+			}
+		}
+		return $mediaSessionHtml;
+		
+	}
+
+	public  function  getGallerySessionHtml(){
+	    $mediaSessionHtml = "";
+		$sessionData = $this->getGallerySession();
+		if($sessionData){
+			foreach($sessionData as $session){
+					$mediaSessionHtml = $mediaSessionHtml.'<div class="col-lg-4">
+						<div class="thumbnail thumbnail-inner-img">
+							<a href="'.BaseUrl."gallery.php?gallerysessionId=".$session->gallerysessionId.'" >
+								<img src="'.BaseUrl."upload/".$session->upload.'" class="img-responsive">
+							</a>
+							<div class="caption text-center">
+							<a href="'.BaseUrl."gallery.php?gallerysessionId=".$session->gallerysessionId.'">
+							<h3 class="pof-h3-img">'.$session->title." ".$session->sessionName.'</h3>
+							</a>
+								<div>&nbsp;</div>
+							</div>
+						</div>
+					</div>';
+			}
+		}
+		return $mediaSessionHtml;
+		
+	}
+
+
+	public  function  getGalleryHtml(){
+	    $mediaSessionHtml = "";
+		$sessionData = $this->getGallery();
+		if($sessionData){
+				foreach($sessionData as $session){
+					if(isset($_REQUEST['gallerysessionId']) && ($_REQUEST['gallerysessionId']== $session->gallerysessionId)){
+						$mediaSessionHtml = $mediaSessionHtml.'<div class="col-lg-4">
+							<div class="thumbnail thumbnail-inner-img">
+								<a href="'.BaseUrl."upload/".$session->upload.'" class="fancybox"  data-fancybox-group="gallery" >
+									<img src="'.BaseUrl."upload/".$session->upload.'" class="img-responsive">
+								</a>
+								<div class="caption text-center">
+								<h3 class="pof-h3-img">'.$session->title.'</h3>
+								<a href="'.BaseUrl."upload/".$session->upload.'" class="btn btn-default margin-top-10" download role="button">download</a>
+									<div>&nbsp;</div>
+								</div>
+							</div>
+						</div>';
+				}
+			}
+		}
+		return $mediaSessionHtml;
+		
+	} 
+	
+
+
+
+	
 
 }
 ?>

@@ -219,6 +219,10 @@ else
                 <li class="olympaidInformation" ><a href="viewOlympaidInformation.php"><i class="fa fa-globe"></i>View Olympiad Information</a></li>
                 <li class="ViewEmail" ><a href="viewSubscribe.php"><i class="fa fa-envelope-o"></i>View Email Subscribe</a></li>
                 <li class="viewAbout" ><a href="viewAbout.php"><i class="fa fa-user"></i>View About</a></li>
+                <li class="viewSession" ><a href="viewSession.php"><i class="fa fa-pie-chart"></i>View Session</a></li>
+                <li class="viewMedia" ><a href="viewMedia.php"><i class="fa fa-lightbulb-o"></i>View Media</a></li>
+                <li class="viewGallerySession" ><a href="viewGallerySession.php"><i class="fa fa-star-half-o"></i>View Gallery Session</a></li>
+                <li class="viewGallery" ><a href="viewGallery.php"><i class="fa fa-futbol-o"></i>View Gallery</a></li>
                <!-- <li><a href="index2.html"><i class="fa fa-circle-o"></i> moreInformation v2</a></li>-->
                </ul>
                <?php

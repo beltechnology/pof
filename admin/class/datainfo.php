@@ -14,6 +14,16 @@ class dataInfo
 	  }
 	  return $allData;
 	 }
+	public function selectAllDesc($tableName)
+	 {
+	  $allData = "";
+	  $res=mysql_query("SELECT * FROM ".$tableName." where deleted = 0  ORDER BY sessionId desc ");
+	  while($obj=mysql_fetch_object($res))
+	  {
+	  	$allData[] = $obj;
+	  }
+	  return $allData;
+	 }
 
 
 	public function selectAllMenu($tableName)
@@ -1081,6 +1091,126 @@ public function getSubmenu($parentId)
 		
 		
 	}
+	
+	
+	public function addSession($sessionData){
+			$sessionName = $sessionData->sessionName;
+			mysql_query("SET AUTOCOMMIT=0");
+			mysql_query("START TRANSACTION");
+			$res = mysql_query("insert into  tb_session SET sessionName='$sessionName'");
+			if ($res) {
+			mysql_query("COMMIT");
+			$response = "session  successfully created.";
+			} else {        
+			mysql_query("ROLLBACK");
+			$response = "session data failed.";
+			}
+			return $response;
+	}
+	
+	
+ 	public function addMedia($mediaData)
+	 {
+				
+				$title = $mediaData->title;
+				$sessionId = $mediaData->sessionId;
+				$upload = $mediaData->upload;
+				$tmp_name = $mediaData->tmp_name;
+				$temp = explode(".", $upload);
+				$newfilename = $temp[0].round(microtime(true)) . '.' . end($temp);
+				move_uploaded_file($tmp_name, "../upload/" . $newfilename);
+				
+				mysql_query("SET AUTOCOMMIT=0");
+				mysql_query("START TRANSACTION");
+				
+				if($mediaData->state == 1 )
+				{
+				$res = mysql_query("INSERT INTO tb_media (title,  upload,sessionId)VALUES('$title','$newfilename','$sessionId')");
+					if ($res) {
+						mysql_query("COMMIT");
+						$response = "Media detail  successfully Added.";
+					} else {        
+						mysql_query("ROLLBACK");
+						$response = "Media detail failed.";
+					}				
+	
+				}
+				else
+				{
+					$response = "Required data fill.";
+				}
+			
+			return $response;
+	 }
+	 
+ 	public function addGallerySession($gallerySessionData)
+	{
+				
+				$title = $gallerySessionData->title;
+				$sessionId = $gallerySessionData->sessionId;
+				$upload = $gallerySessionData->upload;
+				$tmp_name = $gallerySessionData->tmp_name;
+				$temp = explode(".", $upload);
+				$newfilename = $temp[0].round(microtime(true)) . '.' . end($temp);
+				move_uploaded_file($tmp_name, "../upload/" . $newfilename);
+				
+				mysql_query("SET AUTOCOMMIT=0");
+				mysql_query("START TRANSACTION");
+				
+				if($gallerySessionData->state == 1 )
+				{
+				$res = mysql_query("INSERT INTO tb_gallerysession (title,  upload,sessionId)VALUES('$title','$newfilename','$sessionId')");
+					if ($res) {
+						mysql_query("COMMIT");
+						$response = "Gallery Session detail  successfully Added.";
+					} else {        
+						mysql_query("ROLLBACK");
+						$response = "Gallery Session  detail failed.";
+					}				
+	
+				}
+				else
+				{
+					$response = "Required data fill.";
+				}
+			
+			return $response;
+	 }
+	 
+	 
+ 	public function addGallery($galleryData)
+	{
+				
+				$title = $galleryData->title;
+				$gallerysessionId = $galleryData->gallerysessionId;
+				$upload = $galleryData->upload;
+				$tmp_name = $galleryData->tmp_name;
+				$temp = explode(".", $upload);
+				$newfilename = $temp[0].round(microtime(true)) . '.' . end($temp);
+				move_uploaded_file($tmp_name, "../upload/" . $newfilename);
+				
+				mysql_query("SET AUTOCOMMIT=0");
+				mysql_query("START TRANSACTION");
+				
+				if($galleryData->state == 1 )
+				{
+				$res = mysql_query("INSERT INTO tb_gallery (title,  upload,gallerysessionId)VALUES('$title','$newfilename','$gallerysessionId')");
+					if ($res) {
+						mysql_query("COMMIT");
+						$response = "Gallery successfully Added.";
+					} else {        
+						mysql_query("ROLLBACK");
+						$response = "Gallery detail failed.";
+					}				
+	
+				}
+				else
+				{
+					$response = "Required data fill.";
+				}
+			
+			return $response;
+	 }
 	 
 	 
 }

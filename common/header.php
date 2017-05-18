@@ -116,6 +116,8 @@ $pageData = $htmlFactory->getPageDetailByPageId($pageId);
                             </ul>-->
                         </li>
                         <li class="dropdown contact"><a href="<?php echo BaseUrl;?>contact.php">Contact Us <!--<i class="fa fa-angle-down"></i>--></a>
+                        <li class="dropdown mediaCoverage"><a href="<?php echo BaseUrl;?>mediaCoverage.php">Media Coverage <!--<i class="fa fa-angle-down"></i>--></a>
+                        <li class="dropdown gallerySession"><a href="<?php echo BaseUrl;?>gallerySession.php">Award Gallery <!--<i class="fa fa-angle-down"></i>--></a>
                             <!--<ul role="menu" class="sub-menu">
                                 <li><a href="portfolio.html">Portfolio Default</a></li>
                                 <li><a href="portfoliofour.html">Isotope 3 Columns + Right Sidebar</a></li>

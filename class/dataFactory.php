@@ -38,12 +38,35 @@ class dataFactory
 	public function selectAll($tableName)
 	 {
 	  $allData = "";
-	  $res=mysql_query("SELECT * FROM ".$tableName." where deleted = 0 and status= 0 ");
+	  $res = mysql_query("SELECT * FROM ".$tableName." where deleted = 0 and status= 0 ");
 	  while($obj=mysql_fetch_object($res))
 	  {
 	  	$allData[] = $obj;
 	  }
 	  return $allData;
+	 }
+	 
+	public function selectAllDesc($tableName,$descField)
+	 {
+	  $allData = "";
+	  $res = mysql_query("SELECT * FROM ".$tableName." where deleted = 0 ORDER BY ".$descField." DESC ");
+	  while($obj=mysql_fetch_object($res))
+	  {
+	  	$allData[] = $obj;
+	  }
+	  return $allData;
+	 }
+	 
+	 
+	 public function updateVisitors()
+	 {
+		$visitData = $this->selectAll('visitors'); 
+	//	var_dump($visitData);
+		foreach($visitData as $visit);
+		$visitor_id = $visit->visitor_id; 
+		$visits = $visit->visits+1;
+		mysql_query("UPDATE visitors SET visits = ".$visits." where visitor_id =1 ");
+		
 	 }
 	
 // get page by page id
@@ -193,6 +216,30 @@ class dataFactory
 	  	$allData = $obj->text;
 	  }
 	  return $allData;
+	}
+	
+	
+	
+	public function getGallerySession(){
+			$allData ="";
+			$sql = "SELECT tb_session.sessionName, tb_gallerysession.*  FROM tb_session,tb_gallerysession where tb_gallerysession.deleted = 0 and  tb_session.deleted= 0 and tb_session.sessionId =tb_gallerysession.sessionId   ORDER BY tb_gallerysession.gallerysessionId DESC ";
+			$result = mysql_query($sql);
+		  while($obj=mysql_fetch_object($result))
+		  {
+			$allData[] = $obj;
+		  }
+		  return $allData;
+	}
+	
+	public function getGallery(){
+			$allData ="";
+			$sql = "SELECT tb_session.sessionName,tb_gallery.*, tb_gallerysession.title as typeTitle  FROM tb_session,tb_gallerysession,tb_gallery where tb_gallerysession.deleted = 0 and tb_gallery.deleted=0 and tb_session.deleted= 0 and tb_session.sessionId =tb_gallerysession.sessionId and tb_gallerysession.gallerysessionId=tb_gallery.gallerysessionId   ORDER BY tb_gallery.galleryId DESC ";
+			$result = mysql_query($sql);
+		  while($obj=mysql_fetch_object($result))
+		  {
+			$allData[] = $obj;
+		  }
+		  return $allData;
 	}
 	
 	

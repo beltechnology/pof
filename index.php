@@ -1,27 +1,29 @@
-<?php include("common/header.php");?>
+<?php include("common/header.php");
+$htmlFactory->updateVisitors();
+?>
  <!--/#home-slider-->
-    <section id="home-slider">
+    <section id="home-slider" >
         <div class="container">
             <div class="row">
-                <div class="main-slider">
+                <div class="main-slider ">
                     <div class="slide-text">
                         <h1>Significant Improvement In Learning Performance</h1>
-                        <p>POF is promises to give you a good future. To see our world upclose provide your credentials and start your journey with us. </p>
-                        
+                        <p>POF is promises to give you a good future </p>
                         <form class="form" action="<?php echo BaseUrl;?>admin/index.php" method="post">
-					   <div class="row">
+					   <!-- <div class="row"> -->
 					      
 					      <div class="col-md-6 col-lg-6"><input class="group-form" type="text" class="form-control" placeholder="Username" required id="userName" name="userName"></div>
-						  <div class="col-md-6 col-lg-6 " id="passwordDiv">
-                <div class="group-form date" >
-                    <input  type="password"  placeholder="Password" required name="password" id="password" readonly  class="span2"><span class="add-on"><span class="glyphicon glyphicon-calendar"></span></span>
-                </div>                        </div>
-                          </div>
+						  <div class="col-md-6 col-lg-6 login-form" id="">
+                <div class="group-form " >
+                    <input  type="password"  placeholder="Password" required name="password" id="password1"   class="span2">
+					<!--<span class="add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+-->                </div>                        </div>
                           <div align="center" style="color:red;"><?php if(isset($_GET['msg'])){echo $_GET['msg'];}?></div>
                           <input name="loginType" type="hidden" class="input username" value="student"  />
-                           <button type="submit"  class="btn btn-common" name="login">LOGIN</button>  
+                           <button type="submit"  class="btn btn-common login-btn " name="login">LOGIN</button>  
                           </form>
                                          </div>
+										 </div>
                     <img src="<?php echo BaseUrl;?>images/home/slider/hill.png" class="slider-hill" alt="slider image">
                     <img src="<?php echo BaseUrl;?>images/home/slider/house.png" class="slider-house" alt="slider image">
                     <img src="<?php echo BaseUrl;?>images/home/slider/sun.png" class="slider-sun" alt="slider image">
@@ -34,6 +36,9 @@
     <!--/#home-slider-->
     <?php include("common/services.php");?>
      <!--/#services-->
+ 	 <!-- start new section code -->
+ 	 
+    <!-- new secition end        -->
      <section id="action" class="responsive">
         <div class="vertical-center">
              <div class="container">
@@ -154,7 +159,7 @@
         </div>
      </section>
     <!--/#clients-->
-<?php include("common/footer.php");?>
+<?php include("common/footer.php");  ?>
 <link rel="stylesheet" href="<?php echo BaseUrl;?>css/jquery.fancybox.css?v=2.1.5" media="all" type="text/css">
 <link rel="stylesheet" href="<?php echo BaseUrl;?>css/jquery.simplyscroll.css" media="all" type="text/css">
 <script type='text/javascript' src='<?php echo BaseUrl;?>js/jquery.simplyscroll.js'></script>
@@ -178,6 +183,21 @@ $(document).ready(function() {
 </script>
 
 <style>
+.cse .gsc-search-button input.gsc-search-button-v2, input.gsc-search-button-v2 {
+    width: 29px;
+    height: 26px;
+    padding: 6px 6px;
+    min-width: 13px;
+    margin-top: 6px;
+}
+
+#gs_id50 {
+    margin-top: -3px;
+}
+.gsc-input-box {
+    height: 27px;
+}
+
 	#fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
 		background-image: url('images/fancybox_sprite@2x.png');
 		background-size: 44px 152px; /*The size of the normal image, half the size of the hi-res image*/
